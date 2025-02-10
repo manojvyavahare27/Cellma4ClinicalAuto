@@ -1,3 +1,4 @@
+const { clickElement, typeText, selectFromDropdown} = require('../../UtilFiles/StaticUtility');
 class PatientSearch
 {
     constructor(page)
@@ -6,7 +7,8 @@ class PatientSearch
         this.btn_BackButton=page.getByRole('button', { name: 'Back Button' })
         this.txtbox_GivenName=page.getByRole('textbox', { name: 'Given Name' })  
         this.txtbox_FamilyName=page.getByRole('textbox', { name: 'Family Name' })
-        this.dropdown_PatientSex=page.locator("xpath=//div[@id='mui-component-select-sex']")
+        //this.dropdown_PatientSex=page.locator("xpath=//div[@id='mui-component-select-sex']")
+        this.dropdown_PatientSex=page.getByTestId('Sex').getByLabel('', { exact: true })
         this.txtbox_PatNameInOtherLang=page.getByRole('textbox', { name: 'Patient name in other language' })
         this.txtbox_HospitalRef=page.getByRole('textbox', { name: 'Hospital Ref' })
         this.txtbox_MobileNumber=page.getByTestId('Mobile')
@@ -265,9 +267,8 @@ class PatientSearch
 
     //Select Sex
     async selectSex(pat_sex)
-    {       
-        await this.dropdown_PatientSex.click()
-        await this.page
+    {
+        await selectFromDropdown(this.page, this.dropdown_PatientSex, pat_sex)
     }
 
     //Patient seen in last days
@@ -320,11 +321,11 @@ class PatientSearch
     {
         await this.btn_AddPatient.click()
     }
-    async selectSex()
-    {
-            await this.dropdown_sex.click()
-            await this.dropdown_sex_male.click()
-    }
+    // async selectSex()
+    // {
+    //         await this.dropdown_sex.click()
+    //         await this.dropdown_sex_male.click()
+    // }
     async enterPatientIdentifier()
     {
         await this.txtbox_Identifier.type('Idf007')

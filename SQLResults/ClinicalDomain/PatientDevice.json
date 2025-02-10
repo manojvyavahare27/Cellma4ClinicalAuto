@@ -1,0 +1,16 @@
+[
+  {
+    "ded_id": 367,
+    "dev_id": 276,
+    "dev_name": "Cochlear Osia OSI200",
+    "dev_type": "Device",
+    "dev_procedure_name": "Cochlear Implantation",
+    "dev_manufacturer": "Cochlear",
+    "dev_expiry_date": "28/02/2025",
+    "ded_type": "primary",
+    "ded_internal_external": "internal",
+    "ded_laterality": "left",
+    "ded_notes": "Device added",
+    "ded_status": "requested"
+  }
+]

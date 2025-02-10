@@ -30,6 +30,44 @@ class ClinicalExtraDetails {
     this.ReactionSeverity = page.locator("xpath=//input[@id='episodes[0].reactionSeverity']");
     this.allergyTextArea = page.locator("xpath=//textarea[@id='episodes[0].allergyNotes']");
 
+    //Devices
+    // this.dropdownDeviceProcedure = page.locator("xpath=//input[@id='ProcedureCochlear Osia OSI200']");
+    // this.dropdownManufacturer = page.locator("xpath=//input[@id='ManufacturerCochlear Osia OSI200']");
+    // this.dropdownDeviceSubCategory = page.locator("xpath=//input[@id='Sub CategoryCochlear Osia OSI200']");
+    // this.txtSearchForDevice = page.locator("xpath=//input[@id='Search For DeviceCochlear Osia OSI200']");
+    // this.dropdownTypeOfDevice = page.locator("xpath=//input[@id='Type of DeviceCochlear Osia OSI200']");
+    // this.dropdownInternalExternal = page.locator("xpath=//input[@id='Internal/ExternalCochlear Osia OSI200']");
+    // this.dropdownDeviceStatus = page.locator("xpath=//input[@id='StatusCochlear Osia OSI200']");
+    // this.dropdownLaterality = page.locator("xpath=//input[@id='LateralityCochlear Osia OSI200']");
+    // this.txtDeviceExpiryDate = page.locator("xpath=//input[@id='Expiry DateCochlear Osia OSI200']");
+    // this.txtDeviceNotes = page.locator("xpath=//textarea[@id='NotesCochlear Osia OSI200']");
+    // this.btnSaveDevice = page.locator("xpath=//button[@aria-label='saveCategoryExtraDetails']");
+    // this.extraDetailLevel = page.locator("xpath=//button[@data-testid='levelThree']")
+    // this.btnEditDevice = page.locator("xpath=//button[@aria-label='edit']");
+    // this.btnDeleteDevice = page.locator("xpath=//button[aria-label='Delete']")
+    // this.btnOkDevicePopup = page.locator("xpath=//button[aria-label='Ok']")
+    // this.txtDeleteDeviceReason = page.locator("xpath=//textarea[id='Reason']")
+    // this.btnSaveDeleteReason = page.locator("xpath=//button[aria-label='saveDeleteReason']")
+
+    //Temp Devices till locator issues sorted.
+    this.dropdownDeviceProcedure = page.getByTestId('procedure').getByLabel('Open');
+    this.dropdownManufacturer = page.getByTestId('manufacturer').getByLabel('Open');
+    this.dropdownDeviceSubCategory = page.getByTestId('subCategory').getByLabel('Open');
+    this.txtSearchForDevice = page.getByLabel('Search For Device *');
+    this.dropdownTypeOfDevice = page.getByTestId('typeOfDevice').getByLabel('Open');
+    this.dropdownInternalExternal = page.getByTestId('internalExternal').getByLabel('Open');
+    this.dropdownDeviceStatus = page.getByTestId('status').getByLabel('Open');
+    this.dropdownLaterality = page.getByTestId('laterality').getByLabel('Open');
+    this.txtDeviceExpiryDate = page.getByTestId('Expiry Date');
+    this.txtDeviceNotes = page.getByTestId('Notes');
+    this.btnSaveDevice = page.locator("xpath=//button[@aria-label='saveCategoryExtraDetails']");
+    this.extraDetailLevel = page.locator("xpath=//button[@data-testid='levelThree']")
+    this.btnEditDevice = page.locator("xpath=//button[@aria-label='edit']");
+    this.btnDeleteDevice = page.locator("xpath=//button[@aria-label='Delete']")
+    this.btnOkDevicePopup = page.locator("xpath=//button[@aria-label='Ok']")
+    this.txtDeleteDeviceReason = page.locator("xpath=//textarea[@id='Reason']")
+    this.btnSaveDeleteReason = page.locator("xpath=//button[@aria-label='saveDeleteReason']")
+    
     //Procedure
     this.dateOfProcedure = page.locator(
       "xpath=//input[@name='dateOfProcedure']"
@@ -868,10 +906,75 @@ async selectMachineName(mname)
      // this.saveCustomizableViewbutton)
   }
 
+  //Devices
+  async selectDeviceProcedure(procedure) {
+      await selectFromDropdown(this.page, this.dropdownDeviceProcedure, procedure)
+  }
 
+  async selectManufacturer(manufacturer) {
+    await selectFromDropdown(this.page, this.dropdownManufacturer, manufacturer)
+  }
 
+  async selectDeviceSubCategory(category) {
+    await selectFromDropdown(this.page, this.dropdownDeviceSubCategory, category)
+  }
+
+  async enterDevice(device) {
+    await this.txtSearchForDevice.type(device)
+    await this.page.getByRole('option', { name: device }).first().click()
+  }
+  
+  async selectTypeOfDevice(typeOfDevice) {
+    await selectFromDropdown(this.page, this.dropdownTypeOfDevice, typeOfDevice)
+  }
+
+  async selectInternalOrExternal(internalExternal) {
+    await selectFromDropdown(this.page, this.dropdownInternalExternal, internalExternal)
+  }
+
+  async selectDeviceStatus(status) {
+    await selectFromDropdown(this.page, this.dropdownDeviceStatus, status)
+  }
+
+  async selectLaterality(laterality) {
+    await selectFromDropdown(this.page, this.dropdownLaterality, laterality)
+  }
+
+  async enterDeviceExpiryDate(dateExpiry) {
+    await typeText(this.page, this.txtDeviceExpiryDate, dateExpiry)
+  }
+
+  async enterDeviceNotes(notes) {
+    await typeText(this.page, this.txtDeviceNotes, notes)
+  }
+
+  async clickOnSaveDevice() {
+    await clickElement(this.page, this.btnSaveDevice);
+  }
+
+  async clickOnExtraDetailsView3() {
+    await clickElement(this.page, this.extraDetailLevel)
+  }
+
+  async clickOnEditDevice() {
+    await clickElement(this.page, this.btnEditDevice)
+  }
+
+  async clickOnDeleteDevice() {
+    await clickElement(this.page, this.btnDeleteDevice)
+  }
+
+  async clickOnOkPopup() {
+    await clickElement(this.page, this.btnOkDevicePopup)
+  }
+
+  async enterDeleteDeviceReason(reason) {
+    await typeText(this.page, this.txtDeleteDeviceReason, reason)
+  }
+
+  async clickOnSaveDeleteReason() {
+    await clickElement(this.page, this.btnSaveDeleteReason)
+  }
 }
-
-
 
 module.exports = ClinicalExtraDetails;

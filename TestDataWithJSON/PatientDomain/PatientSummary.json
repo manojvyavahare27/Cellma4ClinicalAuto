@@ -46,6 +46,51 @@
       "pat_disability_note": "For Testing"
     }
   ],
+  "DevicePatientDetails": [
+    {
+      "pat_firstname": "AkaliA",
+      "pat_surname": "Riomedtest",
+      "pat_sex": "Male",
+      "pat_dob": "08/09/2024"
+    }
+  ],
+  "AddDevice": [
+    {
+      "dev_name": "Cochlear Osia OSI200",
+      "dev_type": "Device",
+      "dev_procedure_name": "Cochlear Implantation",
+      "dev_manufacturer": "Cochlear",
+      "dev_expiry_date": "28/02/2025",
+      "ded_type": "primary",
+      "ded_type_entry": "Primary",
+      "ded_internal_external": "internal",
+      "ded_internal_external_entry": "Internal",
+      "ded_laterality": "left",
+      "ded_laterality_entry": "Left",
+      "ded_notes": "Device added",
+      "ded_status": "requested",
+      "ded_status_entry": "Requested"
+    }
+  ],
+  "EditDevice": [
+    {
+      "dev_name": "Cochlear Osia OSI200",
+      "dev_type": "Tool",
+      "dev_procedure_name": "Cochlear Implantation",
+      "dev_manufacturer": "SA Company",
+      "dev_deleted_reason": "Device deleted",
+      "dev_expiry_date": "31/03/2025",
+      "ded_type": "firststage",
+      "ded_type_entry": "First Stage",
+      "ded_internal_external": "external",
+      "ded_internal_external_entry": "External",
+      "ded_laterality": "right",
+      "ded_laterality_entry": "Right",
+      "ded_notes": "Device edited",
+      "ded_status": "issued",
+      "ded_status_entry": "Issued"
+    }
+  ],
   "MedicationCategory": [],
   "AddMedication": [
     {
@@ -271,7 +316,7 @@
       "pacr_category": "Allergies",
       "pacr_que_name": "Coal dust",
       "alrg_reaction_severity": "Moderate",
-      "pacr_clinic_date": 45679,
+      "pacr_clinic_date": 45698,
       "alrg_notes": "Add for Notes",
       "eli_text": "Sneezing",
       "alrg_start_date": "08/05/2024",
@@ -283,7 +328,7 @@
       "pacr_category": "Allergies",
       "pacr_que_name": "Coal dust",
       "alrg_reaction_severity": "Moderate",
-      "pacr_clinic_date": 45679,
+      "pacr_clinic_date": 45698,
       "alrg_notes": "Edit for Notes",
       "eli_text": "Sneezing",
       "alrg_start_date": "20/05/2024",
@@ -301,8 +346,8 @@
     {
       "pacr_category": "Procedure",
       "pacr_que_name": "Arthroplasty",
-      "Date": 45679,
-      "proc_procedure_date": "22-01-2025",
+      "Date": 45698,
+      "proc_procedure_date": "10-02-2025",
       "proc_site": "Left",
       "proc_type": "High",
       "proc_notes": "Add Procedure Notes",
@@ -319,7 +364,7 @@
     {
       "pacr_category": "Procedure",
       "pacr_que_name": "Arthroplasty",
-      "proc_procedure_date": 45679,
+      "proc_procedure_date": 45698,
       "proc_site": "Left",
       "proc_type": "High",
       "proc_notes": "Add Procedure Notes",

@@ -10,12 +10,22 @@ class ClinicalMedicationAdministration {
         this.selectBatch = page.getByRole('option', { name: 'Aspirin 25mg capsules' })
         this.btnSelect = page.getByTestId('Select')
         this.btnSave = page.getByTestId('Save')
-        this.lastDateField = page.locator('div').filter({ hasText: /^22\/01\/2025$/ }).nth(1)
-        this.timeSlotOne = page.locator('div:nth-child(3) > div:nth-child(9) > .MuiGrid-root').getByTestId('DoneIcon')
-        this.timeSlotTwo = page.locator('div:nth-child(4) > div:nth-child(9) > .MuiGrid-root').getByTestId('DoneIcon')
-        //this.confirmedGiven = page.getByTestId('DoneIcon')
         this.btnLogout = page.getByTestId('logout')
         this.btnPageBack = page.getByLabel('Back-Button')
+
+        //Front End Display Locators
+
+        this.lastDateField = page.locator('div').filter({ hasText: /^22\/01\/2025$/ }).nth(1)
+        this.timeSlotOneNotGiven = page.locator('div:nth-child(9) > .MuiGrid-root > .MuiSvgIcon-root').first()
+        this.timeSlotOne = page.locator('div:nth-child(3) > div:nth-child(9) > .MuiGrid-root').getByTestId('DoneIcon')
+        this.timeSlotTwo = page.locator('div:nth-child(4) > div:nth-child(9) > .MuiGrid-root').getByTestId('DoneIcon')
+        this.medicationName = page.getByRole('heading', { name: 'Aspirin 25mg capsules' })
+        this.medicationDose = page.getByRole('heading', { name: '2', exact: true })
+        this.medicationRoute = page.getByRole('heading', { name: 'Oral' })
+        this.medicationFrequency = page.getByRole('heading', { name: 'Hours' })
+        this.medicationDuration = page.getByRole('heading', { name: 'Days' })
+        this.medicationStartDate = page.getByRole('cell', { name: '16/06/2024', exact: true }).getByRole('heading')
+        this.username = page.getByRole('heading', { name: 'Thayne.auto' })
     }
 
     async clickOnMedicationToggle() {

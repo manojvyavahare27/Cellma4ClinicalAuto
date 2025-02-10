@@ -67,6 +67,7 @@ test.describe("Medications Category", () => {
         page
       );
 
+      await page.pause()
       const menu = new Menu(page);
       await page.goto(environment.Test);
       await loginpage.enterUsername(jsonData.loginDetails[0].username);
@@ -108,6 +109,7 @@ test.describe("Medications Category", () => {
       await Medications.clickOnViewContactItemsMenu();
       await Medications.clickOnPinContactItemsMenu();
       await Medications.selectCategoryFromList("Medications");
+      //await page.pause()
       await page.waitForTimeout(2000);
 
       ////////REVIEW EXISTING ITEM AND DELETE/////
@@ -148,12 +150,12 @@ test.describe("Medications Category", () => {
         jsonData.AddMedication[index].pacr_que_name
       );
       await page.waitForTimeout(2000);
-      await page.getByLabel("cancelIcon").click();
-      //await MedicationsExtraDetails.clickOnClincialItemCollapsable();
-      await Medications.selectandAddClinicalItem(
-        jsonData.AddMedication[index].pacr_que_name
-      );
-      await page.waitForTimeout(1000);
+      // await page.getByLabel("cancelIcon").click();
+      // await MedicationsExtraDetails.clickOnClincialItemCollapsable();
+      // await Medications.selectandAddClinicalItem(
+      //   jsonData.AddMedication[index].pacr_que_name
+      // );
+      // await page.waitForTimeout(1000);
       await MedicationsExtraDetails.selectClinicalItemSubcategory(
         jsonData.AddMedication[index].eli_text
       );
@@ -229,9 +231,9 @@ test.describe("Medications Category", () => {
       await MedicationsExtraDetails.selectEndoserment(
         jsonData.AddMedication[index].paprd_endorsement
       );
-      await MedicationsExtraDetails.selectForCondition(
-        jsonData.AddMedication[index].que_display_text
-      );
+      // await MedicationsExtraDetails.selectForCondition(
+      //   jsonData.AddMedication[index].que_display_text
+      // );
       await MedicationsExtraDetails.enterPriceCheckQuantity(
         jsonData.AddMedication[index].meded_value_Price_check_quantity
       );
@@ -244,10 +246,10 @@ test.describe("Medications Category", () => {
       await MedicationsExtraDetails.clickOnSaveCheckList();
       await page.waitForTimeout(1000);
 
-      //await expect(page.getByText("Medication record added successfully")).toHaveText("Medication record added successfully");
+      await expect(page.getByText("Medication record added successfully")).toHaveText("Medication record added successfully");
       //await expect(page.getByText(`${clinicaCatergory} Record Added Successfully`)).toHaveText(`${clinicaCatergory} Record Added Successfully`);
 
-      ////// Database comparison- Patient Clinical Records - ADDING NEW Medications/////////
+      //// Database comparison- Patient Clinical Records - ADDING NEW Medications/////////
       sqlQuery =
         "select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk, medi_notes" +
         " from patient_clinical_records join patient_clinical_records_details on pacr_id=pacrd_pacr_id join Medications on pacr_id=medi_pacr_id where pacr_record_status='approved'" +
@@ -283,6 +285,9 @@ test.describe("Medications Category", () => {
       await Medications.clickOnDropdownLinks();
       await Medications.clickOnMedicationAdministrationsLink();
       await MedicationAdministration.clickOnMedicationToggle();
+
+      //await page.pause()
+
       if (jsonData.AddMedication[index].medadt_medication_status === "given") {
         await MedicationAdministration.clickOnNotGivenLink();
         await MedicationAdministration.selectBatchMedication();
@@ -291,8 +296,7 @@ test.describe("Medications Category", () => {
         await expect(
           page.getByText("Medication administered successfully")
         ).toHaveText("Medication administered successfully");
-        await MedicationAdministration.timeSlotOne.waitFor();
-        await page.waitForTimeout(2000);
+        await page.waitForTimeout(2000)
 
         ////// Database comparison- Medication Adiministration/////////
         sqlQuery =
@@ -330,12 +334,118 @@ test.describe("Medications Category", () => {
             jsonData.AddMedication[index].medadt_medication_status
         );
         console.log(
-          "\n Medication Administration Comparision has not been executed.\n"
+          "\n Medication Administration Comparision should be executed.\n"
         );
       }
       await page.waitForTimeout(2000);
-      ///////// Deleting Item ////////////
 
+      ////////////////////////// FRONT END COMPARISON OF ENTERED INFORMAION //////////////////////////
+      await MedicationAdministration.clickOnBackButton();
+      await Medications.clickOnDropdownLinks();
+      await Medications.clickOnMedicationAdministrationsLink();
+      await MedicationAdministration.clickOnMedicationToggle();
+
+      var count = 0;
+
+      console.log('\nFRONT END COMPARISON - REGULAR JAVASCRIPT')
+      console.log('Medication Administration Page\n')
+      
+      var med_name = await MedicationAdministration.medicationName.isVisible()
+      var med_dose = await MedicationAdministration.medicationDose.isVisible()
+      var med_route = await MedicationAdministration.medicationRoute.isVisible()
+      var med_frequency = await MedicationAdministration.medicationFrequency.isVisible()
+      var med_duration = await MedicationAdministration.medicationDuration.isVisible()
+      var med_start_date = await MedicationAdministration.medicationStartDate.isVisible()
+      var slotOne = await MedicationAdministration.timeSlotOne.isVisible();
+      var slotTwo = await MedicationAdministration.timeSlotTwo.isVisible();
+
+      if (med_name){
+        await expect.soft(MedicationAdministration.medicationName).toContainText(jsonData.AddMedication[index].pacr_que_name);
+        console.log('Displayed medication matched: ' + jsonData.AddMedication[index].pacr_que_name)
+      }
+      else {
+        console.log('Displayed medication did not match.')
+        count++
+      }
+
+      if (med_dose){
+        await expect.soft(MedicationAdministration.medicationDose).toContainText(jsonData.AddMedication[index].medi_dose);
+        console.log('Displayed medication dose matched: ' + jsonData.AddMedication[index].medi_dose)
+      }
+      else {
+        console.log('Displayed medication dose did not match.')
+        count++
+      }
+
+      if (med_route){
+        await expect.soft(MedicationAdministration.medicationRoute).toContainText(jsonData.AddMedication[index].medi_route);
+        console.log('Displayed medication route matched: ' + jsonData.AddMedication[index].medi_route)
+      }
+      else {
+        console.log('Displayed medication route did not match.')
+        count++
+      }
+
+      if (med_frequency){
+        await expect.soft(MedicationAdministration.medicationFrequency).toContainText(jsonData.AddMedication[index].medi_frequency);
+        console.log('Displayed medication matched: ' + jsonData.AddMedication[index].medi_frequency)
+      }
+      else {
+        console.log('Displayed medication did not match.')
+        count++
+      }
+
+      if (med_duration){
+        await expect.soft(MedicationAdministration.medicationDuration).toContainText(jsonData.AddMedication[index].medi_duration);
+        console.log('Displayed medication matched: ' + jsonData.AddMedication[index].medi_duration + 'Days')
+      }
+      else {
+        console.log('Displayed medication did not match.')
+        count++
+      }
+
+      if (med_start_date){
+        await expect.soft(MedicationAdministration.medicationStartDate).toContainText(jsonData.AddMedication[index].medi_start_date);
+        console.log('Displayed medication matched: ' + jsonData.AddMedication[index].medi_start_date)
+      }
+      else {
+        console.log('Displayed medication did not match.')
+        count++
+      }
+
+      if (slotOne){
+        await expect.soft(MedicationAdministration.timeSlotOne).toBeVisible();
+        console.log('Time Slot 1: Medication Given')
+      }
+      else {
+        console.log('Time Slot 1: Medication Not Given')
+        count++
+      }
+
+      if (slotTwo){
+        await expect.soft(MedicationAdministration.timeSlotTwo).toBeVisible();
+        console.log('Time Slot 2: Medication Given')
+      }
+      else {
+        console.log('Time Slot 2: Medication Not Given')
+        count++
+      }
+      console.log('\nFailed count: ' + count);
+
+      
+      console.log('\nFRONT END COMPARISON - PLAYWRIGHT ASSERTIONS')
+      console.log('Medication Administration Page\n')
+
+      await expect.soft(MedicationAdministration.medicationName, 'Medication name should match').toContainText(jsonData.AddMedication[index].pacr_que_name);
+      await expect.soft(MedicationAdministration.medicationDose, 'Medication dose should match').toContainText(jsonData.AddMedication[index].medi_dose);
+      await expect.soft(MedicationAdministration.medicationRoute, 'Medication route should match').toContainText(jsonData.AddMedication[index].medi_route);
+      await expect.soft(MedicationAdministration.medicationFrequency, 'Medication frequency should match').toContainText(jsonData.AddMedication[index].medi_frequency);
+      await expect.soft(MedicationAdministration.medicationDuration, 'Medication duration should match').toContainText(jsonData.AddMedication[index].medi_duration + ' Days');
+      await expect.soft(MedicationAdministration.medicationStartDate, 'Medication start date should match').toContainText(jsonData.AddMedication[index].medi_start_date);
+      await expect.soft(MedicationAdministration.timeSlotOne, 'Medication should be administered').toBeVisible();
+      await expect.soft(MedicationAdministration.timeSlotTwo, 'Medication should be administered').toBeVisible();
+
+      ///////// Deleting Item ////////////
       await MedicationAdministration.clickOnBackButton();
       await Medications.clickOnAllItemsSection();
       await Medications.clickOnItemEdit();
