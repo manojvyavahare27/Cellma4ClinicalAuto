@@ -341,6 +341,7 @@ test.describe("Medications Category", () => {
 
       ////////////////////////// FRONT END COMPARISON OF ENTERED INFORMAION //////////////////////////
       await MedicationAdministration.clickOnBackButton();
+      await page.waitForTimeout(3000)
       await Medications.clickOnDropdownLinks();
       await Medications.clickOnMedicationAdministrationsLink();
       await MedicationAdministration.clickOnMedicationToggle();
@@ -397,7 +398,7 @@ test.describe("Medications Category", () => {
 
       if (med_duration){
         await expect.soft(MedicationAdministration.medicationDuration).toContainText(jsonData.AddMedication[index].medi_duration);
-        console.log('Displayed medication matched: ' + jsonData.AddMedication[index].medi_duration + 'Days')
+        console.log('Displayed medication matched: ' + jsonData.AddMedication[index].medi_duration + ' Days')
       }
       else {
         console.log('Displayed medication did not match.')

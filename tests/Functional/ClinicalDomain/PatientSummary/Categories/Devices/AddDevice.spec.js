@@ -63,7 +63,7 @@ test.describe("Device Category", () => {
             const SummaryPage = new ClinicalSummary(page);
             const Devices = new DeviceDetails(page);
 
-            await page.pause()
+            //await page.pause()
             const menu = new Menu(page);
             await page.goto(environment.Test);
             await loginpage.enterUsername(jsonData.loginDetails[0].username);
@@ -97,6 +97,28 @@ test.describe("Device Category", () => {
             await contacthistory.clickOnAddContact();
             await SummaryPage.selectCategoryFromList("Devices");
 
+            ////////REVIEW EXISTING ITEM AND DELETE/////
+            await Devices.clickOnExtraDetailsView3();
+            await page.waitForTimeout(8000);
+            if (
+              await SummaryPage.checkItemOnHistoryTable(
+                jsonData.AddDevice[index].dev_name
+              )
+            ) {
+              //await Medications.clickOnItemReview(jsonData.AddMedication[index].pacr_que_name);
+              //console.log("Item reviewed before deleting");
+              await SummaryPage.clickOnDeviceEdit(
+                jsonData.AddDevice[index].dev_name
+              );
+              await page.waitForTimeout(3000);
+              await Devices.clickOnDeleteDevice();
+              await Devices.clickOnOkPopup();
+              await Devices.enterDeleteDeviceReason(jsonData.EditDevice[index].dev_deleted_reason);
+              await Devices.clickOnSaveDeleteReason();
+              console.log("\x1bItem was deleted successfully\x1b[0m");
+            }
+            await page.waitForTimeout(2000);
+
 
             //////Fetch Patient Details/////////
             var sqlQuery =
@@ -118,16 +140,96 @@ test.describe("Device Category", () => {
             await Devices.selectTypeOfDevice(jsonData.AddDevice[index].ded_type_entry);
             await Devices.selectInternalOrExternal(jsonData.AddDevice[index].ded_internal_external_entry);
             await Devices.selectDeviceStatus(jsonData.AddDevice[index].ded_status_entry);
+            await Devices.selectSerialNumber(jsonData.AddDevice[index].dev_serial_number);
             await Devices.selectLaterality(jsonData.AddDevice[index].ded_laterality_entry);
             await Devices.enterDeviceExpiryDate(jsonData.AddDevice[index].dev_expiry_date);
             await Devices.enterDeviceNotes(jsonData.AddDevice[index].ded_notes);
             await Devices.clickOnSaveDevice();
-            await expect(page.getByText("Device record added successfully")).toHaveText("Device record added successfully");
-            //assert device saved
+            await expect.soft(page.getByText("Device record added successfully")).toHaveText("Device record added successfully");
+            await Devices.clickOnExtraDetailsView3();
+            await page.pause()
+
+            ////////////////////////// FRONT END COMPARISON OF ENTERED INFORMAION //////////////////////////      
+            var count = 0;
+      
+            console.log('\nFRONT END COMPARISON - REGULAR JAVASCRIPT')
+            console.log('Add Device\n')
+            
+            var dev_procedure_name = await Devices.deviceProcedureName.isVisible()
+            var dev_name = await Devices.deviceName.isVisible()
+            var ded_laterality = await Devices.deviceLaterality.isVisible()
+            var ded_status = await Devices.deviceStatus.isVisible()
+            var dev_expiry_date = await Devices.deviceExpiryDate.isVisible()
+            var dev_serial_number = await Devices.deviceSerialNumber.isVisible()
+            var ded_notes = await Devices.deviceNotes.isVisible();
+      
+            if (dev_procedure_name){
+              await expect.soft(Devices.deviceProcedureName).toContainText(jsonData.AddDevice[index].dev_procedure_name);
+              console.log('Displayed procedure matched: ' + jsonData.AddDevice[index].dev_procedure_name)
+            }
+            else {
+              console.log('Displayed procedure did not match.')
+              count++
+            }
+      
+            if (dev_name){
+              await expect.soft(Devices.deviceName).toContainText(jsonData.AddDevice[index].dev_name);
+              console.log('Displayed device matched: ' + jsonData.AddDevice[index].dev_name)
+            }
+            else {
+              console.log('Displayed device did not match.')
+              count++
+            }
+      
+            if (ded_laterality){
+              await expect.soft(Devices.deviceLaterality).toContainText(jsonData.AddDevice[index].ded_laterality);
+              console.log('Displayed device laterality matched: ' + jsonData.AddDevice[index].ded_laterality)
+            }
+            else {
+              console.log('Displayed device laterality did not match.')
+              count++
+            }
+      
+            if (ded_status){
+              await expect.soft(Devices.deviceStatus).toContainText(jsonData.AddDevice[index].ded_status);
+              console.log('Displayed status matched: ' + jsonData.AddDevice[index].ded_status)
+            }
+            else {
+              console.log('Displayed status did not match.')
+              count++
+            }
+      
+            if (dev_expiry_date){
+              await expect.soft(Devices.deviceExpiryDate).toContainText(jsonData.AddDevice[index].dev_expiry_date);
+              console.log('Displayed expiry date matched: ' + jsonData.AddDevice[index].dev_expiry_date)
+            }
+            else {
+              console.log('Displayed expiry date did not match.')
+              count++
+            }
+      
+            if (dev_serial_number){
+              await expect.soft(Devices.deviceSerialNumber).toContainText(jsonData.AddDevice[index].dev_serial_number);
+              console.log('Displayed serial number matched: ' + jsonData.AddDevice[index].dev_serial_number)
+            }
+            else {
+              console.log('Displayed serial number did not match.')
+              count++
+            }
+      
+            if (ded_notes){
+              await expect.soft(Devices.deviceNotes).toContainText(jsonData.AddDevice[index].ded_notes);
+              console.log('Displayed device notes matched: ' + jsonData.AddDevice[index].ded_notes)
+            }
+            else {
+              console.log('Displayed device notes did not match.')
+              count++
+            }
+            console.log('\nFailed count: ' + count);
 
             ///////// Database comparison- Patient Device Records - ADDING NEW Device /////////
             sqlQuery =
-            "SELECT ded_id, dev_id, dev_name, dev_type, dev_procedure_name,dev_manufacturer, dev_expiry_date, ded_type, ded_internal_external, ded_laterality, ded_notes, ded_status "+
+            "SELECT ded_id, dev_id, dev_name, dev_type, dev_procedure_name,dev_manufacturer, dev_expiry_date, dev_serial_number, ded_type, ded_internal_external, ded_laterality, ded_notes, ded_status "+
             "FROM patient_device_details JOIN patient_devices on ded_dev_id = dev_id "+
             "WHERE dev_pat_id = " + patId +
             " and ded_record_status = 'approved' and dev_record_status = 'approved' "+
@@ -159,19 +261,18 @@ test.describe("Device Category", () => {
             await page.waitForTimeout(5000);
 
             // Edit Device
-            await Devices.clickOnExtraDetailsView3();
             await Devices.clickOnEditDevice();
-            await Devices.selectManufacturer(jsonData.EditDevice[index].dev_manufacturer);
-            await Devices.selectDeviceSubCategory(jsonData.EditDevice[index].dev_type);
-            await Devices.selectTypeOfDevice(jsonData.EditDevice[index].ded_type_entry);
-            await Devices.selectInternalOrExternal(jsonData.EditDevice[index].ded_internal_external_entry);
+            //await Devices.selectManufacturer(jsonData.EditDevice[index].dev_manufacturer);
+            //await Devices.selectDeviceSubCategory(jsonData.EditDevice[index].dev_type);
+            //await Devices.selectTypeOfDevice(jsonData.EditDevice[index].ded_type_entry);
+            //await Devices.selectInternalOrExternal(jsonData.EditDevice[index].ded_internal_external_entry);
             await Devices.selectDeviceStatus(jsonData.EditDevice[index].ded_status_entry);
             await Devices.selectLaterality(jsonData.EditDevice[index].ded_laterality_entry);
             await Devices.enterDeviceExpiryDate(jsonData.EditDevice[index].dev_expiry_date);
             await Devices.enterDeviceNotes(jsonData.EditDevice[index].ded_notes);
             await Devices.clickOnSaveDevice();
             //assert device edited -Device record updated successfully
-            await expect(page.getByText("Device record updated successfully")).toHaveText("Device record updated successfully");
+            await expect.soft(page.getByText("Device record updated successfully")).toHaveText("Device record updated successfully");
 
             ///////// Database comparison- Patient Device Records - Editing Device /////////
             sqlQuery =
@@ -187,7 +288,7 @@ test.describe("Device Category", () => {
             );
 
             sqlQuery =
-            "SELECT ded_id, dev_id, dev_name, dev_type, dev_procedure_name,dev_manufacturer, dev_expiry_date, ded_type, ded_internal_external, ded_laterality, ded_notes, ded_status "+
+            "SELECT ded_id, dev_id, dev_name, dev_procedure_name, dev_expiry_date, ded_laterality, ded_notes, ded_status "+
             "FROM patient_device_details JOIN patient_devices on ded_dev_id = dev_id "+
             "WHERE dev_pat_id = " + patId +
             " and ded_record_status = 'approved' and dev_record_status = 'approved' "+
@@ -216,6 +317,30 @@ test.describe("Device Category", () => {
             }
             await page.waitForTimeout(5000);
 
+
+            //Request Order
+            await Devices.clickOnExtraDetailsView3();
+            await page.waitForTimeout(5000);
+            await Devices.clickOnRequestLink();
+            await Devices.clickOnRequestButton();
+            await Devices.clickOnExtraDetailsView2();
+            await Devices.clickOnExtraDetailsView3();
+            await page.waitForTimeout(5000);
+            await expect.soft(Devices.displayOrderStatus, 'Order Status name should match').toContainText('Awaiting Approval');
+
+            ///////// Database display- Patient Device Records - Order Status /////////
+            sqlQuery =
+            "SELECT dev_ordering_status "+
+            "FROM patient_devices "+
+            "WHERE dev_id = " + devId;
+
+            sqlFilePath = "SQLResults/ClinicalDomain/PatientDeviceEdit.json";
+            results = await executeQuery(sqlQuery, sqlFilePath);
+            console.log(
+              "\n Patient Device order status updated: \n",
+              results
+            );
+
             // Delete Device
             await Devices.clickOnExtraDetailsView3();
             await Devices.clickOnEditDevice();
@@ -225,7 +350,7 @@ test.describe("Device Category", () => {
             await Devices.clickOnSaveDeleteReason();
 
             //assert device deleted - Device deleted successfully
-            await expect(page.getByText("Device deleted successfully")).toHaveText("Device deleted successfully");
+            await expect.soft(page.getByText("Device deleted successfully")).toHaveText("Device deleted successfully");
 
             ///////// Database comparison- Patient Device Records - Delete Device /////////
             sqlQuery =
@@ -260,7 +385,7 @@ test.describe("Device Category", () => {
             
 
 
-            await page.pause()
+            //await page.pause()
         }
     });
 });

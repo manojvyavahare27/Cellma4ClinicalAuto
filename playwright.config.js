@@ -37,6 +37,10 @@ module.exports = defineConfig({
               '**/Functional/ClinicalDomain/PatientSummary/Categories/Medication/AddMedication.spec.js',
               '**/Functional/ClinicalDomain/PatientSummary/Categories/Medication/AdministerMedication.spec.js',
               '**/Functional/ClinicalDomain/PatientSummary/Categories/Devices/AddDevice.spec.js',
+              '**/Functional/ClinicalDomain/PatientSummary/Categories/PatientConsent/AddPatientConsent.spec.js',
+              '**/Functional/ClinicalDomain/PatientSummary/Categories/TestTool/AddTestTool.spec.js',
+              '**/Functional/ClinicalDomain/PatientSummary/Categories/TestTool/AddTest.spec.js',
+              '**/Functional/ClinicalDomain/PatientSummary/Categories/TestTool/AddTool.spec.js',
             ], // Corrected the file extension
   timeout: 800 * 1000,
   expect: {

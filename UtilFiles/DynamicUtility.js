@@ -164,7 +164,7 @@ async function locateField(page, selector) {
 
   // Dynamic methods 
   async function showClinicalItemByStatus(page, tabText) {
-    const locator = `xpath=//div[@class='MuiTabs-flexContainer css-k008qs']//button[contains(text(), '${tabText}')]`;
+    const locator = `xpath=//div[@class='MuiTabs-flexContainer css-162tvoi']//button[contains(text(), '${tabText}')]`;
     try {
       await page.waitForSelector(locator);
       const elementHandle = await page.$(locator);

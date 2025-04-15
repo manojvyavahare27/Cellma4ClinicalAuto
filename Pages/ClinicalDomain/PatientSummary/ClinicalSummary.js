@@ -1,7 +1,7 @@
 //Sathyanarayan
 
 
-const { clickElement, typeText, selectFromDropdown} = require('../../../UtilFiles/StaticUtility.js');
+const { clickElement, typeText, selectFromDropdown, frontEndComparison} = require('../../../UtilFiles/StaticUtility.js');
 const { selectFromSearchResults, selectRadioButton, locateFieldById, toggleDivVisibility, clickOnRemoveCustomizableQuestion, clickOnRestoreCustomizableQuestion, showClinicalItemByStatus, showExtraDetailLevel, clickHistoryTableIconsBeforeItemName, clickHistoryTableIconsUsingItemName, replaceLocator, assertElementExists } = require('../../../UtilFiles/DynamicUtility.js');
 
 class ClinicalSummary {
@@ -67,6 +67,10 @@ class ClinicalSummary {
         //Links
         this.dropdownLinks=page.getByTestId('Links')
         this.linkMedicationAdministrations=page.getByRole('heading', { name: 'Medication Administrations' })
+
+        this.dropdownAddTo=page.getByTestId('Add To')
+        this.linkPatientConsent = page.locator("xpath=//li[@data-testid='consent']")
+        this.addButton = page.locator("xpath=//div[@class='MuiGrid2-root MuiGrid2-direction-xs-row css-1n5khr6'][normalize-space()='Add']")
      }
 
      async clickOnDropdownLinks()
@@ -79,6 +83,14 @@ class ClinicalSummary {
          await this.linkMedicationAdministrations.click()
      }
 
+     async clickOnDropdownAddToo()
+     {
+        await this.dropdownAddTo.click()
+     }
+     async clickOnPatientConsent(){
+        await this.linkPatientConsent.click()
+     }
+
     ///////////////////////////////BUTTON CLICKS///////////////////////////////////////////////
     /*This method is no longer used as we are clicking it in selectandaddClinicalItem*/
     // // Click on Add Medication button
@@ -86,7 +98,9 @@ class ClinicalSummary {
     //     await this.page.waitForSelector(this.addClinicalItem);
     //     await clickElement(this.page, this.addClinicalItem);
     // }
-
+    async clickOnAddButton() {
+        await clickElement(this.page, this.addButton)
+    }
     async ClickOnAddMedicalCertificateButton()
     {
         await clickElement(this.page, this.AddMedicalCertificateButton)
@@ -127,6 +141,13 @@ class ClinicalSummary {
        // await this.addClinicalItem.click() 
     }
     ///////////////////////////////CHOOSE DYNAMIC DROPDOWN ITEMS//////////////////////////////////
+
+    async selectTestToolItem(testToolName) {
+        this.itemName = this.page.locator(`xpath=//h1[normalize-space()='${testToolName}']`)
+        this.searchClinicalItem = this.page.locator("xpath=//input[@name='search']")
+        await this.searchClinicalItem.click()
+        await this.itemName.click()
+    }
 
     async selectandAddClinicalItem(clinicalItemName) {
         this.itemName=clinicalItemName;
@@ -278,6 +299,13 @@ class ClinicalSummary {
             this.itemName=item;
         }
         await clickHistoryTableIconsUsingItemName(this.page,this.itemName, 'editIconButton')
+    }
+
+    async clickOnDeviceEdit(item = null){
+        if(item){
+            this.itemName=item;
+        }
+        await clickHistoryTableIconsUsingItemName(this.page,this.itemName, 'edit')
     }
 
     async closeWindow(){

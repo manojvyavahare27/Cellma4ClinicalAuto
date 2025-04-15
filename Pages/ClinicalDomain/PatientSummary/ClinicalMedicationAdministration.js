@@ -17,8 +17,8 @@ class ClinicalMedicationAdministration {
 
         this.lastDateField = page.locator('div').filter({ hasText: /^22\/01\/2025$/ }).nth(1)
         this.timeSlotOneNotGiven = page.locator('div:nth-child(9) > .MuiGrid-root > .MuiSvgIcon-root').first()
-        this.timeSlotOne = page.locator('div:nth-child(3) > div:nth-child(9) > .MuiGrid-root').getByTestId('DoneIcon')
-        this.timeSlotTwo = page.locator('div:nth-child(4) > div:nth-child(9) > .MuiGrid-root').getByTestId('DoneIcon')
+        this.timeSlotOne = page.locator('div:nth-child(3) > div:nth-child(9) > .MuiGrid2-root').getByTestId('DoneIcon')
+        this.timeSlotTwo = page.locator('div:nth-child(4) > div:nth-child(9) > .MuiGrid2-root').getByTestId('DoneIcon')
         this.medicationName = page.getByRole('heading', { name: 'Aspirin 25mg capsules' })
         this.medicationDose = page.getByRole('heading', { name: '2', exact: true })
         this.medicationRoute = page.getByRole('heading', { name: 'Oral' })

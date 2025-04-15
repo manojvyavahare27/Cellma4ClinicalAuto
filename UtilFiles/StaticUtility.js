@@ -70,6 +70,22 @@ async function selectFromDropdown(page, dropdownLocator, listItem) {
   await page.click(itemLocator);
 }
 
+async function frontEndComparison (locator, excelData, iteration) {
+  let count = 0;
+
+  for(let i = 0; i < iteration; i++ ) {
+    if (locator){
+      await expect.soft(Devices.deviceProcedureName).toContainText(excelData);
+      console.log('Displayed procedure matched: ' + excelData)
+    }
+    else {
+      console.log('Displayed procedure did not match.')
+      count++
+    }
+  }
+
+}
 
 
-module.exports = { clickElement, typeText, selectFromDropdown};
+
+module.exports = { clickElement, typeText, selectFromDropdown, frontEndComparison};

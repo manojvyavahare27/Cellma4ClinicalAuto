@@ -19,7 +19,7 @@ class ClinicalExtraDetails {
 
     //Allergy
     //this.clinicalItemSubcategory = page.locator("xpath=//input[@id='Sub Category']");
-    this.clinicalItemSubcategory = page.locator("xpath=//input[@id='Sub Category']");
+    this.clinicalItemSubcategory = page.locator("xpath=//input[@name='subCategory']");
     this.clinicalItemCollapsableAllergy1 = page.getByTestId("allergies").getByLabel("cellmaAccordionIcon");
     this.clinicalItemCollapsableAllergy2 = page.getByTestId("episodes[0].id").getByLabel("cellmaAccordionIcon");
     this.clinicalSubcategoryAllergy = page.locator("xpath=//input[@name='subCategory']");
@@ -58,15 +58,64 @@ class ClinicalExtraDetails {
     this.dropdownInternalExternal = page.getByTestId('internalExternal').getByLabel('Open');
     this.dropdownDeviceStatus = page.getByTestId('status').getByLabel('Open');
     this.dropdownLaterality = page.getByTestId('laterality').getByLabel('Open');
+    this.txtDeviceSerialNumber = page.getByTestId('Serial Number');
     this.txtDeviceExpiryDate = page.getByTestId('Expiry Date');
     this.txtDeviceNotes = page.getByTestId('Notes');
     this.btnSaveDevice = page.locator("xpath=//button[@aria-label='saveCategoryExtraDetails']");
+    this.extraDetailLevel2 = page.locator("xpath=//button[@data-testid='levelTwo']")
     this.extraDetailLevel = page.locator("xpath=//button[@data-testid='levelThree']")
     this.btnEditDevice = page.locator("xpath=//button[@aria-label='edit']");
     this.btnDeleteDevice = page.locator("xpath=//button[@aria-label='Delete']")
     this.btnOkDevicePopup = page.locator("xpath=//button[@aria-label='Ok']")
     this.txtDeleteDeviceReason = page.locator("xpath=//textarea[@id='Reason']")
     this.btnSaveDeleteReason = page.locator("xpath=//button[@aria-label='saveDeleteReason']")
+    this.linkRequestOrderStatus = page.locator("xpath=//a[@aria-label='Not Ordered']")
+    this.btnExternalRequest = page.locator("xpath=//button[@aria-label='External Request']")
+    this.displayOrderStatus = page.getByRole('heading', { name: 'Awaiting Approval' })
+
+    //Front End Display - Devices
+    this.deviceProcedureName = page.getByRole('heading', { name: 'Cochlear Implantation' })
+    this.deviceName = page.getByRole('cell', { name: 'Cochlear Osia OSI200' })
+    this.deviceLaterality = page.getByRole('cell', { name: 'left' })
+    this.deviceStatus = page.getByRole('cell', { name: 'implanted' })
+    this.deviceExpiryDate = page.getByRole('heading', { name: '28/02/2025' })
+    this.deviceSerialNumber = page.getByRole('heading', { name: '913748362' })
+    this.deviceNotes = page.getByRole('heading', { name: 'Device added' })
+
+    //Test Tools Locators
+    this.sensoryPerception = page.locator("xpath=//input[@id='question-0']")
+    this.moisture = page.locator("xpath=//input[@id='question-1']")
+    this.activityTest = page.locator("xpath=//input[@id='question-2']")
+    this.mobility = page.locator("xpath=//input[@id='question-3']")
+    this.nutrition = page.locator("xpath=//input[@id='question-4']")
+    this.frictionAndShear = page.locator("xpath=//input[@id='question-5']")
+    this.calculateButton = page.locator("xpath=//button[@data-testid='Calculate']")
+    this.saveTestToolButton = page.locator("xpath=//button[@data-testid='Save']")
+    this.deleteTestToolButton = page.locator("xpath=//button[@data-testid='Delete']")
+    this.lastReviewedDate = page.locator("xpath=//input[@id='Last Reviewed']");
+    this.editIcon = page.locator("xpath=//button[@aria-label='editIconButton']");
+    // 2nd Test
+    this.bmiScore = page.locator("xpath=//input[@id='question-0']")
+    this.unplannedWeightLoss = page.locator("xpath=//input[@id='question-1']")
+    this.noNutritialIntake = page.locator("xpath=//input[@id='question-2']")
+    // 3rd Test
+    this.recentFalls = page.locator("xpath=//input[@id='question-0']")
+    this.medications = page.locator("xpath=//input[@id='question-1']")
+    this.psychological = page.locator("xpath=//input[@id='question-2']")
+    this.cognitiveStatus = page.locator("xpath=//input[@id='question-3']")
+    // 4th Test
+    this.interestOrPleasure = page.locator("xpath=//input[@id='question-0']")
+    this.downOrDepressed = page.locator("xpath=//input[@id='question-1']")
+    this.troubleSleeping = page.locator("xpath=//input[@id='question-2']")
+    this.tiredLittleEnergy = page.locator("xpath=//input[@id='question-3']")
+    this.poorAppetite = page.locator("xpath=//input[@id='question-4']")
+    this.feelingBadAboutYourself = page.locator("xpath=//input[@id='question-5']")
+    this.troubleConcentrating = page.locator("xpath=//input[@id='question-6']")
+    //this.movingSlowly = page.locator("xpath=//input[@name='question-7']")
+    //this.thoughtsOfDeath = page.locator("xpath=//input[@name='question-8']")
+
+    // 1st Tool
+    
     
     //Procedure
     this.dateOfProcedure = page.locator(
@@ -116,7 +165,7 @@ class ClinicalExtraDetails {
     this.linkToProcedure = page.locator("xpath=//input[@id='Link to Procedure']");
 
     this.dateOfOutcome = page.locator("xpath=//input[@id='Date of Outcome']");
-    this.frequency = page.locator("xpath=//input[@id='Frequency']");
+    this.frequency = page.locator("xpath=//input[@name='frequency']");
     this.notes = page.locator("xpath=//textarea[@id='Notes']");
     this.private = page.locator("xpath=//label[@aria-label='Private Record']//input[@class='PrivateSwitchBase-input css-1m9pwf3']");
     this.setAsDefault = page.locator("xpath=//label[@aria-label='Set as Default']//input[@class='PrivateSwitchBase-input css-1m9pwf3']");
@@ -222,39 +271,39 @@ class ClinicalExtraDetails {
        // this.addClinicalItem = page.locator("xpath=//button[@aria-label='Add']")
 
     //Medication
-    this.dose = page.locator("xpath=//input[@id='Dose']");
-    this.Route = page.locator("xpath=//input[@id='Route']");
-    this.days = page.locator("xpath=//input[@id='Days']");
-    this.site = page.locator("xpath=//input[@id='Site']");
-    this.prescribeBy = page.locator("xpath=//input[@id='Prescribed By']");
-    this.startDate = page.locator("xpath=//input[@id='Start Date']");
-    this.reviewDate = page.locator("xpath=//input[@id='Review Date']");
-    this.stopDate = page.locator("xpath=//input[@id='Stop Date']");
+    this.dose = page.locator("xpath=//input[@name='dose']");
+    this.Route = page.locator("xpath=//input[@name='route']");
+    this.days = page.locator("xpath=//input[@name='days']");
+    this.site = page.locator("xpath=//input[@name='site']");
+    this.prescribeBy = page.locator("xpath=//input[@name='prescribedBy']");
+    this.startDate = page.locator("xpath=//input[@name='startDate']");
+    this.reviewDate = page.locator("xpath=//input[@name='reviewDate']");
+    this.stopDate = page.locator("xpath=//input[@name='stopDate']");
     this.sideEffect = page.locator("xpath=//input[@name='sideEffect']");
-    this.medicationStatus = page.locator("xpath=//input[@id='Status']");
-    this.indication = page.locator("xpath=//input[@id='Indication']");
-    this.stopReason = page.locator("xpath=//input[@id='Stopped Reason']");
-    this.PGDPSD = page.locator("xpath=//input[@id='PGD/PSD']");
+    this.medicationStatus = page.locator("xpath=//input[@name='status']");
+    this.indication = page.locator("xpath=//input[@name='indication']");
+    this.stopReason = page.locator("xpath=//input[@name='stoppedReason']");
+    this.PGDPSD = page.locator("xpath=//input[@name='pGDPSD']");
     this.medicationGradeForAdministrator = page.locator(
-      "xpath=//input[@id='User grades that can administator medication-MAED']"
+      "xpath=//input[@name='userGradesThatCanAdministatorMedicationMAED']"
     );
-    this.maxReffills = page.locator("xpath=//input[@id='Max Reffills']");
-    this.quantity = page.locator("xpath=//input[@id='Quantity']");
-    this.unit = page.locator("xpath=//input[@aria-label='Unit']");
+    this.maxReffills = page.locator("xpath=//input[@name='maxRefills']");
+    this.quantity = page.locator("xpath=//input[@name='quantity']");
+    this.unit = page.locator("xpath=//input[@name='unit']");
     this.currentLocation = page.locator(
-      "xpath=//input[@id='Current Location']"
+      "xpath=//input[@name='currentLocation']"
     );
     this.linkToDiagnosis = page.locator(
-      "xpath=//input[@id='Link to Diagnosis']"
+      "xpath=//input[@name='linkToDiagnosis']"
     );
-    this.adherent = page.locator("xpath=//input[@id='Adherent']");
-    this.endoserment = page.locator("xpath=//input[@id='Endoserment']");
-    this.forCondition = page.locator("xpath=//input[@id='For Condition']");
+    this.adherent = page.locator("xpath=//input[@name='adherent']");
+    this.endoserment = page.locator("xpath=//input[@name='endorsement']");
+    this.forCondition = page.locator("xpath=//input[@name='forCondition']");
     this.priceCheckQuantity = page.locator(
-      "xpath=//input[@id='Price check quantity']"
+      "xpath=//input[@name='priceCheckQuantity']"
     );
-    this.totalCost = page.locator("xpath=//input[@id='Total Cost']");
-    this.notes = page.locator("xpath=//textarea[@aria-label='Notes']");
+    this.totalCost = page.locator("xpath=//input[@name='totalCost']");
+    this.notes = page.locator("xpath=//textarea[@name='notes']");
 
     //Medication Checkboxes
     this.prescribeAndSupply = page.locator(
@@ -940,6 +989,10 @@ async selectMachineName(mname)
     await selectFromDropdown(this.page, this.dropdownLaterality, laterality)
   }
 
+  async selectSerialNumber(serialNo) {
+    await typeText(this.page, this.txtDeviceSerialNumber, serialNo)
+  }
+
   async enterDeviceExpiryDate(dateExpiry) {
     await typeText(this.page, this.txtDeviceExpiryDate, dateExpiry)
   }
@@ -950,6 +1003,10 @@ async selectMachineName(mname)
 
   async clickOnSaveDevice() {
     await clickElement(this.page, this.btnSaveDevice);
+  }
+
+  async clickOnExtraDetailsView2() {
+    await clickElement(this.page, this.extraDetailLevel2)
   }
 
   async clickOnExtraDetailsView3() {
@@ -975,6 +1032,125 @@ async selectMachineName(mname)
   async clickOnSaveDeleteReason() {
     await clickElement(this.page, this.btnSaveDeleteReason)
   }
+
+  async clickOnRequestLink() {
+    await clickElement(this.page, this.linkRequestOrderStatus)
+  }
+
+  async clickOnRequestButton() {
+    await clickElement(this.page, this.btnExternalRequest)
+  }
+
+  // Test Tool
+  async selectSensoryPerception(ans){
+    await selectFromDropdown(this.page, this.sensoryPerception, ans)
+  }
+
+  async selectMoisture(ans){
+    await selectFromDropdown(this.page, this.moisture, ans)
+  }
+
+  async selectActivityTest(ans){
+    await selectFromDropdown(this.page, this.activityTest, ans)
+  }
+
+  async selectMobility(ans){
+    await selectFromDropdown(this.page, this.mobility, ans)
+  }
+
+  async selectNutrition(ans){
+    await selectFromDropdown(this.page, this.nutrition, ans)
+  }
+
+  async selectFrictionAndShear(ans){
+    await selectFromDropdown(this.page, this.frictionAndShear, ans)
+  }
+
+  async clickOnCalculateButton(){
+    await clickElement(this.page, this.calculateButton)
+  }
+
+  async clickOnSaveTestTool(){
+    await clickElement(this.page, this.saveTestToolButton)
+  }
+
+  async clickOnDeleteTestTool(){
+    await clickElement(this.page, this.deleteTestToolButton)
+  }
+
+  async enterLastReviewedDate(lastReviewedDate) {
+    await typeText(this.page, this.lastReviewedDate, lastReviewedDate);
+  }
+  async clickOnEditIcon(){
+    await clickElement(this.page, this.editIcon)
+  }
+
+  async selectBmiScore(ans){
+    await selectFromDropdown(this.page, this.bmiScore, ans)
+  }
+
+  async selectUnplannedWeightLoss(ans){
+    await selectFromDropdown(this.page, this.unplannedWeightLoss, ans)
+  }
+
+  async selectNoNutritonalIntake(ans){
+    await selectFromDropdown(this.page, this.noNutritialIntake, ans)
+  }
+
+  async selectRecentFalls(ans){
+    await selectFromDropdown(this.page, this.recentFalls, ans)
+  }
+
+  async selectMedications(ans){
+    await selectFromDropdown(this.page, this.medications, ans)
+  }
+
+  async selectPsycological(ans){
+    await selectFromDropdown(this.page, this.psychological, ans)
+  }
+
+  async selectCognitiveStatus(ans){
+    await selectFromDropdown(this.page, this.cognitiveStatus, ans)
+  }
+
+  async selectInterestOrPleasure(ans){
+    await selectFromDropdown(this.page, this.interestOrPleasure, ans)
+  }
+
+  async selectDownOrDepressed(ans){
+    await selectFromDropdown(this.page, this.downOrDepressed, ans)
+  }
+
+  async selectTroubleSleeping(ans){
+    await selectFromDropdown(this.page, this.troubleSleeping, ans)
+  }
+
+  async selectTiredLittleEnergy(ans){
+    await selectFromDropdown(this.page, this.tiredLittleEnergy, ans)
+  }
+
+  async selectPoorAppetite(ans){
+    await selectFromDropdown(this.page, this.poorAppetite, ans)
+  }
+
+  async selectFeelingBadAboutYourself(ans){
+    await selectFromDropdown(this.page, this.feelingBadAboutYourself, ans)
+  }
+
+  async selectTroubleConcentrating(ans){
+    await selectFromDropdown(this.page, this.troubleConcentrating, ans)
+  }
+  
+  async selectMovingSlowly(ans) {
+    await this.page.getByText(ans, { exact: true }).first().click();
+  }
+
+  async selectThoughtsOfDeath(ans) {
+    await this.page.getByText(ans, { exact: true }).nth(1).click();
+  }
+  //this.movingSlowly = page.locator("xpath=//input[@name='question-7']")
+  //this.thoughtsOfDeath = page.locator("xpath=//input[@name='question-8']")
+
 }
 
 module.exports = ClinicalExtraDetails;
