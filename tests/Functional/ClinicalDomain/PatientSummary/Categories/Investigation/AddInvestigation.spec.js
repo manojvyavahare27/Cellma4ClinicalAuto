@@ -114,7 +114,7 @@ test.describe("Investigations Category", () => {
       await Investigations.clickOnPinContactItemsMenu();
       await Investigations.selectCategoryFromList("Investigations");
       await page.waitForTimeout(2000)
-       await page.pause()
+       //await page.pause()
        ////////REVIEW EXISTING ITEM AND DELETE/////
        if(await Investigations.checkItemOnHistoryTable(jsonData.AddInvestigation[index].pacr_que_name)){
        // await Investigations.clickOnItemReview(jsonData.AddInvestigation[index].pacr_que_name);
@@ -209,7 +209,7 @@ test.describe("Investigations Category", () => {
 
       //await expect(page.getByText("Investigation record added successfully")).toHaveText("Investigation record added successfully");
       //await expect(page.getByText(`${clinicaCatergory} Record Added Successfully`)).toHaveText(`${clinicaCatergory} Record Added Successfully`); 
-      await page.pause()
+      //await page.pause()
     //   ////// Database comparison- Patient Clinical Records - ADDING NEW Investigations/////////
     //   sqlQuery =
     //   "select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk,inte_outcome_eli_text, inte_notes"+
@@ -318,7 +318,7 @@ test.describe("Investigations Category", () => {
       await InvestigationsExtraDetails.clickOnDelete();
       await InvestigationsExtraDetails.clickOnConfirmDelete();
       await InvestigationsExtraDetails.enterDeleteReason(jsonData.DeleteInvestigation[index].pacr_delete_reason);
-      await page.pause()
+      //await page.pause()
       await InvestigationsExtraDetails.clickOnSaveDeleteReason();
     //  await expect(page.getByText('Investigation deleted successfully')).toHaveText('Investigation deleted successfully')
 
