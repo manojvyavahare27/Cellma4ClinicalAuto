@@ -85,7 +85,7 @@ test.describe("Assessment Category", () => {
       //await page.pause()
       await patientsearch.enterFamilyName(data.pat_surname);
       logger.info("Family Name entered successfully");
-      await patientsearch.selectSex(data.pat_sex);
+      //await patientsearch.selectSex(data.pat_sex);
  
     await patientsearch.selectBornDate(jsonData.PatientDetails[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
@@ -94,7 +94,10 @@ test.describe("Assessment Category", () => {
       //await page.pause()
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(2000);
-      await confirmexisting.clickOnConfirmExistingDetails();    
+      await confirmexisting.clickOnConfirmExistingDetails();  
+      await page.waitForTimeout(4000);
+      await assessment.closePopUp()   
+      await page.waitForTimeout(2000); 
        await contacthistory.clickOnShowFilter()  
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -109,17 +112,15 @@ test.describe("Assessment Category", () => {
         await assessment.selectCategoryFromList("Assessments");       
        
         
-        //////Fetch Patient Details/////////
-  //  var sqlQuery =
-  //  "select * from patient_audit where paa_use_username='" + jsonData.loginDetails[0].username + 
-  //  "' and paa_type='selected' order by 1 desc limit 1";
-  //  var sqlFilePath = "SQLResults/PatientDomain/PatientAudit.json";
-  //  var results = await executeQuery(sqlQuery, sqlFilePath);
-  //  console.log("\n Patient Details stored into the database: \n", results);
-  //  const patId = results[0].paa_pat_id;
-
-  //  console.log("Patient Accessed by User:" + patId);
-
+  //////Fetch Patient Details/////////
+        // var sqlQuery =
+        // "select * from patient_audit where paa_use_username='" + jsonData.loginDetails[0].username +
+        // "' and paa_type='selected' order by 1 desc limit 1";
+        // var sqlFilePath = "SQLResults/PatientDomain/PatientAudit.json";
+        // var results = await executeQuery(sqlQuery, sqlFilePath);
+        // console.log("\n Patient Details stored into the database: \n", results);
+        // const patId = results[0].paa_pat_id;
+        // console.log("Patient Accessed by User:" + patId);
   
   // Adding new Presenting Problem
   
@@ -130,7 +131,29 @@ test.describe("Assessment Category", () => {
   await page.waitForTimeout(5000);
   await assessment.ClickOnAssessmentSelectBtn(); 
  await page.pause()
-
+      
+      await page.waitForTimeout(3000);
+      await assessment.clickDivPatientDetails()
+      await page.waitForTimeout(2000);
+      await assessment.selectAssessmentCheckbox()
+      await page.waitForTimeout(2000);
+      await assessment.clickDivAllergies()
+      await page.waitForTimeout(2000);
+      await assessment.selectAssessmentCheckbox()
+      await page.waitForTimeout(2000);
+      await assessment.clickDivPresProblems()
+      await page.waitForTimeout(2000);
+      await assessment.selectAssessmentCheckbox()
+      await page.waitForTimeout(2000);
+      await assessment.clickDivConditions()
+      await page.waitForTimeout(2000);
+      await assessment.selectAssessmentCheckbox()
+      await page.waitForTimeout(2000);
+      await assessment.clickDivLifestyle()
+      await page.waitForTimeout(2000);
+      await assessment.selectExSmokerCheckbox()
+      await page.waitForTimeout(2000);
+      await assessment.ClickOnbtnNext()
   // Add Diagnosis
   await assessment.clickDivDiagnosis()
   await page.waitForTimeout(2000);
@@ -145,6 +168,29 @@ test.describe("Assessment Category", () => {
    await assessmentExtraDetails.enterDiagnosisNotes(jsonData.EditDiagnosis[index].diag_notes);
       //await page.pause()
     await assessmentExtraDetails.clickOnSaveExtraDetails();
+
+     ////// Database comparison- Patient Clinical Records - ADDING NEW Diagnosis/////////
+    //   sqlQuery =
+    //   "select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk, diag_date_onset, diag_date_firstseen, diag_date_diagnosed, diag_notes"+
+    //   " from patient_clinical_records join patient_clinical_records_details on pacr_id=pacrd_pacr_id join diagnosis on pacr_id=diag_pacr_id where pacr_record_status='approved'"+
+    //   " and pacr_pat_id=" + patId +
+    //   " and pacr_record_status='approved' and pacr_que_name='" + jsonData.AddDiagnosis[index].pacr_que_name +
+    //   "' and pacr_category='diagnosis' order by 1 desc limit 1";
+ 
+ 
+ 
+    //   //select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk, diag_date_onset, diag_date_firstseen, diag_date_diagnosed, diag_notes from patient_clinical_records join patient_clinical_records_details on pacr_id=pacrd_pacr_id join diagnosis on pacr_id=diag_pacr_id where pacr_record_status='approved' and pacrd_record_status='approved' and diag_record_status='approved' and pacr_pat_id='787755' and pacr_record_status='approved' and pacr_que_name='Dengue haemorrhagic fever' and pacr_category='diagnosis' order by 1 desc limit 1;
+           
+    // sqlFilePath = "SQLResults/ClinicalDomain/patientClinicalRecord.json";
+    // results = await executeQuery(sqlQuery, sqlFilePath);
+    // const pacrId = results[0].pacr_id;
+    // console.log("\n Patient Clinical Records stored into the database: \n", results);
+    // var match = await compareJsons(sqlFilePath, null, jsonData.AddDiagnosis[index]);
+    // if (match) {
+    //   console.log("\n Patient Clinical Records Comparision adding new Diagnosis: Parameters from both JSON files match!\n");
+    // } else {
+    //   console.log("\n Patient Clinical Records Comparision adding new Diagnosis: Parameters from both JSON files do not match!\n");
+    // }
 
  // Add Examination
     await assessment.clickDivExamination()
@@ -228,28 +274,7 @@ test.describe("Assessment Category", () => {
       await assessment.clickDivOverview()
       await assessment.enterOverviewNotes('Overview_notes')
       await page.waitForTimeout(2000);
-      await assessment.ClickOnbtnNext()
-      await page.waitForTimeout(3000);
-      await assessment.clickDivPatientDetails()
-      await page.waitForTimeout(2000);
-      await assessment.selectAssessmentCheckbox()
-      await page.waitForTimeout(2000);
-      await assessment.clickDivAllergies()
-      await page.waitForTimeout(2000);
-      await assessment.selectAssessmentCheckbox()
-      await page.waitForTimeout(2000);
-      await assessment.clickDivPresProblems()
-      await page.waitForTimeout(2000);
-      await assessment.selectAssessmentCheckbox()
-      await page.waitForTimeout(2000);
-      await assessment.clickDivConditions()
-      await page.waitForTimeout(2000);
-      await assessment.selectAssessmentCheckbox()
-      await page.waitForTimeout(2000);
-      await assessment.clickDivLifestyle()
-      await page.waitForTimeout(2000);
-      await assessment.selectExSmokerCheckbox()
-      await page.waitForTimeout(2000);
+
       await assessment.clickOnEndButton()
       await page.pause()
       await assessment.cancelAssessmentBtn()
@@ -292,7 +317,7 @@ test.describe("Assessment Category", () => {
       
       //Delete Medication
       await page.waitForTimeout(4000);
-      await assessment.medicationLink()
+      await assessment.clickMedicationLink()
       await page.waitForTimeout(2000);
       await assessmentExtraDetails.clickOnDelete();
       await assessmentExtraDetails.clickOnConfirmDelete();

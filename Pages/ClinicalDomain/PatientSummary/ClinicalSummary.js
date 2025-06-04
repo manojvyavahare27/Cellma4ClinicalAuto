@@ -146,6 +146,12 @@ class ClinicalSummary {
         }
              }
 
+
+    async clickMedicationLink()
+     {
+        await clickElement(this.page, this.medicationLink)
+     }
+
       async DiagnosisLink()
      {
         await clickElement(this.page, this.asthmaLink)
