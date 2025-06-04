@@ -97,7 +97,7 @@ test.describe("Recommendations Category", () => {
       logger.info("Family Name entered successfully");
      // await patientsearch.selectSex(data.pat_sex);
 
-      await page.pause()
+      //await page.pause()
     await patientsearch.selectBornDate(jsonData.PatientDetails[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
@@ -150,7 +150,7 @@ test.describe("Recommendations Category", () => {
       await Recommendations.selectandAddClinicalItem(jsonData.AddRecommendations[index].pacr_que_name);  
       //await RecommendationsExtraDetails.clickOnClincialItemCollapsable();
       await page.waitForTimeout(3000);
-      await page.pause()
+      //await page.pause()
       //await RecommendationsExtraDetails.selectClinicalItemSubcategory(jsonData.EditRecommendations[index].eli_text);
       await RecommendationsExtraDetails.enterReviewDate(jsonData.AddRecommendations[index].recom_review_date.toString());
            
