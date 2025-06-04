@@ -109,7 +109,7 @@ test.describe("Allergy Category", () => {
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();   
       await page.waitForTimeout(2000);
-       await allergy.closePopUp()   
+       await allergy.clickOnSavePopup()   
        await contacthistory.clickOnShowFilter()  
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");

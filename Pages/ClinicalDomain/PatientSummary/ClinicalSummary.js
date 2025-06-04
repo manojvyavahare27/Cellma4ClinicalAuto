@@ -120,12 +120,17 @@ class ClinicalSummary {
           //this.medicationLink = page.locator("xpath=//a[@data-testid='Medication']").last()
           this.medicationLink = page.getByTestId('CommonCellmaPopup').getByText('Metformin 500mg tablets')
           this.popupLocator = page.locator('//div[@class="MuiDialog-container MuiDialog-scrollPaper css-8azq84"]');
+          this.SavePopupbutton=page.locator("xpath=//button[@data-testid='Save']")
           
 
 
 
      }
 
+     async clickOnSavePopup()
+     {
+        await this.SavePopupbutton.click()
+     }
 
      async closePopUp()
      {
