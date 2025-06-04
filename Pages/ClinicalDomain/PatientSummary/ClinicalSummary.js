@@ -122,9 +122,6 @@ class ClinicalSummary {
           this.popupLocator = page.locator('//div[@class="MuiDialog-container MuiDialog-scrollPaper css-8azq84"]');
           this.SavePopupbutton=page.locator("xpath=//button[@data-testid='Save']")
           
-
-
-
      }
 
      async clickOnSavePopup()

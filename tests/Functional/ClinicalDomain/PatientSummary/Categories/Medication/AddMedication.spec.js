@@ -103,7 +103,7 @@ test.describe("Medications Category", () => {
       await page.waitForTimeout(700);
       await confirmexisting.clickOnConfirmExistingDetails();    
        await page.waitForTimeout(2000);
-       await Medications.closePopUp()
+       await Medications.clickOnSavePopup()
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
