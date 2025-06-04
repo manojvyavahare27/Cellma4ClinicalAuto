@@ -97,9 +97,11 @@ module.exports = defineConfig({
                   ['allure-playwright', {outputFile: 'my-allure-results'}]
                 ],
        // ['experimental-allure-playwright']],
+       
 
         launchOptions:{
          // slowMo:1000
+         args: ['--start-maximized'],
         }
       }
     },
