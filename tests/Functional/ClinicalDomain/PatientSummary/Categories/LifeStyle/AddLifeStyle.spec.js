@@ -103,7 +103,7 @@ test.describe("LifeStyle Category", () => {
         await confirmexisting.clickOnConfirmExistingDetails();
         //await page.pause()
         await page.waitForTimeout(2000);
-        await lifestyle.closePopUp() 
+        await lifestyle.clickOnSavePopup() 
         //await contacthistory.enterContactDate('26/11/2024');
         await contacthistory.selectContactReason('Assessments');
         await contacthistory.selectContactLocation('Cardio Location');

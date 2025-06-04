@@ -99,7 +99,7 @@ test.describe("Procedure Category", () => {
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails(); 
       await page.waitForTimeout(5000);
-       await Procedures.closePopUp()     
+       await Procedures.clickOnSavePopup()     
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
