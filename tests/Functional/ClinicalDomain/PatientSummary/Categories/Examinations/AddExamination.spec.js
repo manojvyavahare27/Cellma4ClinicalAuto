@@ -117,7 +117,7 @@ test.describe("Examination Category", () => {
     
 
       await page.waitForTimeout(4000)
-      await examination.closePopUp();
+      await examination.clickOnSavePopup();
       await page.pause()
       //Add Recommendation
       const flag = false;
