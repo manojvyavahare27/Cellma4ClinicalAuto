@@ -104,7 +104,7 @@ test.describe("Problems Category", () => {
         await page.waitForTimeout(1500);
         await confirmexisting.clickOnConfirmExistingDetails();
         await page.waitForTimeout(5000);
-        await problems.closePopUp() 
+        await problems.clickOnSavePopup() 
         
        // await contacthistory.enterContactDate('26/04/2024');
         await contacthistory.selectContactReason('Assessments');
@@ -118,7 +118,7 @@ test.describe("Problems Category", () => {
         
         //Review and delete
         await page.waitForTimeout(5000);
-        await page.pause()
+       // await page.pause()
         if(await problems.checkItemOnHistoryTable(jsonData.AddProblems[index].pacr_que_name)){
           //await problems.clickOnItemReview(jsonData.AddProblems[index].pacr_que_name);
           console.log("Item reviewed before deleting");
@@ -157,7 +157,7 @@ test.describe("Problems Category", () => {
   //await problemsExtraDetails.clickOnClincialItemCollapsable();
   await problems.selectandAddClinicalItem(jsonData.AddProblems[index].pacr_que_name);
   await page.waitForTimeout(1000);
-  await page.pause()
+  //await page.pause()
   //await problemsExtraDetails.selectClinicalItemSubcategory(jsonData.AddProblems[index].eli_text);
   await problemsExtraDetails.enterOnSetDate(jsonData.AddProblems[index].prp_date_of_onset);
   //await page.pause()
