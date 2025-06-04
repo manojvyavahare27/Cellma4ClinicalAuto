@@ -90,7 +90,7 @@ module.exports = defineConfig({
         screenshot:"on",
         video:"on",
         trace:"on",
-        viewport: { width: 1920, height: 1080 },
+        viewport: { width: 1600, height: 900 },
         headless:false,
      // storageState:'Shree.json',
         reporter: [["dot"],
@@ -102,7 +102,7 @@ module.exports = defineConfig({
 
         launchOptions:{
          // slowMo:1000
-        args: ['--window-size=1920,1080'],
+        args: ['--window-size=1920,900'],
         }
       }
     },
