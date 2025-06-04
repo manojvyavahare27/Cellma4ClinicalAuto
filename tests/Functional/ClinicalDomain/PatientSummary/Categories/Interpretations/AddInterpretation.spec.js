@@ -98,7 +98,7 @@ test.describe("Interpretations Category", () => {
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();  
       await page.waitForTimeout(2000);
-      await Interpretations.closePopUp()          
+      await Interpretations.clickOnSavePopup()          
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -254,7 +254,7 @@ test.describe("Interpretations Category", () => {
       await InterpretationsExtraDetails.clickOnDelete();
       await InterpretationsExtraDetails.clickOnConfirmDelete();
       await InterpretationsExtraDetails.enterDeleteReason(jsonData.DeleteInterpretation[index].pacr_delete_reason);
-      await page.pause()
+     // await page.pause()
       await InterpretationsExtraDetails.clickOnSaveDeleteReason();
       await expect(page.getByText('Interpretation deleted successfully')).toHaveText('Interpretation deleted successfully')
 
@@ -274,7 +274,7 @@ test.describe("Interpretations Category", () => {
      } else {
        console.log("\n  Patient Clinical Records Comparision for Delete Interpretations: Parameters from both JSON files do not match!\n");
      }   
-     await page.pause();     
+     //await page.pause();     
       await Interpretations.clickOnMigratedItemsSection();
       await Interpretations.clickOnDeletedItemsSection();
       await page.waitForTimeout(1000);
