@@ -106,7 +106,7 @@ test.describe("Diagnosis Category", () => {
       await page.waitForTimeout(2000);
       await confirmexisting.clickOnConfirmExistingDetails();   
       await page.waitForTimeout(2000);
-      await diagnosis.closePopUp()  
+      await diagnosis.clickOnSavePopup()  
       await contacthistory.clickOnShowFilter()  
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
