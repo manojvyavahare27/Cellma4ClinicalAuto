@@ -90,6 +90,7 @@ module.exports = defineConfig({
         screenshot:"on",
         video:"on",
         trace:"on",
+        viewport: null,
         headless:false,
      // storageState:'Shree.json',
         reporter: [["dot"],
