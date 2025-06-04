@@ -133,7 +133,7 @@ class ClinicalSummary {
          console.log("Popup detected. Attempting to close it.");
   
         // Adjust this selector if your close button is different
-            const closeButton = this.popupLocator.locator('//button[@aria-label="cancelIcon"]'); // or use a role/icon selector
+            const closeButton = this.page.locator('//button[@aria-label="cancelIcon"]'); // or use a role/icon selector
             
          if (await closeButton.isVisible()) {
          await closeButton.click();
