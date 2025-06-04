@@ -3,12 +3,13 @@ const fs = require('fs');
 
 // MySQL database configuration
 const dbConfig = {
-    host: "10.0.0.64",
-  user: "cellma4_api_user",
-  password: "C31lm@2023",
-  port:3314,
-  database: "cellma4_api",
-  //connectionLimit: 10
+   host: "10.0.0.16",
+    user: "cellma4_api_user",
+    password: "Welcome@123",
+    port:3314,
+    //database: "cellma4_api",
+    database: "cellma4_pre_release",
+    connectionLimit: 10
 };
 
 module.exports = {
