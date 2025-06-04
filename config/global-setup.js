@@ -1,23 +1,27 @@
-const { chromium, expect } = require('@playwright/test')
 const fs = require('fs');
-const { config } = require('process');
-
+const path = require('path');
 const XLSX = require('xlsx');
-const path = 'C:/Riomed/Cellma4Automation'
 
-module.exports = async config => {
-  //const browser=await chromium.launch({headless:false})
- // const page=await browser.newPage()
-//Excel to JSON Convertor for patient
+// ✅ Use __dirname to make the path absolute and safe
+const excelFilePath = path.join(__dirname, '../ExcelFiles/PatientDomain.xlsx');
 
-  const workbook = XLSX.readFile('./ExcelFiles/PatientDomain.xlsx');
+module.exports = async () => {
+  // ✅ Use the safe path here
+  const workbook = XLSX.readFile(excelFilePath);
   const jsonData = {};
+
   workbook.SheetNames.forEach(sheetName => {
     const worksheet = workbook.Sheets[sheetName];
     jsonData[sheetName] = XLSX.utils.sheet_to_json(worksheet);
-    fs.writeFileSync(path + '/TestDataWithJSON/PatientDomain/PatientDetails.json', JSON.stringify(jsonData, null, 2));
   });
-  console.log('Excel data has been converted and saved to excel_data.json');
- // await browser.close()
-  }
 
+  const outputDir = path.join(__dirname, '../TestDataWithJSON/PatientDomain');
+  const outputFilePath = path.join(outputDir, 'PatientDetails.json');
+
+  // ✅ Ensure the output directory exists
+  fs.mkdirSync(outputDir, { recursive: true });
+
+  // ✅ Now safely write the file
+  fs.writeFileSync(outputFilePath, JSON.stringify(jsonData, null, 2));
+  console.log('Excel data has been converted and saved to PatientDetails.json');
+};
