@@ -1,0 +1,17 @@
+[
+  {
+    "exam_id": 6663,
+    "exam_est_id": 4,
+    "exam_sgr_id": 45218,
+    "exam_pat_id": 789584,
+    "exam_pacr_id": 38574,
+    "exam_outcome": "Abnormal",
+    "exam_record_status": "approved",
+    "exam_notes": "Edited for Notes",
+    "exam_risk": "moderate",
+    "exam_updated": "28/05/2025",
+    "exam_updated_by": "saurabh.auto",
+    "exam_imported": null,
+    "exam_imported_method": null
+  }
+]
