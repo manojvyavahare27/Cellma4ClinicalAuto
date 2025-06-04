@@ -116,7 +116,7 @@ test.describe("Medications Category", () => {
       await Medications.clickOnPinContactItemsMenu();
       await Medications.selectCategoryFromList("Medications");
       await page.waitForTimeout(2000);
-      await page.pause();
+      //await page.pause();
        ////////REVIEW EXISTING ITEM AND DELETE/////
        if(await Medications.checkItemOnHistoryTable(jsonData.AddMedication[index].pacr_que_name)){
         //await Medications.clickOnItemReview(jsonData.AddMedication[index].pacr_que_name);
@@ -222,7 +222,7 @@ test.describe("Medications Category", () => {
       await MedicationsExtraDetails.clickOnSetAsDefault()
       await MedicationsExtraDetails.clickOnRepeatable()
       await MedicationsExtraDetails.clickOPrivateRecord()  
-      await page.pause() 
+     // await page.pause() 
 
       await MedicationsExtraDetails.selectEndoserment(jsonData.AddMedication[index].paprd_endorsement) 
       //await page.pause() 
@@ -233,12 +233,12 @@ test.describe("Medications Category", () => {
       
       
 
-     await page.pause()
+     //await page.pause()
 
       await MedicationsExtraDetails.clickOnSaveExtraDetails();      
       await page.waitForTimeout(1000);           
       await MedicationsExtraDetails.clickOnSaveCheckList()
-      await page.pause()
+      //await page.pause()
       await page.waitForTimeout(1000); 
       //await expect(page.getByText("Medication record added successfully")).toHaveText("Medication record added successfully");
       //await expect(page.getByText(`${clinicaCatergory} Record Added Successfully`)).toHaveText(`${clinicaCatergory} Record Added Successfully`); 
@@ -277,7 +277,7 @@ test.describe("Medications Category", () => {
       //     console.error("Newly added item is reviewed before updating the record.");
       //   }
       // }
-      await page.pause()
+      //await page.pause()
       await Medications.clickOnItemEdit();
       //await MedicationsExtraDetails.clickOnClincialItemCollapsable();
       //await MedicationsExtraDetails.selectClinicalItemSubcategory(jsonData.EditMedication[index].eli_text);
@@ -383,7 +383,7 @@ test.describe("Medications Category", () => {
       await MedicationsExtraDetails.enterDeleteReason(jsonData.DeleteMedication[index].pacr_delete_reason);
       await MedicationsExtraDetails.clickOnSaveDeleteReason();
       await page.waitForTimeout(1000)
-      await page.pause();
+      //await page.pause();
 
        ////// Database comparison- Patient Clinical Records - DELETE OUTCOME/////////
        sqlQuery ="select pacr_que_name, pacr_delete_reason from patient_clinical_records where pacr_id=" +
@@ -408,7 +408,7 @@ test.describe("Medications Category", () => {
          "\n  Patient Clinical Records Comparision for Delete Medications: Parameters from both JSON files do not match!\n"
        );
      }        
-     await page.pause();
+    // await page.pause();
       await Medications.clickOnMigratedItemsSection();
       await Medications.clickOnDeletedItemsSection();
       await page.waitForTimeout(1000);
