@@ -24,7 +24,7 @@ import RecommendationED from "../../../../../../Pages/ClinicalDomain/PatientSumm
 import PatientSummary from "../../../../../../Pages/ClinicalDomain/PatientSummary/PatientSummary";
 import ClinicalSummary from "../../../../../../Pages/ClinicalDomain/PatientSummary/ClinicalSummary";
 import ClinicalExtraDetails from "../../../../../../Pages/ClinicalDomain/PatientSummary/ClinicalExtraDetails";
- 
+
 import { TIMEOUT } from "dns";
 import { error } from "console";
 import { before } from "node:test";
@@ -35,7 +35,7 @@ const consoleLogs = [];
 let jsonData;
 
 test.describe("Excel Conversion Examination Category", () => {
-  test("Extract Patient Summary Details", async ({}) => {
+  test("Extract Patient Summary Details", async ({ }) => {
     const excelFilePath =
       process.env.EXCEL_FILE_PATH || "./ExcelFiles/PatientSummary.xlsx";
     const jsonFilePath = "./TestDataWithJSON/PatientDomain/PatientSummary.json";
@@ -82,13 +82,19 @@ test.describe("Examination Category", () => {
 
       const menu = new Menu(page);
       await page.goto(environment.Test);
+
+      // Set zoom level to 70% using page.evaluate
+      await page.evaluate(() => {
+        document.body.style.zoom = '70%';
+      });
+
       await loginpage.enterUsername(jsonData.loginDetails[0].username);
       logger.info("Username enter successfully");
       await loginpage.enter_Password(jsonData.loginDetails[0].password);
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();
 
-      
+
       logger.info("Clicked on Login button successfully");
       await homepage.clickOnHomeDashboardIcon()
       await homepage.clickOnPatientIcon();
@@ -108,13 +114,13 @@ test.describe("Examination Category", () => {
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1000);
-     // await page.pause()
+      // await page.pause()
       await confirmexisting.clickOnConfirmExistingDetails();
       // await contacthistory.clickOnMenu();
       // await page.waitForTimeout(2000);
       // await contacthistory.clickOnMenu();
-      
-    
+
+
 
       await page.waitForTimeout(4000)
       await examination.clickOnSavePopup();
@@ -123,8 +129,8 @@ test.describe("Examination Category", () => {
       const flag = false;
       await patientsummary.clickOniconRecommendation();
       await page.waitForTimeout(5000)
-      if(await examination.checkItemOnHistoryTable(jsonData.AddRecommendations[index].pacr_que_name)){}
-      
+      if (await examination.checkItemOnHistoryTable(jsonData.AddRecommendations[index].pacr_que_name)) { }
+
       // const Rectoplastylocator = page.getByRole("heading", {
       //   name: "Rectoplasty",
       // });
@@ -133,45 +139,44 @@ test.describe("Examination Category", () => {
       //   await page.waitForTimeout(2000);
       //   await Rectoplastylocator.click();
       // } 
-       else
-       {
+      else {
         await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);
         await recommendationhome.clickonAddRecommendationButton();
         await recommendationEd.clickOnExpandRecommendation();
         await recommendationEd.clickOnExpandRecommendation();
-       // await recommendationEd.selectSubcategory(jsonData.AddRecommendations[index].pacr_subcategory);
+        // await recommendationEd.selectSubcategory(jsonData.AddRecommendations[index].pacr_subcategory);
         await recommendationEd.enterReviewDate(jsonData.AddRecommendations[index].recom_review_date);
         //await recommendationEd.selectCheckboxPrivateRecord();
         await recommendationEd.selectCheckboxSetAsDefault();
-       // await page.pause()
+        // await page.pause()
         await recommendationEd.enterNotes();
         await recommendationEd.clickOnSaveButton();
         await page.waitForTimeout(500);
-       // await page.getByTestId('Check All').click()
+        // await page.getByTestId('Check All').click()
         //await page.getByLabel('saveChecklist').click()
       }
 
       //Contact History page
       await patientsummary.clickOniconExaminationsCategory();
       await page.waitForTimeout(5000);
-       // Delete Existing item
-     if(await examinationhome.checkItemOnHistoryTable(jsonData.AddExamination[index].pacr_que_name)){
-      // await diagnosis.clickOnItemReview(jsonData.AddDiagnosis[index].pacr_que_name);
-       //console.log("Item reviewed before deleting");
-       await examinationhome.clickOnEditExaminationButton()
-      //await examination.clickOnItemEdit(jsonData.AddExamination[index].pacr_que_name);
-       await examinationEd.clickOnDeleteButton();
-      await examinationEd.clickOnCancelExamination();
-      await examinationEd.clickOnDeleteButton();
-      await examinationEd.clickOnOkDeleteExamination();
-      await examinationEd.enterDeleteExaminationReason(
-        jsonData.DeleteExamination[index].pacr_delete_reason
-      );
-      await examinationEd.clickOnSaveForReason();
-       //await expect(page.getByText('Diagnosis deleted successfully')).toHaveText('Diagnosis deleted successfully')
+      // Delete Existing item
+      if (await examinationhome.checkItemOnHistoryTable(jsonData.AddExamination[index].pacr_que_name)) {
+        // await diagnosis.clickOnItemReview(jsonData.AddDiagnosis[index].pacr_que_name);
+        //console.log("Item reviewed before deleting");
+        await examinationhome.clickOnEditExaminationButton()
+        //await examination.clickOnItemEdit(jsonData.AddExamination[index].pacr_que_name);
+        await examinationEd.clickOnDeleteButton();
+        await examinationEd.clickOnCancelExamination();
+        await examinationEd.clickOnDeleteButton();
+        await examinationEd.clickOnOkDeleteExamination();
+        await examinationEd.enterDeleteExaminationReason(
+          jsonData.DeleteExamination[index].pacr_delete_reason
+        );
+        await examinationEd.clickOnSaveForReason();
+        //await expect(page.getByText('Diagnosis deleted successfully')).toHaveText('Diagnosis deleted successfully')
 
-       console.log('\x1bItem was deleted successfully\x1b[0m');
-       }
+        console.log('\x1bItem was deleted successfully\x1b[0m');
+      }
 
 
       await examinationhome.searchExamination(jsonData.AddExamination[index].pacr_que_name);
@@ -180,8 +185,8 @@ test.describe("Examination Category", () => {
       await page.getByLabel('cancelIcon').click();
       await examinationhome.searchExamination(jsonData.AddExamination[index].pacr_que_name);
       await examinationhome.clickonAddExaminationButton();
-     // await examinationEd.clickOnExpandExamination();
-     // await page.pause()
+      // await examinationEd.clickOnExpandExamination();
+      // await page.pause()
       //await examinationEd.selectSubCategory(jsonData.AddExamination[index].pacr_category)
       //await examinationEd.selectSubCategory(jsonData.AddExamination[index].pacr_subcategory);
       //await examinationEd.EnterClinicalDate(jsonData.AddExamination[index].pacr_clinic_date);
@@ -218,8 +223,8 @@ test.describe("Examination Category", () => {
         " and pacr_record_status='approved' and pacr_que_name='" +
         jsonData.AddExamination[index].pacr_que_name +
         "' and pacr_category='examination' order by 1 desc limit 1";
-       //console.log("Query Output:"+sqlQuery);
-       
+      //console.log("Query Output:"+sqlQuery);
+
       sqlFilePath = "SQLResults/ClinicalDomain/patientClinicalRecord.json";
       results = await executeQuery(sqlQuery, sqlFilePath);
       const pacrId = results[0].pacr_id;
@@ -230,7 +235,7 @@ test.describe("Examination Category", () => {
         console.log("\n Patient Clinical Records Comparision: Parameters from both JSON files match!\n");
       } else {
         console.log("\n Patient Clinical Records Comparision: Parameters from both JSON files do not match!\n");
-      } 
+      }
 
       //////Database comparison- Patient Clinical records Linking/////////
       sqlQuery =
@@ -240,7 +245,7 @@ test.describe("Examination Category", () => {
         jsonData.AddExamination[index].pacr_que_name_recommendation +
         "' order by pacr_id desc limit 1";
 
-        //console.log("Manoj Vyavahare"+sqlQuery);
+      //console.log("Manoj Vyavahare"+sqlQuery);
       sqlFilePath = "SQLResults/ClinicalDomain/patientClinicRecordlinking.json";
       results = await executeQuery(sqlQuery, sqlFilePath);
       console.log("Waiting for SQL result....");
@@ -281,7 +286,7 @@ test.describe("Examination Category", () => {
       //await page.pause()
       await examinationhome.clickOnEditExaminationButton();
       //await page.waitForTimeout(2000)
-     // await examinationEd.clickOnExpandExamination();
+      // await examinationEd.clickOnExpandExamination();
       await page.waitForTimeout(3000)
       //await examinationEd.selectSubCategory(jsonData.AddExamination[index].pacr_subcategory);
       await examinationEd.SelectOutcome(jsonData.EditExamination[index].exam_outcome);
@@ -302,8 +307,9 @@ test.describe("Examination Category", () => {
       results = await executeQuery(sqlQuery, sqlFilePath);
       // pacrId=results[0].pacr_id;
       console.log("\n Patient Details stored into the database: \n", results);
-      var match = await compareJsons(sqlFilePath,null,jsonData.EditExamination[index]);
-      if (match) {console.log("\n Patient Clinical Records Comparision: Parameters from both JSON files match!\n");
+      var match = await compareJsons(sqlFilePath, null, jsonData.EditExamination[index]);
+      if (match) {
+        console.log("\n Patient Clinical Records Comparision: Parameters from both JSON files match!\n");
       } else {
         console.log("\n Patient Clinical Records Comparision: Parameters from both JSON files do not match!\n");
       }
@@ -363,7 +369,7 @@ test.describe("Examination Category", () => {
         "select * from patient_clinical_records where pacr_id=" +
         pacrId +
         " and pacr_record_status='wrong'";
-        console.log("Manoj"+ sqlQuery);
+      console.log("Manoj" + sqlQuery);
       sqlFilePath = "SQLResults/ClinicalDomain/patientClinicalRecord.json";
       results = await executeQuery(sqlQuery, sqlFilePath);
       //  pacrId=results[0].pacr_id;
@@ -382,10 +388,10 @@ test.describe("Examination Category", () => {
           "\n  Patient Clinical Records Comparision: Parameters from both JSON files do not match!\n"
         );
       }
-      
+
       //await page.pause()
     }
 
-    
+
   });
 });
