@@ -104,7 +104,7 @@ test.describe("PatientScan Category", () => {
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();
       await page.waitForTimeout(5000);
-      await patientScan.closePopUp() 
+      await patientScan.clickOnSavePopup() 
       
       
      // await contacthistory.enterContactDate('26/04/2024');

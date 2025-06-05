@@ -102,7 +102,7 @@ test.describe("Overview Category", () => {
         await page.waitForTimeout(1500);
         await confirmexisting.clickOnConfirmExistingDetails();        
        await page.waitForTimeout(2000);
-       await overview.closePopUp() 
+       await overview.clickOnSavePopup() 
        // await contacthistory.enterContactDate('26/04/2024');
         await contacthistory.selectContactReason('Assessments');
         await contacthistory.selectContactLocation('Cardio Location');
