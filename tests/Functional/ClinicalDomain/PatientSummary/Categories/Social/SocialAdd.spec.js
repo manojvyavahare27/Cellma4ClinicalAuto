@@ -115,7 +115,7 @@ test.describe("social Category", () => {
       await social.clickOnPinContactItemsMenu();
       await social.selectCategoryFromList("Social Circumstances");
       await page.waitForTimeout(2000)
-      await page.pause()
+     // await page.pause()
        ////////REVIEW EXISTING ITEM AND DELETE/////
        if(await social.checkItemOnHistoryTable(jsonData.Addsocial[index].pacr_que_name)){
         await social.clickOnItemReview(jsonData.Addsocial[index].pacr_que_name);
