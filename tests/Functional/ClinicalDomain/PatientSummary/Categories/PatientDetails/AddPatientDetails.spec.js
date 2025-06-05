@@ -109,7 +109,7 @@ test.describe("Excel Conversion Patient Details Category", () => {
       await confirmexisting.clickOnConfirmExistingDetails();
       //await contacthistory.clickOnMenuIcon();
       await page.waitForTimeout(2000);
-      await patientDetails.closePopUp() 
+      await patientDetails.clickOnSavePopup() 
      
       await patientDetailshome.addContact();
       await patientDetailshome.clickOnAddContact()
