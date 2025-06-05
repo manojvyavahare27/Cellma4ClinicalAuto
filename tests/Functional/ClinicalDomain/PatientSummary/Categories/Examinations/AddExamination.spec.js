@@ -84,9 +84,9 @@ test.describe("Examination Category", () => {
       await page.goto(environment.Test);
 
       // Set zoom level to 70% using page.evaluate
-      await page.evaluate(() => {
-        document.body.style.zoom = '70%';
-      });
+      // await page.evaluate(() => {
+      //   document.body.style.zoom = '70%';
+      // });
 
       await loginpage.enterUsername(jsonData.loginDetails[0].username);
       logger.info("Username enter successfully");
