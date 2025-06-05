@@ -157,7 +157,7 @@ test.describe("Excel Conversion Patient Details Category", () => {
       //Add Patient Details
       await patientsummary.clickOniconPatientDetailsCategory();
       await page.waitForTimeout(1000);
-      await page.pause()
+      
       await patientDetailshome.searchPatientDetails(jsonData.AddPatientDetails[index].pacr_que_name);
       //await page.pause()
       await patientDetailshome.clickonAddPatientDetailsButton();
@@ -184,7 +184,7 @@ test.describe("Excel Conversion Patient Details Category", () => {
       await patientDetailshome.riskFilters3();
       await page.waitForTimeout(1000);
       await patientDetailshome.riskFilters4();
-      await page.pause()
+      
  ////// Database comparison- Patient Clinical Records - ADDING NEW Patient details/////////
 
  sqlQuery="select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk, " +
@@ -231,7 +231,7 @@ if (formattedDate==dbDate){
  console.log(formattedDate)
  console.log(dbDate)// Example: "2024-05-21"
 
-await page.pause()
+
 
        //Edit PatientDetails
       await patientDetailshome.clickonEditPatientDetailsIcon();
@@ -269,7 +269,7 @@ if (match) {
    "\n Update Patient Clinical Records Comparision: Parameters from both JSON files do not match!\n"
  );
 }
-await page.pause()
+
   
       
      //Delete records
@@ -288,7 +288,7 @@ await page.pause()
  "select pacr_que_name, pacr_delete_reason from patient_clinical_records where pacr_id=" +
  pacrId +
  " and pacr_record_status='wrong'";
-await page.pause()
+
  console.log(sqlQuery);
  
 sqlFilePath = "SQLResults/ClinicalDomain/patientClinicalRecord.json";
