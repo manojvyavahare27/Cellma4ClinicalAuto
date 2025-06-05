@@ -103,8 +103,8 @@ test.describe("Care Plan Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();
-      await page.pause();
-      await carePlan.closePopUp()
+      await page.waitForTimeout(2000);
+       await overview.clickOnSavePopup() 
       await contacthistory.clickOnShowFilter();
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -121,7 +121,7 @@ test.describe("Care Plan Category", () => {
       await carePlan.clickOnPinContactItemsMenu();
       await carePlan.selectCategoryFromList(jsonData.AddCarePlan[index].pacr_category);
       await page.waitForTimeout(2000);
-      await page.pause();
+      
       ////////REVIEW EXISTING ITEM AND DELETE/////
 
       if (await carePlan.checkItemOnHistoryTable(jsonData.AddCarePlan[index].pacr_que_name)
@@ -149,7 +149,7 @@ test.describe("Care Plan Category", () => {
       
       //await page.pause();
       await carePlan.selectandAddClinicalItem(jsonData.AddCarePlan[index].pacr_que_name);       
-      await page.pause();
+     
       await carePlanExtraDetails.clickOnSaveExtraDetails();
       await expect(page.getByText('Nursing Diagnosis is required')).toHaveText('Nursing Diagnosis is required')
       await expect(page.getByText('Goal is required')).toHaveText('Goal is required')
@@ -167,7 +167,7 @@ test.describe("Care Plan Category", () => {
       await carePlanExtraDetails.EnterUpdateNotes(jsonData.AddCarePlan[index].carpd_type_notes);
       await carePlanExtraDetails.clickOnSaveExtraDetails();
       await expect(page.getByText('Care Plans record added successfully')).toHaveText('Care Plans record added successfully')      
-      await page.pause();      
+           
 
       sqlQuery =
       " select carpd_que_name,carpd_pacr_id, carpd_eli_text, carpd_notes from care_plan_details where carpd_pat_id=11917 and carpd_record_status='approved';"
@@ -180,7 +180,7 @@ test.describe("Care Plan Category", () => {
         // " and pacrd_record_status='approved' and alrg_record_status='approved' and pacr_que_name='" +
         // jsonData.AddAllergy[index].pacr_que_name +
         // "' and pacr_category='allergies' order by 1 desc limit 1";
-        await page.pause()
+       
       console.log(sqlQuery);
       //select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk, diag_date_onset, diag_date_firstseen, diag_date_diagnosed, diag_notes from patient_clinical_records join patient_clinical_records_details on pacr_id=pacrd_pacr_id join diagnosis on pacr_id=diag_pacr_id where pacr_record_status='approved' and pacrd_record_status='approved' and diag_record_status='approved' and pacr_pat_id='787755' and pacr_record_status='approved' and pacr_que_name='Dengue haemorrhagic fever' and pacr_category='diagnosis' order by 1 desc limit 1;
 
@@ -194,7 +194,7 @@ test.describe("Care Plan Category", () => {
       } else {
         console.log("\n Patient Clinical Records Comparision adding new Allergy: Parameters from both JSON files do not match!\n");
       }
-      await page.pause();
+     
       await carePlan.toggleSearchSection(); //Close the search section
 
       await carePlan.clickOnItemDiv(jsonData.EditCarePlan[index].pacr_que_name);
@@ -238,7 +238,6 @@ test.describe("Care Plan Category", () => {
       //   console.log("\n Update Patient Clinical Records Comparision Edit Allergy: Parameters from both JSON files do not match!\n");
       // }
 
-      await page.pause();
       
       await carePlan.clickOnItemHighlightNone();
       await page.waitForTimeout(500);
@@ -266,7 +265,6 @@ test.describe("Care Plan Category", () => {
 
       ///////// Deleting Item ////////////
 
-      await page.pause()
       await carePlan.clickOnItemEdit();
       await carePlanExtraDetails.clickOnDelete();
       await carePlanExtraDetails.clickOnCancelDelete();
@@ -292,7 +290,6 @@ test.describe("Care Plan Category", () => {
       //   console.log("\n  Patient Clinical Records Comparision: Parameters from both JSON files do not match!\n");
       // }
 
-      await page.pause();
        //await carePlan.clickOnCurrentItemsSection();
       //  await carePlan.showClinicalItemByStatusforCarePlan();
       // await carePlan.clickOnDeletedItemsSectionCarePlan();
