@@ -68,6 +68,7 @@ test.describe("Care Plan Category", () => {
       const contacthistory = new ContactHistory(page);
       const patientsearch = new PatientSearch(page);
       const carePlan = new ClinicalSummary(page);
+     // const overview=new 
       const carePlanExtraDetails = new ClinicalExtraDetails(page);
 
       const clinicalSummary = new ClinicalSummary(page);
@@ -104,7 +105,7 @@ test.describe("Care Plan Category", () => {
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();
       await page.waitForTimeout(2000);
-       await overview.clickOnSavePopup() 
+       await carePlan.clickOnSavePopup() 
       await contacthistory.clickOnShowFilter();
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");

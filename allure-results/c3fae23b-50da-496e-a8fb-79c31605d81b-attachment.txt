@@ -1,0 +1,61 @@
+Successfully stored results into JSON: SQLResults/PatientDomain/PatientAudit.json
+The JSON data is as below [
+  {
+    "paa_id": 123663,
+    "paa_usa_id": 186752,
+    "paa_use_username": "saurabh.auto",
+    "paa_pat_id": 789584,
+    "paa_est_id": 4,
+    "paa_viewed": "06/06/2025",
+    "paa_type": "selected"
+  }
+]
+
+ Patient Details stored into the database: 
+ [
+  {
+    paa_id: 123663,
+    paa_usa_id: 186752,
+    paa_use_username: 'saurabh.auto',
+    paa_pat_id: 789584,
+    paa_est_id: 4,
+    paa_viewed: 2025-06-05T21:37:56.000Z,
+    paa_type: 'selected'
+  }
+]
+Patient Accessed by User:789584
+Overview_queryselect pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk, over_notes from patient_clinical_records join patient_clinical_records_details on pacr_id=pacrd_pacr_id join overview on pacr_id=over_pacr_id where pacr_record_status='approved' and pacrd_record_status='approved' and over_record_status='approved' and pacr_pat_id=789584 and pacr_record_status='approved' and pacr_que_name='Overview' and pacr_category='overview' order by 1 desc limit 1
+Successfully stored results into JSON: SQLResults/ClinicalDomain/patientClinicalRecord.json
+The JSON data is as below [
+  {
+    "pacr_id": 38850,
+    "pacr_category": "Overview",
+    "pacr_que_name": "Overview",
+    "pacr_clinic_date": "06/06/2025",
+    "pacr_risk": "none",
+    "over_notes": "Added Notes for Overview"
+  }
+]
+
+ Patient Clinical Records stored into the database: 
+ [
+  {
+    pacr_id: 38850,
+    pacr_category: 'Overview',
+    pacr_que_name: 'Overview',
+    pacr_clinic_date: 2025-06-05T18:30:00.000Z,
+    pacr_risk: 'none',
+    over_notes: 'Added Notes for Overview'
+  }
+]
+
+The common keys are:
+ [ 'pacr_category', 'pacr_que_name', 'pacr_risk', 'over_notes' ]
+
+Mismatched values:
+ []
+
+ Patient Clinical Records Comparision add Overview: Parameters from both JSON files match!
+
+If loop
+Locator is: //div[@id='historyTable']//*[text()='Overview']//../..//button[@aria-label='editIconButton']
