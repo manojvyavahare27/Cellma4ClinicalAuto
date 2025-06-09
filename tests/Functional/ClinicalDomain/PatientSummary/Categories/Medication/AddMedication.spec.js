@@ -278,7 +278,7 @@ test.describe("Medications Category", () => {
       //     console.error("Newly added item is reviewed before updating the record.");
       //   }
       // }
-      //await page.pause()
+      await page.pause()
       await Medications.clickOnItemEdit();
       //await MedicationsExtraDetails.clickOnClincialItemCollapsable();
       //await MedicationsExtraDetails.selectClinicalItemSubcategory(jsonData.EditMedication[index].eli_text);
