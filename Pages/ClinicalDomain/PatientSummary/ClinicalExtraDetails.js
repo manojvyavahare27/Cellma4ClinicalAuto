@@ -239,6 +239,7 @@ class ClinicalExtraDetails {
 
     //Medication
     this.dose = page.locator("xpath=//input[@name='dose']");
+    this.form=page.locator("xpath=//input[@data-testid='Form']")
     this.Route = page.locator("xpath=//input[@name='route']");
     this.days = page.locator("xpath=//input[@name='duration']");
     this.site = page.locator("xpath=//input[@name='site']");
@@ -875,6 +876,10 @@ async enterPatientScanNotes(pascn_notes)
 
   async selectRoute(Route) {
     await selectFromDropdown(this.page, this.Route, Route);
+  }
+  async enterForm(form)
+  {
+   await typeText(this.page, this.form, form);
   }
 
   async enterDays(days) {

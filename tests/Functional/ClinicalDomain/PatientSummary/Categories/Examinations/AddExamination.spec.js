@@ -59,11 +59,14 @@ test.describe("Excel Conversion Examination Category", () => {
   });
 });
 
+
+
 test.describe("Examination Category", () => {
   test("Add Examination", async ({ page }) => {
     if (!jsonData || !jsonData.PatientDetails) {
       throw new Error("JSON data is missing or invalid.");
     }
+     
     let index = 0;
     for (const data of jsonData.PatientDetails) {
       const loginpage = new LoginPage(page);
@@ -81,6 +84,7 @@ test.describe("Examination Category", () => {
       const examinationExtraDetails = new ClinicalExtraDetails(page);
 
       const menu = new Menu(page);
+      
       await page.goto(environment.Test);
 
       // Set zoom level to 70% using page.evaluate
@@ -124,7 +128,9 @@ test.describe("Examination Category", () => {
 
       await page.waitForTimeout(4000)
       await examination.clickOnSavePopup();
-      //await page.pause()
+      await page.pause()
+      await page.evaluate(() => document.body.style.zoom = '0.5');
+       await page.waitForTimeout(2000)
       //Add Recommendation
       const flag = false;
       await patientsummary.clickOniconRecommendation();

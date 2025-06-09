@@ -188,6 +188,7 @@ test.describe("Medications Category", () => {
       //await page.pause()
       //await MedicationsExtraDetails.selectClinicalItemSubcategory(jsonData.AddMedication[index].eli_text);
       await MedicationsExtraDetails.enterOnDose(jsonData.AddMedication[index].medi_dose)
+      await MedicationsExtraDetails.enterForm(jsonData.AddMedication[index].medi_form)
       await MedicationsExtraDetails.selectFrequency(jsonData.AddMedication[index].medi_frequency)
       await MedicationsExtraDetails.selectRoute(jsonData.AddMedication[index].medi_route)
       await MedicationsExtraDetails.enterDays(jsonData.AddMedication[index].medi_duration)
@@ -282,6 +283,7 @@ test.describe("Medications Category", () => {
       //await MedicationsExtraDetails.clickOnClincialItemCollapsable();
       //await MedicationsExtraDetails.selectClinicalItemSubcategory(jsonData.EditMedication[index].eli_text);
       await MedicationsExtraDetails.enterOnDose(jsonData.EditMedication[index].medi_dose)
+       await MedicationsExtraDetails.enterForm(jsonData.EditMedication[index].medi_form)
       await MedicationsExtraDetails.selectFrequency(jsonData.EditMedication[index].medi_frequency)
       await MedicationsExtraDetails.selectRoute(jsonData.EditMedication[index].medi_route)
       await MedicationsExtraDetails.enterDays(jsonData.EditMedication[index].medi_duration)
