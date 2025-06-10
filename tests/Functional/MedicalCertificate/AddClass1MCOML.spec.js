@@ -98,10 +98,10 @@ test.describe("Medical Certificate", () => {
       logger.info("Clicked on Search button successfully");
       await patientsearch.enterGivenName(data.pat_firstname);
       logger.info("Given Name entered successfully");
-      
+      await page.pause()
       await patientsearch.enterFamilyName(data.pat_surname);
       logger.info("Family Name entered successfully");
-      await patientsearch.selectSex(data.pat_sex);
+      //await patientsearch.selectSex(data.pat_sex);
       await patientsearch.selectBornDate(jsonData.PatientDetails[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
@@ -109,7 +109,9 @@ test.describe("Medical Certificate", () => {
       await patientsearch.clickOnSearchPatientLink();
       //await page.pause()//wait 1.5 second     
       await page.waitForTimeout(3000)
-      await confirmexisting.clickOnConfirmExistingDetails();     
+      await confirmexisting.clickOnConfirmExistingDetails();    
+      await page.waitForTimeout(2000);
+       await MedicalCertificate.clickOnSavePopup() 
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -202,7 +204,7 @@ test.describe("Medical Certificate", () => {
       
       
       //////// Limitations details/////////
-    var sqlQuery =  "SELECT * FROM cellma4_api.patient_medical_certificate_limitations where patmcsn_pat_id='"+patmce_pat_id+"' and patmcsn_type='limitation' order by patmcsn_id limit 1;";
+    var sqlQuery =  "SELECT * FROM patient_medical_certificate_limitations where patmcsn_pat_id='"+patmce_pat_id+"' and patmcsn_type='limitation' order by patmcsn_id limit 1;";
     console.log("Limitation Query is:  "+sqlQuery) 
   var sqlFilePath = "SQLResults/MedicalCertificate/Limitations.json";
   var results = await executeQuery(sqlQuery, sqlFilePath);
