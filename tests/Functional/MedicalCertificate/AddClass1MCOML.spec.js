@@ -98,7 +98,7 @@ test.describe("Medical Certificate", () => {
       logger.info("Clicked on Search button successfully");
       await patientsearch.enterGivenName(data.pat_firstname);
       logger.info("Given Name entered successfully");
-      await page.pause()
+      // await page.pause()
       await patientsearch.enterFamilyName(data.pat_surname);
       logger.info("Family Name entered successfully");
       //await patientsearch.selectSex(data.pat_sex);
@@ -247,8 +247,8 @@ test.describe("Medical Certificate", () => {
 
       await MedicalCertificate.clickOnCertificateFitnessforFit("Class 1 Pilots Single pilot commercial operations carrying passengers","fit")
       await MCExtraDetails.enterMedicalCertificateReason("Added for testing")
-      await page.pause()
-      await page.pause()
+      // await page.pause()
+      // await page.pause()
      
       await MCExtraDetails.clickOnSaveMedicalCertificate()
       await MCExtraDetails.enterAMEDeclaration("Declaration added")
@@ -259,7 +259,7 @@ test.describe("Medical Certificate", () => {
       await page.waitForTimeout(1000)     
       
       //Edit Medical certificate
-      await page.pause()
+      //await page.pause()
       await MedicalCertificate.clickOnMCItemEdit("Class 1 Pilots");
       console.log("Already click on Edit button");      
       await MCExtraDetails.enterEditedMCNotes("Edited MC notes");
@@ -269,7 +269,7 @@ test.describe("Medical Certificate", () => {
       await MCExtraDetails.clickOnbtnAcknowledgeDeclaration()
       await expect(page.getByText('Medical certificate is generated')).toHaveText('Medical certificate is generated')
       await MedicalCertificate.clickOnMCItemDiv("Class 1 Pilots")
-      await page.pause()
+      //await page.pause()
       
 //////////////////////////////////////////////////////////////////////////////////////////
        await MedicalCertificate.clickOnMCItemHistory();
@@ -281,7 +281,7 @@ test.describe("Medical Certificate", () => {
       
 
      //Click on Show link//
-       await page.pause()
+       //await page.pause()
        await MedicalCertificate.clickOnShowLink()
        await page.waitForTimeout(2000)
        //await MedicalCertificate.clickOnPrintButton()
@@ -296,7 +296,7 @@ test.describe("Medical Certificate", () => {
 
       //   // Close the newly opened tab
       // await newPage.close();
-      await page.pause()
+      //await page.pause()
       await MedicalCertificate.closeWindow();
        
        

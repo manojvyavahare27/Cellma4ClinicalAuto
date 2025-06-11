@@ -126,7 +126,7 @@ test.describe("Medical Certificate", () => {
      
       //Removed Existing Certificate
       await page.waitForTimeout(1000)
-      await page.pause() 
+      //await page.pause() 
       if(await MedicalCertificate.checkItemOnMedicationCertificateHistoryTable("Class 1 Pilots"))
       {      
       await MCExtraDetails.clickOnDeleteCertificate()           
@@ -145,7 +145,7 @@ test.describe("Medical Certificate", () => {
       await page.waitForTimeout(1000)
       await MedicalCertificate.ClickOnAddMedicalCertificateButton()
       await page.waitForTimeout(1000)
-      await page.pause()
+      //await page.pause()
      // await MedicalCertificate.selectClass("Class 1 Pilots")
       await MedicalCertificate.selectClass(jsonData.MedicalCertificate[index].patmce_class)
       await page.waitForTimeout(1000)
@@ -158,13 +158,13 @@ test.describe("Medical Certificate", () => {
       await page.waitForTimeout(1000)      
       await MCExtraDetails.clickOnSave(); 
       await page.waitForTimeout(2000)
-      await page.pause()
+      //await page.pause()
       //await MCExtraDetails.enterMedicalCertificateNotes(jsonData.MedicalCertificate[index].patmce_notes);
       await MCExtraDetails.enterMedicalCertificateNotes1("Added for testing");
       await MCExtraDetails.clickOnConfirm()
       await page.waitForTimeout(1000)
       await expect(page.getByText("Medical certificate dates are successfully saved")).toHaveText("Medical certificate dates are successfully saved");     
-      await page.pause()
+      //await page.pause()
 //////// Get Medical certificate details/////////
 var sqlQuery =  "SELECT * FROM patient_medical_certificates order by patmce_id desc limit 1;";
 console.log(sqlQuery)
@@ -189,7 +189,7 @@ console.log("\n certificate Details Comparision: Parameters from both JSON files
 }
 await page.waitForTimeout(1000)
        //Add Limitations
-       await page.pause()
+       //await page.pause()
       await MCExtraDetails.selectLimitations("TML   Limited period of validity of the medical certificate ")
      
      //await MCExtraDetails.selectLimitations("OML   Valid only as or with qualified co-pilot (Applies only to Class 1 Privileges) ")
@@ -247,7 +247,7 @@ await page.waitForTimeout(1000)
       await MCExtraDetails.clickOnSaveRemovedLimitation()      
       await expect(page.getByText('Limitation deleted successfully')).toHaveText('Limitation deleted successfully')
       await page.waitForTimeout(1000)
-      await page.pause()
+      //await page.pause()
       // await MCExtraDetails.clickOnshowRemovedReasonlink()
       // await MCExtraDetails.closeOnClosePopupButton()    
       
@@ -267,7 +267,7 @@ await page.waitForTimeout(1000)
 
     
      await page.waitForTimeout(1000)
-     await page.pause()
+     //await page.pause()
      
      await MedicalCertificate.clickOnCertificateFitnessforFit("Class 1 Pilots Single pilot commercial operations carrying passengers","fit")
       await MCExtraDetails.enterMedicalCertificateReason(jsonData.MedicalCertificate[index].patmcsn_reason)
