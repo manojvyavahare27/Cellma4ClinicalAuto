@@ -14,7 +14,8 @@ const { test, expect } = require("@playwright/test");
 const connectToDatabase = require("../../../manoj").default;
 const { executeQuery } = require("../../../databaseWriteFile"); // Update the path accordingly
 //import compareJsons from "../../../../../../../Cellma4Automation/compareFileOrJson";
-import compareJsons from "../../../../Cellma4Automation/compareFileOrJson";
+// import compareJsons from "../../../../Cellma4Automation/compareFileOrJson";
+import compareJsons from "../../../compareFileOrJson";
 
 import logger from "../../../Pages/BaseClasses/logger";
 import LoginPage from "../../../Pages/BaseClasses/LoginPage";
