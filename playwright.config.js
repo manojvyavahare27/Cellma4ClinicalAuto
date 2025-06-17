@@ -45,7 +45,14 @@ module.exports = defineConfig({
               '**/Functional/Pharmacy/RegisterPharmacyPatient.spec.js',
               '**/Functional/ClinicalDomain/PatientSummary/Categories/Assessment/Assessment.spec.js', 
               '**/Functional/ClinicalDomain/PatientSummary/Categories/Physical Sign/AddPhysicalSign.spec.js',      
-              
+
+              '**/Functional/ClinicalDomain/PatientSummary/Categories/Medication/AdministerMedication.spec.js',
+              '**/Functional/ClinicalDomain/PatientSummary/Categories/Devices/AddDevice.spec.js',
+              '**/Functional/ClinicalDomain/PatientSummary/Categories/PatientConsent/AddPatientConsent.spec.js',
+              '**/Functional/ClinicalDomain/PatientSummary/Categories/TestTool/AddTest.spec.js',
+              '**/Functional/ClinicalDomain/PatientSummary/Categories/TestTool/AddTool.spec.js',
+              '**/Functional/ClinicalDomain/PatientSummary/Categories/PatientView/CheckPatientView.spec.js',
+
               // Appointment Domain
               '**/Functional/AppointmentDomain/AddNewPatient.spec.js'
 
@@ -90,7 +97,7 @@ module.exports = defineConfig({
         screenshot:"on",
         video:"on",
         trace:"on",
-        viewport: { width: 1600, height: 900 },
+        viewport: { width: 1400, height: 900 },
         headless:false,
      // storageState:'Shree.json',
         reporter: [["dot"],

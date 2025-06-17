@@ -1,6 +1,10 @@
 {
   "loginDetails": [
     {
+      "username": "thayne.auto",
+      "password": "Thayne@2024"
+    },
+    {
       "username": "saurabh.auto",
       "password": "Saurabh@2025"
     },
@@ -16,6 +20,7 @@
       "pat_firstname": "Assessment",
       "pat_surname": "Patient",
       "pat_sex": "M",
+      "pat_sex_at_birth": "Male",
       "pat_dob": "01/01/1990",
       "pat_marital_status": "Single",
       "pat_ethnicity_text": "Indian",
@@ -59,7 +64,7 @@
       "medi_prescribed_by": "GP",
       "pcl_location_name": "Cardio Location",
       "pacr_que_name_Diagnosis": "Asthma",
-      "medi_notes": "Added notes for testing",
+      "medi_notes_hidden": "Added notes for testing",
       "medi_stopped_reason_eli_text": "Dose completed",
       "mse_text": "Drowsiness",
       "paprd_endorsement": "Yes",
@@ -74,7 +79,8 @@
       "meded_value_Adherent": "Adherent",
       "eli_text": "Antibacterial",
       "que_display_text": "Dirty living conditions",
-      "question_name": "Notes"
+      "question_name": "Notes",
+      "medadt_medication_status": "given"
     }
   ],
   "EditMedication": [
@@ -266,7 +272,7 @@
       "pacr_category": "Allergies",
       "pacr_que_name": "Coal dust",
       "alrg_reaction_severity": "Moderate",
-      "pacr_clinic_date": "04/06/2025",
+      "pacr_clinic_date": "17/06/2025",
       "alrg_notes": "Add for Notes",
       "eli_text": "Sneezing",
       "alrg_start_date": "08/05/2024",
@@ -278,7 +284,7 @@
       "pacr_category": "Allergies",
       "pacr_que_name": "Coal dust",
       "alrg_reaction_severity": "Moderate",
-      "pacr_clinic_date": "04/06/2025",
+      "pacr_clinic_date": "17/06/2025",
       "alrg_notes": "Edit for Notes",
       "eli_text": "Sneezing",
       "alrg_start_date": "20/05/2024",
@@ -314,7 +320,7 @@
     {
       "pacr_category": "Procedure",
       "pacr_que_name": "Knee Arthroplasty",
-      "proc_procedure_date": 45812,
+      "proc_procedure_date": 45825,
       "proc_site": "Left",
       "proc_type": "High",
       "proc_notes": "Add Procedure Notes",
@@ -673,7 +679,7 @@
   "Alerts": [
     {
       "Alert_Start_Date": "01-04-2025",
-      "Alert_End_Date": "04/06/2025",
+      "Alert_End_Date": "17/06/2025",
       "Priority_Any_Priority": "Any Priority",
       "Priority_Very_High": "Very High",
       "Priority_High": "High",
@@ -703,6 +709,233 @@
       "sendTo": "Default Lab",
       "extLocation": "Riomed",
       "notes": "Investigation Requested"
+    }
+  ],
+  "DevicePatientDetails": [
+    {
+      "pat_firstname": "AkaliA",
+      "pat_surname": "Riomedtest",
+      "pat_sex": "Male",
+      "pat_dob": "08/09/2024"
+    }
+  ],
+  "AddDevice": [
+    {
+      "dev_name": "Cochlear Osia OSI200",
+      "dev_type": "Device",
+      "dev_procedure_name": "Cochlear Implantation",
+      "dev_manufacturer": "Cochlear",
+      "dev_expiry_date": "28/02/2025",
+      "ded_type": "primary",
+      "ded_type_entry": "Primary",
+      "ded_internal_external": "internal",
+      "ded_internal_external_entry": "Internal",
+      "ded_laterality": "left",
+      "ded_laterality_entry": "Left",
+      "ded_notes": "Device added",
+      "ded_status": "implanted",
+      "ded_status_entry": "Implanted",
+      "dev_serial_number": "913748362"
+    }
+  ],
+  "EditDevice": [
+    {
+      "dev_name": "Cochlear Osia OSI200",
+      "dev_type": "Tool",
+      "dev_procedure_name": "Cochlear Implantation",
+      "dev_manufacturer": "SA Company",
+      "dev_deleted_reason": "Device deleted",
+      "dev_expiry_date": "31/03/2025",
+      "ded_type": "firststage",
+      "ded_type_entry": "First Stage",
+      "ded_internal_external": "external",
+      "ded_internal_external_entry": "External",
+      "ded_laterality": "right",
+      "ded_laterality_entry": "Right",
+      "ded_notes": "Device edited",
+      "ded_status": "requested",
+      "ded_status_entry": "Requested",
+      "dev_ordering_status": "awaitingapproval"
+    }
+  ],
+  "AddTest": [
+    {
+      "pattes_tests_question_que_name": "Pressure Ulcer Test",
+      "pattes_answer_0": "Completely Limited",
+      "pattes_answer_1": "Constantly Moist",
+      "pattes_answer_2": "Chairfast",
+      "pattes_answer_3": "Completely Immobile",
+      "pattes_answer_4": "Probably Inadequate",
+      "pattes_answer_5": "Potential Problem",
+      "pattes_notes": "Add Pressure Ulcer Test"
+    },
+    {
+      "pattes_tests_question_que_name": "Malnutrition universal screening Test",
+      "pattes_answer_0": ">20 ",
+      "pattes_answer_1": "<5%",
+      "pattes_answer_2": "Yes",
+      "pattes_notes": "Add Malnutrition universal screening Test"
+    },
+    {
+      "pattes_tests_question_que_name": "Falls Risk Assessment Scale",
+      "pattes_answer_0": "None in the last 12 months",
+      "pattes_answer_1": "Not taking any of these",
+      "pattes_answer_2": "Does not appear to have any of these",
+      "pattes_answer_3": "AMTS 9-10 OR intact",
+      "pattes_notes": "Add Falls Risk Assessment Scale"
+    },
+    {
+      "pattes_tests_question_que_name": "PHQ-9",
+      "pattes_answer_0": "Not at all",
+      "pattes_answer_1": "Several days",
+      "pattes_answer_2": "More than half the days",
+      "pattes_answer_3": "Nearly every days",
+      "pattes_answer_4": "Not at all",
+      "pattes_answer_5": "Several days",
+      "pattes_answer_6": "More than half the days",
+      "pattes_answer_7": "Yes",
+      "pattes_answer_8": "Yes",
+      "pattes_notes": "Add PHQ-9 Test"
+    }
+  ],
+  "EditTest": [
+    {
+      "pattes_tests_question_que_name": "Pressure Ulcer Test",
+      "pattes_answer_0": "Very Limited",
+      "pattes_answer_1": "Very Moist",
+      "pattes_answer_2": "Bedfast",
+      "pattes_answer_3": "Slightly Limited",
+      "pattes_answer_4": "Very Poor",
+      "pattes_answer_5": "No Apparent Problem",
+      "pattes_notes": "Edit Pressure Ulcer Test",
+      "pattes_review_date": "04/04/2025",
+      "pattes_last_reviewed": "04/04/2025",
+      "pacr_delete_reason": "Delete Test"
+    },
+    {
+      "pattes_tests_question_que_name": "Malnutrition universal screening Test",
+      "pattes_answer_0": "<18.5",
+      "pattes_answer_1": ">10%",
+      "pattes_answer_2": "No",
+      "pattes_notes": "Edit Malnutrition universal screening Test",
+      "pattes_review_date": "04/04/2025",
+      "pattes_last_reviewed": "04/04/2025",
+      "pacr_delete_reason": "Delete Test"
+    },
+    {
+      "pattes_tests_question_que_name": "Falls Risk Assessment Scale",
+      "pattes_answer_0": "One or more between 3 and 12 months ago",
+      "pattes_answer_1": "Taking one",
+      "pattes_answer_2": "Appears mildly affected by one or more",
+      "pattes_answer_3": "AMTS 7-8 OR mildy impaired",
+      "pattes_notes": "Edit Falls Risk Assessment Scale",
+      "pattes_review_date": "04/04/2025",
+      "pattes_last_reviewed": "04/04/2025",
+      "pacr_delete_reason": "Delete Test"
+    },
+    {
+      "pattes_tests_question_que_name": "PHQ-9",
+      "pattes_answer_0": "Several days",
+      "pattes_answer_1": "More than half the days",
+      "pattes_answer_2": "Nearly every days",
+      "pattes_answer_3": "Not at all",
+      "pattes_answer_4": "Several days",
+      "pattes_answer_5": "More than half the days",
+      "pattes_answer_6": "Not at all",
+      "pattes_answer_7": "No",
+      "pattes_answer_8": "No",
+      "pattes_notes": "Edit PHQ-9 Test",
+      "pattes_review_date": "04/04/2025",
+      "pattes_last_reviewed": "04/04/2025",
+      "pacr_delete_reason": "Delete Test"
+    }
+  ],
+  "AddTool": [
+    {
+      "pacr_que_name": "Audiogram Tool",
+      "pattod_var_value_0": "VRA",
+      "pattod_var_value_1": "Pure tone",
+      "pattod_var_value_2": "Reliability Air Conduction",
+      "pattod_var_value_3": "Headphones",
+      "pattod_var_value_4": "Play Audiometry",
+      "pattod_var_value_5": "Warble",
+      "pattod_var_value_6": "Reliability Bone Conduction",
+      "pattod_var_value_7": "Behavioural Observation Audiometry",
+      "pattod_var_value_8": "Narrowband noise",
+      "pattod_var_value_9": "Reliability Unaided Soundfield",
+      "pattod_var_value_10": "Patient Response Button",
+      "pattod_var_value_11": "White noise",
+      "pattod_var_value_12": "Reliability Aided Soundfield",
+      "patto_notes_0": "Notes on Air Conduction",
+      "patto_notes_1": "Notes on Bone Conduction",
+      "patto_notes_2": "Notes on Unaided Soundfield",
+      "patto_notes_3": "Notes on Aided Soundfield",
+      "clinicItem": "Audiogram Tool"
+    },
+    {
+      "pacr_que_name": "DAS28",
+      "pattod_var_value_0": "33",
+      "pattod_var_value_1": "87",
+      "pattod_var_value_2": "65",
+      "patto_notes": "DAS Examination notes",
+      "pattom_notes": "Patient marker functionality test",
+      "clinicItem": "DAS 28 Examination Tool"
+    },
+    {
+      "pacr_que_name": "DAS78",
+      "patto_notes": "DAS 78 New tool",
+      "pattom_notes": "Patient marker for DAS 78",
+      "clinicItem": "DAS 78 Examination Tool"
+    }
+  ],
+  "EditTool": [
+    {
+      "pacr_que_name": "Audiogram Tool",
+      "pattod_var_value_0": "Play Audiometry",
+      "pattod_var_value_1": "Warble",
+      "pattod_var_value_2": "Reliability Air Conduction Edited",
+      "pattod_var_value_3": "Speaker",
+      "pattod_var_value_4": "VRA",
+      "pattod_var_value_5": "Pure tone",
+      "pattod_var_value_6": "Reliability Bone Conduction Edited",
+      "pattod_var_value_7": "Patient Response Button",
+      "pattod_var_value_8": "White noise",
+      "pattod_var_value_9": "Reliability Unaided Soundfield Edited",
+      "pattod_var_value_10": "Behavioural Observation Audiometry",
+      "pattod_var_value_11": "Narrowband noise",
+      "pattod_var_value_12": "Reliability Aided Soundfield Edited",
+      "patto_notes_0": "Edit  Air Conduction",
+      "patto_notes_1": "Edit Bone Conduction",
+      "patto_notes_2": "Edit Unaided Soundfield",
+      "patto_notes_3": "Edit Aided Soundfield",
+      "clinicItem": "Audiogram Tool",
+      "pacr_clinic_date": "09/05/2025",
+      "patto_review_date": "09/05/2025",
+      "patto_last_reviewed": "09/05/2025",
+      "pacr_delete_reason": "Delete Tool"
+    },
+    {
+      "pacr_que_name": "DAS28",
+      "pattod_var_value_0": "75",
+      "pattod_var_value_1": "67",
+      "pattod_var_value_2": "42",
+      "pattod_var_value_3": "4",
+      "pattod_var_value_4": "6",
+      "patto_notes": "Edit tool test",
+      "clinicItem": "DAS 28 Examination Tool",
+      "patto_review_date": "09/05/2025",
+      "patto_last_reviewed": "09/05/2025",
+      "pacr_delete_reason": "Delete Tool"
+    },
+    {
+      "pacr_que_name": "DAS78",
+      "pattod_var_value_0": "11",
+      "pattod_var_value_1": "18",
+      "patto_notes": "DAS 78 Edit Tool",
+      "clinicItem": "DAS 78 Examination Tool",
+      "patto_review_date": "09/05/2026",
+      "patto_last_reviewed": "09/05/2026",
+      "pacr_delete_reason": "Delete Tool"
     }
   ]
 }
