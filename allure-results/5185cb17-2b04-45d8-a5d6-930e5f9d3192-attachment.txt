@@ -1,0 +1,27 @@
+No popup found, proceeding with test flow.
+Successfully stored results into JSON: SQLResults/PatientDomain/PatientAudit.json
+The JSON data is as below [
+  {
+    "paa_id": 123587,
+    "paa_usa_id": 186677,
+    "paa_use_username": "saurabh.auto",
+    "paa_pat_id": 789584,
+    "paa_est_id": 4,
+    "paa_viewed": "05/06/2025",
+    "paa_type": "selected"
+  }
+]
+
+ Patient Details stored into the database: 
+ [
+  {
+    paa_id: 123587,
+    paa_usa_id: 186677,
+    paa_use_username: 'saurabh.auto',
+    paa_pat_id: 789584,
+    paa_est_id: 4,
+    paa_viewed: 2025-06-05T07:05:04.000Z,
+    paa_type: 'selected'
+  }
+]
+Patient Accessed by User:789584

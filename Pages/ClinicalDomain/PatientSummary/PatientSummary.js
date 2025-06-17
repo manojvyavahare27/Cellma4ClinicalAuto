@@ -121,9 +121,15 @@ class PatientSummary
         await this.iconExaminationsCategory.click()
     }
     async clickOniconRecommendation()
-    {
+    {          
         await this.iconRecommendationsCategory.click()
     }
+ 
+
+
+
+
+
     async clickOniconPatientDetailsCategory()
     {
         await this.iconPatientDetailsCategory.click()

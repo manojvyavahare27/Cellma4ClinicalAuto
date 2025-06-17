@@ -91,7 +91,7 @@ test.describe("PatientScan Category", () => {
       logger.info("Clicked on Search button successfully");
       await patientsearch.enterGivenName(data.pat_firstname);
       logger.info("Given Name entered successfully");
-      await page.pause()
+      //await page.pause()
       await patientsearch.enterFamilyName(data.pat_surname);
       logger.info("Family Name entered successfully");
      // await patientsearch.selectSex(data.pat_sex);
@@ -104,7 +104,7 @@ test.describe("PatientScan Category", () => {
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();
       await page.waitForTimeout(5000);
-      await patientScan.closePopUp() 
+      await patientScan.clickOnSavePopup() 
       
       
      // await contacthistory.enterContactDate('26/04/2024');
@@ -137,7 +137,7 @@ test.describe("PatientScan Category", () => {
         console.log('\x1b[31mItem was deleted successfully\x1b[0m'); //Red
         console.log('\x1b[32mItem was deleted successfully\x1b[0m');   // Green
         console.log('\x1b[90mItem was deleted successfully\x1b[0m');    // Grey
-        await page.pause()
+       // await page.pause()
    //////Fetch Patient Details/////////
    var sqlQuery =
    "select * from patient_audit where paa_use_username='" + jsonData.loginDetails[0].username + 

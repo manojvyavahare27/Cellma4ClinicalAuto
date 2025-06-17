@@ -14,7 +14,7 @@ const { test, expect } = require("@playwright/test");
 const connectToDatabase = require("../../../manoj").default;
 const { executeQuery } = require("../../../databaseWriteFile"); // Update the path accordingly
 //import compareJsons from "../../../../../../../Cellma4Automation/compareFileOrJson";
-import compareJsons from "../../../../Cellma4Automation/compareFileOrJson";
+import compareJsons from "../../../compareFileOrJson";
 
 import logger from "../../../Pages/BaseClasses/logger";
 import LoginPage from "../../../Pages/BaseClasses/LoginPage";
@@ -98,10 +98,10 @@ test.describe("Medical Certificate", () => {
       logger.info("Clicked on Search button successfully");
       await patientsearch.enterGivenName(data.pat_firstname);
       logger.info("Given Name entered successfully");
-      
+      // await page.pause()
       await patientsearch.enterFamilyName(data.pat_surname);
       logger.info("Family Name entered successfully");
-      await patientsearch.selectSex(data.pat_sex);
+      //await patientsearch.selectSex(data.pat_sex);
       await patientsearch.selectBornDate(jsonData.PatientDetails[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
@@ -109,7 +109,9 @@ test.describe("Medical Certificate", () => {
       await patientsearch.clickOnSearchPatientLink();
       //await page.pause()//wait 1.5 second     
       await page.waitForTimeout(3000)
-      await confirmexisting.clickOnConfirmExistingDetails();     
+      await confirmexisting.clickOnConfirmExistingDetails();    
+      await page.waitForTimeout(2000);
+       await MedicalCertificate.clickOnSavePopup() 
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -202,7 +204,7 @@ test.describe("Medical Certificate", () => {
       
       
       //////// Limitations details/////////
-    var sqlQuery =  "SELECT * FROM cellma4_api.patient_medical_certificate_limitations where patmcsn_pat_id='"+patmce_pat_id+"' and patmcsn_type='limitation' order by patmcsn_id limit 1;";
+    var sqlQuery =  "SELECT * FROM patient_medical_certificate_limitations where patmcsn_pat_id='"+patmce_pat_id+"' and patmcsn_type='limitation' order by patmcsn_id limit 1;";
     console.log("Limitation Query is:  "+sqlQuery) 
   var sqlFilePath = "SQLResults/MedicalCertificate/Limitations.json";
   var results = await executeQuery(sqlQuery, sqlFilePath);
@@ -245,8 +247,8 @@ test.describe("Medical Certificate", () => {
 
       await MedicalCertificate.clickOnCertificateFitnessforFit("Class 1 Pilots Single pilot commercial operations carrying passengers","fit")
       await MCExtraDetails.enterMedicalCertificateReason("Added for testing")
-      await page.pause()
-      await page.pause()
+      // await page.pause()
+      // await page.pause()
      
       await MCExtraDetails.clickOnSaveMedicalCertificate()
       await MCExtraDetails.enterAMEDeclaration("Declaration added")
@@ -257,7 +259,7 @@ test.describe("Medical Certificate", () => {
       await page.waitForTimeout(1000)     
       
       //Edit Medical certificate
-      await page.pause()
+      //await page.pause()
       await MedicalCertificate.clickOnMCItemEdit("Class 1 Pilots");
       console.log("Already click on Edit button");      
       await MCExtraDetails.enterEditedMCNotes("Edited MC notes");
@@ -267,7 +269,7 @@ test.describe("Medical Certificate", () => {
       await MCExtraDetails.clickOnbtnAcknowledgeDeclaration()
       await expect(page.getByText('Medical certificate is generated')).toHaveText('Medical certificate is generated')
       await MedicalCertificate.clickOnMCItemDiv("Class 1 Pilots")
-      await page.pause()
+      //await page.pause()
       
 //////////////////////////////////////////////////////////////////////////////////////////
        await MedicalCertificate.clickOnMCItemHistory();
@@ -279,7 +281,7 @@ test.describe("Medical Certificate", () => {
       
 
      //Click on Show link//
-       await page.pause()
+       //await page.pause()
        await MedicalCertificate.clickOnShowLink()
        await page.waitForTimeout(2000)
        //await MedicalCertificate.clickOnPrintButton()
@@ -294,7 +296,7 @@ test.describe("Medical Certificate", () => {
 
       //   // Close the newly opened tab
       // await newPage.close();
-      await page.pause()
+      //await page.pause()
       await MedicalCertificate.closeWindow();
        
        

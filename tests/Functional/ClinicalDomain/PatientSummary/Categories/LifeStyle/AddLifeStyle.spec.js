@@ -77,7 +77,7 @@ test.describe("LifeStyle Category", () => {
         await page.goto(environment.Test);
         await loginpage.enterUsername(jsonData.loginDetails[0].username);
         logger.info("Username enter successfully");
-        await page.pause()
+        //await page.pause()
         await loginpage.enter_Password(jsonData.loginDetails[0].password);
         logger.info("Password enter successfully");
         await loginpage.clickOnLogin();      
@@ -101,9 +101,9 @@ test.describe("LifeStyle Category", () => {
         await patientsearch.clickOnSearchPatientLink();
         await page.waitForTimeout(1500);
         await confirmexisting.clickOnConfirmExistingDetails();
-        await page.pause()
+        //await page.pause()
         await page.waitForTimeout(2000);
-        await lifestyle.closePopUp() 
+        await lifestyle.clickOnSavePopup() 
         //await contacthistory.enterContactDate('26/11/2024');
         await contacthistory.selectContactReason('Assessments');
         await contacthistory.selectContactLocation('Cardio Location');
@@ -155,9 +155,9 @@ test.describe("LifeStyle Category", () => {
   //await lifestyleExtraDetails.selectClinicalItemSubcategory(jsonData.AddLifestyle[index].eli_text); 
   await lifestyleExtraDetails.clickOPrivateRecord();
   await page.waitForTimeout(500);  
-  await page.pause()
+ // await page.pause()
   await lifestyleExtraDetails.enterLifestyleNotes(jsonData.AddLifestyle[index].life_notes);
-  await page.pause()
+ // await page.pause()
   await lifestyleExtraDetails.clickOnSaveExtraDetails();
   await page.waitForTimeout(500);
     

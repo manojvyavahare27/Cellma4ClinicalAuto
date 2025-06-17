@@ -102,7 +102,7 @@ test.describe("Overview Category", () => {
         await page.waitForTimeout(1500);
         await confirmexisting.clickOnConfirmExistingDetails();        
        await page.waitForTimeout(2000);
-       await overview.closePopUp() 
+       await overview.clickOnSavePopup() 
        // await contacthistory.enterContactDate('26/04/2024');
         await contacthistory.selectContactReason('Assessments');
         await contacthistory.selectContactLocation('Cardio Location');
@@ -113,7 +113,7 @@ test.describe("Overview Category", () => {
         await overview.clickOnPinContactItemsMenu();
         await overview.selectCategoryFromList("Overview"); 
         await page.waitForTimeout(2000)
-        await page.pause()
+        //await page.pause()
   
         //    ////////REVIEW EXISTING ITEM AND DELETE/////
         // if(await overview.checkItemOnHistoryTable(jsonData.AddOverview[index].pacr_que_name)){
@@ -181,7 +181,7 @@ test.describe("Overview Category", () => {
            "\n Patient Clinical Records Comparision: Parameters from both JSON files do not match!\n"
          );
        } 
-       await page.pause()
+       //await page.pause()
        await overview.toggleSearchSection();//Close the search section 
        await page.waitForTimeout(1000)
        
@@ -225,7 +225,7 @@ test.describe("Overview Category", () => {
        "\n Update Patient Clinical Records Comparision: Parameters from both JSON files do not match!\n"
      );
    }
-   await page.pause()
+   //await page.pause()
 
   
         ////////AUTO UPDATE RISK AFTER UPDATING OUTCOME /////
@@ -283,7 +283,7 @@ test.describe("Overview Category", () => {
        "\n Update Patient Clinical Records Comparision: Parameters from both JSON files do not match!\n"
      );
    }
-   await page.pause()
+   //await page.pause()
        ///////// Deleting Item ////////////
   
         await overview.clickOnItemEdit('Overview');
@@ -320,7 +320,7 @@ test.describe("Overview Category", () => {
        "\n  Patient Clinical Records Comparision: Parameters from both JSON files do not match!\n"
      );
    }
-   await page.pause()
+   //await page.pause()
 
 
     if(!(await overview.checkItemOnHistoryTable(jsonData.EditOverview[index].pacr_que_name)) ){

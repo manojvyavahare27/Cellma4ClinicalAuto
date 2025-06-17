@@ -1,0 +1,107 @@
+Executing checkItemOnHistoryTable method...
+Constructed Locator: xpath=//div[@id='historyTable']//*[text()='Coal dust']
+Executing assertElementExists function...
+Coal dust is present.
+assertElementExists function executed successfully.
+checkItemOnHistoryTable method executed successfully.
+If loop
+Locator is: //div[@id='historyTable']//*[text()='Coal dust']//../..//button[@aria-label='editIconButton']
+tem was deleted successfully
+Successfully stored results into JSON: SQLResults/PatientDomain/PatientAudit.json
+The JSON data is as below [
+  {
+    "paa_id": 123661,
+    "paa_usa_id": 186751,
+    "paa_use_username": "saurabh.auto",
+    "paa_pat_id": 789584,
+    "paa_est_id": 4,
+    "paa_viewed": "06/06/2025",
+    "paa_type": "selected"
+  }
+]
+
+ Patient Details stored into the database: 
+ [
+  {
+    paa_id: 123661,
+    paa_usa_id: 186751,
+    paa_use_username: 'saurabh.auto',
+    paa_pat_id: 789584,
+    paa_est_id: 4,
+    paa_viewed: 2025-06-05T21:35:14.000Z,
+    paa_type: 'selected'
+  }
+]
+Patient Accessed by User:789584
+Item Name is:Coal dust
+Waiting for searchLocator...
+Filling searchLocator with: Coal dust
+Waiting for itemLocator...
+Found itemLocator: getByRole('option', { name: 'Coal dust' })
+Waiting for itemLocator to be visible...
+itemLocator is visible, clicking...
+Item Name is:Coal dust
+Waiting for searchLocator...
+Filling searchLocator with: Coal dust
+Waiting for itemLocator...
+Found itemLocator: getByRole('option', { name: 'Coal dust' })
+Waiting for itemLocator to be visible...
+itemLocator is visible, clicking...
+select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk,  alrg_start_date, alrg_end_date, alrg_notes from patient_clinical_records join patient_clinical_records_details on pacr_id=pacrd_pacr_id join allergies on pacr_id=alrg_pacr_id where pacr_record_status='approved' and pacr_pat_id=789584 and pacrd_record_status='approved' and alrg_record_status='approved' and pacr_que_name='Coal dust' and pacr_category='allergies' order by 1 desc limit 1
+Successfully stored results into JSON: SQLResults/ClinicalDomain/patientClinicalRecord.json
+The JSON data is as below [
+  {
+    "pacr_id": 38849,
+    "pacr_category": "Allergies",
+    "pacr_que_name": "Coal dust",
+    "pacr_clinic_date": "06/06/2025",
+    "pacr_risk": "none",
+    "alrg_start_date": "08/05/2024",
+    "alrg_end_date": "20/05/2024",
+    "alrg_notes": "Add for Notes"
+  }
+]
+
+ Patient Clinical Records stored into the database: 
+ [
+  {
+    pacr_id: 38849,
+    pacr_category: 'Allergies',
+    pacr_que_name: 'Coal dust',
+    pacr_clinic_date: 2025-06-05T18:30:00.000Z,
+    pacr_risk: 'none',
+    alrg_start_date: 2024-05-07T18:30:00.000Z,
+    alrg_end_date: 2024-05-19T18:30:00.000Z,
+    alrg_notes: 'Add for Notes'
+  }
+]
+
+The common keys are:
+ [
+  'pacr_category',
+  'pacr_que_name',
+  'pacr_clinic_date',
+  'alrg_start_date',
+  'alrg_end_date',
+  'alrg_notes'
+]
+
+Mismatched values:
+ [
+  {
+    key: 'pacr_clinic_date',
+    valueFromJson1: '06/06/2025',
+    valueFromJson2: '04/06/2025'
+  }
+]
+
+ Patient Clinical Records Comparision adding new Allergy: Parameters from both JSON files do not match!
+
+If loop
+Locator is: //div[@id='historyTable']//*[text()='Coal dust']//../..//button[@aria-label='expandRowIconundefined']
+If loop
+Locator is: //div[@id='historyTable']//*[text()='Coal dust']//../..//button[@aria-label='expandRowIconundefined']
+If loop
+Locator is: //div[@id='historyTable']//*[text()='Coal dust']//../..//button[@aria-label='editIconButton']
+If loop
+Locator is: //div[@id='historyTable']//*[text()='Coal dust']//../..//button[@aria-label='editIconButton']

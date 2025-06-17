@@ -68,3 +68,4 @@ class Communication
         await this.contactBySMSClinicalNoRadio.click();
     }
 }
+module.exports=Communication

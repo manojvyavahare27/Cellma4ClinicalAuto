@@ -102,7 +102,7 @@ test.describe("riskFactor Category", () => {
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();    
        await page.waitForTimeout(2000);
-       await riskFactor.closePopUp() 
+       await riskFactor.clickOnSavePopup() 
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -116,7 +116,7 @@ test.describe("riskFactor Category", () => {
       await riskFactor.selectCategoryFromList("Risk Factors");
       await page.waitForTimeout(2000)
 
-      await page.pause()
+      //await page.pause()
        ////////REVIEW EXISTING ITEM AND DELETE/////
        if(await riskFactor.checkItemOnHistoryTable(jsonData.AddRiskFactor[index].pacr_que_name)){
         //await riskFactor.clickOnItemReview(jsonData.AddRiskFactor[index].pacr_que_name);
