@@ -519,7 +519,7 @@ class ClinicalExtraDetails {
     this.riskHistory = page.locator('div').filter({ hasText: /^Risk Factors1$/ }).getByLabel('patientHistoryIconButton');
     this.testToolHistory = page.locator('div').filter({ hasText: /^Test\/Tools1$/ }).getByLabel('patientHistoryIconButton');
     this.interpretationHistory  = page.locator('div').filter({ hasText: /^Interpretations1$/ }).getByLabel('patientHistoryIconButton');
-    this.recommedationHistory = page.locator('div').filter({ hasText: /^Recommendations1$/ }).getByLabel('patientHistoryIconButton');
+    this.recommendationHistory = page.locator('div').filter({ hasText: /^Recommendations1$/ }).getByLabel('patientHistoryIconButton');
     this.pregnancyHistory = page.locator('div').filter({ hasText: /^Pregnancies1$/ }).getByLabel('patientHistoryIconButton');
 
     this.allergyHistoryPopUp = page.getByRole('heading', { name: 'Allergies History', exact: true })
@@ -1092,7 +1092,7 @@ async enterPatientScanNotes(pascn_notes)
   //Medication Extra Details
   async enterOnDose(dose) {
     await this.dose.clear();
-    await this.page.getByRole('button', { name: 'Ok' }).click()
+    await this.page.getByTestId('Ok').click()
     await typeText(this.page, this.dose, dose);
   }
 
@@ -1906,8 +1906,133 @@ async enterPatientScanNotes(pascn_notes)
   async clickOnAllergyHistoryBtn(){
     await clickElement(this.page, this.allergyHistory)
   }
+
+  async clickOnDiagnosisHistoryBtn(){
+    await clickElement(this.page, this.diagnosisHistory)
+  }
+
+  async clickOnProcedureHistoryBtn(){
+    await clickElement(this.page, this.procedureHistory)
+  }
+
+  async clickOnProblemsHistoryBtn(){
+    await clickElement(this.page, this.problemsHistory)
+  }
+
+  async clickOnConditionHistoryBtn(){
+    await clickElement(this.page, this.conditionHistory)
+  }
+
+  async clickOnMedicationHistoryBtn(){
+    await clickElement(this.page, this.medicationHistory)
+  }
+
+  async clickOnDeviceHistoryBtn(){
+    await clickElement(this.page, this.deviceHistory)
+  }
+
+  async clickOnInvestigationHistoryBtn(){
+    await clickElement(this.page, this.investigationHistory)
+  }
+
+  async clickOnExaminationHistoryBtn(){
+    await clickElement(this.page, this.examinationHistory)
+  }
+
+  async clickOnLifestyleHistoryBtn(){
+    await clickElement(this.page, this.lifestyleHistory)
+  }
+
+  async clickOnSocialHistoryBtn(){
+    await clickElement(this.page, this.socialHistory)
+  }
+
+  async clickOnRiskHistoryBtn(){
+    await clickElement(this.page, this.riskHistory)
+  }
+
+  async clickOnTestToolHistoryBtn(){
+    await clickElement(this.page, this.testToolHistory)
+  }
+
+  async clickOnInterpretationHistoryBtn(){
+    await clickElement(this.page, this.interpretationHistory)
+  }
+
+  async clickOnRecommendationHistoryBtn(){
+    await clickElement(this.page, this.recommendationHistory)
+  }
+
+  async clickOnPregnancyHistoryBtn(){
+    await clickElement(this.page, this.pregnancyHistory)
+  }
+
+  async checkPatientView(selectorName, selectorName2, popUpName) {
+
+    const popUp = this.page.getByRole('heading', { name: popUpName, exact: true });
+    const selector = this.page.getByTestId(selectorName);
+
+    if(popUpName === 'Allergies History') {
+      await this.clickOnAllergyHistoryBtn();
+    } else if (popUpName === 'Diagnosis History'){
+      await this.clickOnDiagnosisHistoryBtn();
+    } else if (popUpName === 'Procedures History'){
+      await this.clickOnProcedureHistoryBtn();
+    } else if (popUpName === 'Current Problems and Symptoms History'){
+      await this.clickOnProblemsHistoryBtn()
+    } else if (popUpName === 'Conditions History'){
+      await this.clickOnConditionHistoryBtn();
+    } else if (popUpName === 'Medications History'){
+      await this.clickOnMedicationHistoryBtn();
+    } else if (popUpName === 'Devices History'){
+      await this.clickOnDeviceHistoryBtn();
+    } else if (popUpName === 'Investigations History'){
+      await this.clickOnInvestigationHistoryBtn();
+    } else if (popUpName === 'Examinations History'){
+      await this.clickOnExaminationHistoryBtn();
+    } else if (popUpName === 'Lifestyle History'){
+      await this.clickOnLifestyleHistoryBtn();
+    } else if (popUpName === 'Social Circumstances History'){
+      await this.clickOnSocialHistoryBtn();
+    } else if (popUpName === 'Risk Factors History'){
+      await this.clickOnRiskHistoryBtn();
+    } else if (popUpName === 'Test/Tools History'){
+      await this.clickOnTestToolHistoryBtn();
+    } else if (popUpName === 'Interpretations History'){
+      await this.clickOnInterpretationHistoryBtn();
+    } else if (popUpName === 'Recommendations History'){
+      await this.clickOnRecommendationHistoryBtn();
+    } else if (popUpName === 'Pregnancies History'){
+      await this.clickOnPregnancyHistoryBtn();
+    } else {
+      console.log("Incorrect information entered")
+    }
+
+    await popUp.waitFor();
+
+    const isPopupVisible = popUp.isVisible();
+    const isSelectorVisible = selector.isVisible();
+    console.log("\n");
+
+    if(isPopupVisible) {
+      console.log(popUpName + " Pop up is displayed")
+      
+      if(isSelectorVisible) {
+        console.log("Entered information " + selectorName + " is displayed on Pop up")
+      }
+
+      if(selectorName2 != 'none') {
+        const selector2 = this.page.getByTestId(selectorName);
+        const isSelector2Visible = selector2.isVisible();
+
+        if(isSelector2Visible) {
+          console.log("Entered information " + selectorName2 + " is displayed on Pop up")
+        }
+      }
+    }
+    await this.page.waitForTimeout(1500)
+    await this.closePopup.click();
+  }
 }
-
-
 
 module.exports = ClinicalExtraDetails;

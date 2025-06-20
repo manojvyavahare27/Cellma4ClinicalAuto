@@ -127,7 +127,7 @@ class ClinicalSummary {
         this.linkMedicationAdministrations=page.getByRole('heading', { name: 'Medication Administrations' })
 
         this.dropdownAddTo=page.getByTestId('Add To')
-        this.linkPatientConsent = page.locator("xpath=//li[@data-testid='consent']")
+        this.linkPatientConsent = page.locator("xpath=//li[@data-testid='patientConsent']")
           
      }
      

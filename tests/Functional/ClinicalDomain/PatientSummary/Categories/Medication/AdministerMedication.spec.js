@@ -115,7 +115,6 @@ test.describe("Medications Category", () => {
       await Medications.clickOnViewContactItemsMenu();
       await Medications.clickOnPinContactItemsMenu();
       await Medications.selectCategoryFromList("Medications");
-      //await page.pause()
       await page.waitForTimeout(6000);
 
       ////////REVIEW EXISTING ITEM AND DELETE/////

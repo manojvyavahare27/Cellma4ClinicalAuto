@@ -80,7 +80,7 @@ test.describe("Patient View Category", () => {
             logger.info("Given Name entered successfully");
             await patientsearch.enterFamilyName(data.pat_surname);
             logger.info("Family Name entered successfully");
-            await patientsearch.selectSex(data.pat_sex);
+            await patientsearch.selectSexAtBirth(data.pat_sex);
             await patientsearch.selectBornDate(data.pat_dob);
             //await patientsearch.selectBornDate(formattedDate);
             await patientsearch.clickOnSearchButton();
@@ -90,24 +90,23 @@ test.describe("Patient View Category", () => {
             await confirmexisting.btn_confirmExistingDetails.waitFor();
             await page.waitForTimeout(1000);
             await confirmexisting.clickOnConfirmExistingDetails();
-            await PatientViewDetails.togglePatientView();
-
-            //Allergy
             
+            const alert = page.getByRole('heading', { name: 'Alerts' }).isVisible()
+            if (alert) {
+              await PatientViewDetails.clickPopup();              
+            }
 
-            await page.pause();
+            await PatientViewDetails.togglePatientView();
+            let count = 0;
+            console.log("\n Display Check For All Patient View Categories")
 
-            //////Fetch Patient Details/////////
-            var sqlQuery =
-              "select * from patient_audit where paa_use_username='" +
-              jsonData.loginDetails[0].username +
-              "' and paa_type='selected' order by 1 desc limit 1";
-            var sqlFilePath = "SQLResults/PatientDomain/PatientAudit.json";
-            var results = await executeQuery(sqlQuery, sqlFilePath);
-            console.log("\n Patient Details stored into the database: \n", results);
-            const patId = results[0].paa_pat_id;
-            console.log("Patient Accessed by User:" + patId);
+              for (let section of jsonData.PatientViewSections) {
 
+                ////////// Checking function call
+                await PatientViewDetails.checkPatientView(section.selector, section.selector2, section.popUp)
+
+                console.log(++count);
+              }            
         }
     });
 });
