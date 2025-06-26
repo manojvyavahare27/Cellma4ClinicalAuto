@@ -128,8 +128,8 @@ test.describe("Examination Category", () => {
 
       await page.waitForTimeout(4000)
       await examination.clickOnSavePopup();
-      await page.pause()
-      await page.evaluate(() => document.body.style.zoom = '0.5');
+      // await page.pause()
+      // await page.evaluate(() => document.body.style.zoom = '0.5');
        await page.waitForTimeout(2000)
       //Add Recommendation
       const flag = false;

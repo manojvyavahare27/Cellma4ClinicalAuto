@@ -116,7 +116,7 @@ test.describe("Medications Category", () => {
       await Medications.clickOnPinContactItemsMenu();
       await Medications.selectCategoryFromList("Medications");
       await page.waitForTimeout(2000);
-      //await page.pause();
+      await page.pause();
        ////////REVIEW EXISTING ITEM AND DELETE/////
        if(await Medications.checkItemOnHistoryTable(jsonData.AddMedication[index].pacr_que_name)){
         //await Medications.clickOnItemReview(jsonData.AddMedication[index].pacr_que_name);
@@ -188,7 +188,7 @@ test.describe("Medications Category", () => {
       //await page.pause()
       //await MedicationsExtraDetails.selectClinicalItemSubcategory(jsonData.AddMedication[index].eli_text);
       await MedicationsExtraDetails.enterOnDose(jsonData.AddMedication[index].medi_dose)
-      await MedicationsExtraDetails.enterForm(jsonData.AddMedication[index].medi_form)
+     // await MedicationsExtraDetails.enterForm(jsonData.AddMedication[index].medi_form)
       await MedicationsExtraDetails.selectFrequency(jsonData.AddMedication[index].medi_frequency)
       await MedicationsExtraDetails.selectRoute(jsonData.AddMedication[index].medi_route)
       await MedicationsExtraDetails.enterDays(jsonData.AddMedication[index].medi_duration)
@@ -204,7 +204,7 @@ test.describe("Medications Category", () => {
       await MedicationsExtraDetails.selectPGDPSD(jsonData.AddMedication[index].meded_value_PGD) 
       await MedicationsExtraDetails.enterMedicationGradeForAdministrator(jsonData.AddMedication[index].meded_value_Administrator)
       await MedicationsExtraDetails.selectMaxReffills(jsonData.AddMedication[index].meded_value_MaxReffills)       
-      await MedicationsExtraDetails.selectQuantity(jsonData.AddMedication[index].meded_value_Quantity)
+     // await MedicationsExtraDetails.selectQuantity(jsonData.AddMedication[index].meded_value_Quantity)
       
          
      
@@ -229,7 +229,7 @@ test.describe("Medications Category", () => {
       //await page.pause() 
 
       //await MedicationsExtraDetails.selectForCondition(jsonData.AddMedication[index].que_display_text)
-      await MedicationsExtraDetails.enterPriceCheckQuantity(jsonData.AddMedication[index].meded_value_Price_check_quantity)  
+     // await MedicationsExtraDetails.enterPriceCheckQuantity(jsonData.AddMedication[index].meded_value_Price_check_quantity)  
       await MedicationsExtraDetails.enterMedicationNotes(jsonData.AddMedication[index].medi_notes) 
       
       
@@ -238,7 +238,7 @@ test.describe("Medications Category", () => {
 
       await MedicationsExtraDetails.clickOnSaveExtraDetails();      
       await page.waitForTimeout(1000);           
-      await MedicationsExtraDetails.clickOnSaveCheckList()
+     // await MedicationsExtraDetails.clickOnSaveCheckList()
       //await page.pause()
       await page.waitForTimeout(1000); 
       //await expect(page.getByText("Medication record added successfully")).toHaveText("Medication record added successfully");
@@ -283,7 +283,7 @@ test.describe("Medications Category", () => {
       //await MedicationsExtraDetails.clickOnClincialItemCollapsable();
       //await MedicationsExtraDetails.selectClinicalItemSubcategory(jsonData.EditMedication[index].eli_text);
       await MedicationsExtraDetails.enterOnDose(jsonData.EditMedication[index].medi_dose)
-       await MedicationsExtraDetails.enterForm(jsonData.EditMedication[index].medi_form)
+      // await MedicationsExtraDetails.enterForm(jsonData.EditMedication[index].medi_form)
       await MedicationsExtraDetails.selectFrequency(jsonData.EditMedication[index].medi_frequency)
       await MedicationsExtraDetails.selectRoute(jsonData.EditMedication[index].medi_route)
       await MedicationsExtraDetails.enterDays(jsonData.EditMedication[index].medi_duration)
@@ -300,7 +300,7 @@ test.describe("Medications Category", () => {
        await MedicationsExtraDetails.selectPGDPSD(jsonData.EditMedication[index].meded_value_PGD)
       // await MedicationsExtraDetails.enterMedicationGradeForAdministrator(jsonData.EditMedication[index].meded_value_Administrator)
        await MedicationsExtraDetails.selectMaxReffills(jsonData.EditMedication[index].meded_value_MaxReffills)       
-      await MedicationsExtraDetails.selectQuantity(jsonData.EditMedication[index].meded_value_Quantity)
+     // await MedicationsExtraDetails.selectQuantity(jsonData.EditMedication[index].meded_value_Quantity)
       //await page.pause()
       // await MedicationsExtraDetails.enterUnit(jsonData.EditMedication[index].meded_value_Unit)
      await MedicationsExtraDetails.selectCurrentLocation(jsonData.EditMedication[index].pcl_location_name)

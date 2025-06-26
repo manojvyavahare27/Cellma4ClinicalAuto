@@ -183,6 +183,7 @@ test.describe("Investigations Category", () => {
       await InvestigationsExtraDetails.enterInvNotes(jsonData.AddInvestigation[index].notes);
       await InvestigationsExtraDetails.clickOnSaveExtraDetails();
       await page.waitForTimeout(1000);
+      await page.pause()
       await InvestigationsExtraDetails.selectlinks()
       await page.waitForTimeout(1000);
       await InvestigationsExtraDetails.LabRequestLink()
