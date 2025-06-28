@@ -72,8 +72,8 @@ module.exports = defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   //reporter: 'html',
   // reporter: 'html',
-  reporter: [ ['html'],
-              ['allure-playwright', { outputFolder: 'allure-results' }]
+  reporter: [ ['html']
+              //['allure-playwright', { outputFolder: 'allure-results' }]
             //  ['allure-playwright',{outputFolder: 'allure-result'}]
 
             ],
