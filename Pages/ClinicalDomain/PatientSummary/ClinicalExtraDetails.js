@@ -317,6 +317,227 @@ class ClinicalExtraDetails {
         this.pregComplications= page.locator("xpath=//input[@name='complications']")
         this.pregNotes= page.locator("xpath=//label[contains(text(),'Notes')]")
         this.pregSave= page.locator("xpath=//div[contains(text(),'Save')]")
+
+            //Temp Devices till locator issues sorted.
+    this.dropdownDeviceProcedure = page.getByTestId('procedure').getByLabel('Open');
+    this.dropdownManufacturer = page.getByTestId('manufacturer').getByLabel('Open');
+    this.dropdownDeviceSubCategory = page.getByTestId('subCategory').getByLabel('Open');
+    this.txtSearchForDevice = page.getByLabel('Search For Device *');
+    this.dropdownTypeOfDevice = page.getByTestId('typeOfDevice').getByLabel('Open');
+    this.dropdownInternalExternal = page.getByTestId('internalExternal').getByLabel('Open');
+    this.dropdownDeviceStatus = page.getByTestId('status').getByLabel('Open');
+    this.dropdownLaterality = page.getByTestId('laterality').getByLabel('Open');
+    this.txtDeviceSerialNumber = page.getByTestId('Serial Number');
+    this.txtDeviceExpiryDate = page.getByTestId('Expiry Date');
+    this.txtDeviceNotes = page.getByTestId('Notes');
+    this.btnSaveDevice = page.locator("xpath=//button[@aria-label='saveCategoryExtraDetails']");
+    this.extraDetailLevel2 = page.locator("xpath=//button[@data-testid='levelTwo']")
+    this.extraDetailLevel = page.locator("xpath=//button[@data-testid='levelThree']")
+    this.btnEditDevice = page.locator("xpath=//button[@aria-label='edit']");
+    this.btnDeleteDevice = page.locator("xpath=//button[@aria-label='Delete']")
+    this.btnOkDevicePopup = page.locator("xpath=//button[@aria-label='Ok']")
+    this.txtDeleteDeviceReason = page.locator("xpath=//textarea[@id='Reason']")
+    this.btnSaveDeleteReason = page.locator("xpath=//button[@aria-label='saveDeleteReason']")
+    this.linkRequestOrderStatus = page.locator("xpath=//a[@aria-label='Not Ordered']")
+    this.btnExternalRequest = page.locator("xpath=//button[@aria-label='External Request']")
+    this.displayOrderStatus = page.getByRole('heading', { name: 'Awaiting Approval' })
+
+    //Front End Display - Devices
+    this.deviceProcedureName = page.getByRole('heading', { name: 'Cochlear Implantation' })
+    this.deviceName = page.getByRole('cell', { name: 'Cochlear Osia OSI200' })
+    this.deviceLaterality = page.getByRole('cell', { name: 'left' })
+    this.deviceStatus = page.getByRole('cell', { name: 'implanted' })
+    this.deviceExpiryDate = page.getByRole('heading', { name: '28/02/2025' })
+    this.deviceSerialNumber = page.getByRole('heading', { name: '913748362' })
+    this.deviceNotes = page.getByRole('heading', { name: 'Device added' })
+
+    //Test Tools Locators
+    this.sensoryPerception = page.locator("xpath=//input[@id='question-0']")
+    this.moisture = page.locator("xpath=//input[@id='question-1']")
+    this.activityTest = page.locator("xpath=//input[@id='question-2']")
+    this.mobility = page.locator("xpath=//input[@id='question-3']")
+    this.nutrition = page.locator("xpath=//input[@id='question-4']")
+    this.frictionAndShear = page.locator("xpath=//input[@id='question-5']")
+    this.calculateButton = page.locator("xpath=//button[@data-testid='Calculate']")
+    this.saveTestButton = page.locator("xpath=//button[@data-testid='Save']")
+    this.saveDASToolButton = page.locator("xpath=//button[@aria-label='Save DAS']")
+    this.saveDASCRPToolButton = page.locator("xpath=//button[@aria-label='Save DAS-CRP']")
+    this.deleteTestToolButton = page.locator("xpath=//button[@data-testid='Delete']")
+    this.lastReviewedDate = page.locator("xpath=//input[@id='Last Reviewed']");
+    this.lastReviewedTool = page.locator("xpath=//input[@id='lastReviewed']");
+    this.editIcon = page.locator("xpath=//button[@aria-label='editIconButton']");
+    this.notes = page.locator("xpath=//textarea[@id='notes']");
+    // 2nd Test
+    this.bmiScore = page.locator("xpath=//input[@id='question-0']")
+    this.unplannedWeightLoss = page.locator("xpath=//input[@id='question-1']")
+    this.noNutritialIntake = page.locator("xpath=//input[@id='question-2']")
+    // 3rd Test
+    this.recentFalls = page.locator("xpath=//input[@id='question-0']")
+    this.medications = page.locator("xpath=//input[@id='question-1']")
+    this.psychological = page.locator("xpath=//input[@id='question-2']")
+    this.cognitiveStatus = page.locator("xpath=//input[@id='question-3']")
+    // 4th Test
+    this.interestOrPleasure = page.locator("xpath=//input[@id='question-0']")
+    this.downOrDepressed = page.locator("xpath=//input[@id='question-1']")
+    this.troubleSleeping = page.locator("xpath=//input[@id='question-2']")
+    this.tiredLittleEnergy = page.locator("xpath=//input[@id='question-3']")
+    this.poorAppetite = page.locator("xpath=//input[@id='question-4']")
+    this.feelingBadAboutYourself = page.locator("xpath=//input[@id='question-5']")
+    this.troubleConcentrating = page.locator("xpath=//input[@id='question-6']")
+    //this.movingSlowly = page.locator("xpath=//input[@name='question-7']")
+    //this.thoughtsOfDeath = page.locator("xpath=//input[@name='question-8']")
+
+    //Tools
+    // 1st Tool
+    this.testDate = page.locator("xpath=//input[@id='testDate']")
+    this.airConductionBtn = page.getByTestId('airConduction')
+    //page.locator("xpath=//button[@data-testid='airConduction']")
+    this.boneConductionBtn = page.locator("xpath=//button[@data-testid='boneConduction']")
+    this.unaidedSoundFieldBtn = page.locator("xpath=//button[@data-testid='unaidedSoundField']")
+    this.aidedSoundFieldBtn = page.locator("xpath=//button[@data-testid='aidedSoundField']")
+
+    this.dropdownACTestingMethods = page.locator("xpath=//input[@id='airConduction.testingMethods']")
+    this.dropdownACTransducerUsed = page.locator("xpath=//input[@id='airConduction.trasducerUser']")
+    this.dropdownACStimulusSignalType = page.locator("xpath=//input[@id='airConduction.stimulusSignalType']")
+    this.txtACReliability = page.locator("xpath=//input[@id='airConduction.reliability']")
+    this.txtACNotes = page.locator("xpath=//input[@id='airConduction.notes']")
+
+    this.dropdownBCTestingMethods = page.locator("xpath=//input[@id='boneConduction.testingMethods']")
+    //this.dropdownBCTransducerUsed = page.locator("xpath=//input[@id='boneConduction.trasducerUser']")
+    this.dropdownBCStimulusSignalType = page.locator("xpath=//input[@id='boneConduction.stimulusSignalType']")
+    this.txtBCReliability = page.locator("xpath=//input[@id='boneConduction.reliability']")
+    this.txtBCNotes = page.locator("xpath=//input[@id='boneConduction.notes']")
+
+    this.dropdownUSFTestingMethods = page.locator("xpath=//input[@id='unaidedSoundField.testingMethods']")
+    //this.dropdownUSFTransducerUsed = page.locator("xpath=//input[@id='unaidedSoundField.trasducerUser']")
+    this.dropdownUSFStimulusSignalType = page.locator("xpath=//input[@id='unaidedSoundField.stimulusSignalType']")
+    this.txtUSFReliability = page.locator("xpath=//input[@id='unaidedSoundField.reliability']")
+    this.txtUSFNotes = page.locator("xpath=//input[@id='unaidedSoundField.notes']")
+
+    this.dropdownASFTestingMethods = page.locator("xpath=//input[@id='aidedSoundField.testingMethods']")
+    //this.dropdownASFTransducerUsed = page.locator("xpath=//input[@id='aidedSoundField.trasducerUser']")
+    this.dropdownASFStimulusSignalType = page.locator("xpath=//input[@id='aidedSoundField.stimulusSignalType']")
+    this.txtASFReliability = page.locator("xpath=//input[@id='aidedSoundField.reliability']")
+    this.txtASFNotes = page.locator("xpath=//input[@id='aidedSoundField.notes']")
+
+    this.saveTestAndToolExtraDetailsBtn = page.locator("xpath=//button[@aria-label='saveTestAndToolExtraDetails']")
+
+    // 2nd Tool
+    this.markerBtn = page.locator("xpath=//button[@data-testid='Add Marker']")
+    this.markerOne = page.locator("xpath=//div[@data-testid='marker']")
+    //this.markerNotes = page.locator("xpath=//textarea[@aria-label='Notes']")
+    this.markerNotes = page.getByRole('textbox', { name: 'Notes' })
+    this.saveNotes = page.locator("xpath=//button[@aria-label='saveNotes']");
+    this.saveDasBtn = page.locator("xpath=//button[@data-testid='Save DAS']")
+    this.saveDasCrpBtn = page.locator("xpath=//button[@data-testid='Save DAS-CRP']")
+
+    this.divS1 = page.locator("xpath=//input[@id='divS1']")
+    this.divS2 = page.locator("xpath=//input[@id='divS2']")
+    this.divS3 = page.locator("xpath=//input[@id='divS3']")
+    this.divS4 = page.locator("xpath=//input[@id='divS4']")
+    this.divS5 = page.locator("xpath=//input[@id='divS5']")
+    this.divS6 = page.locator("xpath=//input[@id='divS6']")
+    this.divS7 = page.locator("xpath=//input[@id='divS7']")
+    this.divS8 = page.locator("xpath=//input[@id='divS8']")
+    this.divS9 = page.locator("xpath=//input[@id='divS9']")
+    this.divS10 = page.locator("xpath=//input[@id='divS10']")
+    this.divS11 = page.locator("xpath=//input[@id='divS11']")
+    this.divS12 = page.locator("xpath=//input[@id='divS12']")
+    this.divS13 = page.locator("xpath=//input[@id='divS13']")
+    this.divS14 = page.locator("xpath=//input[@id='divS14']")
+    this.divS15 = page.locator("xpath=//input[@id='divS15']")
+    this.divS16 = page.locator("xpath=//input[@id='divS16']")
+    this.divS17 = page.locator("xpath=//input[@id='divS17']")
+    this.divS18 = page.locator("xpath=//input[@id='divS18']")
+    this.divS19 = page.locator("xpath=//input[@id='divS19']")
+    this.divS20 = page.locator("xpath=//input[@id='divS20']")
+    this.divS21 = page.locator("xpath=//input[@id='divS21']")
+    this.divS22 = page.locator("xpath=//input[@id='divS22']")
+    this.divS23 = page.locator("xpath=//input[@id='divS23']")
+    this.divS24 = page.locator("xpath=//input[@id='divS24']")
+    this.divS25 = page.locator("xpath=//input[@id='divS25']")
+    this.divS26 = page.locator("xpath=//input[@id='divS26']")
+    this.divS27 = page.locator("xpath=//input[@id='divS27']")
+    this.divS28 = page.locator("xpath=//input[@id='divS28']")
+
+    this.divT1 = page.locator("xpath=//input[@id='divT1']")
+    this.divT2 = page.locator("xpath=//input[@id='divT2']")
+    this.divT3 = page.locator("xpath=//input[@id='divT3']")
+    this.divT4 = page.locator("xpath=//input[@id='divT4']")
+    this.divT5 = page.locator("xpath=//input[@id='divT5']")
+    this.divT6 = page.locator("xpath=//input[@id='divT6']")
+    this.divT7 = page.locator("xpath=//input[@id='divT7']")
+    this.divT8 = page.locator("xpath=//input[@id='divT8']")
+    this.divT9 = page.locator("xpath=//input[@id='divT9']")
+    this.divT10 = page.locator("xpath=//input[@id='divT10']")
+    this.divT11 = page.locator("xpath=//input[@id='divT11']")
+    this.divT12 = page.locator("xpath=//input[@id='divT12']")
+    this.divT13 = page.locator("xpath=//input[@id='divT13']")
+    this.divT14 = page.locator("xpath=//input[@id='divT14']")
+    this.divT15 = page.locator("xpath=//input[@id='divT15']")
+    this.divT16 = page.locator("xpath=//input[@id='divT16']")
+    this.divT17 = page.locator("xpath=//input[@id='divT17']")
+    this.divT18 = page.locator("xpath=//input[@id='divT18']")
+    this.divT19 = page.locator("xpath=//input[@id='divT19']")
+    this.divT20 = page.locator("xpath=//input[@id='divT20']")
+    this.divT21 = page.locator("xpath=//input[@id='divT21']")
+    this.divT22 = page.locator("xpath=//input[@id='divT22']")
+    this.divT23 = page.locator("xpath=//input[@id='divT23']")
+    this.divT24 = page.locator("xpath=//input[@id='divT24']")
+    this.divT25 = page.locator("xpath=//input[@id='divT25']")
+    this.divT26 = page.locator("xpath=//input[@id='divT26']")
+    this.divT27 = page.locator("xpath=//input[@id='divT27']")
+    this.divT28 = page.locator("xpath=//input[@id='divT28']")
+
+    this.healthState = page.locator("xpath=//input[@id='healthState']")
+    this.esr = page.locator("xpath=//input[@id='esr']")
+    this.crp = page.locator("xpath=//input[@id='crp']")
+    this.tenderJointCount = page.locator("xpath=//input[@id='tenderJointCount']")
+    this.swollenJointCount = page.locator("xpath=//input[@id='swollenJointCount']")
+
+    // 3rd Tool
+        this.circle8 = page.locator('svg:nth-child(8)')
+    this.circle80 = page.locator('svg:nth-child(80)')
+    this.circle87 = page.locator('svg:nth-child(87)')
+    this.circle3 = page.locator('svg:nth-child(3)')
+    this.tenderJointCount78 = page.locator("xpath=//input[@id='tenderJointCount78']")
+    this.swollenJointCount78 = page.locator("xpath=//input[@id='swollenJointCount78']")
+
+    //Patient View
+    this.patientView = page.locator("xpath=//button[@data-testid='patientView']")
+    this.allergyHistory = page.locator('div').filter({ hasText: /^Allergies1$/ }).getByLabel('patientHistoryIconButton');
+    this.diagnosisHistory = page.locator('div').filter({ hasText: /^Diagnosis1$/ }).getByLabel('patientHistoryIconButton');
+    this.procedureHistory = page.locator('div').filter({ hasText: /^Procedures2$/ }).getByLabel('patientHistoryIconButton');
+    this.problemsHistory = page.locator('div').filter({ hasText: /^Current Problems and Symptoms1$/ }).getByLabel('patientHistoryIconButton');
+    this.conditionHistory = page.locator('div').filter({ hasText: /^Conditions1$/ }).getByLabel('patientHistoryIconButton');
+    this.medicationHistory = page.locator('div').filter({ hasText: /^Medications1$/ }).getByLabel('patientHistoryIconButton');
+    this.deviceHistory = page.locator('div').filter({ hasText: /^Devices1$/ }).getByLabel('patientHistoryIconButton');
+    this.investigationHistory = page.locator('div').filter({ hasText: /^Investigations1$/ }).getByLabel('patientHistoryIconButton');
+    this.examinationHistory = page.locator('div').filter({ hasText: /^Examinations1$/ }).getByLabel('patientHistoryIconButton');
+    this.lifestyleHistory = page.locator('div').filter({ hasText: /^Lifestyle1$/ }).getByLabel('patientHistoryIconButton');
+    this.socialHistory = page.locator('div').filter({ hasText: /^Social Circumstances1$/ }).getByLabel('patientHistoryIconButton');
+    this.riskHistory = page.locator('div').filter({ hasText: /^Risk Factors1$/ }).getByLabel('patientHistoryIconButton');
+    this.testToolHistory = page.locator('div').filter({ hasText: /^Test\/Tools1$/ }).getByLabel('patientHistoryIconButton');
+    this.interpretationHistory  = page.locator('div').filter({ hasText: /^Interpretations1$/ }).getByLabel('patientHistoryIconButton');
+    this.recommendationHistory = page.locator('div').filter({ hasText: /^Recommendations1$/ }).getByLabel('patientHistoryIconButton');
+    this.pregnancyHistory = page.locator('div').filter({ hasText: /^Pregnancies1$/ }).getByLabel('patientHistoryIconButton');
+
+    this.allergyHistoryPopUp = page.getByRole('heading', { name: 'Allergies History', exact: true })
+    this.diagnosisHistoryPopUp = page.getByRole('heading', { name: 'Diagnosis History', exact: true })
+    this.procedureHistoryPopUp = page.getByRole('heading', { name: 'Procedures History', exact: true })
+    this.problemsHistoryPopUp = page.getByRole('heading', { name: 'Current Problems and Symptoms' })
+    this.conditionHistoryPopUp = page.getByRole('heading', { name: 'Conditions History', exact: true })
+    this.medicationHistoryPopUp = page.getByRole('heading', { name: 'Medications History', exact: true })
+    this.deviceHistoryPopUp = page.getByRole('heading', { name: 'Devices History', exact: true })
+    this.investigationHistoryPopUp = page.getByRole('heading', { name: 'Investigations History', exact: true })
+    this.examinationHistoryPopUp = page.getByRole('heading', { name: 'Examinations History', exact: true })
+    this.lifestyleHistoryPopUp = page.getByRole('heading', { name: 'Lifestyle History', exact: true })
+    this.socialHistoryPopUp = page.getByRole('heading', { name: 'Social Circumstances History', exact: true })
+    this.riskHistoryPopUp = page.getByRole('heading', { name: 'Risk Factors History', exact: true })
+    this.testToolHistoryPopUp = page.getByRole('heading', { name: 'Test/Tools History' })
+    this.interpretationHistoryPopUp = page.getByRole('heading', { name: 'Interpretations History', exact: true })
+    this.recommedationHistoryPopUp = page.getByRole('heading', { name: 'Recommendations History', exact: true })
+    this.pregnancyHistoryPopUp = page.getByRole('heading', { name: 'Pregnancies History', exact: true })
 }
 
 //Riskfactor
@@ -871,6 +1092,7 @@ async enterPatientScanNotes(pascn_notes)
   //Medication Extra Details
   async enterOnDose(dose) {
     await this.dose.clear();
+    await this.page.getByTestId('Ok').click()
     await typeText(this.page, this.dose, dose);
   }
 
@@ -1268,8 +1490,549 @@ async enterPatientScanNotes(pascn_notes)
         await this.textareaNotes.fill(exam_notes)
     }
 
+      //Devices
+  async selectDeviceProcedure(procedure) {
+      await selectFromDropdown(this.page, this.dropdownDeviceProcedure, procedure)
+  }
+
+  async selectManufacturer(manufacturer) {
+    await selectFromDropdown(this.page, this.dropdownManufacturer, manufacturer)
+  }
+
+  async selectDeviceSubCategory(category) {
+    await selectFromDropdown(this.page, this.dropdownDeviceSubCategory, category)
+  }
+
+  async enterDevice(device) {
+    await this.txtSearchForDevice.type(device)
+    await this.page.getByRole('option', { name: device }).first().click()
+  }
+  
+  async selectTypeOfDevice(typeOfDevice) {
+    await selectFromDropdown(this.page, this.dropdownTypeOfDevice, typeOfDevice)
+  }
+
+  async selectInternalOrExternal(internalExternal) {
+    await selectFromDropdown(this.page, this.dropdownInternalExternal, internalExternal)
+  }
+
+  async selectDeviceStatus(status) {
+    await selectFromDropdown(this.page, this.dropdownDeviceStatus, status)
+  }
+
+  async selectLaterality(laterality) {
+    await selectFromDropdown(this.page, this.dropdownLaterality, laterality)
+  }
+
+  async selectSerialNumber(serialNo) {
+    await typeText(this.page, this.txtDeviceSerialNumber, serialNo)
+  }
+
+  async enterDeviceExpiryDate(dateExpiry) {
+    await typeText(this.page, this.txtDeviceExpiryDate, dateExpiry)
+  }
+
+  async enterDeviceNotes(notes) {
+    await typeText(this.page, this.txtDeviceNotes, notes)
+  }
+
+  async clickOnSaveDevice() {
+    await clickElement(this.page, this.btnSaveDevice);
+  }
+
+  async clickOnExtraDetailsView2() {
+    await clickElement(this.page, this.extraDetailLevel2)
+  }
+
+  async clickOnExtraDetailsView3() {
+    await clickElement(this.page, this.extraDetailLevel)
+  }
+
+  async clickOnEditDevice() {
+    await clickElement(this.page, this.btnEditDevice)
+  }
+
+  async clickOnDeleteDevice() {
+    await clickElement(this.page, this.btnDeleteDevice)
+  }
+
+  async clickOnOkPopup() {
+    await clickElement(this.page, this.btnOkDevicePopup)
+  }
+
+  async enterDeleteDeviceReason(reason) {
+    await typeText(this.page, this.txtDeleteDeviceReason, reason)
+  }
+
+  async clickOnSaveDeleteReason() {
+    await clickElement(this.page, this.btnSaveDeleteReason)
+  }
+
+  async clickOnRequestLink() {
+    await clickElement(this.page, this.linkRequestOrderStatus)
+  }
+
+  async clickOnRequestButton() {
+    await clickElement(this.page, this.btnExternalRequest)
+  }
+
+  // Test Tool
+  async enterTestDate(val){
+    typeText(this.page, this.testDate, val)
+  }
+  async clickOnAirConduction(){
+    clickElement(this.page, this.airConductionBtn)
+  }
+
+  async clickOnBoneConduction(){
+    clickElement(this.page, this.boneConductionBtn)
+  }
+
+  async clickOnUnaidedSoundField(){
+    clickElement(this.page, this.unaidedSoundFieldBtn)
+  }
+
+  async clickOnAidedSoundField(){
+    clickElement(this.page, this.aidedSoundFieldBtn)
+  }
+
+  async selectAirConductionTestingMethods(val){
+    await this.page.getByTestId('airConduction.testingMethods').getByPlaceholder('Please Select').click();
+    await this.page.getByRole('option', { name: val }).click();
+  }
+
+  async selectAirConductionTransducerUsed(val){
+    await this.page.getByTestId('airConduction.transducerUsed').getByPlaceholder('Please Select').click();
+    await this.page.getByRole('option', { name: val }).click();
+  }
+
+  async selectAirConductionStimulusSignalType(val){
+    await this.page.getByTestId('airConduction.stimulusSignalType').getByPlaceholder('Please Select').click();
+    await this.page.getByRole('option', { name: val }).click();
+  }
+
+  async enterAirConductionReliability(val){
+    await this.page.getByRole('textbox', { name: 'airConduction.reliability' }).fill(val);
+  }
+
+  async enterAirConductionNotes(val){
+    await this.page.getByRole('textbox', { name: 'airConduction.notes' }).fill(val);
+  }
+
+  async selectBoneConductionTestingMethods(val){
+    await this.page.getByTestId('boneConduction.testingMethods').getByPlaceholder('Please Select').click();
+    await this.page.getByRole('option', { name: val }).click();
+  }
+
+  async selectBoneConductionStimulusSignalType(val){
+    await this.page.getByTestId('boneConduction.stimulusSignalType').getByPlaceholder('Please Select').click();
+    await this.page.getByRole('option', { name: val }).click();
+  }
+
+  async enterBoneConductionReliability(val){
+    await this.page.getByRole('textbox', { name: 'boneConduction.reliability' }).fill(val);
+  }
+
+  async enterBoneConductionNotes(val){
+    await this.page.getByRole('textbox', { name: 'boneConduction.notes' }).fill(val);
+  }
+
+  async selectUnaidedSoundFieldTestingMethods(val){
+    await this.page.getByTestId('unaidedSoundField.testingMethods').getByPlaceholder('Please Select').click();
+    await this.page.getByRole('option', { name: val }).click();
+  }
+
+  async selectUnaidedSoundFieldStimulusSignalType(val){
+    await this.page.getByTestId('unaidedSoundField.stimulusSignalType').getByPlaceholder('Please Select').click();
+    await this.page.getByRole('option', { name: val }).click();
+  }
+
+  async enterUnaidedSoundFieldReliability(val){
+    await this.page.getByRole('textbox', { name: 'unaidedSoundField.reliability' }).fill(val);
+  }
+
+  async enterUnaidedSoundFieldNotes(val){
+    await this.page.getByRole('textbox', { name: 'unaidedSoundField.notes' }).fill(val);
+  }
+
+  async selectAidedSoundFieldTestingMethods(val){
+    await this.page.getByTestId('aidedSoundField.testingMethods').getByPlaceholder('Please Select').click();
+    await this.page.getByRole('option', { name: val }).click();
+  }
+
+  async selectAidedSoundFieldStimulusSignalType(val){
+    await this.page.getByTestId('aidedSoundField.stimulusSignalType').getByPlaceholder('Please Select').click();
+    await this.page.getByRole('option', { name: val }).click();
+  }
+
+  async enterAidedSoundFieldReliability(val){
+    await this.page.getByRole('textbox', { name: 'aidedSoundField.reliability', exact: true }).fill(val);
+  }
+
+  async enterAidedSoundFieldNotes(val){
+    await this.page.getByRole('textbox', { name: 'aidedSoundField.notes', exact: true }).fill(val);
+  }
+
+  async clickOnSaveBtn(){
+    clickElement(this.page, this.saveTestAndToolExtraDetailsBtn)
+  }
+
+  async selectSensoryPerception(ans){
+    await selectFromDropdown(this.page, this.sensoryPerception, ans)
+  }
+
+  async selectMoisture(ans){
+    await selectFromDropdown(this.page, this.moisture, ans)
+  }
+
+  async selectActivityTest(ans){
+    await selectFromDropdown(this.page, this.activityTest, ans)
+  }
+
+  async selectMobility(ans){
+    await selectFromDropdown(this.page, this.mobility, ans)
+  }
+
+  async selectNutrition(ans){
+    await selectFromDropdown(this.page, this.nutrition, ans)
+  }
+
+  async selectFrictionAndShear(ans){
+    await selectFromDropdown(this.page, this.frictionAndShear, ans)
+  }
+
+  async clickOnCalculateButton(){
+    await clickElement(this.page, this.calculateButton)
+  }
+
+  async clickOnSaveTest(){
+    await clickElement(this.page, this.saveTestButton)
+  }
+
+  async clickOnSaveTool(){
+    await clickElement(this.page, this.saveDASToolButton)
+  }
+
+  async clickOnSaveDASCRPTool(){
+    await clickElement(this.page, this.saveDASCRPToolButton)
+  }
+
+  async clickOnDeleteTestTool(){
+    await clickElement(this.page, this.deleteTestToolButton)
+  }
+
+  async enterLastReviewedDate(lastReviewedDate) {
+    await typeText(this.page, this.lastReviewedDate, lastReviewedDate);
+  }
+
+  async enterLastReviewed(lastReviewedDate) {
+    await typeText(this.page, this.lastReviewedTool, lastReviewedDate);
+  }
+
+  async clickOnEditIcon(){
+    await clickElement(this.page, this.editIcon)
+  }
+
+  async selectBmiScore(ans){
+    await selectFromDropdown(this.page, this.bmiScore, ans)
+  }
+
+  async selectUnplannedWeightLoss(ans){
+    await selectFromDropdown(this.page, this.unplannedWeightLoss, ans)
+  }
+
+  async selectNoNutritonalIntake(ans){
+    await selectFromDropdown(this.page, this.noNutritialIntake, ans)
+  }
+
+  async selectRecentFalls(ans){
+    await selectFromDropdown(this.page, this.recentFalls, ans)
+  }
+
+  async selectMedications(ans){
+    await selectFromDropdown(this.page, this.medications, ans)
+  }
+
+  async selectPsycological(ans){
+    await selectFromDropdown(this.page, this.psychological, ans)
+  }
+
+  async selectCognitiveStatus(ans){
+    await selectFromDropdown(this.page, this.cognitiveStatus, ans)
+  }
+
+  async selectInterestOrPleasure(ans){
+    await selectFromDropdown(this.page, this.interestOrPleasure, ans)
+  }
+
+  async selectDownOrDepressed(ans){
+    await selectFromDropdown(this.page, this.downOrDepressed, ans)
+  }
+
+  async selectTroubleSleeping(ans){
+    await selectFromDropdown(this.page, this.troubleSleeping, ans)
+  }
+
+  async selectTiredLittleEnergy(ans){
+    await selectFromDropdown(this.page, this.tiredLittleEnergy, ans)
+  }
+
+  async selectPoorAppetite(ans){
+    await selectFromDropdown(this.page, this.poorAppetite, ans)
+  }
+
+  async selectFeelingBadAboutYourself(ans){
+    await selectFromDropdown(this.page, this.feelingBadAboutYourself, ans)
+  }
+
+  async selectTroubleConcentrating(ans){
+    await selectFromDropdown(this.page, this.troubleConcentrating, ans)
+  }
+  
+  async selectMovingSlowly(ans) {
+    await this.page.getByText(ans, { exact: true }).first().click();
+  }
+
+  async selectThoughtsOfDeath(ans) {
+    await this.page.getByText(ans, { exact: true }).nth(1).click();
+  }
+
+  //Tools
+  async clickOnMarkerButton(){
+    await clickElement(this.page, this.markerBtn)
+  }
+
+  async clickOnFirstMarker(){
+    await this.page.getByRole('img', { name: 'markerWithBrown' }).click();
+  }
+
+  async enterMarkerNotes(notes){
+    await typeText(this.page, this.markerNotes, notes)
+  }
+
+  async clickOnSaveNotes(){
+    await clickElement(this.page, this.saveNotes)
+  }
+  
+  async clickOnSwollen1(){
+    await clickElement(this.page, this.divS1)
+  }
+
+  async clickOnSwollen2(){
+    await clickElement(this.page, this.divS2)
+  }
+
+  async clickOnSwollen3(){
+    await clickElement(this.page, this.divS3)
+  }
+
+  async clickOnSwollen4(){
+    await clickElement(this.page, this.divS4)
+  }
+
+  async clickOnSwollen5(){
+    await clickElement(this.page, this.divS5)
+  }
+
+  async clickOnTender1(){
+    await clickElement(this.page, this.divT1)
+  }
+
+  async clickOnTender2(){
+    await clickElement(this.page, this.divT2)
+  }
+
+  async clickOnTender3(){
+    await clickElement(this.page, this.divT3)
+  }
+
+  async clickOnTender4(){
+    await clickElement(this.page, this.divT4)
+  }
+
+  async clickOnTender5(){
+    await clickElement(this.page, this.divT5)
+  }
+
+  async enterHealthState(val){
+    await typeText(this.page, this.healthState, val)
+  }
+
+  async enterEsr(val){
+    await typeText(this.page, this.esr, val)
+  }
+
+  async enterCrp(val){
+    await typeText(this.page, this.crp, val)
+  }
+
+  async enterTender(val){
+    await typeText(this.page, this.tenderJointCount, val)
+  }
+
+  async enterSwollen(val){
+    await typeText(this.page, this.swollenJointCount, val)
+  }
+
+  async clickOnCircle1(){
+    await clickElement(this.page, this.circle3)
+  }
+
+  async clickOnCircle2(){
+    await clickElement(this.page, this.circle8)
+  }
+
+  async clickOnCircle3(){
+    await clickElement(this.page, this.circle80)
+  }
+
+  async clickOnCircle4(){
+    await clickElement(this.page, this.circle87)
+  }
+
+  async enterTender78(val){
+    await typeText(this.page, this.tenderJointCount78, val)
+  }
+
+  async enterSwollen78(val){
+    await typeText(this.page, this.swollenJointCount78, val)
+  }
+
+  //Patient View
+  async togglePatientView(){
+    await clickElement(this.page, this.patientView)
+  }
+
+  async clickOnAllergyHistoryBtn(){
+    await clickElement(this.page, this.allergyHistory)
+  }
+
+  async clickOnDiagnosisHistoryBtn(){
+    await clickElement(this.page, this.diagnosisHistory)
+  }
+
+  async clickOnProcedureHistoryBtn(){
+    await clickElement(this.page, this.procedureHistory)
+  }
+
+  async clickOnProblemsHistoryBtn(){
+    await clickElement(this.page, this.problemsHistory)
+  }
+
+  async clickOnConditionHistoryBtn(){
+    await clickElement(this.page, this.conditionHistory)
+  }
+
+  async clickOnMedicationHistoryBtn(){
+    await clickElement(this.page, this.medicationHistory)
+  }
+
+  async clickOnDeviceHistoryBtn(){
+    await clickElement(this.page, this.deviceHistory)
+  }
+
+  async clickOnInvestigationHistoryBtn(){
+    await clickElement(this.page, this.investigationHistory)
+  }
+
+  async clickOnExaminationHistoryBtn(){
+    await clickElement(this.page, this.examinationHistory)
+  }
+
+  async clickOnLifestyleHistoryBtn(){
+    await clickElement(this.page, this.lifestyleHistory)
+  }
+
+  async clickOnSocialHistoryBtn(){
+    await clickElement(this.page, this.socialHistory)
+  }
+
+  async clickOnRiskHistoryBtn(){
+    await clickElement(this.page, this.riskHistory)
+  }
+
+  async clickOnTestToolHistoryBtn(){
+    await clickElement(this.page, this.testToolHistory)
+  }
+
+  async clickOnInterpretationHistoryBtn(){
+    await clickElement(this.page, this.interpretationHistory)
+  }
+
+  async clickOnRecommendationHistoryBtn(){
+    await clickElement(this.page, this.recommendationHistory)
+  }
+
+  async clickOnPregnancyHistoryBtn(){
+    await clickElement(this.page, this.pregnancyHistory)
+  }
+
+  async checkPatientView(selectorName, selectorName2, popUpName) {
+
+    const popUp = this.page.getByRole('heading', { name: popUpName, exact: true });
+    const selector = this.page.getByTestId(selectorName);
+
+    if(popUpName === 'Allergies History') {
+      await this.clickOnAllergyHistoryBtn();
+    } else if (popUpName === 'Diagnosis History'){
+      await this.clickOnDiagnosisHistoryBtn();
+    } else if (popUpName === 'Procedures History'){
+      await this.clickOnProcedureHistoryBtn();
+    } else if (popUpName === 'Current Problems and Symptoms History'){
+      await this.clickOnProblemsHistoryBtn()
+    } else if (popUpName === 'Conditions History'){
+      await this.clickOnConditionHistoryBtn();
+    } else if (popUpName === 'Medications History'){
+      await this.clickOnMedicationHistoryBtn();
+    } else if (popUpName === 'Devices History'){
+      await this.clickOnDeviceHistoryBtn();
+    } else if (popUpName === 'Investigations History'){
+      await this.clickOnInvestigationHistoryBtn();
+    } else if (popUpName === 'Examinations History'){
+      await this.clickOnExaminationHistoryBtn();
+    } else if (popUpName === 'Lifestyle History'){
+      await this.clickOnLifestyleHistoryBtn();
+    } else if (popUpName === 'Social Circumstances History'){
+      await this.clickOnSocialHistoryBtn();
+    } else if (popUpName === 'Risk Factors History'){
+      await this.clickOnRiskHistoryBtn();
+    } else if (popUpName === 'Test/Tools History'){
+      await this.clickOnTestToolHistoryBtn();
+    } else if (popUpName === 'Interpretations History'){
+      await this.clickOnInterpretationHistoryBtn();
+    } else if (popUpName === 'Recommendations History'){
+      await this.clickOnRecommendationHistoryBtn();
+    } else if (popUpName === 'Pregnancies History'){
+      await this.clickOnPregnancyHistoryBtn();
+    } else {
+      console.log("Incorrect information entered")
+    }
+
+    await popUp.waitFor();
+
+    const isPopupVisible = popUp.isVisible();
+    const isSelectorVisible = selector.isVisible();
+    console.log("\n");
+
+    if(isPopupVisible) {
+      console.log(popUpName + " Pop up is displayed")
+      
+      if(isSelectorVisible) {
+        console.log("Entered information " + selectorName + " is displayed on Pop up")
+      }
+
+      if(selectorName2 != 'none') {
+        const selector2 = this.page.getByTestId(selectorName);
+        const isSelector2Visible = selector2.isVisible();
+
+        if(isSelector2Visible) {
+          console.log("Entered information " + selectorName2 + " is displayed on Pop up")
+        }
+      }
+    }
+    await this.page.waitForTimeout(1500)
+    await this.closePopup.click();
+  }
 }
-
-
 
 module.exports = ClinicalExtraDetails;

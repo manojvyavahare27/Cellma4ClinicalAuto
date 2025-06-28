@@ -172,8 +172,11 @@ test.describe("Excel Conversion Patient Details Category", () => {
       await patientDetailsED.EnterDate();
       await patientDetailsED.EnterNotes(jsonData.AddPatientDetails[index].pad_notes);
       await patientDetailsED.clickOnSaveButton();
+       
       await page.waitForTimeout(1000);
-     // await expect(page.getByText("Patient detail Record Added Successfully")).toHaveText("Patient detail Record Added Successfully");
+      await expect(page.getByText("Patient Detail record added successfully")).toHaveText("Patient Detail record added successfully");
+      
+      await page.pause()
       await patientDetailshome.expandLevels();
       await patientDetailshome.reviewRecords();
       await page.waitForTimeout(1000);

@@ -121,7 +121,33 @@ class ClinicalSummary {
           this.medicationLink = page.getByTestId('CommonCellmaPopup').getByText('Metformin 500mg tablets')
           this.popupLocator = page.locator('//div[@class="MuiDialog-container MuiDialog-scrollPaper css-8azq84"]');
           this.SavePopupbutton=page.locator("xpath=//button[@data-testid='Save']")
+
+        //Links
+        this.dropdownLinks=page.getByTestId('Links')
+        this.linkMedicationAdministrations=page.getByRole('heading', { name: 'Medication Administrations' })
+
+        this.dropdownAddTo=page.getByTestId('Add To')
+        this.linkPatientConsent = page.locator("xpath=//li[@data-testid='patientConsent']")
           
+     }
+     
+     //Links
+     async clickOnDropdownLinks()
+     {
+         await this.dropdownLinks.click()
+     }
+
+     async clickOnMedicationAdministrationsLink()
+     {
+         await this.linkMedicationAdministrations.click()
+     }
+
+     async clickOnDropdownAddToo()
+     {
+        await this.dropdownAddTo.click()
+     }
+     async clickOnPatientConsent(){
+        await this.linkPatientConsent.click()
      }
 
      async clickOnSavePopup()
@@ -344,6 +370,11 @@ class ClinicalSummary {
     //     await clickElement(this.page, this.addClinicalItem);
     // }
 
+    //TestTool
+    async clickOnAddButton() {
+        await clickElement(this.page, this.addClinicalItem)
+    }
+
     //Medical Certificate
     async ClickOnAddMedicalCertificateButton()
     {
@@ -439,6 +470,13 @@ class ClinicalSummary {
        // await this.addClinicalItem.click() 
     }
     ///////////////////////////////CHOOSE DYNAMIC DROPDOWN ITEMS//////////////////////////////////
+    
+    async selectTestToolItem(testToolName) {
+        this.itemName = this.page.locator(`xpath=//h1[normalize-space()='${testToolName}']`)
+        this.searchClinicalItem = this.page.locator("xpath=//input[@name='search']")
+        await this.searchClinicalItem.click()
+        await this.itemName.click()
+    }
 
     async selectandAddClinicalItem(clinicalItemName) {
         
@@ -616,6 +654,13 @@ class ClinicalSummary {
             this.itemName=item;
         }
         await clickHistoryTableIconsUsingItemName(this.page,this.itemName, 'editIconButton')
+    }
+
+    async clickOnDeviceEdit(item = null){
+        if(item){
+            this.itemName=item;
+        }
+        await clickHistoryTableIconsUsingItemName(this.page,this.itemName, 'edit')
     }
 
     async closeWindow(){

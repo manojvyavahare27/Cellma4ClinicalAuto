@@ -1,3 +1,4 @@
+const { clickElement, typeText, selectFromDropdown} = require('../../UtilFiles/StaticUtility');
 class PatientSearch
 {
     constructor(page)
@@ -7,6 +8,7 @@ class PatientSearch
         this.txtbox_GivenName=page.getByRole('textbox', { name: 'Given Name' })  
         this.txtbox_FamilyName=page.getByRole('textbox', { name: 'Family Name' })
         this.dropdown_PatientSex=page.locator("xpath=//input[@name='sex']")
+        this.dropdown_SexAtBirth=page.getByTestId('sex').getByLabel('Open')
         this.txtbox_PatNameInOtherLang=page.getByRole('textbox', { name: 'Patient name in other language' })
         this.txtbox_HospitalRef=page.getByRole('textbox', { name: 'Hospital Ref' })
         this.txtbox_MobileNumber=page.getByTestId('Mobile')
@@ -268,6 +270,12 @@ class PatientSearch
     {       
         await this.dropdown_PatientSex.click()
         await this.page
+    }
+
+    //Select Sex at Birth
+    async selectSexAtBirth(pat_sex)
+    {
+        await selectFromDropdown(this.page, this.dropdown_SexAtBirth, pat_sex)
     }
 
     //Patient seen in last days
