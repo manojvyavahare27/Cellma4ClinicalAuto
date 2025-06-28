@@ -7,8 +7,9 @@ class AddPIP
         this.txtbox_PIPFamilyName=page.getByTestId('Family Name')
         this.txtbox_PIPGivenName=page.getByTestId('Given Name')
         this.txtbox_PIPMiddleName=page.getByTestId('Middle Name(s)')
-        this.calender_PIPBornDate=page.getByTestId('Born').getByPlaceholder('dd/mm/yyyy')
-        this.dropdown_PIPEthnicity=page.locator("xpath=//div[@aria-labelledby='mui-component-select-ethnicity']")
+        this.calender_PIPBornDate=page.locator("xpath=//input[@name='born']")
+        this.dropdown_PIPEthnicity=page.locator("xpath=//div[@data-testid='Ethnicity']")
+        this.chiNumber=page.locator("xpath=//input[@id='CHI Number']")
         this.dropdown_PIPOccupation=page.locator("xpath=//div[@aria-labelledby='mui-component-select-occupation']")
         this.txtbox_PIPMobile=page.getByTestId('Mobile')
         this.txtbox_PIPEmail=page.getByTestId('Email')
@@ -46,6 +47,10 @@ class AddPIP
     async checkBeingPhotographed()
     {
         await this.chkbox_BeingPhotographed.click()
+    }
+    async enterCHInumber(pip_identifier_type)
+    {
+        await this.chiNumber.type(pip_identifier_type)
     }
     async checkHelpingPatients()
     {
@@ -131,7 +136,7 @@ class AddPIP
         await this.dropdown_PIPOccupation.click()
         await this.page.getByRole('option', { name: 'Trainer', exact: true }).click()
     }
-    async selecrPIPEthnicity(pip_ethnicity_text)
+    async selectPIPEthnicity(pip_ethnicity_text)
     {
         await this.dropdown_PIPEthnicity.click()
         await this.page.getByRole('option', { name: pip_ethnicity_text, exact: true }).click()

@@ -19,7 +19,7 @@ class PatientSearch
         //this.txtbox_Barcode=page.getByRole('spinbutton', { name: 'Barcode' })
         this.txtbox_Barcode=page.getByTestId('Barcode')
         this.txtbox_NHSNo =page.getByRole('textbox', { name: 'NHS No' })
-        this.txtbox_BornDate=page.getByPlaceholder('dd/mm/yyyy')
+        this.txtbox_BornDate=page.locator("xpath=//input[@id='Born']")
         this.dropdown_PatientSeenInLastDays=page.locator("xpath=//div[@id='mui-component-select-patientSeenInLastDays']")
         this.txtbox_MPINumber=page.getByRole('textbox', { name: 'MPI Number' })
         this.checkbox_IncludeDeceasedPatient=page.getByRole('checkbox', { name: 'Include deceased patients' })
@@ -269,13 +269,14 @@ class PatientSearch
     async selectSex(pat_sex)
     {       
         await this.dropdown_PatientSex.click()
-        await this.page
+        await this.page.getByRole('option', { name: 'Male', exact: true }).click()
     }
 
     //Select Sex at Birth
     async selectSexAtBirth(pat_sex)
     {
         await selectFromDropdown(this.page, this.dropdown_SexAtBirth, pat_sex)
+         await page.locator.getByRole('option', { name: 'Male', exact: true }).click()        
     }
 
     //Patient seen in last days
@@ -328,11 +329,11 @@ class PatientSearch
     {
         await this.btn_AddPatient.click()
     }
-    async selectSex()
-    {
-            await this.dropdown_sex.click()
-            await this.dropdown_sex_male.click()
-    }
+    // async selectSex()
+    // {
+    //         await this.dropdown_sex.click()
+    //         await this.dropdown_sex_male.click()
+    // }
     async enterPatientIdentifier()
     {
         await this.txtbox_Identifier.type('Idf007')

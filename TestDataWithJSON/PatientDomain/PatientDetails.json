@@ -1,15 +1,15 @@
 {
   "loginDetails": [
     {
-      "username": "saurabh.auto",
-      "password": "Saurabh@2024"
+      "username": "Manoj.auto",
+      "password": "Manoj@2024"
     }
   ],
   "addPatient": [
     {
-      "pat_hospital_ref": "href05Reco004",
+      "pat_hospital_ref": "href05Reco005",
       "pat_title": "B/O",
-      "pat_firstname": "Supriya",
+      "pat_firstname": "YouC",
       "pat_surname": "Pawar",
       "pat_sex": "F",
       "pat_dob": "28/09/1994",
@@ -42,7 +42,7 @@
     {
       "pat_hospital_ref": "AutoHosp109",
       "pat_title": "B/O",
-      "pat_firstname": "Supriya",
+      "pat_firstname": "YouC",
       "pat_surname": "Pawar",
       "pat_sex": "F",
       "pat_dob": "28/09/1994",
@@ -73,7 +73,7 @@
   ],
   "patientIdentifier": [
     {
-      "pat_firstname": "Supriya",
+      "pat_firstname": "YouC",
       "pat_lastname": "Pawar",
       "pat_sex": "F",
       "pat_dob": "28/09/1994",
@@ -82,7 +82,7 @@
       "pat_country": "India",
       "pat_title": "B/O",
       "pat_middlename": "Martin",
-      "add_email": "Supriya.Pawar@Gmail.com"
+      "add_email": "YouC.Pawar@Gmail.com"
     }
   ],
   "tempAddress": [
@@ -131,6 +131,7 @@
       "pip_next_of_kin": 1,
       "pip_next_of_kin_Yes": "Yes",
       "pip_next_of_kin_1": 0,
+      "pip_chiNumber": "12354",
       "pip_notes": "Added for testing",
       "pip_family_aware_illness_yes": "Yes",
       "pip_family_aware_illness": 1,
@@ -422,12 +423,12 @@
   ],
   "patDetails": [
     {
-      "pat_hospital_ref": "href05Reco004",
+      "pat_hospital_ref": "href05Reco005",
       "pat_dod": "29/09/2023",
       "pat_tod": "10:11",
       "pat_dead_confirmation_status": "confirmed",
       "pat_death_notes": "Added For Testing",
-      "pat_firstname": "Supriya",
+      "pat_firstname": "YouC",
       "pat_surname": "Pawar"
     }
   ],
