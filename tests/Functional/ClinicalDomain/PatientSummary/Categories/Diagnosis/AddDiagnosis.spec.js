@@ -97,7 +97,7 @@ test.describe("Diagnosis Category", () => {
       logger.info("Family Name entered successfully");
      // await patientsearch.selectSex(data.pat_sex);
  
-    await patientsearch.selectBornDate(jsonData.PatientDetails[index].pat_dob);
+      await patientsearch.selectBornDate(jsonData.PatientDetails[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
      
@@ -114,7 +114,50 @@ test.describe("Diagnosis Category", () => {
       await contacthistory.selectContactReason("Assessments");
       await contacthistory.selectContactLocation("Cardio Location");
       await contacthistory.enterContactWith("Dr Sathya");
-      await contacthistory.clickOnAddContact();      
+      await contacthistory.clickOnAddContact();    
+      await page.pause()
+
+      await page.locator("xpath=//h1[@class='MuiTypography-root MuiTypography-h5 css-bjo12z'][normalize-space()='Diagnosis']").click()
+     
+      //Add Favourites
+      await diagnosis.clickOnFavouritesQuestion()
+      await diagnosis.clickOnfavouritesItem()
+      await diagnosisExtraDetails.enterOnSetDate(jsonData.EditDiagnosis[index].diag_date_onset.toString());
+      await diagnosisExtraDetails.enterDiagnosedDate(jsonData.EditDiagnosis[index].diag_date_diagnosed.toString());
+      await page.waitForTimeout(1500)
+      await diagnosisExtraDetails.enterDiagnosis1stSeenDate(jsonData.EditDiagnosis[index].diag_date_firstseen) 
+      await diagnosisExtraDetails.selectSeverity(jsonData.EditDiagnosis[index].diag_severity)      
+      await diagnosisExtraDetails.selectActivity(jsonData.EditDiagnosis[index].diag_activity)
+      await diagnosisExtraDetails.enterDiagnosisNotes(jsonData.EditDiagnosis[index].diag_notes);
+      await diagnosisExtraDetails.clickOnSaveFavourites();
+        await diagnosis.clickOnItemEdit('Asthma');
+        await diagnosisExtraDetails.clickOnDelete();
+        await diagnosisExtraDetails.clickOnConfirmDelete();
+        await diagnosisExtraDetails.enterDeleteReason('Deleted Existing item');
+        await diagnosisExtraDetails.clickOnSaveDeleteReason();
+        await expect(page.getByText('Diagnosis deleted successfully')).toHaveText('Diagnosis deleted successfully')
+
+
+        //Add OrderSet
+
+        await diagnosis.clickOnOrderSetHypertension()
+      await diagnosis.clickOnOrderSetItemChronic()
+      await diagnosisExtraDetails.enterOnSetDate(jsonData.EditDiagnosis[index].diag_date_onset.toString());
+      await diagnosisExtraDetails.enterDiagnosedDate(jsonData.EditDiagnosis[index].diag_date_diagnosed.toString());
+      await page.waitForTimeout(1500)
+      await diagnosisExtraDetails.enterDiagnosis1stSeenDate(jsonData.EditDiagnosis[index].diag_date_firstseen) 
+      await diagnosisExtraDetails.selectSeverity(jsonData.EditDiagnosis[index].diag_severity)      
+      await diagnosisExtraDetails.selectActivity(jsonData.EditDiagnosis[index].diag_activity)
+      await diagnosisExtraDetails.enterDiagnosisNotes(jsonData.EditDiagnosis[index].diag_notes);
+      await diagnosisExtraDetails.clickOnSaveFavourites();
+        await diagnosis.clickOnItemEdit('Chronic Diahorrhoea');
+        await diagnosisExtraDetails.clickOnDelete();
+        await diagnosisExtraDetails.clickOnConfirmDelete();
+        await diagnosisExtraDetails.enterDeleteReason('Deleted Existing item');
+        await diagnosisExtraDetails.clickOnSaveDeleteReason();
+        await expect(page.getByText('Diagnosis deleted successfully')).toHaveText('Diagnosis deleted successfully')
+
+
       await diagnosis.selectCategoryFromList(jsonData.AddDiagnosis[index].pacr_category);
       await page.waitForTimeout(2000)
      
@@ -252,7 +295,7 @@ test.describe("Diagnosis Category", () => {
       await diagnosisExtraDetails.enterDiagnosedDate(jsonData.EditDiagnosis[index].diag_date_diagnosed.toString());
       await page.waitForTimeout(1500)
       await diagnosisExtraDetails.enterDiagnosis1stSeenDate(jsonData.EditDiagnosis[index].diag_date_firstseen)      
-      //await diagnosisExtraDetails.selectStatus(jsonData.EditDiagnosis[index].diag_diagnosis_status)
+      
       await diagnosisExtraDetails.selectSeverity(jsonData.EditDiagnosis[index].diag_severity)      
       await diagnosisExtraDetails.selectActivity(jsonData.EditDiagnosis[index].diag_activity)
  

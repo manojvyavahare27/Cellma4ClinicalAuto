@@ -282,7 +282,7 @@ test.describe("Investigations Category", () => {
       await page.waitForTimeout(500);
       await Investigations.closeWindow();
       await page.waitForTimeout(500);
-     
+      await page.pause()
      
       // await page.waitForTimeout(500);
       await Investigations.clickOnItemHighlightNone();
@@ -298,7 +298,7 @@ test.describe("Investigations Category", () => {
      // await Investigations.clickOnLevelThreeExtraDetails();
       await Investigations.clickOnLevelOneExtraDetails();
 
-
+ await page.pause()
   //     ////// Database comparison - Patient Clinical Records - UPDATE Investigations RISK/////////
   //    sqlQuery =
   //    "select pacr_risk from patient_clinical_records where pacr_id=" + pacrId;

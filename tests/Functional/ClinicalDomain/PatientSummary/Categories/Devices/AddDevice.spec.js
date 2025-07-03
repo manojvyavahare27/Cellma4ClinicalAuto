@@ -79,6 +79,7 @@ test.describe("Device Category", () => {
             logger.info("Clicked on Search button successfully");
             await patientsearch.enterGivenName(data.pat_firstname);
             logger.info("Given Name entered successfully");
+            await page.pause()
             await patientsearch.enterFamilyName(data.pat_surname);
             logger.info("Family Name entered successfully");
             await patientsearch.selectSexAtBirth(data.pat_sex);
@@ -92,10 +93,10 @@ test.describe("Device Category", () => {
             await page.waitForTimeout(1000);
             await confirmexisting.clickOnConfirmExistingDetails();
             
-            const alert = page.getByRole('heading', { name: 'Alerts' }).isVisible()
-            if (alert) {
-              await Devices.clickPopup();              
-            }
+            // const alert = page.getByRole('heading', { name: 'Alerts' }).isVisible()
+            // if (alert) {
+            //   await Devices.clickPopup();              
+            // }
 
             await contacthistory.selectContactReason("Data Entry");
             await contacthistory.selectContactLocation("Cardio Location");

@@ -32,6 +32,8 @@ class PatientSummary
         this.iconCommunicationCategory=page.locator("xpath=//img[@alt='Communication Image Avatar']")
         this.iconOverviewCategory=page.locator("xpath=//img[@alt='Overview Image Avatar']")
 
+        this.allCategory=page.locator("xpath=//input[@name='allCategory']")
+
         //Top Icons on Patient Summary page
         this.topIconHome=page.locator("xpath=//div[contains(text(),'Home')]")
         this.topIconMyArea=page.locator("xpath=//div[contains(text(),'My Area')]")
@@ -123,6 +125,12 @@ class PatientSummary
     async clickOniconRecommendation()
     {          
         await this.iconRecommendationsCategory.click()
+    }
+
+    async clickOnallCategory()
+    {
+        await this.allCategory.click()
+        await this.page.getByRole('option', { name: 'Recommendations' }).click()
     }
  
 

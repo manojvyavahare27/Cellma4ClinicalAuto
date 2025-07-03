@@ -100,6 +100,8 @@ class ClinicalExtraDetails {
     this.saveCheckList = page.locator("xpath=//button[@aria-label='saveChecklist']");
     //this.saveExtraDetails = page.locator("xpath=//button[@aria-label='saveCategoryExtraDetails']");
     this.saveExtraDetails = page.locator("xpath=//button[@data-testid='Save']");
+    this.saveCheckListButton=page.locator("xpath=//div[@class='MuiStack-root css-jj2ztu']//button[normalize-space()='Save']")
+    this.saveFavourites=page.locator("xpath=//div[@role='dialog']//button[normalize-space()='Save']")
     this.delete = page.locator("xpath=//button[@data-testid='Delete']");
     this.deleteCertificate = page.locator("xpath=//button[@aria-label='Delete']");
     this.cancelDelete = page.locator("xpath=//button[@data-testid='Cancel']");
@@ -629,6 +631,7 @@ async enterSocialNotes(soci_notes)
 
   async enterDiagnosisNotes(diag_notes) {
    // await this.diagnosisNotes.type(diag_notes)
+    await this.diagnosisNotes.clear()
     await this.diagnosisNotes.type(diag_notes)
   }
 
@@ -741,9 +744,30 @@ async enterSocialNotes(soci_notes)
     await clickElement(this.page, this.saveCheckList);
   }
 
+  async clickOnSaveChecklistButton()
+  {
+    await this.saveCheckListButton.click()
+  }
+
   async clickOnSaveExtraDetails() {
     await clickElement(this.page, this.saveExtraDetails);
   }
+  async clickOnSaveFavourites()
+  {
+    await this.saveFavourites.click()
+  }
+
+  async clickOnSaveExamFavourites()
+  {
+    await this.saveFavourites.click()
+  }
+
+  async clickOnSaveMediFavourites()
+  {
+    await this.saveFavourites.click()
+  }
+
+
 
   async clickOnDelete() {
     await clickElement(this.page, this.delete);
@@ -1092,7 +1116,7 @@ async enterPatientScanNotes(pascn_notes)
   //Medication Extra Details
   async enterOnDose(dose) {
     await this.dose.clear();
-    //await this.page.getByTestId('Ok').click()
+   // await this.page.getByTestId('Ok').click()
     await typeText(this.page, this.dose, dose);
   }
 

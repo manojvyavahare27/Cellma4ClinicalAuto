@@ -116,7 +116,7 @@ test.describe("Medications Category", () => {
       await Medications.clickOnPinContactItemsMenu();
       await Medications.selectCategoryFromList("Medications");
       await page.waitForTimeout(2000);
-      await page.pause();
+      //await page.pause();
        ////////REVIEW EXISTING ITEM AND DELETE/////
        if(await Medications.checkItemOnHistoryTable(jsonData.AddMedication[index].pacr_que_name)){
         //await Medications.clickOnItemReview(jsonData.AddMedication[index].pacr_que_name);
@@ -143,40 +143,63 @@ test.describe("Medications Category", () => {
       const patId = results[0].paa_pat_id;
       console.log("Patient Accessed by User:" + patId);
 
-      ////////Check Remove and Restore Question from Customizable view/////
+      //Add Favourites
+      await Medications.clickOnFavouriteQueMedication();
+        await page.waitForTimeout(500);
+        await Medications.clickOnFavouritemItemMedication() 
+        await page.waitForTimeout(2000);
+        await MedicationsExtraDetails.enterOnDose(jsonData.AddMedication[index].medi_dose)
+      await MedicationsExtraDetails.enterForm(jsonData.AddMedication[index].medi_form)
+      await MedicationsExtraDetails.selectFrequency(jsonData.AddMedication[index].medi_frequency)
+      await MedicationsExtraDetails.selectRoute(jsonData.AddMedication[index].medi_route)
+      await MedicationsExtraDetails.enterDays(jsonData.AddMedication[index].medi_duration)
+      await MedicationsExtraDetails.selectSite(jsonData.AddMedication[index].meded_value)
+      await MedicationsExtraDetails.selectPrescribeBy(jsonData.AddMedication[index].medi_prescribed_by)
+      await MedicationsExtraDetails.enterStartDate(jsonData.AddMedication[index].medi_start_date)
+      await MedicationsExtraDetails.enterReviewDate(jsonData.AddMedication[index].medi_stop_date) 
+     // await page.pause() 
+      await MedicationsExtraDetails.enterStopDate(jsonData.AddMedication[index].medi_stop_date)
+      await MedicationsExtraDetails.selectSideEffects(jsonData.AddMedication[index].mse_text)  
+      await MedicationsExtraDetails.selectIndication(jsonData.AddMedication[index].meded_value) 
+      await MedicationsExtraDetails.selectStoppedReason(jsonData.AddMedication[index].medi_stopped_reason_eli_text)
+      await MedicationsExtraDetails.selectPGDPSD(jsonData.AddMedication[index].meded_value_PGD) 
+      await MedicationsExtraDetails.enterMedicationGradeForAdministrator(jsonData.AddMedication[index].meded_value_Administrator)
+      await MedicationsExtraDetails.selectMaxReffills(jsonData.AddMedication[index].meded_value_MaxReffills)    
+      await MedicationsExtraDetails.enterUnit(jsonData.AddMedication[index].meded_value_Unit)
+      await MedicationsExtraDetails.selectCurrentLocation(jsonData.AddMedication[index].pcl_location_name)     
+      await MedicationsExtraDetails.selectAdherent(jsonData.AddMedication[index].meded_value_Adherent)
+      await MedicationsExtraDetails.clickOnPrescribeAndSupply()
+      await MedicationsExtraDetails.clickOnSuitableForDelivery()
+      await MedicationsExtraDetails.clickOnAddToPrescribe()
+      await MedicationsExtraDetails.clickOnSupply()
+      await MedicationsExtraDetails.clickOnSetAsDefault()
+      //await MedicationsExtraDetails.clickOnRepeatable()
+      await MedicationsExtraDetails.clickOPrivateRecord()      
+      await MedicationsExtraDetails.selectEndoserment(jsonData.AddMedication[index].paprd_endorsement)         
+      await MedicationsExtraDetails.enterMedicationNotes(jsonData.AddMedication[index].medi_notes)    
+      await MedicationsExtraDetails.clickOnSaveMediFavourites(); 
+     // await page.pause()
+      await Medications.clickOnCheckallCheckListcheckbox()  
+      await MedicationsExtraDetails.clickOnSaveChecklistButton()
+
+     // await page.pause()
+     // await MedicationsExtraDetails.clickOnSaveMediFavourites();  
       
-      // await Medications.selectandAddClinicalItem(jsonData.AddMedication[index].pacr_que_name); //This searches item and clicks on add button
-      // await page.waitForTimeout(2000);      
-      // await MedicationsExtraDetails.clickOnClincialItemCollapsable();
-      // await page.waitForTimeout(1000);      
-      // await contacthistory.clickOnSettingButton() 
-      // await contacthistory.clickOnCustomizableView()     
-      // await Medications.clickOnDeleteQuestion(jsonData.AddMedication[index].question_name)    
-      // await page.waitForTimeout(3000)
-      // await Medications.clickOnRestoreQuestion(jsonData.AddMedication[index].question_name)
-      // await page.waitForTimeout(2000)
-      
-      // await Medications.clickOnDeleteQuestion(jsonData.AddMedication[index].question_name) 
-      // await page.waitForTimeout(3000)
-      // await page.pause()
-      // await MedicationsExtraDetails.clickOnSaveCustomizableButton();
+      await page.waitForTimeout(1000);           
+
+      //Delete Favourites
+      await Medications.clickOnEditIconforFavouriteMedication()
+
+      await MedicationsExtraDetails.clickOnDelete();
+      await MedicationsExtraDetails.clickOnCancelDelete();
+      await MedicationsExtraDetails.clickOnDelete();
+      await MedicationsExtraDetails.clickOnConfirmDelete();
+      await MedicationsExtraDetails.enterDeleteReason(jsonData.DeleteMedication[index].pacr_delete_reason);
+      await MedicationsExtraDetails.clickOnSaveDeleteReason();
+
      
 
-      // ////////Restored Customizable view//////
-      // await Medications.selectandAddClinicalItem(jsonData.AddMedication[index].pacr_que_name)
-      //   await page.waitForTimeout(2000);      
-      //   await MedicationsExtraDetails.clickOnClincialItemCollapsable();
-      //   await page.waitForTimeout(1000);      
-      //   await contacthistory.clickOnSettingButton() 
-      //   await contacthistory.clickOnCustomizableView()     
-      //   //await Medications.clickOnDeleteQuestion(jsonData.AddMedication[index].question_name)   
-      //   await page.waitForTimeout(4000)
-      //   //await page.pause()
-      //   await Medications.clickOnRestoreQuestion(jsonData.AddMedication[index].question_name)
-      //   await page.waitForTimeout(1000)
-
-      //   await MedicationsExtraDetails.clickOnSaveCustomizableButton();
-      //   await page.waitForTimeout(1000)
+      
 
         // Add New Medication
       await Medications.selectandAddClinicalItem(jsonData.AddMedication[index].pacr_que_name)
@@ -188,7 +211,7 @@ test.describe("Medications Category", () => {
       //await page.pause()
       //await MedicationsExtraDetails.selectClinicalItemSubcategory(jsonData.AddMedication[index].eli_text);
       await MedicationsExtraDetails.enterOnDose(jsonData.AddMedication[index].medi_dose)
-     // await MedicationsExtraDetails.enterForm(jsonData.AddMedication[index].medi_form)
+      await MedicationsExtraDetails.enterForm(jsonData.AddMedication[index].medi_form)
       await MedicationsExtraDetails.selectFrequency(jsonData.AddMedication[index].medi_frequency)
       await MedicationsExtraDetails.selectRoute(jsonData.AddMedication[index].medi_route)
       await MedicationsExtraDetails.enterDays(jsonData.AddMedication[index].medi_duration)
@@ -205,12 +228,7 @@ test.describe("Medications Category", () => {
       await MedicationsExtraDetails.enterMedicationGradeForAdministrator(jsonData.AddMedication[index].meded_value_Administrator)
       await MedicationsExtraDetails.selectMaxReffills(jsonData.AddMedication[index].meded_value_MaxReffills)       
      // await MedicationsExtraDetails.selectQuantity(jsonData.AddMedication[index].meded_value_Quantity)
-      
-         
      
-      //await page.pause()
-      
-    //  await page.pause()
       await MedicationsExtraDetails.enterUnit(jsonData.AddMedication[index].meded_value_Unit)
       await MedicationsExtraDetails.selectCurrentLocation(jsonData.AddMedication[index].pcl_location_name)
       //await MedicationsExtraDetails.enterLinkTiDiagnosis(jsonData.AddMedication[index].pacr_que_name_Diagnosis)
@@ -221,27 +239,23 @@ test.describe("Medications Category", () => {
       await MedicationsExtraDetails.clickOnAddToPrescribe()
       await MedicationsExtraDetails.clickOnSupply()
       await MedicationsExtraDetails.clickOnSetAsDefault()
-      await MedicationsExtraDetails.clickOnRepeatable()
+     // await MedicationsExtraDetails.clickOnRepeatable()
       await MedicationsExtraDetails.clickOPrivateRecord()  
-     // await page.pause() 
+      await page.pause() 
 
       await MedicationsExtraDetails.selectEndoserment(jsonData.AddMedication[index].paprd_endorsement) 
-      //await page.pause() 
-
+      
       //await MedicationsExtraDetails.selectForCondition(jsonData.AddMedication[index].que_display_text)
      // await MedicationsExtraDetails.enterPriceCheckQuantity(jsonData.AddMedication[index].meded_value_Price_check_quantity)  
       await MedicationsExtraDetails.enterMedicationNotes(jsonData.AddMedication[index].medi_notes) 
       
-      
-
-     //await page.pause()
 
       await MedicationsExtraDetails.clickOnSaveExtraDetails();      
-      await page.waitForTimeout(1000);           
-     // await MedicationsExtraDetails.clickOnSaveCheckList()
-      //await page.pause()
-      await page.waitForTimeout(1000); 
-      //await expect(page.getByText("Medication record added successfully")).toHaveText("Medication record added successfully");
+      await page.waitForTimeout(200);           
+     await Medications.clickOnCheckallCheckListcheckbox()  
+      await MedicationsExtraDetails.clickOnSaveChecklistButton()
+      await expect(page.getByText("Medication record added successfully")).toHaveText("Medication record added successfully");
+       
       //await expect(page.getByText(`${clinicaCatergory} Record Added Successfully`)).toHaveText(`${clinicaCatergory} Record Added Successfully`); 
      // await page.pause()
       ////// Database comparison- Patient Clinical Records - ADDING NEW Medications/////////
@@ -265,55 +279,29 @@ test.describe("Medications Category", () => {
       console.log("\n Patient Clinical Records Comparision adding new Medications: Parameters from both JSON files do not match!\n");
     }
    
-    //await page.pause()
-      // await Medications.toggleSearchSection();       
-      // await Medications.clickOnItemDiv(jsonData.EditMedication[index].pacr_que_name);
-
-      // if(await Medications.checkItemOnHistoryTable(jsonData.EditMedication[index].pacr_que_name)){
-      //   await Medications.clickOnItemDiv(jsonData.EditMedication[index].pacr_que_name)
-      //   if(await Medications.checkItemOnHistoryTable( null, true)){
-      //     console.log("Newly added item is not reviewed before updating the record");
-      //   }
-      //   else{
-      //     console.error("Newly added item is reviewed before updating the record.");
-      //   }
-      // }
+    
       //await page.pause()
       await Medications.clickOnItemEdit();
-      //await MedicationsExtraDetails.clickOnClincialItemCollapsable();
-      //await MedicationsExtraDetails.selectClinicalItemSubcategory(jsonData.EditMedication[index].eli_text);
-      await MedicationsExtraDetails.enterOnDose(jsonData.EditMedication[index].medi_dose)
-      // await MedicationsExtraDetails.enterForm(jsonData.EditMedication[index].medi_form)
+      
+      await MedicationsExtraDetails.enterOnDose(jsonData.EditMedication[index].medi_dose)      
       await MedicationsExtraDetails.selectFrequency(jsonData.EditMedication[index].medi_frequency)
       await MedicationsExtraDetails.selectRoute(jsonData.EditMedication[index].medi_route)
       await MedicationsExtraDetails.enterDays(jsonData.EditMedication[index].medi_duration)
-      await MedicationsExtraDetails.selectSite(jsonData.EditMedication[index].meded_value)
-      //await MedicationsExtraDetails.selectSite(jsonData.EditMedication[index].meded_value)
+      await MedicationsExtraDetails.selectSite(jsonData.EditMedication[index].meded_value)     
       await MedicationsExtraDetails.selectPrescribeBy(jsonData.EditMedication[index].medi_prescribed_by)
-      await MedicationsExtraDetails.enterStartDate(jsonData.EditMedication[index].medi_start_date)
-      //await MedicationsExtraDetails.enterReviewDate(jsonData.EditMedication[index].medi_start_date)  
-      await MedicationsExtraDetails.enterStopDate(jsonData.EditMedication[index].medi_stop_date)
-      //await MedicationsExtraDetails.selectSideEffects(jsonData.EditMedication[index].mse_text)  
-      // await MedicationsExtraDetails.selectStatus(jsonData.EditMedication[index].pacr_status)
-      // await MedicationsExtraDetails.selectIndication(jsonData.EditMedication[index].meded_value)      
-      // await MedicationsExtraDetails.selectStoppedReason(jsonData.EditMedication[index].medi_stopped_reason_eli_text)
+      await MedicationsExtraDetails.enterStartDate(jsonData.EditMedication[index].medi_start_date)        
+      await MedicationsExtraDetails.enterStopDate(jsonData.EditMedication[index].medi_stop_date)     
        await MedicationsExtraDetails.selectPGDPSD(jsonData.EditMedication[index].meded_value_PGD)
       // await MedicationsExtraDetails.enterMedicationGradeForAdministrator(jsonData.EditMedication[index].meded_value_Administrator)
-       await MedicationsExtraDetails.selectMaxReffills(jsonData.EditMedication[index].meded_value_MaxReffills)       
-     // await MedicationsExtraDetails.selectQuantity(jsonData.EditMedication[index].meded_value_Quantity)
-      //await page.pause()
-      // await MedicationsExtraDetails.enterUnit(jsonData.EditMedication[index].meded_value_Unit)
-     await MedicationsExtraDetails.selectCurrentLocation(jsonData.EditMedication[index].pcl_location_name)
-      // await MedicationsExtraDetails.enterLinkTiDiagnosis(jsonData.EditMedication[index].pacr_que_name_Diagnosis)
-      // await MedicationsExtraDetails.selectAdherent(jsonData.EditMedication[index].meded_value_Adherent)
-      // await MedicationsExtraDetails.selectEndoserment(jsonData.EditMedication[index].paprd_endorsement)  
-      // await MedicationsExtraDetails.selectForCondition(jsonData.EditMedication[index].que_display_text)
-      // await MedicationsExtraDetails.enterPriceCheckQuantity(jsonData.EditMedication[index].meded_value_Price_check_quantity)  
+       await MedicationsExtraDetails.selectMaxReffills(jsonData.EditMedication[index].meded_value_MaxReffills)     
+    
+     await MedicationsExtraDetails.selectCurrentLocation(jsonData.EditMedication[index].pcl_location_name)      
       await MedicationsExtraDetails.enterMedicationNotes(jsonData.EditMedication[index].medi_notes) 
       //await page.pause()
       await MedicationsExtraDetails.clickOnSaveExtraDetails();      
       await page.waitForTimeout(1500);     
-      await MedicationsExtraDetails.clickOnSaveCheckList()
+      await Medications.clickOnCheckallCheckListcheckbox()
+      await MedicationsExtraDetails.clickOnSaveChecklistButton()
 
        ////// Database comparison - Patient Clinical Records - UPDATE Medications/////////
      sqlQuery =

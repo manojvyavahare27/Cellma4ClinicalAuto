@@ -83,6 +83,9 @@ test.describe("Examination Category", () => {
       const examination = new ClinicalSummary(page);
       const examinationExtraDetails = new ClinicalExtraDetails(page);
 
+      const Recommendations = new ClinicalSummary(page);
+      const RecommendationsExtraDetails = new ClinicalExtraDetails(page);
+
       const menu = new Menu(page);
       
       await page.goto(environment.Test);
@@ -118,7 +121,7 @@ test.describe("Examination Category", () => {
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1000);
-      // await page.pause()
+       await page.pause()
       await confirmexisting.clickOnConfirmExistingDetails();
       // await contacthistory.clickOnMenu();
       // await page.waitForTimeout(2000);
@@ -128,25 +131,19 @@ test.describe("Examination Category", () => {
 
       await page.waitForTimeout(4000)
       await examination.clickOnSavePopup();
-      // await page.pause()
+       await page.pause()
       // await page.evaluate(() => document.body.style.zoom = '0.5');
        await page.waitForTimeout(2000)
       //Add Recommendation
-      const flag = false;
-      await patientsummary.clickOniconRecommendation();
-      await page.waitForTimeout(5000)
-      if (await examination.checkItemOnHistoryTable(jsonData.AddRecommendations[index].pacr_que_name)) { }
-
-      // const Rectoplastylocator = page.getByRole("heading", {
-      //   name: "Rectoplasty",
-      // });
-      // await page.waitForTimeout(2000);
-      // if (await Rectoplastylocator.isVisible()) {
-      //   await page.waitForTimeout(2000);
-      //   await Rectoplastylocator.click();
-      // } 
-      else {
+      //const flag = false;
+      //await patientsummary.clickOniconRecommendation();
+       await patientsummary.clickOniconExaminationsCategory();
+       await patientsummary.clickOnallCategory()
         await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);
+
+      await page.waitForTimeout(3000);      
+      await page.pause()
+        //await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);
         await recommendationhome.clickonAddRecommendationButton();
         await recommendationEd.clickOnExpandRecommendation();
         await recommendationEd.clickOnExpandRecommendation();
@@ -154,13 +151,38 @@ test.describe("Examination Category", () => {
         await recommendationEd.enterReviewDate(jsonData.AddRecommendations[index].recom_review_date);
         //await recommendationEd.selectCheckboxPrivateRecord();
         await recommendationEd.selectCheckboxSetAsDefault();
-        // await page.pause()
+         await page.pause()
         await recommendationEd.enterNotes();
         await recommendationEd.clickOnSaveButton();
         await page.waitForTimeout(500);
-        // await page.getByTestId('Check All').click()
-        //await page.getByLabel('saveChecklist').click()
-      }
+       
+        //Add Favourites
+
+        await patientsummary.clickOniconExaminationsCategory();
+        await page.waitForTimeout(500);
+        await examination.clickOnFavouriteQueExam();
+        await page.waitForTimeout(500);
+        await examination.clickOnFavouritemItemExam()      
+      await examinationEd.SelectOutcome(jsonData.AddExamination[index].exam_outcome);
+      await examinationEd.SelectRecommendation(jsonData.AddExamination[index].pacr_que_name_recommendation);
+      await examinationEd.selectCheckboxes();
+      await examinationEd.EnterNotes(jsonData.AddExamination[index].exam_notes);      
+      await examinationExtraDetails.clickOnSaveExamFavourites();
+      await page.waitForTimeout(500);
+
+      //Delete Favourites
+          
+      await examinationhome.clickOnEditExaminationButton();     
+      await examinationEd.clickOnDeleteButton();
+      await examinationEd.clickOnCancelExamination();
+      await examinationEd.clickOnDeleteButton();
+      await examinationEd.clickOnOkDeleteExamination();
+      await examinationEd.enterDeleteExaminationReason(jsonData.DeleteExamination[index].pacr_delete_reason);
+      await examinationEd.clickOnSaveForReason();
+      await page.waitForTimeout(500);
+      await expect(page.getByText("Examination deleted successfully ")).toHaveText("Examination deleted successfully ");
+
+        
 
       //Contact History page
       await patientsummary.clickOniconExaminationsCategory();
@@ -191,18 +213,13 @@ test.describe("Examination Category", () => {
       await page.getByLabel('cancelIcon').click();
       await examinationhome.searchExamination(jsonData.AddExamination[index].pacr_que_name);
       await examinationhome.clickonAddExaminationButton();
-      // await examinationEd.clickOnExpandExamination();
-      // await page.pause()
-      //await examinationEd.selectSubCategory(jsonData.AddExamination[index].pacr_category)
-      //await examinationEd.selectSubCategory(jsonData.AddExamination[index].pacr_subcategory);
-      //await examinationEd.EnterClinicalDate(jsonData.AddExamination[index].pacr_clinic_date);
       await examinationEd.SelectOutcome(jsonData.AddExamination[index].exam_outcome);
       await examinationEd.SelectRecommendation(jsonData.AddExamination[index].pacr_que_name_recommendation);
       await examinationEd.selectCheckboxes();
-      await examinationEd.EnterNotes(jsonData.AddExamination[index].exam_notes);
-      //await page.pause();
+      await examinationEd.EnterNotes(jsonData.AddExamination[index].exam_notes);      
       await examinationEd.clickOnSaveButton();
       await page.waitForTimeout(500);
+
       //await page.getByTestId('Check All').click()
       //await page.getByLabel('saveChecklist').click()
       //await page.waitForTimeout(1000);
@@ -353,22 +370,16 @@ test.describe("Examination Category", () => {
       console.log("Waiting for SQL result....");
       await page.waitForTimeout(10000);
 
-      //Delete Examination
-      //await page.pause()
-      await examinationhome.clickOnEditExaminationButton();
-      //await examinationEd.clickOnExpandExamination();
+      //Delete Examination      
+      await examinationhome.clickOnEditExaminationButton();     
       await examinationEd.clickOnDeleteButton();
       await examinationEd.clickOnCancelExamination();
       await examinationEd.clickOnDeleteButton();
       await examinationEd.clickOnOkDeleteExamination();
-      await examinationEd.enterDeleteExaminationReason(
-        jsonData.DeleteExamination[index].pacr_delete_reason
-      );
+      await examinationEd.enterDeleteExaminationReason(jsonData.DeleteExamination[index].pacr_delete_reason);
       await examinationEd.clickOnSaveForReason();
       await page.waitForTimeout(500);
-      await expect(
-        page.getByText("Examination deleted successfully ")
-      ).toHaveText("Examination deleted successfully ");
+      await expect(page.getByText("Examination deleted successfully ")).toHaveText("Examination deleted successfully ");
 
       ////// Database comparison- Patient Clinical Records/////////
       sqlQuery =

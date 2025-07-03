@@ -53,6 +53,10 @@ class Homepage{
     }
     //PharmacyHomepage
 
+    async redirectsToHomePage()
+    {
+        
+    }
     async clickOnContactHistoryCategory()
     {
         await this.ContacHistorycategory.click()

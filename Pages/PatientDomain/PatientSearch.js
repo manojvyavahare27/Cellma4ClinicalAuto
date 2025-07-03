@@ -276,7 +276,8 @@ class PatientSearch
     async selectSexAtBirth(pat_sex)
     {
         await selectFromDropdown(this.page, this.dropdown_SexAtBirth, pat_sex)
-         await page.locator.getByRole('option', { name: 'Male', exact: true }).click()        
+        // await this.page.locator.getByRole('option', { name: pat_sex, exact: true }).click()        
+        //await this.page.getByRole('option', { name: 'Male', exact: true }).click()
     }
 
     //Patient seen in last days

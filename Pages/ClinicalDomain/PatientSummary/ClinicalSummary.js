@@ -26,6 +26,9 @@ class ClinicalSummary {
         // Search Clinical Items fields
         this.searchClinicalItem = page.locator("xpath=//label[text()='Any Search, Item, Code, Category']");
         this.addClinicalItem = page.locator("xpath=//button[@aria-label='Add']")
+
+        //Medication
+        this.editFavouriteMedication=page.locator("xpath=//button[@aria-label='editIconButton']")
        
         // Clinical Section Divs - These locators should be declared as string as we will use the toggle function
         this.expandSearchButton = "xpath=//div[@data-testid='search']//button[@aria-label='cellmaAccordionIcon']//*[name()='svg'][@aria-label='Expand']";
@@ -38,14 +41,24 @@ class ClinicalSummary {
         
         // Favourites & Order sets
         // this.orderSetName = "xpath=//h1[text()='Conditions Order Sets']//..//..//button[@aria-label='Condyloma latum']"
-        this.orderSetName = "xpath=//h1[text()='placeholder1']//..//..//button[@aria-label='placeholder2']"
+        this.orderSetNameHypertension = page.locator("xpath=//div[contains(text(),'Hypertension')]")
+        this.orderSetItemChronic =page.locator("xpath=//a[@aria-label='Chronic Diahorrhoea']")
         // this.favouriteName = "xpath=//h1[text()='Conditions Favourites']//..//..//button[@aria-label='Condyloma latum']"
-        this.favouriteName = "xpath=//h1[text()='placeholder1']//..//..//button[@aria-label='placeholder2']"
-        // this.orderSetItem = "xpath=//a[text()='Metformin 500mg tablets     ']//..//..//input[@class='PrivateSwitchBase-input css-1m9pwf3']"
-        this.orderSetItem = "xpath=//a[text()='placeholder1']//..//..//input[@class='placeholder2']"       
-        // this.favouriteItem = "xpath=//a[text()='Metformin 500mg tablets']//..//..//input[@class='PrivateSwitchBase-input css-1m9pwf3']"
-        this.favouriteItem = "xpath=//a[text()='placeholder1']//..//..//input[@class='placeholder2']"
+        this.favouriteNameRespiratory = page.locator("xpath=//div[contains(text(),'Respiratory System')]")
+        this.FavouriteItemAsthama=page.locator("xpath=//a[@aria-label='Asthma']")
+        this.favouriteQueExamination=page.locator("xpath=//button[@data-testid='Mental Health (MH)']")
+        this.favouriteItemExamination=page.locator("xpath=//a[@aria-label='Mental Health Assessment']")
+        this.favouriteQueMedication=page.locator("xpath=//div[contains(text(),'Antibiotics')]")
+        this.favouriteItemMedication=page.locator("xpath=//a[@aria-label='Erythromycin']")
 
+
+
+        // this.orderSetItem = "xpath=//a[text()='Metformin 500mg tablets     ']//..//..//input[@class='PrivateSwitchBase-input css-1m9pwf3']"
+        //this.orderSetItem = "xpath=//a[text()='placeholder1']//..//..//input[@class='placeholder2']"       
+        // this.favouriteItem = "xpath=//a[text()='Metformin 500mg tablets']//..//..//input[@class='PrivateSwitchBase-input css-1m9pwf3']"
+       // this.favouriteItem = "xpath=//a[text()='placeholder1']//..//..//input[@class='placeholder2']"
+
+       this.checkAllCheckboxCheckList=page.locator("xpath=//button[@data-testid='Check All']")
         //RiskLevel dropdown
         this.riskLevel = page.locator("xpath=//input[@id='riskLevel']");
 
@@ -129,6 +142,69 @@ class ClinicalSummary {
         this.dropdownAddTo=page.getByTestId('Add To')
         this.linkPatientConsent = page.locator("xpath=//li[@data-testid='patientConsent']")
           
+     }
+
+     //Add favourites
+     //Diagnosis
+     async clickOnFavouritesQuestion()
+     {
+        await this.favouriteNameRespiratory.click()
+     }
+
+     async clickOnfavouritesItem()
+     {
+        await this.FavouriteItemAsthama.click()
+     }
+
+     //Add order sets diagnosis
+        async clickOnOrderSetHypertension()
+        {
+            await this.orderSetNameHypertension.click()
+        }
+
+        async clickOnOrderSetItemChronic()
+        {
+            await this.orderSetItemChronic.click()
+        }
+
+     //Examination
+     async clickOnFavouriteQueExam()
+     {
+        await this.favouriteQueExamination.click()
+     }
+
+
+     async clickOnFavouritemItemExam()
+     {
+        await this.favouriteItemExamination.click()
+     }
+
+     //Orderset exam
+     
+
+     //Medication
+
+     async clickOnFavouriteQueMedication()
+     {
+        await this.favouriteQueMedication.click()
+     }
+
+
+     async clickOnFavouritemItemMedication()
+     {
+        await this.favouriteItemMedication.click()
+     }
+
+     async clickOnEditIconforFavouriteMedication()
+     {
+        await this.editFavouriteMedication.click()
+     }
+
+     
+
+     async clickOnCheckallCheckListcheckbox()
+     {
+        await this.checkAllCheckboxCheckList.click()
      }
      
      //Links
