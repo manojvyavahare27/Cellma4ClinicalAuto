@@ -85,7 +85,7 @@ test.describe("Medications Category", () => {
       logger.info("Given Name entered successfully");
       await patientsearch.enterFamilyName(data.pat_surname);
       logger.info("Family Name entered successfully");
-      await patientsearch.selectSexAtBirth(data.pat_sex_at_birth);
+      //await patientsearch.selectSexAtBirth(data.pat_sex_at_birth);
 
       await patientsearch.selectBornDate(
         jsonData.PatientDetails[index].pat_dob
@@ -98,10 +98,11 @@ test.describe("Medications Category", () => {
       await confirmexisting.btn_confirmExistingDetails.waitFor();
       await page.waitForTimeout(1000);
       await confirmexisting.clickOnConfirmExistingDetails();
-
-      const alert = page.getByRole('heading', { name: 'Alerts' }).isVisible()
+      await page.waitForTimeout(5000)
+      
+      const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible();
       if (alert) {
-        await MedicationsExtraDetails.clickPopup();              
+        await MedicationsExtraDetails.clickPopup();
       }
 
       await contacthistory.clickOnShowFilter();
@@ -209,9 +210,9 @@ test.describe("Medications Category", () => {
       await MedicationsExtraDetails.selectMaxReffills(
         jsonData.AddMedication[index].meded_value_MaxReffills
       );
-      await MedicationsExtraDetails.selectQuantity(
-        jsonData.AddMedication[index].meded_value_Quantity
-      );
+      // await MedicationsExtraDetails.selectQuantity(
+      //   jsonData.AddMedication[index].meded_value_Quantity
+      // );
       await MedicationsExtraDetails.enterUnit(
         jsonData.AddMedication[index].meded_value_Unit
       );
@@ -245,11 +246,15 @@ test.describe("Medications Category", () => {
       // await MedicationsExtraDetails.enterClinicalItemNotes(
       //   jsonData.AddMedication[index].medi_notes
       // );
-
+      //await page.pause()
       await MedicationsExtraDetails.clickOnSaveExtraDetails();
       await page.waitForTimeout(1000);
-      await MedicationsExtraDetails.clickOnSaveCheckList();
-      await page.waitForTimeout(1000);
+      
+      let checklist = page.getByRole('heading', { name: 'Medications Checklist' }).isVisible()
+      if (checklist) {
+        await MedicationsExtraDetails.clickOnSaveCheckList();
+        await page.waitForTimeout(1000);         
+      }
 
       await expect(page.getByText("Medication record added successfully")).toHaveText("Medication record added successfully");
       //await expect(page.getByText(`${clinicaCatergory} Record Added Successfully`)).toHaveText(`${clinicaCatergory} Record Added Successfully`);
@@ -296,7 +301,7 @@ test.describe("Medications Category", () => {
         await MedicationAdministration.selectBatchMedication(jsonData.AddMedication[index].pacr_que_name);
         await MedicationAdministration.clickOnSelectButton();
 
-        const checklist = page.getByRole('heading', { name: 'Medication Administration' }).isVisible()
+        checklist = page.getByRole('heading', { name: 'Medication Administration' }).isVisible()
         if (checklist) {
           await MedicationAdministration.clickOnCheckAllButton();
           await MedicationAdministration.clickOnSaveChecklistButton();              

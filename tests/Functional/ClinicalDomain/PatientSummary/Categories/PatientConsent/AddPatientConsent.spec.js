@@ -92,10 +92,11 @@ test.describe("Patient Consent Category", () => {
             await confirmexisting.btn_confirmExistingDetails.waitFor();
             await page.waitForTimeout(1000);
             await confirmexisting.clickOnConfirmExistingDetails();
+            await page.waitForTimeout(5000)
             
-            const alert = page.getByRole('heading', { name: 'Alerts' }).isVisible()
+            const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible()
             if (alert) {
-              await ExtraDetailsPage.clickPopup();              
+              await ExtraDetailsPage.clickPopup();
             }
 
             await SummaryPage.clickOnDropdownAddToo();

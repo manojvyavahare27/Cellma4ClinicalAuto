@@ -91,10 +91,11 @@ test.describe("Device Category", () => {
             await confirmexisting.btn_confirmExistingDetails.waitFor();
             await page.waitForTimeout(1000);
             await confirmexisting.clickOnConfirmExistingDetails();
-            
-            const alert = page.getByRole('heading', { name: 'Alerts' }).isVisible()
+            await page.waitForTimeout(5000)
+
+            const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible();
             if (alert) {
-              await Devices.clickPopup();              
+              await Devices.clickPopup();
             }
 
             await contacthistory.selectContactReason("Data Entry");
