@@ -1117,6 +1117,7 @@ async enterPatientScanNotes(pascn_notes)
   async enterOnDose(dose) {
     await this.dose.clear();
    // await this.page.getByTestId('Ok').click()
+    await this.page.getByTestId('Ok').click()
     await typeText(this.page, this.dose, dose);
   }
 

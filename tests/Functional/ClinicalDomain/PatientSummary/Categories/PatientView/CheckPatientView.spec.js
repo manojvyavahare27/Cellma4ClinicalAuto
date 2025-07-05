@@ -91,7 +91,7 @@ test.describe("Patient View Category", () => {
             await page.waitForTimeout(1000);
             await confirmexisting.clickOnConfirmExistingDetails();
             
-            const alert = page.getByRole('heading', { name: 'Alerts' }).isVisible()
+            const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible()
             if (alert) {
               await PatientViewDetails.clickPopup();              
             }

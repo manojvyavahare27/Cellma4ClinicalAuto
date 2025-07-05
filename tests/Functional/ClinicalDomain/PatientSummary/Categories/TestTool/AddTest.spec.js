@@ -90,11 +90,16 @@ test.describe("Test and Tool Category", () => {
             await confirmexisting.btn_confirmExistingDetails.waitFor();
             await page.waitForTimeout(1000);
             await confirmexisting.clickOnConfirmExistingDetails();
+            await page.waitForTimeout(5000)
 
-            // const alert = page.getByRole('heading', { name: 'Alerts' }).isVisible()
-            // if (alert) {
-            //   await TestTool.clickPopup();              
-            // }
+
+           
+
+            const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible()
+            if (alert) {
+              await TestTool.clickPopup();              
+            }
+
 
             await contacthistory.selectContactReason("Data Entry");
             await contacthistory.selectContactLocation("Cardio Location");
