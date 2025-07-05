@@ -121,7 +121,7 @@ test.describe("Examination Category", () => {
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1000);
-      
+      //await page.pause()
       await confirmexisting.clickOnConfirmExistingDetails();
       // await contacthistory.clickOnMenu();
       // await page.waitForTimeout(2000);
