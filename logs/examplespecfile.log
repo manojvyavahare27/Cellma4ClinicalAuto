@@ -141,3 +141,7 @@
 {"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T08:32:26.488Z"}
 {"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T08:32:26.730Z"}
 {"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T08:32:27.131Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T08:39:40.728Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T08:39:40.859Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T08:39:41.100Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T08:40:10.482Z"}

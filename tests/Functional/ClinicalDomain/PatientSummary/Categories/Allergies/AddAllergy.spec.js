@@ -88,7 +88,7 @@ test.describe("Allergy Category", () => {
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
      // await homepage.clickOnHomeDashboardIcon()
-      await page.pause()
+     
       await homepage.clickOnSideIconPatient()
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
@@ -104,7 +104,7 @@ test.describe("Allergy Category", () => {
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
      
-      await page.pause()
+     
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();   
