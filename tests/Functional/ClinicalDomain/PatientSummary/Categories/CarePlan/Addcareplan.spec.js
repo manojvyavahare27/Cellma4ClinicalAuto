@@ -100,12 +100,20 @@ test.describe("Care Plan Category", () => {
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
 
-     // await page.pause();
+     await page.pause();
       await patientsearch.clickOnSearchPatientLink();
-      await page.waitForTimeout(1500);
+      await page.waitForTimeout(200);
       await confirmexisting.clickOnConfirmExistingDetails();
+     
+      //await page.pause()
+      await page.waitForTimeout(5000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await carePlan.closePopUp()
+        }
       await page.waitForTimeout(2000);
-       await carePlan.clickOnSavePopup() 
+
       await contacthistory.clickOnShowFilter();
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");

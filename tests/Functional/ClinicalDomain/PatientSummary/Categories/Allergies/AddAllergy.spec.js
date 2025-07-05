@@ -88,7 +88,7 @@ test.describe("Allergy Category", () => {
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
      // await homepage.clickOnHomeDashboardIcon()
-     // await page.pause()
+      await page.pause()
       await homepage.clickOnSideIconPatient()
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
@@ -108,8 +108,15 @@ test.describe("Allergy Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();   
+
+      await page.waitForTimeout(5000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await allergy.closePopUp()
+        }
       await page.waitForTimeout(2000);
-     //  await allergy.clickOnSavePopup()   
+      
        await contacthistory.clickOnShowFilter()  
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -118,6 +125,8 @@ test.describe("Allergy Category", () => {
       await contacthistory.selectContactLocation("Cardio Location");
       //  await contacthistory.enterContactWith("Dr Sathya");
       //await page.pause()
+
+
       await contacthistory.clickOnAddContact();      
        await allergy.selectCategoryFromList(jsonData.AddAllergy[index].pacr_category);
        await page.waitForTimeout(2000)

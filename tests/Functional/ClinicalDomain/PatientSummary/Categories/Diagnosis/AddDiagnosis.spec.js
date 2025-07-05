@@ -101,12 +101,21 @@ test.describe("Diagnosis Category", () => {
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
      
-      //await page.pause()
+      await page.pause()
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(2000);
       await confirmexisting.clickOnConfirmExistingDetails();   
       await page.waitForTimeout(2000);
-      await diagnosis.clickOnSavePopup()  
+
+
+      await page.waitForTimeout(5000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await diagnosis.clickOnSavePopup()  
+        }
+      await page.waitForTimeout(2000);
+      // await diagnosis.clickOnSavePopup()  
       await contacthistory.clickOnShowFilter()  
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
