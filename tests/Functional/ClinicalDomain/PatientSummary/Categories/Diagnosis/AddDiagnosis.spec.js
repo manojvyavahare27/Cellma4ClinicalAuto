@@ -101,7 +101,7 @@ test.describe("Diagnosis Category", () => {
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
      
-      await page.pause()
+      
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(2000);
       await confirmexisting.clickOnConfirmExistingDetails();   
@@ -124,7 +124,7 @@ test.describe("Diagnosis Category", () => {
       await contacthistory.selectContactLocation("Cardio Location");
       //await contacthistory.enterContactWith("Dr Sathya");
       await contacthistory.clickOnAddContact();    
-      await page.pause()
+      
 
       await page.locator("xpath=//h1[@class='MuiTypography-root MuiTypography-h5 css-bjo12z'][normalize-space()='Diagnosis']").click()
      
