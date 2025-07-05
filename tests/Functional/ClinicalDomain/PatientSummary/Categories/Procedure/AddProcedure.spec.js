@@ -106,7 +106,7 @@ test.describe("Procedure Category", () => {
       await contacthistory.enterContactDate("26/04/2024");
       await contacthistory.selectContactReason("Assessments");
       await contacthistory.selectContactLocation("Cardio Location");
-      await contacthistory.enterContactWith("Dr Sathya");
+      //await contacthistory.enterContactWith("Dr Sathya");
       await contacthistory.clickOnAddContact();
       await Procedures.clickOnViewContactItemsMenu();
       await Procedures.clickOnPinContactItemsMenu();

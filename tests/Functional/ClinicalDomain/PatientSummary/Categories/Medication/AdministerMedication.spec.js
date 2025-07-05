@@ -111,7 +111,7 @@ test.describe("Medications Category", () => {
       await contacthistory.enterContactDate("26/04/2024");
       await contacthistory.selectContactReason("Assessments");
       await contacthistory.selectContactLocation("Cardio Location");
-      await contacthistory.enterContactWith("Dr Sathya");
+      //await contacthistory.enterContactWith("Dr Sathya");
       await contacthistory.clickOnAddContact();
       await Medications.clickOnViewContactItemsMenu();
       await Medications.clickOnPinContactItemsMenu();
@@ -165,7 +165,7 @@ test.describe("Medications Category", () => {
       // await MedicationsExtraDetails.selectClinicalItemSubcategory(
       //   jsonData.AddMedication[index].eli_text
       // );
-      await MedicationsExtraDetails.enterOnDose(
+      await MedicationsExtraDetails.enterOnDosewithOk(
         jsonData.AddMedication[index].medi_dose
       );
       await MedicationsExtraDetails.selectFrequency(
@@ -273,19 +273,10 @@ test.describe("Medications Category", () => {
       sqlFilePath = "SQLResults/ClinicalDomain/patientClinicalRecord.json";
       results = await executeQuery(sqlQuery, sqlFilePath);
       const pacrId = results[0].pacr_id;
-      console.log(
-        "\n Patient Clinical Records stored into the database: \n",
-        results
-      );
-      var match = await compareJsons(
-        sqlFilePath,
-        null,
-        jsonData.AddMedication[index]
-      );
+      console.log("\n Patient Clinical Records stored into the database: \n", results);
+      var match = await compareJsons(sqlFilePath, null, jsonData.AddMedication[index]);
       if (match) {
-        console.log(
-          "\n Patient Clinical Records Comparision adding new Medications: Parameters from both JSON files match!\n"
-        );
+        console.log("\n Patient Clinical Records Comparision adding new Medications: Parameters from both JSON files match!\n");
       } else {
         console.log(
           "\n Patient Clinical Records Comparision adding new Medications: Parameters from both JSON files do not match!\n"
@@ -449,7 +440,19 @@ test.describe("Medications Category", () => {
       }
       console.log('\nFailed count: ' + count);
 
-      // await page.pause()
+       await page.pause()
+
+       await MedicationAdministration.clickOnReviewLink()
+       await MedicationAdministration.selectclinicalReview()
+       await MedicationAdministration.clickOnSaveClinicalReviewButton()
+       await page.waitForTimeout(1000)
+       await MedicationAdministration.ClickOnGivenLink()
+       await MedicationAdministration.clickOnselectBatch()
+       await MedicationAdministration.clickOnSelectButtonbatch()
+       await page.getByTestId('Check All').click()
+       await page.getByLabel('saveChecklist').click()
+
+
       // console.log('\nFRONT END COMPARISON - PLAYWRIGHT ASSERTIONS')
       // console.log('Medication Administration Page\n')
       // await expect.soft(MedicationAdministration.medicationName, 'Medication name should match').toContainText(jsonData.AddMedication[index].pacr_que_name);

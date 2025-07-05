@@ -107,7 +107,7 @@ test.describe("LifeStyle Category", () => {
         //await contacthistory.enterContactDate('26/11/2024');
         await contacthistory.selectContactReason('Assessments');
         await contacthistory.selectContactLocation('Cardio Location');
-        await contacthistory.enterContactWith('Dr Sathya');
+        //await contacthistory.enterContactWith('Dr Sathya');
         await contacthistory.clickOnAddContact();
         
         await lifestyle.clickOnViewContactItemsMenu();        

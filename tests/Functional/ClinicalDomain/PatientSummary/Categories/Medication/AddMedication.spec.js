@@ -110,7 +110,7 @@ test.describe("Medications Category", () => {
       await contacthistory.enterContactDate("26/04/2024");
       await contacthistory.selectContactReason("Assessments");
       await contacthistory.selectContactLocation("Cardio Location");
-      await contacthistory.enterContactWith("Dr Sathya");
+      //await contacthistory.enterContactWith("Dr Sathya");
       await contacthistory.clickOnAddContact();
       await Medications.clickOnViewContactItemsMenu();
       await Medications.clickOnPinContactItemsMenu();

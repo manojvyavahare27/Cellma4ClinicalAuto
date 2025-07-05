@@ -28,8 +28,48 @@ class ClinicalMedicationAdministration {
         this.medicationDuration = page.getByRole('heading', { name: 'Days' })
         //this.medicationStartDate = page.getByRole('heading', { name: '13/06/2025' }).first()
         //this.username = page.getByRole('heading', { name: 'Thayne.auto' })
-        
-        
+
+        //Review
+        this.reviewLink=page.locator("xpath=//a[@class='MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-1cahger'][@data-testid='Review']")
+        this.clinicalReviewTextbox=page.locator("xpath=//input[@id='reviewCode']")
+        this.saveClinicalReviewbutton=page.locator("xpath=//button[@id=':r4vc:']//div[@class='MuiGrid2-root MuiGrid2-direction-xs-row css-3ex5vf'][normalize-space()='Save']")
+       this.GivenLink=page.locator("xpath=//a[@aria-label='Give']")
+       //this.GivenLink=page.getByTestId('Give')
+        this.batchdropdown=page.locator("xpath=//input[@id='selectBatch']")
+        this.selectbatchButton=page.locator("xpath=//div[contains(text(),'Select')]")
+    }
+
+    async clickOnSelectButtonbatch()
+    {
+        await this.selectbatchButton.click()
+    }
+    async clickOnselectBatch()
+    {
+        await this.batchdropdown.click()
+        await this.page.locator("xpath=//li[@id='selectBatch-option-0']").click()
+    }
+
+    async ClickOnGivenLink()
+    {
+        await this.GivenLink.click()
+    }
+
+    async clickOnSaveClinicalReviewButton()
+    {
+        // await this.saveClinicalReviewbutton.click();
+        // await this.page.waitForTimeout(500);
+        await this.page.getByTestId('CommonCellmaPopup').getByTestId('Save').click()
+    }
+
+    async selectclinicalReview()
+    {
+        await this.clinicalReviewTextbox.click()
+        await this.page.locator("xpath=//li[@id='reviewCode-option-4']").click()
+    }
+
+    async clickOnReviewLink()
+    {
+        await this.reviewLink.click()
     }
 
     async clickOnMedicationToggle() {

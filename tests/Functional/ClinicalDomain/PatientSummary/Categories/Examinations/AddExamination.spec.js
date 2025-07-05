@@ -107,11 +107,11 @@ test.describe("Examination Category", () => {
       await homepage.clickOnPatientIcon();
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
-      //await page.pause()
+      
       logger.info("Clicked on Search button successfully");
       await patientsearch.enterGivenName(data.pat_firstname);
       logger.info("Given Name entered successfully");
-      //await page.pause()
+     
       await patientsearch.enterFamilyName(data.pat_surname);
       logger.info("Family Name entered successfully");
       //await patientsearch.selectSex(data.pat_sex);
@@ -121,7 +121,7 @@ test.describe("Examination Category", () => {
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1000);
-       await page.pause()
+      
       await confirmexisting.clickOnConfirmExistingDetails();
       // await contacthistory.clickOnMenu();
       // await page.waitForTimeout(2000);
@@ -131,7 +131,7 @@ test.describe("Examination Category", () => {
 
       await page.waitForTimeout(4000)
       await examination.clickOnSavePopup();
-       await page.pause()
+      
       // await page.evaluate(() => document.body.style.zoom = '0.5');
        await page.waitForTimeout(2000)
       //Add Recommendation
@@ -142,7 +142,7 @@ test.describe("Examination Category", () => {
         await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);
 
       await page.waitForTimeout(3000);      
-      await page.pause()
+     
         //await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);
         await recommendationhome.clickonAddRecommendationButton();
         await recommendationEd.clickOnExpandRecommendation();
@@ -151,7 +151,7 @@ test.describe("Examination Category", () => {
         await recommendationEd.enterReviewDate(jsonData.AddRecommendations[index].recom_review_date);
         //await recommendationEd.selectCheckboxPrivateRecord();
         await recommendationEd.selectCheckboxSetAsDefault();
-         await page.pause()
+         
         await recommendationEd.enterNotes();
         await recommendationEd.clickOnSaveButton();
         await page.waitForTimeout(500);
@@ -306,7 +306,7 @@ test.describe("Examination Category", () => {
       await examinationhome.checkExtradetailsLevel();
 
       //Edit Examination
-      //await page.pause()
+     
       await examinationhome.clickOnEditExaminationButton();
       //await page.waitForTimeout(2000)
       // await examinationEd.clickOnExpandExamination();
@@ -406,7 +406,7 @@ test.describe("Examination Category", () => {
         );
       }
 
-      //await page.pause()
+     
     }
 
 

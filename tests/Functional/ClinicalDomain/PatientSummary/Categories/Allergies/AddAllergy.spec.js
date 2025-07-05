@@ -116,7 +116,7 @@ test.describe("Allergy Category", () => {
       //await contacthistory.enterContactDate("24-06-2024");
       await contacthistory.selectContactReason("Assessments");
       await contacthistory.selectContactLocation("Cardio Location");
-       await contacthistory.enterContactWith("Dr Sathya");
+      //  await contacthistory.enterContactWith("Dr Sathya");
       //await page.pause()
       await contacthistory.clickOnAddContact();      
        await allergy.selectCategoryFromList(jsonData.AddAllergy[index].pacr_category);
