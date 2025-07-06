@@ -66,7 +66,7 @@ class ClinicalSummary {
         
 
         //Overview
-        this.addClinicalItem = page.locator("xpath=//button[@aria-label='Add']")
+        this.addClinicalItem = page.locator("xpath=//button[@data-testid='Add']")
 
 
         //Medical Certificates
