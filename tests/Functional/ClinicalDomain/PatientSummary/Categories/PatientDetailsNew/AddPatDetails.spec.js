@@ -84,11 +84,11 @@ test.describe("Excel Conversion Patient Details Category", () => {
       await loginpage.enter_Password(jsonData.loginDetails[0].password);
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();
-
-      
       logger.info("Clicked on Login button successfully");
-      await homepage.clickOnPatientIcon();
+      await homepage.clickOnSideIconPatient()
       logger.info("Clicked on Patient Icon successfully");
+      // await homepage.clickOnPatientIcon();
+      // logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
       logger.info("Clicked on Search button successfully");
       await patientsearch.enterGivenName(data.pat_firstname);
