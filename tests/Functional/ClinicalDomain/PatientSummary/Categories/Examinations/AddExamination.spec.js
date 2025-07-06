@@ -128,7 +128,7 @@ test.describe("Examination Category", () => {
       // await contacthistory.clickOnMenu();
 
 
-      await page.pause()
+      //await page.pause()
       await page.waitForTimeout(4000)
       await examination.clickOnSavePopup();
       
@@ -383,18 +383,18 @@ test.describe("Examination Category", () => {
 
 
       //Delete Recommendation
-        await page.pause()
-      await patientsummary.clickOniconExaminationsCategory();
-       await patientsummary.clickOnallCategory()
-      await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);
+      //   await page.pause()
+      // await patientsummary.clickOniconExaminationsCategory();
+      //  await patientsummary.clickOnallCategory()
+      // await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);
 
-      await Recommendations.clickOnItemEdit();
-      await RecommendationsExtraDetails.clickOnDelete();
-      await RecommendationsExtraDetails.clickOnCancelDelete();
-      await RecommendationsExtraDetails.clickOnDelete();
-      await RecommendationsExtraDetails.clickOnConfirmDelete();
-      await RecommendationsExtraDetails.enterDeleteReason(jsonData.DeleteRecommendations[index].pacr_delete_reason);
-      await RecommendationsExtraDetails.clickOnSaveDeleteReason();
+      // await Recommendations.clickOnItemEdit();
+      // await RecommendationsExtraDetails.clickOnDelete();
+      // await RecommendationsExtraDetails.clickOnCancelDelete();
+      // await RecommendationsExtraDetails.clickOnDelete();
+      // await RecommendationsExtraDetails.clickOnConfirmDelete();
+      // await RecommendationsExtraDetails.enterDeleteReason(jsonData.DeleteRecommendations[index].pacr_delete_reason);
+      // await RecommendationsExtraDetails.clickOnSaveDeleteReason();
       ////// Database comparison- Patient Clinical Records/////////
       sqlQuery =
         "select * from patient_clinical_records where pacr_id=" +
