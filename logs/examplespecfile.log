@@ -219,3 +219,11 @@
 {"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-06T08:41:20.681Z"}
 {"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-06T08:41:20.908Z"}
 {"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-06T08:41:21.270Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-06T08:58:53.115Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-06T08:58:53.210Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-06T08:58:53.390Z"}
+{"level":"info","message":"Redirected To Home Page Successfully","timestamp":"2025-07-06T08:58:53.391Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-06T09:00:00.628Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-06T09:00:00.717Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-06T09:00:00.882Z"}
+{"level":"info","message":"Redirected To Home Page Successfully","timestamp":"2025-07-06T09:00:00.883Z"}

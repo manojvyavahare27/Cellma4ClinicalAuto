@@ -85,11 +85,9 @@ test.describe("Excel Conversion Patient Details Category", () => {
       logger.info("Username enter successfully");
       await loginpage.enter_Password(jsonData.loginDetails[0].password);
       logger.info("Password enter successfully");
-      await loginpage.clickOnLogin();      
+      await loginpage.clickOnLogin();
       logger.info("Clicked on Login button successfully");
-      await homepage.redirectsToHomePage();
-      logger.info("Redirected To Home Page Successfully")
-      await homepage.clickOnPatientIcon();
+      await homepage.clickOnSideIconPatient()
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
       logger.info("Clicked on Search button successfully");
@@ -176,7 +174,7 @@ test.describe("Excel Conversion Patient Details Category", () => {
       await page.waitForTimeout(1000);
       await expect(page.getByText("Patient Detail record added successfully")).toHaveText("Patient Detail record added successfully");
       
-      await page.pause()
+      
       await patientDetailshome.expandLevels();
       await patientDetailshome.reviewRecords();
       await page.waitForTimeout(1000);
