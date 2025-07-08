@@ -82,7 +82,7 @@ test.describe("Device Category", () => {
             await page.pause()
             await patientsearch.enterFamilyName(data.pat_surname);
             logger.info("Family Name entered successfully");
-            await patientsearch.selectSexAtBirth(data.pat_sex);
+           // await patientsearch.selectSexAtBirth(data.pat_sex);
             await patientsearch.selectBornDate(data.pat_dob);
             //await patientsearch.selectBornDate(formattedDate);
             await patientsearch.clickOnSearchButton();
@@ -93,14 +93,21 @@ test.describe("Device Category", () => {
             await page.waitForTimeout(1000);
             await confirmexisting.clickOnConfirmExistingDetails();
             
-            const alert = page.getByRole('heading', { name: 'Alerts' }).isVisible()
-            if (alert) {
-              await Devices.clickPopup();              
-            }
-
-            await contacthistory.selectContactReason("Data Entry");
-            await contacthistory.selectContactLocation("Cardio Location");
-            await contacthistory.clickOnAddContact();
+           await page.waitForTimeout(5000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await allergy.closePopUp()
+        }
+      await page.waitForTimeout(2000);
+      
+       await contacthistory.clickOnShowFilter()  
+      await contacthistory.selectServiceFilter("General Medicine Automation");
+      await contacthistory.selectContactReasonFilter("Assessments");
+      //await contacthistory.enterContactDate("24-06-2024");
+      await contacthistory.selectContactReason("Assessments");
+      await contacthistory.selectContactLocation("Cardio Location");
+      
             await SummaryPage.selectCategoryFromList("Devices");
 
             ////////REVIEW EXISTING ITEM AND DELETE/////

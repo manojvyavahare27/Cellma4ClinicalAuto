@@ -82,7 +82,7 @@ test.describe("Patient Consent Category", () => {
             logger.info("Given Name entered successfully");
             await patientsearch.enterFamilyName(data.pat_surname);
             logger.info("Family Name entered successfully");
-            await patientsearch.selectSexAtBirth(data.pat_sex);
+           /// await patientsearch.selectSexAtBirth(data.pat_sex);
             await patientsearch.selectBornDate(data.pat_dob);
             //await patientsearch.selectBornDate(formattedDate);
             await patientsearch.clickOnSearchButton();
