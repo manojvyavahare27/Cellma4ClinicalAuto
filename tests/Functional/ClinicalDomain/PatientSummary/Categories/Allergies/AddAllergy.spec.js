@@ -103,8 +103,7 @@ test.describe("Allergy Category", () => {
       await patientsearch.selectBornDate(jsonData.PatientDetails[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
-     
-     
+         
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();   
