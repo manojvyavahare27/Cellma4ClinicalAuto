@@ -507,3 +507,24 @@
 {"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T06:46:56.615Z"}
 {"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T06:46:56.868Z"}
 {"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T06:46:57.276Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T06:54:06.948Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T06:54:07.066Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T06:54:07.258Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T06:54:11.024Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T06:54:21.687Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T06:54:21.934Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T06:54:22.354Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T08:02:00.053Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T08:02:00.156Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T08:02:00.354Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T08:02:04.762Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T08:02:15.529Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T08:02:15.807Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T08:02:16.223Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T08:03:15.862Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T08:03:15.974Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T08:03:16.177Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T08:03:20.519Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T08:03:28.223Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T08:03:28.524Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T08:03:28.974Z"}
