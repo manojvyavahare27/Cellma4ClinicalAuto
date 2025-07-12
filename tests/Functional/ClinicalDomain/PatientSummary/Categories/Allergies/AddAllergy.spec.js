@@ -153,7 +153,7 @@ test.describe("Allergy Category", () => {
         }
         await page.waitForTimeout(2000)
 
-await page.pause()
+
        
        //////Fetch Patient Details/////////
       var sqlQuery =
