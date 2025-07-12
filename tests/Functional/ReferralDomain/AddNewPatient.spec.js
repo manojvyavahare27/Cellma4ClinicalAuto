@@ -50,7 +50,7 @@ test('Register New Patient For Referral @Referral', async ({ page }) => {
     await patientsearch.clickOnSearchButton()    
     await patientsearch.enterGivenName(patientdetailsdata.New_GivenName)
     await patientsearch.enterFamilyName(patientdetailsdata.New_FamilyName)
-    await patientsearch.selectSex(patientdetailsdata.SexM)   
+   // await patientsearch.selectSex(patientdetailsdata.SexM)   
     //await page.pause()
     //await patientsearch.enterPatientIdentificationId()
 

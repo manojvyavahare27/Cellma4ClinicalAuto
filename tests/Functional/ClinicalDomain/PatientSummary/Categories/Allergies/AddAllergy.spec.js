@@ -154,12 +154,15 @@ test.describe("Allergy Category", () => {
         }
         await page.waitForTimeout(2000)
 
-
+await page.pause()
        
        //////Fetch Patient Details/////////
       var sqlQuery =
       "select * from patient_audit where paa_use_username='" + jsonData.loginDetails[0].username + 
       "' and paa_type='selected' order by 1 desc limit 1";
+
+      console.log(sqlQuery);
+      
       var sqlFilePath = "SQLResults/PatientDomain/PatientAudit.json";
       var results = await executeQuery(sqlQuery, sqlFilePath);
       console.log("\n Patient Details stored into the database: \n", results);

@@ -104,7 +104,7 @@ test.describe("Physical Sign Category", () => {
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
-      await contacthistory.enterContactDate("26/04/2024");
+      //await contacthistory.enterContactDate("26/04/2024");
       await contacthistory.selectContactReason("Assessments");
       await contacthistory.selectContactLocation("Cardio Location");
       //await contacthistory.enterContactWith("Dr Sathya");

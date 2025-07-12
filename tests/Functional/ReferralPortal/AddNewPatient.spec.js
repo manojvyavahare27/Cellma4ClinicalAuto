@@ -7,7 +7,6 @@ const path = require('path');
 const mysql = require("mysql2");
 const convertExcelToJson = require('../../../config/global-setupOptimized');
 
-const { test, expect } = require('@playwright/test');
 const { test, expect, chromium } = require("@playwright/test");
 const connectToDatabase = require("../../../manoj");
 const { executeQuery } = require("../../../databaseWriteFile"); // Update the path accordingly
@@ -96,6 +95,7 @@ test.describe('New Patient', () => {
       await homepage.clickOnPatientIcon();
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
+      await page.pause()
       logger.info("Clicked on Search button successfully");
       await patientsearch.enterGivenName(data.pat_firstname);
       //await patientsearch.enterGivenName("EonFVBY");
@@ -344,7 +344,7 @@ test.describe('New Patient', () => {
       await addgp.enterGPGMCCode(jsonData.addGP[index].egp_gmc_code);
       await addgp.clickOnShowbnt();
       await addgp.selectUnknownPostCode();
-
+await page.pause()
 
       //Gp Address Details       
       await addgp.enterLocalGPPostcode()

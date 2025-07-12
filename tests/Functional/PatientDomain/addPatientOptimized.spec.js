@@ -3,7 +3,7 @@
 //const fs = require("fs");
 const XLSX = require("xlsx");
 const path = "C:/Riomed/Cellma4Automation";
-const mysql = require("mysql");
+const mysql = require("mysql2");
 const convertExcelToJson = require('../../../config/global-setupOptimized');
 
 const { test, expect, chromium } = require("@playwright/test");

@@ -3,7 +3,7 @@ class ViewPIP
     constructor(page)
     {
         this.page=page
-        this.linkViewPIP=page.getByTestId('View')
+        this.linkViewPIP=page.getByRole('gridcell', { name: 'View' }).getByTestId('View')
         this.btnCloseViewPopup=page.getByTestId('CancelIcon')
         this.btnNextOnViewPIP=page.getByTestId('Next')
         this.txtboxSearchPIP=page.getByTestId('Search')

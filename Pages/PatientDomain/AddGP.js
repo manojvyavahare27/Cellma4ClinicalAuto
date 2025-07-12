@@ -25,7 +25,7 @@ class AddGP
 
         //Gp Address Details
         this.txtPostcodeSearch=page.locator("xpath=//input[@name='postcodeSearch']")
-        this.postcodeValue=page.getByRole('option', { name: 'Gondhalenagar Post Office,' })
+        this.postcodeValue=page.getByRole('option', { name: 'PO Box 94 Lowestoft NR33 0PY' })
         this.txtbox_GPNumberandRoad=page.getByTestId('Number & Road')
         this.txtbox_District=page.getByTestId('District')
         this.txtbox_GPTown=page.getByTestId('Town')
@@ -146,7 +146,7 @@ class AddGP
     //Add Address details of GP
     async enterLocalGPPostcode()
     {        // // Interact with the dropdown
-        await this.txtPostcodeSearch.fill('GONDHALENAGAR POST')
+        await this.txtPostcodeSearch.fill('PO BOX 94 Lowestoft')
         await this.postcodeValue.click();
     }
     async enterGpAddressNumberAndRoad(add_address1)

@@ -54,7 +54,14 @@ module.exports = defineConfig({
               '**/Functional/ClinicalDomain/PatientSummary/Categories/PatientView/CheckPatientView.spec.js',
 
               // Appointment Domain
-              '**/Functional/AppointmentDomain/AddNewPatient.spec.js'
+              '**/Functional/AppointmentDomain/AddNewPatient.spec.js',
+
+              '**/Functional/ReferralPortal/AddReferralDetails.spec.js',
+              '**/Functional/ReferralPortal/TrackReferral.spec.js',
+              '**/Functional/PharmacyPortal/AddRefAndDetails.spec.js'
+
+
+              
 
             ], // Corrected the file extension
   timeout: 800 * 1000,

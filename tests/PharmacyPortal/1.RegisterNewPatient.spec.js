@@ -89,13 +89,11 @@ test.describe('New Patient', () => {
       await loginpage.enter_Password(jsonData.loginDetails[0].password);
       await page.waitForTimeout(2000);
       await loginpage.clickOnLogin();
-      //await page.pause()
       logger.info("Clicked on Login button successfully");
       await homepage.clickonSidebarHomeIcon()
       await homepage.clickOnPatientIcon();
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
-      await page.pause()
       logger.info("Clicked on Search button successfully");
       await patientsearch.enterGivenName(data.pat_firstname);
       //await patientsearch.enterGivenName("EonFVBY");
@@ -272,7 +270,7 @@ test.describe('New Patient', () => {
 
       //Billing Corrospondance
       await addaddress.CheckRadiobtnBilllingCorrespondence();
-      //await addaddress.SelectStartEndDate();
+      await addaddress.SelectStartEndDate();
 
       await addaddress.clickOnSaveAddress();
       await page.waitForTimeout(500);
@@ -284,10 +282,9 @@ test.describe('New Patient', () => {
       await addpip.enterPIPFamilyName(jsonData.pip[index].pip_surname);
       await addpip.enterPIPGivenName(jsonData.pip[index].pip_firstname);
       await addpip.enterPIPMiddleName(jsonData.pip[index].pip_middlename);
-      //await page.pause()
       await addpip.selectPIPBornDate(jsonData.pip[index].pip_dob);
 
-      await addpip.selectPIPEthnicity(jsonData.pip[index].pip_ethnicity_text);
+      await addpip.selecrPIPEthnicity(jsonData.pip[index].pip_ethnicity_text);
       await addpip.selectPIPOccupation();
       // await addpip.enterPIPMobileNumber(pipdetailsdata.MobileNo);
       // await addpip.enterPIPEmailId(pipdetailsdata.Email);
@@ -344,7 +341,7 @@ test.describe('New Patient', () => {
       await addgp.enterGPGMCCode(jsonData.addGP[index].egp_gmc_code);
       await addgp.clickOnShowbnt();
       await addgp.selectUnknownPostCode();
-await page.pause()
+
 
       //Gp Address Details       
       await addgp.enterLocalGPPostcode()

@@ -97,13 +97,15 @@ test.describe("Procedure Category", () => {
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1500);
+      await page.pause()
       await confirmexisting.clickOnConfirmExistingDetails(); 
-      await page.waitForTimeout(5000);
-       await Procedures.clickOnSavePopup()     
+      await page.waitForTimeout(3000);
+       await Procedures.clickOnSavePopup() 
+       await page.waitForTimeout(2000);    
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
-      await contacthistory.enterContactDate("26/04/2024");
+      //await contacthistory.enterContactDate("26/04/2024");
       await contacthistory.selectContactReason("Assessments");
       await contacthistory.selectContactLocation("Cardio Location");
       //await contacthistory.enterContactWith("Dr Sathya");
