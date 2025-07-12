@@ -107,7 +107,7 @@ test.describe("Diagnosis Category", () => {
       await confirmexisting.clickOnConfirmExistingDetails();   
       await page.waitForTimeout(2000);
 
-      await page.pause()
+      //await page.pause()
       await page.waitForTimeout(5000);
       const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
       if(alertPopup==true)
