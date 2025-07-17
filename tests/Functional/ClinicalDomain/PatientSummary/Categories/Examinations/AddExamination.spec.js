@@ -121,28 +121,22 @@ test.describe("Examination Category", () => {
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1000);
-      //await page.pause()
-      await confirmexisting.clickOnConfirmExistingDetails();
-      // await contacthistory.clickOnMenu();
-      // await page.waitForTimeout(2000);
-      // await contacthistory.clickOnMenu();
-
-
-      await page.pause()
-      await page.waitForTimeout(4000)
-      await examination.clickOnSavePopup();
       
-      // await page.evaluate(() => document.body.style.zoom = '0.5');
+      await confirmexisting.clickOnConfirmExistingDetails();
+
+      await page.waitForTimeout(5000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await carePlan.closePopUp()
+        }            
+     
        await page.waitForTimeout(2000)
-      //Add Recommendation
-      //const flag = false;
-      //await patientsummary.clickOniconRecommendation();
+      //Add Recommendation      
        await patientsummary.clickOniconExaminationsCategory();
        await patientsummary.clickOnallCategory()
         await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);
-
-      await page.waitForTimeout(3000);      
-     
+      await page.waitForTimeout(3000);           
         //await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);
         await recommendationhome.clickonAddRecommendationButton();
         // await recommendationEd.clickOnExpandRecommendation();
@@ -381,7 +375,7 @@ test.describe("Examination Category", () => {
 
 
       //Delete Recommendation
-      //   await page.pause()
+      
       // await patientsummary.clickOniconExaminationsCategory();
       //  await patientsummary.clickOnallCategory()
       // await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);

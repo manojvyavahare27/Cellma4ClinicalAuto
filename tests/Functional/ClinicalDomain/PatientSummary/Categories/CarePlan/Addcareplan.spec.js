@@ -100,7 +100,7 @@ test.describe("Care Plan Category", () => {
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
 
-     await page.pause();
+    
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(200);
       await confirmexisting.clickOnConfirmExistingDetails();
@@ -307,7 +307,7 @@ test.describe("Care Plan Category", () => {
       //await carePlan.clickOnAllItemsSection();
       //await allergy.toggleHistorySection(); // Close the history section
 
-      // await page.pause();
+     
     }
   });
 });

@@ -107,8 +107,13 @@ test.describe("Task Category", () => {
         await patientsearch.clickOnSearchPatientLink();
         await page.waitForTimeout(1500);
         await confirmexisting.clickOnConfirmExistingDetails();
-        // await contacthistory.clickOnMenuIcon()
-        // await page.waitForTimeout(2000);
+        await page.waitForTimeout(5000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await carePlan.closePopUp()
+        }
+      await page.waitForTimeout(2000);
 
 
          //////Fetch Patient Details/////////
@@ -122,7 +127,7 @@ test.describe("Task Category", () => {
 
    console.log("Patient Accessed by User:" + patId);
 
-  await page.pause()
+  
 
         await contacthistory.enterContactDate('26/04/2024');
         await contacthistory.selectContactReason('Assessments');
@@ -131,7 +136,7 @@ test.describe("Task Category", () => {
         await contacthistory.clickOnAddContact();
         //await problems.clickOnViewContactItemsMenu();
         //await problems.clickOnPinContactItemsMenu();
-        await page.pause()
+       
         await page.waitForTimeout(1000);
         await patientsummary.clickOnAddToTask();
         await page.waitForTimeout(1000);
@@ -171,7 +176,7 @@ let username = jsonData.loginDetails[0].username;
   sqlQuery =
   `SELECT task_name,task_due_date,task_due_time,task_status,task_priority,alert_category,taskd_description, task_notes FROM c4_tasks JOIN c4_alerts ON c4_tasks.task_id = c4_alerts.alert_task_id JOIN task_details ON c4_tasks.task_id = task_details.taskd_task_id WHERE c4_tasks.task_pat_id =${patId}  and task_created_by = '${username}' order by task_id desc limit 1`;
  console.log("Task query"+sqlQuery)       
- await page.pause()
+ 
 
 sqlFilePath = "SQLResults/ClinicalDomain/addTaskToPatient.json";
 results = await executeQuery(sqlQuery, sqlFilePath);
@@ -187,7 +192,7 @@ if (match) {
     "\n Patient Clinical Records Comparision: Parameters from both JSON files do not match!\n"
   );
 } 
-await page.pause()    
+   
 
         //Edit & Complete Task
         await patientsummary.clickTaskIcon();
@@ -229,7 +234,7 @@ await page.pause()
          await patientsummary.selectTaskTemplate();
          await page.waitForTimeout(5000);
          await patientsummary.selectAssignTaskUser(jsonData.AddTask[index].task_username);
-         await page.pause()
+         
          await patientsummary.selectTaskDueDate(jsonData.EditTask[index].due_date);
          await patientsummary.selectTaskDueTime(jsonData.EditTask[index].due_time);
          await patientsummary.selectSendAlertTo();

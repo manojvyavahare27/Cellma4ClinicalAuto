@@ -81,7 +81,7 @@ test.describe("Excel Conversion Patient Details Category", () => {
         await page.goto(environment.Test);
       await loginpage.enterUsername(jsonData.loginDetails[0].username);
       logger.info("Username enter successfully");
-      await page.pause()
+      
       await loginpage.enter_Password(jsonData.loginDetails[0].password);
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();
@@ -106,9 +106,13 @@ test.describe("Excel Conversion Patient Details Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1000);
       await confirmexisting.clickOnConfirmExistingDetails();
-      //await contacthistory.clickOnMenuIcon();
+      await page.waitForTimeout(5000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await carePlan.closePopUp()
+        }
       await page.waitForTimeout(2000);
-       await overview.clickOnSavePopup() 
      
       await patientDetailshome.addContact();
       await patientDetailshome.clickOnAddContact()

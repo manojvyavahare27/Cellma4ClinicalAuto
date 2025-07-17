@@ -105,9 +105,13 @@ test.describe("Excel Conversion Patient Details Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1000);
       await confirmexisting.clickOnConfirmExistingDetails();
-      //await contacthistory.clickOnMenuIcon();
+      await page.waitForTimeout(5000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await carePlan.closePopUp()
+        }
       await page.waitForTimeout(2000);
-      await patientDetails.clickOnSavePopup() 
      
       await patientDetailshome.addContact();
       await patientDetailshome.clickOnAddContact()

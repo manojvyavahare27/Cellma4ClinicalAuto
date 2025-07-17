@@ -106,11 +106,11 @@ test.describe("Diagnosis Category", () => {
       await page.waitForTimeout(2000);
       await confirmexisting.clickOnConfirmExistingDetails();        
       
-      await page.waitForTimeout(5000);
+     await page.waitForTimeout(5000);
       const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
       if(alertPopup==true)
         {       
-          await diagnosis.clickOnSavePopup()  
+          await carePlan.closePopUp()
         }
       await page.waitForTimeout(2000);
       // await diagnosis.clickOnSavePopup()  
@@ -223,7 +223,7 @@ test.describe("Diagnosis Category", () => {
       // Customizable view
       // await contacthistory.clickOnSettingButton()      
       // await contacthistory.clickOnCustomizableView()
-      // await page.pause()
+      
       // await diagnosis.clickOnDeleteQuestion(jsonData.AddDiagnosis[index].question_name)
       // await page.waitForTimeout(1000)
       // await diagnosis.clickOnRestoreQuestion(jsonData.AddDiagnosis[index].question_name)
@@ -236,7 +236,7 @@ test.describe("Diagnosis Category", () => {
       // await diagnosis.selectandAddClinicalItem(jsonData.AddDiagnosis[index].pacr_que_name);
      //await diagnosis.checkItemOnHistoryTable(jsonData.AddDiagnosis[index].pacr_que_name)
  
-    // await page.pause()
+    
       //await diagnosisExtraDetails.selectClinicalItemSubcategory("Medical Diagnosis");
       await diagnosisExtraDetails.enterOnSetDate(jsonData.AddDiagnosis[index].diag_date_onset.toString());
      // await diagnosisExtraDetails.enterDiagnosedDate.fill("");
@@ -409,7 +409,7 @@ test.describe("Diagnosis Category", () => {
      }
      
  
-   //  await page.pause();
+   
        await diagnosis.clickOnCurrentItemsSection();
         await diagnosis.clickOnMigratedItemsSection();
         await diagnosis.clickOnDeletedItemsSection();

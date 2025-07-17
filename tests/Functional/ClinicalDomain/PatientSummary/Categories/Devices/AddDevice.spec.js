@@ -63,7 +63,7 @@ test.describe("Device Category", () => {
             const SummaryPage = new ClinicalSummary(page);
             const Devices = new DeviceDetails(page);
 
-            // await page.pause()
+           
             const menu = new Menu(page);
             await page.goto(environment.Test);
             await loginpage.enterUsername(jsonData.loginDetails[0].username);
@@ -79,7 +79,7 @@ test.describe("Device Category", () => {
             logger.info("Clicked on Search button successfully");
             await patientsearch.enterGivenName(data.pat_firstname);
             logger.info("Given Name entered successfully");
-            await page.pause()
+           
             await patientsearch.enterFamilyName(data.pat_surname);
             logger.info("Family Name entered successfully");
            // await patientsearch.selectSexAtBirth(data.pat_sex);
@@ -93,11 +93,12 @@ test.describe("Device Category", () => {
             await page.waitForTimeout(1000);
             await confirmexisting.clickOnConfirmExistingDetails();
             
-           await page.waitForTimeout(5000);
+           //await page.pause()
+      await page.waitForTimeout(5000);
       const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
       if(alertPopup==true)
         {       
-          await allergy.closePopUp()
+          await carePlan.closePopUp()
         }
       await page.waitForTimeout(2000);
       
@@ -160,7 +161,7 @@ test.describe("Device Category", () => {
             await Devices.clickOnSaveDevice();
             await expect.soft(page.getByText("Device record added successfully")).toHaveText("Device record added successfully");
             await Devices.clickOnExtraDetailsView3();
-            // await page.pause()
+            
 
             ////////////////////////// FRONT END COMPARISON OF ENTERED INFORMAION //////////////////////////      
             var count = 0;

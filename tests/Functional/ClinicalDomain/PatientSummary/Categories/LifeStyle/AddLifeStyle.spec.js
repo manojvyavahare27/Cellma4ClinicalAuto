@@ -101,9 +101,13 @@ test.describe("LifeStyle Category", () => {
         await patientsearch.clickOnSearchPatientLink();
         await page.waitForTimeout(1500);
         await confirmexisting.clickOnConfirmExistingDetails();
-        //await page.pause()
-        await page.waitForTimeout(2000);
-        await lifestyle.clickOnSavePopup() 
+       await page.waitForTimeout(5000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await carePlan.closePopUp()
+        }
+      await page.waitForTimeout(2000);
         //await contacthistory.enterContactDate('26/11/2024');
         await contacthistory.selectContactReason('Assessments');
         await contacthistory.selectContactLocation('Cardio Location');
@@ -155,9 +159,9 @@ test.describe("LifeStyle Category", () => {
   //await lifestyleExtraDetails.selectClinicalItemSubcategory(jsonData.AddLifestyle[index].eli_text); 
   await lifestyleExtraDetails.clickOPrivateRecord();
   await page.waitForTimeout(500);  
- // await page.pause()
+ 
   await lifestyleExtraDetails.enterLifestyleNotes(jsonData.AddLifestyle[index].life_notes);
- // await page.pause()
+ 
   await lifestyleExtraDetails.clickOnSaveExtraDetails();
   await page.waitForTimeout(500);
     

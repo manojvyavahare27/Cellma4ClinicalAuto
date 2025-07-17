@@ -90,6 +90,8 @@ test.describe("Patient View Category", () => {
             await confirmexisting.btn_confirmExistingDetails.waitFor();
             await page.waitForTimeout(1000);
             await confirmexisting.clickOnConfirmExistingDetails();
+
+            
             
             const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible()
             if (alert) {

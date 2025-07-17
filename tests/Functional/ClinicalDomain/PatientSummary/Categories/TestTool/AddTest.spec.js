@@ -91,15 +91,13 @@ test.describe("Test and Tool Category", () => {
             await confirmexisting.btn_confirmExistingDetails.waitFor();
             await page.waitForTimeout(1000);
             await confirmexisting.clickOnConfirmExistingDetails();
-            await page.waitForTimeout(5000)
-
-
-           
-
-            const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible()
-            if (alert) {
-              await TestTool.clickPopup();              
-            }
+            await page.waitForTimeout(5000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await carePlan.closePopUp()
+        }
+      await page.waitForTimeout(2000);
 
 
             await contacthistory.selectContactReason("Data Entry");

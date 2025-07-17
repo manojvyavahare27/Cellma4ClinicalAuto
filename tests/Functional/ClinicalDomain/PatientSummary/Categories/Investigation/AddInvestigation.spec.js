@@ -100,8 +100,14 @@ test.describe("Investigations Category", () => {
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();  
       
-       await page.waitForTimeout(4000)
-      await Investigations.closePopUp();
+       await page.waitForTimeout(5000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await carePlan.closePopUp()
+        }
+      await page.waitForTimeout(2000);
+      
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -183,7 +189,7 @@ test.describe("Investigations Category", () => {
       await InvestigationsExtraDetails.enterInvNotes(jsonData.AddInvestigation[index].notes);
       await InvestigationsExtraDetails.clickOnSaveExtraDetails();
       await page.waitForTimeout(1000);
-      await page.pause()
+      
       await InvestigationsExtraDetails.selectlinks()
       await page.waitForTimeout(1000);
       await InvestigationsExtraDetails.LabRequestLink()
@@ -210,7 +216,7 @@ test.describe("Investigations Category", () => {
 
       //await expect(page.getByText("Investigation record added successfully")).toHaveText("Investigation record added successfully");
       //await expect(page.getByText(`${clinicaCatergory} Record Added Successfully`)).toHaveText(`${clinicaCatergory} Record Added Successfully`); 
-      //await page.pause()
+      
     //   ////// Database comparison- Patient Clinical Records - ADDING NEW Investigations/////////
     //   sqlQuery =
     //   "select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk,inte_outcome_eli_text, inte_notes"+
@@ -282,7 +288,7 @@ test.describe("Investigations Category", () => {
       await page.waitForTimeout(500);
       await Investigations.closeWindow();
       await page.waitForTimeout(500);
-      await page.pause()
+      
      
       // await page.waitForTimeout(500);
       await Investigations.clickOnItemHighlightNone();
@@ -297,8 +303,7 @@ test.describe("Investigations Category", () => {
       await Investigations.clickOnLevelTwoExtraDetails();
      // await Investigations.clickOnLevelThreeExtraDetails();
       await Investigations.clickOnLevelOneExtraDetails();
-
- await page.pause()
+ 
   //     ////// Database comparison - Patient Clinical Records - UPDATE Investigations RISK/////////
   //    sqlQuery =
   //    "select pacr_risk from patient_clinical_records where pacr_id=" + pacrId;
@@ -319,7 +324,7 @@ test.describe("Investigations Category", () => {
       await InvestigationsExtraDetails.clickOnDelete();
       await InvestigationsExtraDetails.clickOnConfirmDelete();
       await InvestigationsExtraDetails.enterDeleteReason(jsonData.DeleteInvestigation[index].pacr_delete_reason);
-      //await page.pause()
+      
       await InvestigationsExtraDetails.clickOnSaveDeleteReason();
     //  await expect(page.getByText('Investigation deleted successfully')).toHaveText('Investigation deleted successfully')
 
@@ -346,7 +351,7 @@ test.describe("Investigations Category", () => {
     //   await Investigations.clickOnAllItemsSection();
     //   await Investigations.toggleHistorySection(); // Close the history section
    
-     // await page.pause();
+    
     }
   
   

@@ -97,8 +97,13 @@ test.describe("Interpretations Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();  
-      await page.waitForTimeout(2000);
-      await Interpretations.clickOnSavePopup()          
+     await page.waitForTimeout(5000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await carePlan.closePopUp()
+        }
+      await page.waitForTimeout(2000);      
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -254,7 +259,7 @@ test.describe("Interpretations Category", () => {
       await InterpretationsExtraDetails.clickOnDelete();
       await InterpretationsExtraDetails.clickOnConfirmDelete();
       await InterpretationsExtraDetails.enterDeleteReason(jsonData.DeleteInterpretation[index].pacr_delete_reason);
-     // await page.pause()
+     
       await InterpretationsExtraDetails.clickOnSaveDeleteReason();
       await expect(page.getByText('Interpretation deleted successfully')).toHaveText('Interpretation deleted successfully')
 

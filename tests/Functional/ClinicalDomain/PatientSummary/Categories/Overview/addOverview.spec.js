@@ -87,7 +87,7 @@ test.describe("Overview Category", () => {
         logger.info("Clicked on Search button successfully");
         await patientsearch.enterGivenName(data.pat_firstname);
         logger.info("Given Name entered successfully");
-        await page.pause()
+       
         await patientsearch.enterFamilyName(data.pat_surname);
         logger.info("Family Name entered successfully");
         //await patientsearch.selectSex(data.pat_sex);
@@ -101,8 +101,13 @@ test.describe("Overview Category", () => {
         await patientsearch.clickOnSearchPatientLink();
         await page.waitForTimeout(1500);
         await confirmexisting.clickOnConfirmExistingDetails();        
-       await page.waitForTimeout(2000);
-       await overview.clickOnSavePopup() 
+      await page.waitForTimeout(5000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await carePlan.closePopUp()
+        }
+      await page.waitForTimeout(2000);
        // await contacthistory.enterContactDate('26/04/2024');
         await contacthistory.selectContactReason('Assessments');
         await contacthistory.selectContactLocation('Cardio Location');
