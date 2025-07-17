@@ -133,7 +133,6 @@ test.describe("Allergy Category", () => {
       await page.waitForTimeout(2000)
       //await page.pause()
        ////////REVIEW EXISTING ITEM AND DELETE/////
-
        if(await allergy.checkItemOnHistoryTable(jsonData.AddAllergy[index].pacr_que_name)){
         //await allergy.clickOnItemReview(jsonData.AddAllergy[index].pacr_que_name);
         //console.log("Item reviewed before deleting");
