@@ -1,0 +1,625 @@
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T06:20:17.743Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T06:20:17.853Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T06:20:18.033Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T06:20:21.637Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T06:20:30.908Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T06:20:31.195Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T06:20:31.603Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T06:26:48.664Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T06:26:48.775Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T06:26:48.946Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T06:26:52.394Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T06:27:00.093Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T06:27:00.332Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T06:27:00.706Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T06:34:27.084Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T06:34:27.260Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T06:34:27.524Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T06:34:31.813Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T06:34:38.175Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T06:34:38.414Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T06:34:38.803Z"}
+{"date":"Sat Jul 05 2025 12:06:12 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: Object with guid handle@30bf4b95a46582fbf3d0b5212f2211f8 was not bound in the connection\nError: Object with guid handle@30bf4b95a46582fbf3d0b5212f2211f8 was not bound in the connection\n    at Connection._tChannelImplFromWire (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js:214:26)\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:128:20\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:90:12\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:107:21\n    at Connection.dispatch (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js:175:26)\n    at Immediate.<anonymous> (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\inProcessFactory.js:49:83)\n    at processImmediate (node:internal/timers:485:21)","os":{"loadavg":[0,0,0],"uptime":165044.781},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright\\lib\\common\\process.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":7852225,"external":11717001,"heapTotal":62312448,"heapUsed":44916160,"rss":140378112},"pid":20544,"uid":null,"version":"v22.17.0"},"stack":"Error: Object with guid handle@30bf4b95a46582fbf3d0b5212f2211f8 was not bound in the connection\n    at Connection._tChannelImplFromWire (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js:214:26)\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:128:20\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:90:12\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:107:21\n    at Connection.dispatch (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js:175:26)\n    at Immediate.<anonymous> (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\inProcessFactory.js:49:83)\n    at processImmediate (node:internal/timers:485:21)","timestamp":"2025-07-05T06:36:12.337Z","trace":[{"column":26,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js","function":"Connection._tChannelImplFromWire","line":214,"method":"_tChannelImplFromWire","native":false},{"column":20,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js","function":null,"line":128,"method":null,"native":false},{"column":12,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js","function":null,"line":90,"method":null,"native":false},{"column":21,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js","function":null,"line":107,"method":null,"native":false},{"column":26,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js","function":"Connection.dispatch","line":175,"method":"dispatch","native":false},{"column":83,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\inProcessFactory.js","function":null,"line":49,"method":null,"native":false},{"column":21,"file":"node:internal/timers","function":"processImmediate","line":485,"method":null,"native":false}]}
+{"date":"Sat Jul 05 2025 12:06:12 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: Object with guid handle@30bf4b95a46582fbf3d0b5212f2211f8 was not bound in the connection\nError: Object with guid handle@30bf4b95a46582fbf3d0b5212f2211f8 was not bound in the connection\n    at Connection._tChannelImplFromWire (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js:214:26)\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:128:20\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:90:12\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:107:21\n    at Connection.dispatch (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js:175:26)\n    at Immediate.<anonymous> (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\inProcessFactory.js:49:83)\n    at processImmediate (node:internal/timers:485:21)","os":{"loadavg":[0,0,0],"uptime":165044.781},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright\\lib\\common\\process.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":7852225,"external":11717001,"heapTotal":62312448,"heapUsed":44916160,"rss":140378112},"pid":20544,"uid":null,"version":"v22.17.0"},"stack":"Error: Object with guid handle@30bf4b95a46582fbf3d0b5212f2211f8 was not bound in the connection\n    at Connection._tChannelImplFromWire (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js:214:26)\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:128:20\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:90:12\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:107:21\n    at Connection.dispatch (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js:175:26)\n    at Immediate.<anonymous> (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\inProcessFactory.js:49:83)\n    at processImmediate (node:internal/timers:485:21)","timestamp":"2025-07-05T06:36:12.337Z","trace":[{"column":26,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js","function":"Connection._tChannelImplFromWire","line":214,"method":"_tChannelImplFromWire","native":false},{"column":20,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js","function":null,"line":128,"method":null,"native":false},{"column":12,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js","function":null,"line":90,"method":null,"native":false},{"column":21,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js","function":null,"line":107,"method":null,"native":false},{"column":26,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js","function":"Connection.dispatch","line":175,"method":"dispatch","native":false},{"column":83,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\inProcessFactory.js","function":null,"line":49,"method":null,"native":false},{"column":21,"file":"node:internal/timers","function":"processImmediate","line":485,"method":null,"native":false}]}
+{"date":"Sat Jul 05 2025 12:06:12 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: Object with guid handle@30bf4b95a46582fbf3d0b5212f2211f8 was not bound in the connection\nError: Object with guid handle@30bf4b95a46582fbf3d0b5212f2211f8 was not bound in the connection\n    at Connection._tChannelImplFromWire (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js:214:26)\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:128:20\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:90:12\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:107:21\n    at Connection.dispatch (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js:175:26)\n    at Immediate.<anonymous> (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\inProcessFactory.js:49:83)\n    at processImmediate (node:internal/timers:485:21)","os":{"loadavg":[0,0,0],"uptime":165044.781},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright\\lib\\common\\process.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":7852225,"external":11717001,"heapTotal":62312448,"heapUsed":44916160,"rss":140378112},"pid":20544,"uid":null,"version":"v22.17.0"},"stack":"Error: Object with guid handle@30bf4b95a46582fbf3d0b5212f2211f8 was not bound in the connection\n    at Connection._tChannelImplFromWire (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js:214:26)\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:128:20\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:90:12\n    at D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js:107:21\n    at Connection.dispatch (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js:175:26)\n    at Immediate.<anonymous> (D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\inProcessFactory.js:49:83)\n    at processImmediate (node:internal/timers:485:21)","timestamp":"2025-07-05T06:36:12.338Z","trace":[{"column":26,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js","function":"Connection._tChannelImplFromWire","line":214,"method":"_tChannelImplFromWire","native":false},{"column":20,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js","function":null,"line":128,"method":null,"native":false},{"column":12,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js","function":null,"line":90,"method":null,"native":false},{"column":21,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\protocol\\validatorPrimitives.js","function":null,"line":107,"method":null,"native":false},{"column":26,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\client\\connection.js","function":"Connection.dispatch","line":175,"method":"dispatch","native":false},{"column":83,"file":"D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\playwright-core\\lib\\inProcessFactory.js","function":null,"line":49,"method":null,"native":false},{"column":21,"file":"node:internal/timers","function":"processImmediate","line":485,"method":null,"native":false}]}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T06:50:48.660Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T06:50:48.759Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T06:50:48.933Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T06:52:52.143Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T06:52:56.638Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T06:52:57.453Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T06:52:58.243Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T06:59:11.075Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T06:59:11.173Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T06:59:11.358Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T06:59:14.733Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T06:59:20.653Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T06:59:20.908Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T06:59:21.303Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T07:00:12.892Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T07:00:13.004Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T07:00:13.179Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T07:00:16.648Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T07:00:22.877Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T07:00:23.122Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T07:00:23.508Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T07:04:05.648Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T07:04:05.739Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T07:04:05.924Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T07:04:09.002Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T07:04:15.897Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T07:04:16.160Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T07:04:16.584Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T07:10:30.443Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T07:10:30.541Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T07:10:30.715Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T07:10:34.527Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T07:10:42.501Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T07:10:42.764Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T07:10:43.154Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T07:13:06.735Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T07:13:06.838Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T07:13:07.044Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T07:13:10.124Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T07:13:18.403Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T07:13:18.629Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T07:13:19.029Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T07:14:21.100Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T07:14:21.213Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T07:14:21.384Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T07:14:24.677Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T07:14:30.474Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T07:14:30.708Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T07:14:31.096Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T07:15:37.342Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T07:15:37.445Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T07:15:37.619Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T07:15:41.016Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T07:15:47.865Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T07:15:48.127Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T07:15:48.530Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T07:17:12.582Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T07:17:12.673Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T07:17:12.844Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T07:17:16.539Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T07:17:22.812Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T07:17:23.062Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T07:17:23.441Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T07:44:20.601Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T07:44:20.743Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T07:44:20.947Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T07:44:25.785Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T07:44:33.146Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T07:44:33.607Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T07:44:34.176Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T07:45:51.453Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T07:45:51.632Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T07:45:51.939Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T07:45:56.171Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T07:46:05.785Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T07:46:06.340Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T07:46:07.070Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T07:48:28.091Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T07:48:28.280Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T07:48:28.569Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T07:48:33.036Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T07:48:39.151Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T07:48:39.520Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T07:48:40.113Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T07:50:40.004Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T07:50:40.130Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T07:50:40.448Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T07:50:44.599Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T07:50:51.755Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T07:50:52.184Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T07:50:52.788Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T08:03:35.120Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T08:03:35.305Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T08:03:35.657Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T08:03:46.705Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T08:03:50.241Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T08:03:50.507Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T08:03:51.012Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T08:18:27.998Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T08:18:28.107Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T08:18:28.277Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T08:18:39.033Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T08:18:40.907Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T08:18:41.150Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T08:18:41.539Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T08:23:39.334Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T08:23:39.466Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T08:23:39.674Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T08:23:47.753Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T08:23:50.187Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T08:23:50.409Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T08:23:50.794Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T08:32:15.560Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T08:32:15.689Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T08:32:15.913Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T08:32:24.555Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T08:32:26.488Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T08:32:26.730Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T08:32:27.131Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T08:39:40.728Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T08:39:40.859Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T08:39:41.100Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T08:40:10.482Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T09:04:41.492Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T09:04:41.594Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T09:04:41.776Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T09:07:43.976Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T09:07:44.071Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T09:07:44.268Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T09:07:54.399Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T09:07:57.278Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T09:07:57.526Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T09:07:57.921Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T09:12:59.383Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T09:12:59.484Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T09:12:59.677Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T09:13:09.343Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T09:13:11.418Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T09:13:11.702Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T09:13:12.101Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T09:15:56.723Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T09:15:56.820Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T09:15:57.000Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T09:16:06.260Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T09:16:08.914Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T09:16:09.187Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T09:16:09.629Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T09:35:48.403Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T09:35:48.533Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T09:35:48.732Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T09:35:57.416Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T09:35:59.639Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T09:35:59.896Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T09:36:00.327Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T09:40:49.849Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T09:40:49.976Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T09:40:50.182Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T09:41:00.363Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T09:41:02.800Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T09:41:03.087Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T09:41:03.536Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T09:42:55.311Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T09:42:55.454Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T09:42:55.664Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T09:43:05.799Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T09:43:08.071Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T09:43:08.324Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T09:43:08.770Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T09:45:13.911Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T09:45:14.013Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T09:45:14.224Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T09:45:23.330Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T09:45:25.494Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T09:45:25.760Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T09:45:26.187Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T10:02:05.769Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T10:02:05.946Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T10:02:06.248Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T10:02:16.036Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-05T10:02:18.981Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-05T10:02:19.486Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-05T10:02:20.181Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-05T11:03:11.964Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-05T11:03:12.056Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-05T11:03:12.239Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-05T11:03:37.720Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-06T08:36:51.065Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-06T08:36:51.196Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-06T08:36:51.366Z"}
+{"level":"info","message":"Redirected To Home Page Successfully","timestamp":"2025-07-06T08:36:51.367Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-06T08:41:10.965Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-06T08:41:11.057Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-06T08:41:11.219Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-06T08:41:14.543Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-06T08:41:20.681Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-06T08:41:20.908Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-06T08:41:21.270Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-06T08:58:53.115Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-06T08:58:53.210Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-06T08:58:53.390Z"}
+{"level":"info","message":"Redirected To Home Page Successfully","timestamp":"2025-07-06T08:58:53.391Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-06T09:00:00.628Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-06T09:00:00.717Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-06T09:00:00.882Z"}
+{"level":"info","message":"Redirected To Home Page Successfully","timestamp":"2025-07-06T09:00:00.883Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-06T09:06:26.063Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-06T09:06:26.156Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-06T09:06:26.330Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-06T09:06:29.391Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-06T09:06:35.725Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-06T09:06:35.961Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-06T09:06:36.317Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-06T09:27:11.001Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-06T09:27:11.091Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-06T09:27:11.258Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-06T09:27:19.524Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-06T09:27:21.844Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-06T09:27:22.061Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-06T09:27:22.426Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-06T10:06:07.324Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-06T10:06:07.433Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-06T10:06:07.604Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-06T10:06:14.963Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-06T10:06:16.922Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-06T10:06:17.229Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-06T10:06:17.687Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-06T10:34:38.470Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-06T10:34:38.565Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-06T10:34:38.739Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-06T10:34:47.449Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-06T10:34:49.980Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-06T10:34:50.278Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-06T10:34:50.749Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-07T02:10:51.228Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-07T02:10:51.351Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-07T02:10:51.516Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-07T02:10:55.081Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-07T02:11:03.671Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-07T02:11:03.904Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-07T02:11:04.251Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-07T02:13:26.079Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-07T02:13:26.204Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-07T02:13:26.356Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-07T02:13:30.489Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-07T02:13:37.617Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-07T02:13:37.838Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-07T02:13:38.210Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-07T10:23:10.229Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-07T10:23:10.315Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-07T10:23:10.468Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-07T10:23:13.826Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-07T10:23:20.282Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-07T10:23:20.492Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-07T10:23:20.848Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-07T10:45:19.671Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-07T10:45:19.759Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-07T10:45:19.927Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-07T10:45:27.711Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-07T10:45:29.741Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-07T10:45:30.031Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-07T10:45:33.668Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-07T10:46:44.522Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-07T10:46:44.617Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-07T10:46:44.772Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-07T10:46:52.373Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-07T10:46:54.572Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-07T10:46:54.850Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-07T10:46:59.938Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-07T10:49:29.823Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-07T10:49:29.919Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-07T10:49:30.124Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-07T10:49:37.902Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-07T10:49:39.872Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-07T10:49:40.175Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-07T10:49:44.515Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-08T12:41:38.299Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-08T12:41:38.392Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-08T12:41:38.585Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-08T12:41:48.040Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T12:41:49.919Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T12:41:50.234Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T12:41:50.735Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-08T12:44:14.234Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-08T12:44:14.335Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-08T12:44:14.512Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-08T12:44:23.095Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T12:44:25.879Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T12:44:26.207Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T12:44:26.732Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-08T12:50:28.764Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-08T12:50:28.868Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-08T12:50:29.072Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-08T12:50:53.168Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T12:50:56.030Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T12:50:56.558Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T12:50:56.942Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-08T12:52:54.679Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-08T12:52:54.814Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-08T12:52:55.066Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-08T12:53:20.792Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-08T14:06:52.991Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-08T14:07:01.566Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T14:07:03.919Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T14:07:04.127Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T14:07:04.406Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-08T14:16:07.053Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-08T14:16:16.423Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T14:16:51.408Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T14:16:51.904Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-08T14:17:15.862Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-08T14:17:55.187Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T14:18:10.986Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T14:18:11.652Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T14:18:12.409Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-08T14:23:06.482Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-08T14:23:14.430Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T14:23:21.130Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T14:23:21.369Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T14:23:21.673Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-08T14:27:16.638Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-08T14:27:26.621Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T14:27:35.774Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T14:27:36.037Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T14:27:36.367Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-08T14:47:38.822Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-08T14:47:47.677Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T14:47:53.906Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T14:47:54.137Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T14:47:54.427Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-08T14:52:50.177Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-08T14:52:59.288Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T14:53:14.966Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T14:53:15.325Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T14:53:15.726Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-08T14:57:31.730Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-08T14:57:40.710Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T14:57:51.698Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T14:57:52.058Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T14:57:52.478Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T16:39:22.825Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T16:39:24.507Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T16:39:25.779Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T16:52:14.987Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T16:52:15.873Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T16:52:16.398Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T16:52:53.272Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T16:52:53.401Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T16:52:53.539Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T16:54:09.268Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T16:54:09.617Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T16:54:09.770Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T16:57:36.119Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T16:57:37.033Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T16:57:38.195Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T16:59:44.807Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T16:59:45.406Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T16:59:46.012Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T17:00:45.779Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T17:00:45.949Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T17:00:46.148Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T17:02:13.833Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T17:02:14.160Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T17:02:14.911Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-08T17:03:26.752Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-08T17:03:26.886Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-08T17:03:27.067Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-09T09:54:14.076Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-09T09:54:14.159Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-09T09:54:14.317Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-09T09:54:17.468Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-09T09:54:24.120Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-09T09:54:24.489Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-09T09:54:25.019Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-11T01:12:12.539Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-11T01:12:12.637Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-11T01:12:12.820Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-11T01:12:20.294Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-11T01:12:22.675Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-11T01:12:22.946Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-11T01:12:23.353Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-11T01:15:26.082Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-11T01:15:26.187Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-11T01:15:26.364Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-11T01:15:34.575Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-11T01:15:36.600Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-11T01:15:36.869Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-11T01:15:37.278Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-11T01:16:45.762Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-11T01:16:45.862Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-11T01:16:46.037Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-11T01:16:54.855Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-11T01:16:57.791Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-11T01:16:58.054Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-11T01:16:58.476Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-11T01:20:36.713Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-11T01:20:36.815Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-11T01:20:37.000Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-11T01:20:44.995Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-11T01:20:48.315Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-11T01:20:48.566Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-11T01:20:48.999Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-11T01:23:22.208Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-11T01:23:22.331Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-11T01:23:22.528Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-11T01:23:30.495Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-11T01:23:32.661Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-11T01:23:32.912Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-11T01:23:33.341Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-11T01:54:50.105Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-11T01:54:50.191Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-11T01:54:50.844Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-11T01:54:54.180Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-11T01:55:01.657Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-11T01:55:01.938Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-11T01:55:02.449Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-11T03:24:38.851Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-11T03:24:38.966Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-11T03:24:39.172Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-11T03:24:42.704Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-11T03:24:48.910Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-11T03:24:49.244Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-11T03:24:49.723Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-11T10:23:33.352Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-11T10:23:33.445Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-11T10:23:33.634Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-11T10:23:36.236Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-11T10:23:41.569Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-11T10:23:41.809Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-11T10:23:42.224Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T06:16:42.598Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T06:16:42.726Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T06:16:42.924Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T06:16:47.351Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T06:17:01.471Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T06:17:01.741Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T06:17:02.200Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T06:18:51.123Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T06:18:51.235Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T06:18:51.405Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T06:18:56.772Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T06:19:07.869Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T06:19:08.166Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T06:19:08.580Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T06:25:08.372Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T06:25:08.478Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T06:25:08.682Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T06:25:21.759Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T06:25:25.561Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T06:25:25.797Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T06:25:26.220Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T06:28:15.344Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T06:28:15.439Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T06:28:15.623Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T06:28:19.910Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T06:28:32.688Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T06:28:32.946Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T06:28:33.359Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T06:31:06.704Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T06:31:06.843Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T06:31:07.055Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T06:31:11.348Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T06:31:20.280Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T06:31:20.593Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T06:31:21.043Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T06:34:34.405Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T06:34:34.838Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T06:34:35.395Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T06:34:50.114Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T06:34:53.282Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T06:34:53.624Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T06:34:55.034Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T06:35:51.466Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T06:35:51.565Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T06:35:51.745Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T06:35:55.825Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T06:36:04.457Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T06:36:04.741Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T06:36:05.221Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T06:46:42.488Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T06:46:42.608Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T06:46:42.794Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T06:46:46.365Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T06:46:56.615Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T06:46:56.868Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T06:46:57.276Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T06:54:06.948Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T06:54:07.066Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T06:54:07.258Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T06:54:11.024Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T06:54:21.687Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T06:54:21.934Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T06:54:22.354Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T08:02:00.053Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T08:02:00.156Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T08:02:00.354Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T08:02:04.762Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T08:02:15.529Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T08:02:15.807Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T08:02:16.223Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-12T08:03:15.862Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-12T08:03:15.974Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-12T08:03:16.177Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-12T08:03:20.519Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-12T08:03:28.223Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-12T08:03:28.524Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-12T08:03:28.974Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-15T02:42:42.847Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-15T02:42:42.949Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-15T02:42:43.596Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-15T02:42:46.179Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-15T02:42:48.038Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-15T02:42:48.322Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-15T02:42:53.661Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-15T02:45:01.590Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-15T02:45:01.680Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-15T02:45:02.353Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-15T02:45:05.029Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-15T02:45:06.851Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-15T02:45:07.178Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-15T02:45:11.789Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-15T08:57:44.527Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-15T08:57:44.625Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-15T08:57:44.804Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-15T08:57:48.228Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-15T08:57:49.883Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-15T08:57:50.110Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-15T08:57:50.487Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-15T09:00:00.424Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-15T09:00:00.524Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-15T09:00:00.696Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-15T09:00:05.923Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-15T09:00:08.110Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-15T09:00:08.358Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-15T09:00:08.751Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-15T09:04:32.418Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-15T09:04:32.509Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-15T09:04:32.694Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-15T09:04:41.330Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-15T09:04:44.038Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-15T09:04:44.285Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-15T09:04:44.680Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-15T18:55:38.708Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-15T18:55:38.885Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-15T18:55:39.089Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-15T18:55:44.128Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-15T18:55:53.311Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-15T18:55:54.044Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-15T18:55:55.099Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-16T04:02:01.799Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-16T04:02:01.894Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-16T04:02:02.073Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-16T04:02:05.454Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-16T04:02:07.143Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-16T04:02:07.388Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-16T04:02:07.804Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-16T04:03:22.760Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-16T04:03:22.853Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-16T04:03:23.025Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-16T04:03:26.141Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-16T04:03:27.941Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-16T04:03:28.226Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-16T04:03:28.634Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-16T04:06:40.500Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-16T04:06:40.595Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-16T04:06:40.795Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-16T04:06:44.430Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-16T04:06:46.070Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-16T04:06:46.327Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-16T04:06:46.738Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-16T05:03:54.786Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-16T05:03:54.872Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-16T05:03:55.046Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-16T05:03:58.914Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-16T05:04:00.605Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-16T05:04:00.854Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-16T05:04:01.278Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-16T10:03:25.941Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-16T10:03:26.047Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-16T10:03:26.224Z"}
+{"level":"info","message":"Clicked on Alerts Icon successfully","timestamp":"2025-07-16T10:03:29.337Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-16T10:03:38.714Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-16T11:19:37.784Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-16T11:19:37.875Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-16T11:19:38.042Z"}
+{"level":"info","message":"Clicked on Alerts Icon successfully","timestamp":"2025-07-16T11:19:40.220Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-16T11:19:45.221Z"}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3070385,"external":6924278,"heapTotal":51359744,"heapUsed":47604608,"rss":111423488},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.566Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3070385,"external":6924278,"heapTotal":51359744,"heapUsed":47604608,"rss":111423488},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.567Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3070385,"external":6924278,"heapTotal":51359744,"heapUsed":47604608,"rss":111423488},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.567Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123.015},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3078601,"external":6932534,"heapTotal":51359744,"heapUsed":47797840,"rss":111529984},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.567Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123.015},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3094985,"external":6948918,"heapTotal":51359744,"heapUsed":47929792,"rss":111529984},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.568Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123.015},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3103177,"external":6957110,"heapTotal":51359744,"heapUsed":48080080,"rss":111529984},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.568Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123.015},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3119561,"external":6973494,"heapTotal":51359744,"heapUsed":48180448,"rss":111529984},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.569Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123.015},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3078601,"external":6932534,"heapTotal":51359744,"heapUsed":47797840,"rss":111529984},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.567Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123.015},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3078601,"external":6932534,"heapTotal":51359744,"heapUsed":47797840,"rss":111529984},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.567Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123.015},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3094985,"external":6948918,"heapTotal":51359744,"heapUsed":47929792,"rss":111529984},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.568Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123.015},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3094985,"external":6948918,"heapTotal":51359744,"heapUsed":47929792,"rss":111529984},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.568Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123.015},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3103177,"external":6957110,"heapTotal":51359744,"heapUsed":48080080,"rss":111529984},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.569Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123.015},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3103177,"external":6957110,"heapTotal":51359744,"heapUsed":48080080,"rss":111529984},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.569Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123.015},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3119561,"external":6973494,"heapTotal":51359744,"heapUsed":48180448,"rss":111529984},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.569Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}
+{"date":"Thu Jul 17 2025 08:25:02 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: WebSocket error: Opening handshake has timed out\nError: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","os":{"loadavg":[0,0,0],"uptime":123.015},"process":{"argv":["D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","D:\\Riomed\\Cellma4ClinicalAuto2\\node_modules\\@playwright\\test\\cli.js","test","-c","playwright.config.js","--list","--reporter=null","D:\\\\Riomed\\\\Cellma4ClinicalAuto2\\\\tests\\\\Functional\\\\ClinicalDomain\\\\PatientSummary\\\\Categories\\\\Medication\\\\AddMedication\\.spec\\.js"],"cwd":"D:\\Riomed\\Cellma4ClinicalAuto2","execPath":"D:\\Riomed\\Cellma_Install\\node.js\\node.EXE","gid":null,"memoryUsage":{"arrayBuffers":3119561,"external":6973494,"heapTotal":51359744,"heapUsed":48180448,"rss":111529984},"pid":18320,"uid":null,"version":"v22.17.0"},"stack":"Error: WebSocket error: Opening handshake has timed out\n    at r.call (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:7:4848)\n    at ge (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29515)\n    at r.s (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:29086)\n    at r.emit (node:events:530:35)\n    at Se (c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js:1:42385)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-07-17T02:55:02.569Z","trace":[{"column":4848,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.call","line":7,"method":"call","native":false},{"column":29515,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"ge","line":1,"method":null,"native":false},{"column":29086,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"r.s","line":1,"method":"s","native":false},{"column":35,"file":"node:events","function":"r.emit","line":530,"method":"emit","native":false},{"column":42385,"file":"c:\\Users\\manoj.vyavahare\\.vscode\\extensions\\ms-playwright.playwright-1.1.15\\out\\oopReporter.js","function":"Se","line":1,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":90,"method":null,"native":false}]}

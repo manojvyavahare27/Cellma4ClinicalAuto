@@ -1,0 +1,17 @@
+[
+  {
+    "exam_id": 6810,
+    "exam_est_id": 4,
+    "exam_sgr_id": 47315,
+    "exam_pat_id": 789847,
+    "exam_pacr_id": 40348,
+    "exam_outcome": "Abnormal",
+    "exam_record_status": "approved",
+    "exam_notes": "Edited for Notes",
+    "exam_risk": "moderate",
+    "exam_updated": "06/07/2025",
+    "exam_updated_by": "manoj.auto",
+    "exam_imported": null,
+    "exam_imported_method": null
+  }
+]
