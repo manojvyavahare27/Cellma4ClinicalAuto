@@ -440,8 +440,7 @@ test.describe("Medications Category", () => {
       }
       console.log('\nFailed count: ' + count);
 
-       await page.pause()
-
+      
        await MedicationAdministration.clickOnReviewLink()
        await MedicationAdministration.selectclinicalReview()
        await MedicationAdministration.clickOnSaveClinicalReviewButton()
