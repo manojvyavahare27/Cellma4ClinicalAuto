@@ -124,9 +124,7 @@ test.describe("Allergy Category", () => {
     
       await contacthistory.clickOnAddContact();      
        await allergy.selectCategoryFromList(jsonData.AddAllergy[index].pacr_category);
-       await page.waitForTimeout(2000)
-    
-       
+       await page.waitForTimeout(2000)       
 
       await allergy.clickOnViewContactItemsMenu();
       await allergy.clickOnPinContactItemsMenu();
