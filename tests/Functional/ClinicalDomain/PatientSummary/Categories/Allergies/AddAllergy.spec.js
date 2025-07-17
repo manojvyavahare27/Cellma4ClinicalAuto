@@ -128,10 +128,10 @@ test.describe("Allergy Category", () => {
 
       await allergy.clickOnViewContactItemsMenu();
       await allergy.clickOnPinContactItemsMenu();
-     // await page.pause()
+    
       await allergy.selectCategoryFromList(jsonData.AddAllergy[index].pacr_category);
       await page.waitForTimeout(2000)
-      //await page.pause()
+      
        ////////REVIEW EXISTING ITEM AND DELETE/////
        if(await allergy.checkItemOnHistoryTable(jsonData.AddAllergy[index].pacr_que_name)){
         //await allergy.clickOnItemReview(jsonData.AddAllergy[index].pacr_que_name);
@@ -181,7 +181,7 @@ await allergy.selectandAddClinicalItem(jsonData.AddAllergy[index].pacr_que_name)
       //await page.locator("xpath=//div[@data-testid='episodes[0].id']").click()
       await page.locator("xpath=//button[@data-testid='episodes[0].id']").click()
       await page.waitForTimeout(1000);
-     //await page.pause()
+     
       await allergyExtraDetails.enterAllergyStartDate(jsonData.AddAllergy[index].alrg_start_date)
 
       await allergyExtraDetails.enterAllergyEndDate(jsonData.AddAllergy[index].alrg_end_date)
@@ -189,13 +189,13 @@ await allergy.selectandAddClinicalItem(jsonData.AddAllergy[index].pacr_que_name)
       await allergyExtraDetails.selectReactionSevirity(jsonData.AddAllergy[index].alrg_reaction_severity)
       await allergyExtraDetails.enterallergyTextArea(jsonData.AddAllergy[index].alrg_notes)
       //await page.locator("xpath=//button[@aria-label='saveExtraDetails']").click()
-     // await page.pause()
+     
       await allergyExtraDetails.clickOnSaveExtraDetails();
       await page.getByLabel('saveChecklist').click()
       await page.waitForTimeout(500);
       //await expect(page.getByText("Allergy record added successfully")).toHaveText("Allergy record added successfully");
       //await expect(page.getByText(`${clinicaCatergory} Record Added Successfully`)).toHaveText(`${clinicaCatergory} Record Added Successfully`); 
-      //await page.pause()
+      
     
 sqlQuery="select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk,  alrg_start_date, alrg_end_date, alrg_notes"+
 " from patient_clinical_records join patient_clinical_records_details on pacr_id=pacrd_pacr_id join allergies on pacr_id=alrg_pacr_id where pacr_record_status='approved'"+
@@ -215,7 +215,7 @@ sqlQuery="select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_r
     } else {
       console.log("\n Patient Clinical Records Comparision adding new Allergy: Parameters from both JSON files do not match!\n");
     }
-    //await page.pause()
+    
     await allergy.toggleSearchSection(); //Close the search section
       await allergy.clickOnItemDiv(jsonData.EditAllergy[index].pacr_que_name);
       await allergy.clickOnItemEdit();
@@ -232,7 +232,7 @@ sqlQuery="select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_r
       await page.getByRole('checkbox', { name: 'Private record' }).click()   
 
      // await allergyExtraDetails.selectFrequency("1");
-     //await page.pause()
+     
      await allergyExtraDetails.enterAllergyStartDate(jsonData.EditAllergy[index].alrg_start_date)
      await allergyExtraDetails.enterAllergyEndDate(jsonData.EditAllergy[index].alrg_end_date)
      //await allergyExtraDetails.selectReaction(jsonData.EditAllergy[index].eli_text)
@@ -240,7 +240,7 @@ sqlQuery="select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_r
      await allergyExtraDetails.enterallergyTextArea(jsonData.EditAllergy[index].alrg_notes)
 
       //await allergyExtraDetails.enterClinicalItemNotes("Updated Allergy Notes From Playwright");
-     // await page.pause()
+     
       //await page.locator("xpath=//button[@aria-label='saveExtraDetails']").click()
       await allergyExtraDetails.clickOnSaveExtraDetails();
       await page.getByLabel('saveChecklist').click()
@@ -271,7 +271,7 @@ sqlQuery="select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_r
      );
    }
 
-  // await page.pause()
+  
    ////////AUTO UPDATE RISK AFTER UPDATING OUTCOME /////
       // await allergy.clickOnItemHistory();
       // await allergy.clickOnHistoryItemDiv();
@@ -313,7 +313,7 @@ sqlQuery="select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_r
 
      ///////// Deleting Item ////////////
 
-      //await page.pause()
+      
       await allergy.clickOnItemEdit();
       await allergyExtraDetails.clickOnDelete();
       await allergyExtraDetails.clickOnCancelDelete();
@@ -349,17 +349,15 @@ sqlQuery="select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_r
      }
      
 
-    // await page.pause();
+    
       // await allergy.clickOnCurrentItemsSection();
       // await allergy.clickOnMigratedItemsSection();
       // await allergy.clickOnDeletedItemsSection();
       //await page.waitForTimeout(1000);
      // await diagnosis.clickOnArchivedItemsSection();
      // await allergy.clickOnAllItemsSection();
-      //await allergy.toggleHistorySection(); // Close the history section
-
+      //await allergy.toggleHistorySection(); // Close the history section    
      
-     // await page.pause();
     }
   });
 });
