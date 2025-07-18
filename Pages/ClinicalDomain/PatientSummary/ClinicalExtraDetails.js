@@ -324,7 +324,7 @@ class ClinicalExtraDetails {
     this.dropdownDeviceProcedure = page.getByTestId('procedure').getByLabel('Open');
     this.dropdownManufacturer = page.getByTestId('manufacturer').getByLabel('Open');
     this.dropdownDeviceSubCategory = page.getByTestId('subCategory').getByLabel('Open');
-    this.txtSearchForDevice = page.getByLabel('Search For Device *');
+    this.txtSearchForDevice = page.locator("xpath=//input[@name='searchForDevice']")
     this.dropdownTypeOfDevice = page.getByTestId('typeOfDevice').getByLabel('Open');
     this.dropdownInternalExternal = page.getByTestId('internalExternal').getByLabel('Open');
     this.dropdownDeviceStatus = page.getByTestId('status').getByLabel('Open');
@@ -1536,7 +1536,7 @@ async enterPatientScanNotes(pascn_notes)
   }
 
   async enterDevice(device) {
-    await this.txtSearchForDevice.type(device)
+    await this.txtSearchForDevice.click()
     await this.page.getByRole('option', { name: device }).first().click()
   }
   

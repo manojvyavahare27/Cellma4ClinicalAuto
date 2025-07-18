@@ -108,7 +108,7 @@ test.describe("Device Category", () => {
       //await contacthistory.enterContactDate("24-06-2024");
       await contacthistory.selectContactReason("Assessments");
       await contacthistory.selectContactLocation("Cardio Location");
-      
+      await contacthistory.clickOnAddContact();
             await SummaryPage.selectCategoryFromList("Devices");
 
             ////////REVIEW EXISTING ITEM AND DELETE/////
