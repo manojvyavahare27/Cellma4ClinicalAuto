@@ -596,8 +596,9 @@ test.describe("Test and Tool Category", () => {
                 "\n Patient - Add new tool: Parameters from both JSON files do not match!\n"
               );
             }
-            await page.waitForTimeout(5000);
+            await page.waitForTimeout(4000);
             await SummaryPage.selectCategoryFromList("Devices");
+            await page.waitForTimeout(1500);
             await SummaryPage.selectCategoryFromList("Test Tools");
             await TestTool.clickOnExtraDetailsView2();
 
