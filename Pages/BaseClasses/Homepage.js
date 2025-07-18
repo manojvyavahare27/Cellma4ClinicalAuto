@@ -2,7 +2,7 @@ class Homepage{
     constructor(page)
     {
         this.page=page
-        this.iconPatient=page.getByTestId('Patients')
+        this.iconPatient=page.locator("xpath=//div[@data-testid='moduleDrawerPatients']")
         this.sidebarPatientIcon=page.locator("xpath=//img[@alt='Patients Image Avatar']")
         this.iconHomePage=page.locator("xpath=//img[@alt='homeDashboard']")
         this.iconAppointment=page.getByTestId('Appointments').nth(1)
@@ -31,7 +31,7 @@ class Homepage{
         this.sideIconAppointment=page.locator("xpath=//div[@data-testid='appointments']")
         this.sideIconLetters=page.getByTestId('letters')
         this.sideIconReferrals=page.getByTestId('referrals')
-        this.sideIconPatient=page.locator("xpath=//img[@alt='Patients Image Avatar']")
+        this.sideIconPatient=page.locator("xpath=//div[@data-testid='moduleDrawerPatients']")
         this.sideIconStock=page.locator("xpath=//ul[@class='MuiList-root MuiList-padding css-1wduhak']//div[@aria-label='Stock']")
        // this.sideIconRejectedReferral=page.getByTestId('ourRejectedReferrals')
         
