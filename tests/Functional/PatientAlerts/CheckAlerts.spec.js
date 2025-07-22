@@ -89,6 +89,7 @@ test.describe("Alerts Category", () => {
       await loginpage.enter_Password(jsonData.loginDetails[0].password);
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();
+       await page.pause()
       logger.info("Clicked on Login button successfully");
       
       await homepage.clickOnSideIconAlerts();

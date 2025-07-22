@@ -111,12 +111,11 @@ test.describe("Medical Certificate", () => {
       await page.waitForTimeout(7000)
       await confirmexisting.clickOnConfirmExistingDetails();   
       
-      await page.waitForTimeout(5000);
-      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
-      if(alertPopup==true)
-        {       
-          await carePlan.closePopUp()
-        }
+      await page.waitForTimeout(5000)            
+            const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible()
+            if (alert) {
+              await MedicalCertificate.closePopUp();
+            }     
       await page.waitForTimeout(2000);
       
        await contacthistory.clickOnShowFilter()

@@ -101,13 +101,12 @@ test.describe("LifeStyle Category", () => {
         await patientsearch.clickOnSearchPatientLink();
         await page.waitForTimeout(1500);
         await confirmexisting.clickOnConfirmExistingDetails();
-       await page.waitForTimeout(5000);
-      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
-      if(alertPopup==true)
-        {       
-          await carePlan.closePopUp()
-        }
-      await page.waitForTimeout(2000);
+       await page.waitForTimeout(5000);  
+            
+            const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible()
+            if (alert) {
+              await lifestyle.closePopUp();
+            }
         //await contacthistory.enterContactDate('26/11/2024');
         await contacthistory.selectContactReason('Assessments');
         await contacthistory.selectContactLocation('Cardio Location');

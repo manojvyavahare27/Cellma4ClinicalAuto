@@ -235,7 +235,7 @@ class ClinicalSummary {
      {
         if (await this.popupLocator.isVisible({ timeout: 2000 }).catch(() => false)) {
          console.log("Popup detected. Attempting to close it.");
-  
+          await this.page.pause()
         // Adjust this selector if your close button is different
             const closeButton = this.page.locator('//button[@aria-label="cancelIcon"]'); // or use a role/icon selector
             
