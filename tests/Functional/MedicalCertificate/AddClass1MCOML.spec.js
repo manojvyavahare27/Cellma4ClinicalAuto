@@ -110,11 +110,11 @@ test.describe("Medical Certificate", () => {
       await page.pause()//wait 1.5 second     
       await page.waitForTimeout(3000)
       await confirmexisting.clickOnConfirmExistingDetails();    
-       await page.getByRole('heading', { name: 'Alerts', exact: true }).waitFor({ timeout: 5000 }); // waits for 5 seconds
-        const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible();
-          if (alert) {
-                        await MedicalCertificate.closePopUp();
-                    }
+       //await page.getByRole('heading', { name: 'Alerts', exact: true }).waitFor({ timeout: 5000 }).click(); // waits for 5 seconds
+        // const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible();
+        //   if (alert) {
+        //                 await MedicalCertificate.closePopUp();
+        //             }
       await page.waitForTimeout(2000);
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
