@@ -105,7 +105,7 @@ test.describe("social Category", () => {
       const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
       if(alertPopup==true)
         {       
-          await carePlan.closePopUp()
+          await social.closePopUp()
         }
       await page.waitForTimeout(2000);
        await contacthistory.clickOnShowFilter()
