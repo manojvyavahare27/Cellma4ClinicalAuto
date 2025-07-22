@@ -268,7 +268,7 @@
       "pacr_category": "Allergies",
       "pacr_que_name": "Coal dust",
       "alrg_reaction_severity": "Moderate",
-      "pacr_clinic_date": "09/07/2025",
+      "pacr_clinic_date": "22/07/2025",
       "alrg_notes": "Add for Notes",
       "eli_text": "Sneezing",
       "alrg_start_date": "08/05/2024",
@@ -280,7 +280,7 @@
       "pacr_category": "Allergies",
       "pacr_que_name": "Coal dust",
       "alrg_reaction_severity": "Moderate",
-      "pacr_clinic_date": "09/07/2025",
+      "pacr_clinic_date": "22/07/2025",
       "alrg_notes": "Edit for Notes",
       "eli_text": "Sneezing",
       "alrg_start_date": "20/05/2024",
@@ -316,7 +316,7 @@
     {
       "pacr_category": "Procedure",
       "pacr_que_name": "Knee Arthroplasty",
-      "proc_procedure_date": 45847,
+      "proc_procedure_date": 45860,
       "proc_site": "Left",
       "proc_type": "High",
       "proc_notes": "Add Procedure Notes",
@@ -550,10 +550,10 @@
   ],
   "AddCondition": [
     {
-      "pacr_category": "Condition",
+      "pacr_category": "Conditions",
       "pacr_que_name": "Erythematous condition",
-      "cond_date_diagnosed": "25-05-2024",
-      "pacr_clinic_date": "28-06-2024",
+      "cond_date_diagnosed": "22/06/2025",
+      "pacr_clinic_date": "22/07/2025",
       "cond_notes": "Added for Notes for Condition",
       "eli_text": "subcategory1"
     }
@@ -675,7 +675,7 @@
   "Alerts": [
     {
       "Alert_Start_Date": "01-04-2025",
-      "Alert_End_Date": "09/07/2025",
+      "Alert_End_Date": "22/07/2025",
       "Priority_Any_Priority": "Any Priority",
       "Priority_Very_High": "Very High",
       "Priority_High": "High",

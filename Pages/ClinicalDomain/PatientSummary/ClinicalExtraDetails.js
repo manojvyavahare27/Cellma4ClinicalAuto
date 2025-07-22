@@ -46,6 +46,17 @@ class ClinicalExtraDetails {
     this.ReactionSeverity = page.locator("xpath=//input[@id='episodes[0].reactionSeverity']");
     this.allergyTextArea = page.locator("xpath=//textarea[@id='episodes[0].allergyNotes']");
 
+    //condition ED
+    this.conditionScore=page.locator("xpath=//input[contains(@id, 'Score')]")
+    this.haveYouStoppedAnyMedications=page.locator("xpath=//input[@name='haveYouStoppedAnyMedications']")
+    this.dateOfCondition=page.locator("xpath=//input[@name='dateOfDiagnosis']")
+    this.previousCondition=page.locator("xpath=//input[@name='previousCondition']")
+    this.conditionnotes=page.locator("xpath=//textarea[@name='notes']")
+    this.saveButton=page.locator("xpath=//button[@type='submit']")
+
+
+
+
     //Procedure
     this.dateOfProcedure = page.locator("xpath=//input[@name='dateOfProcedure']");
     this.procedureType = page.locator("xpath=//input[@name='type']");
@@ -1509,6 +1520,39 @@ async enterPatientScanNotes(pascn_notes)
   
   await selectFromSearchResults(this.page,this.invRequestedBy,requested_by);
   }
+
+
+  //Condition Methods.
+
+  async enterConditionScore(score) {
+    await this.conditionScore.fill(score);
+}
+
+async selectHaveYouStoppedAnyMedications(option) {
+    // option should be either 'Yes' or 'No'
+    await this.haveYouStoppedAnyMedications.click()
+    await this.page.getByRole('option', { name: 'No' }).click()
+}
+
+async enterDateOfCondition(date) {
+    await this.dateOfCondition.fill(date);
+}
+
+async enterPreviousCondition(condition) {
+    await this.previousCondition.click()
+    await this.page.getByRole('option', { name: 'No' }).click()
+
+}
+
+async enterCoditionNotes(cond_notes) {
+    await this.conditionnotes.fill(cond_notes);
+}
+
+async clickSaveButton() {
+    await this.saveButton.click();
+}
+
+
 
   //Examination
   async SelectOutcome(exam_outcome)
