@@ -111,8 +111,7 @@ test.describe("PatientScan Category", () => {
       //   {       
       //     await carePlan.closePopUp()
       //   }
-      // await page.waitForTimeout(2000);
-      
+      // await page.waitForTimeout(2000);      
       
      // await contacthistory.enterContactDate('26/04/2024');
       await contacthistory.selectContactReason('Assessments');
