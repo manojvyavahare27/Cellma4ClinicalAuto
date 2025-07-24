@@ -232,7 +232,7 @@ class ClinicalSummary {
      }
 
      async closePopUp(page) {
-        await page.pause()
+       // await page.pause()
         await page.locator("xpath=//button[@aria-label='cancelIcon']").click()
     }
 
