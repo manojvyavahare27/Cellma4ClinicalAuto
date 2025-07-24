@@ -99,17 +99,19 @@ test.describe("Excel Conversion Patient Details Category", () => {
       //await patientsearch.selectSex(data.pat_sex);
 
       await patientsearch.selectBornDate(data.pat_dob.toString());
-      await page.pause()
+      //await page.pause()
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1000);
       await confirmexisting.clickOnConfirmExistingDetails();
-      await page.waitForTimeout(5000)            
-            const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible()
-            if (alert) {
-              await patientDetails.closePopUp();
-            }
+      await page.waitForTimeout(1000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await patientDetails.closePopUp(page)
+        }                 
+       await page.waitForTimeout(1000)  
      
       await patientDetailshome.addContact();
       await patientDetailshome.clickOnAddContact()
