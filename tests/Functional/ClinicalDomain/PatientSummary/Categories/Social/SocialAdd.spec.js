@@ -101,13 +101,12 @@ test.describe("social Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();   
-     await page.waitForTimeout(5000);
+      await page.waitForTimeout(1000);
       const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
       if(alertPopup==true)
         {       
-          await social.closePopUp()
-        }
-      await page.waitForTimeout(2000);
+          await social.closePopUp(page)
+        }             
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
