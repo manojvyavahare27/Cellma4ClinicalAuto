@@ -103,14 +103,13 @@ test.describe("Problems Category", () => {
         await patientsearch.clickOnSearchPatientLink();
         await page.waitForTimeout(1500);
         await confirmexisting.clickOnConfirmExistingDetails();
-       
-        await page.waitForTimeout(5000);
+       await page.waitForTimeout(1000);
       const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
       if(alertPopup==true)
         {       
-          await carePlan.closePopUp()
-        }
-      await page.waitForTimeout(2000);
+          await problems.closePopUp(page)
+        }                 
+       await page.waitForTimeout(1000)
         
        // await contacthistory.enterContactDate('26/04/2024');
         await contacthistory.selectContactReason('Assessments');
