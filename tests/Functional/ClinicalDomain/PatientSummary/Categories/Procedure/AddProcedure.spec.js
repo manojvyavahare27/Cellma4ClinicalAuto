@@ -99,12 +99,13 @@ test.describe("Procedure Category", () => {
       await page.waitForTimeout(1500);
      // await page.pause()
       await confirmexisting.clickOnConfirmExistingDetails(); 
-      await page.waitForTimeout(5000);
+      await page.waitForTimeout(1000);
       const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
       if(alertPopup==true)
         {       
-          await carePlan.closePopUp()
-        }
+          await Procedures.closePopUp(page)
+        }                 
+       await page.waitForTimeout(1000)
       await page.waitForTimeout(2000);
        await page.waitForTimeout(2000);    
        await contacthistory.clickOnShowFilter()
