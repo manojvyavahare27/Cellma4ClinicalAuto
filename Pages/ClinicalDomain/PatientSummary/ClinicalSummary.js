@@ -231,24 +231,11 @@ class ClinicalSummary {
         await this.SavePopupbutton.click()
      }
 
-     async closePopUp()
-     {
-        if (await this.popupLocator.isVisible({ timeout: 2000 }).catch(() => false)) {
-         console.log("Popup detected. Attempting to close it.");
-          await this.page.pause()
-        // Adjust this selector if your close button is different
-            const closeButton = this.page.locator('//button[@aria-label="cancelIcon"]'); // or use a role/icon selector
-            
-         if (await closeButton.isVisible()) {
-         await closeButton.click();
-         console.log("Popup closed successfully.");
-        } else {
-     console.warn("Popup is visible, but close button was not found.");
-        }
-        } else {
-         console.log("No popup found, proceeding with test flow.");
-        }
-             }
+     async closePopUp(page) {
+        await page.pause()
+        await page.locator("xpath=//button[@aria-label='cancelIcon']").click()
+    }
+
 
 
     async clickMedicationLink()
