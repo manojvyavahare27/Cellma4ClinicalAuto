@@ -81,6 +81,7 @@ test.describe("Investigations Category", () => {
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
+       await page.waitForTimeout(2000)
       await homepage.clickOnHomeDashboardIcon()
       
       await homepage.clickOnPatientIcon();

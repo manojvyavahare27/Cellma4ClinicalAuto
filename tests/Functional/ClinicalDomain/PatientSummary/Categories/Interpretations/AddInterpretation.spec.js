@@ -80,8 +80,10 @@ test.describe("Interpretations Category", () => {
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
-      await homepage.clickOnHomeDashboardIcon()      
+       await page.waitForTimeout(2000)
+      //await homepage.clickOnHomeDashboardIcon()      
       await homepage.clickOnPatientIcon();
+       await page.waitForTimeout(2000)
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
       logger.info("Clicked on Search button successfully");

@@ -86,6 +86,7 @@ test.describe("Diagnosis Category", () => {
       logger.info("Clicked on Login button successfully");
      // await homepage.clickOnHomeDashboardIcon()
       //await page.pause()
+       await page.waitForTimeout(2000)
       await homepage.clickOnSideIconPatient()
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();

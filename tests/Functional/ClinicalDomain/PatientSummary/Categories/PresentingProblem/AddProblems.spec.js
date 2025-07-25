@@ -83,6 +83,7 @@ test.describe("Problems Category", () => {
       logger.info("Clicked on Login button successfully");
       await homepage.redirectsToHomePage();
       logger.info("Redirected To Home Page Successfully")
+      await page.waitForTimeout(2000)
       await homepage.clickOnPatientIcon();
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();

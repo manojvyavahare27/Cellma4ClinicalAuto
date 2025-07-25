@@ -85,7 +85,9 @@ test.describe("Recommendations Category", () => {
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
+       await page.waitForTimeout(2000)
       await homepage.clickOnHomeDashboardIcon()
+       await page.waitForTimeout(2000)
       await homepage.clickOnPatientIcon();
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
