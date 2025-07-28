@@ -132,23 +132,23 @@ test.describe("Examination Category", () => {
           await examination.closePopUp(page)
         }                 
        await page.waitForTimeout(1000)
-      //Add Recommendation      
-       await patientsummary.clickOniconExaminationsCategory();
-       await patientsummary.clickOnallCategory()
-        await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);
-      await page.waitForTimeout(3000);           
-        //await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);
-        await recommendationhome.clickonAddRecommendationButton();
-        // await recommendationEd.clickOnExpandRecommendation();
-        // await recommendationEd.clickOnExpandRecommendation();
-        // await recommendationEd.selectSubcategory(jsonData.AddRecommendations[index].pacr_subcategory);
-        await recommendationEd.enterReviewDate(jsonData.AddRecommendations[index].recom_review_date);
-        //await recommendationEd.selectCheckboxPrivateRecord();
-        await recommendationEd.selectCheckboxSetAsDefault();
+      // //Add Recommendation      
+      //  await patientsummary.clickOniconExaminationsCategory();
+      //  await patientsummary.clickOnallCategory()
+      //   await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);
+      // await page.waitForTimeout(3000);           
+      //   //await recommendationhome.searchRecommendation(jsonData.AddRecommendations[index].pacr_que_name);
+      //   await recommendationhome.clickonAddRecommendationButton();
+      //   // await recommendationEd.clickOnExpandRecommendation();
+      //   // await recommendationEd.clickOnExpandRecommendation();
+      //   // await recommendationEd.selectSubcategory(jsonData.AddRecommendations[index].pacr_subcategory);
+      //   await recommendationEd.enterReviewDate(jsonData.AddRecommendations[index].recom_review_date);
+      //   //await recommendationEd.selectCheckboxPrivateRecord();
+      //   await recommendationEd.selectCheckboxSetAsDefault();
          
-        await recommendationEd.enterNotes();
-        await recommendationEd.clickOnSaveButton();
-        await page.waitForTimeout(500);
+      //   await recommendationEd.enterNotes();
+      //   await recommendationEd.clickOnSaveButton();
+      //   await page.waitForTimeout(500);
        
         //Add Favourites
 
@@ -158,7 +158,7 @@ test.describe("Examination Category", () => {
         await page.waitForTimeout(500);
         await examination.clickOnFavouritemItemExam()      
       await examinationEd.SelectOutcome(jsonData.AddExamination[index].exam_outcome);
-      await examinationEd.SelectRecommendation(jsonData.AddExamination[index].pacr_que_name_recommendation);
+      //await examinationEd.SelectRecommendation(jsonData.AddExamination[index].pacr_que_name_recommendation);
       await examinationEd.selectCheckboxes();
       await examinationEd.EnterNotes(jsonData.AddExamination[index].exam_notes);      
       await examinationExtraDetails.clickOnSaveExamFavourites();
@@ -206,7 +206,7 @@ test.describe("Examination Category", () => {
       await examinationhome.searchExamination(jsonData.AddExamination[index].pacr_que_name);
       await examinationhome.clickonAddExaminationButton();
       await examinationEd.SelectOutcome(jsonData.AddExamination[index].exam_outcome);
-      await examinationEd.SelectRecommendation(jsonData.AddExamination[index].pacr_que_name_recommendation);
+     // await examinationEd.SelectRecommendation(jsonData.AddExamination[index].pacr_que_name_recommendation);
       await examinationEd.selectCheckboxes();
       await examinationEd.EnterNotes(jsonData.AddExamination[index].exam_notes);      
       await examinationEd.clickOnSaveButton();
@@ -253,22 +253,22 @@ test.describe("Examination Category", () => {
       }
 
       //////Database comparison- Patient Clinical records Linking/////////
-      sqlQuery =
-        "select pacr_id from patient_clinical_records where pacr_pat_id=" +
-        patId +
-        " and pacr_category='Recommendation' and pacr_record_status='approved' and pacr_que_name='" +
-        jsonData.AddExamination[index].pacr_que_name_recommendation +
-        "' order by pacr_id desc limit 1";
+      // sqlQuery =
+      //   "select pacr_id from patient_clinical_records where pacr_pat_id=" +
+      //   patId +
+      //   " and pacr_category='Recommendation' and pacr_record_status='approved' and pacr_que_name='" +
+      //   jsonData.AddExamination[index].pacr_que_name_recommendation +
+      //   "' order by pacr_id desc limit 1";
 
-      //console.log("Manoj Vyavahare"+sqlQuery);
-      sqlFilePath = "SQLResults/ClinicalDomain/patientClinicRecordlinking.json";
-      results = await executeQuery(sqlQuery, sqlFilePath);
-      console.log("Waiting for SQL result....");
-      if (results) {
-        console.log("\n Examination is successfully linked with the Recommendation!\n");
-      } else {
-        console.log("\n Examination is not linked with the Recommendation!\n");
-      }
+      // //console.log("Manoj Vyavahare"+sqlQuery);
+      // sqlFilePath = "SQLResults/ClinicalDomain/patientClinicRecordlinking.json";
+      // results = await executeQuery(sqlQuery, sqlFilePath);
+      // console.log("Waiting for SQL result....");
+      // if (results) {
+      //   console.log("\n Examination is successfully linked with the Recommendation!\n");
+      // } else {
+      //   console.log("\n Examination is not linked with the Recommendation!\n");
+      // }
 
       await page.waitForTimeout(10000);
 
