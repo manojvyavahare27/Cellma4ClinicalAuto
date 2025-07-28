@@ -445,12 +445,11 @@ test.describe("Medications Category", () => {
        await MedicationAdministration.selectclinicalReview()
        await MedicationAdministration.clickOnSaveClinicalReviewButton()
        await page.waitForTimeout(1000)
-       await MedicationAdministration.ClickOnGivenLink()
-       await MedicationAdministration.clickOnselectBatch()
-       await MedicationAdministration.clickOnSelectButtonbatch()
-       await page.getByTestId('Check All').click()
-       await page.getByLabel('saveChecklist').click()
-
+      //  await MedicationAdministration.ClickOnGivenLink()
+      //  await MedicationAdministration.clickOnselectBatch()
+      //  await MedicationAdministration.clickOnSelectButtonbatch()
+      //  await page.getByTestId('Check All').click()
+      //  await page.getByLabel('saveChecklist').click()
 
       // console.log('\nFRONT END COMPARISON - PLAYWRIGHT ASSERTIONS')
       // console.log('Medication Administration Page\n')

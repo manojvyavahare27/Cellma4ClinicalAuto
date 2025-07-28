@@ -30,7 +30,7 @@ class ClinicalMedicationAdministration {
         //this.username = page.getByRole('heading', { name: 'Thayne.auto' })
 
         //Review
-        this.reviewLink=page.locator("xpath=//a[@class='MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-1cahger'][@data-testid='Review']")
+        this.reviewLink=page.locator("xpath=//h1[@class='MuiTypography-root MuiTypography-h5 mui-1m29wen']")
         this.clinicalReviewTextbox=page.locator("xpath=//input[@id='reviewCode']")
         this.saveClinicalReviewbutton=page.locator("xpath=//button[@id=':r4vc:']//div[@class='MuiGrid2-root MuiGrid2-direction-xs-row css-3ex5vf'][normalize-space()='Save']")
        this.GivenLink=page.locator("xpath=//a[@aria-label='Give']")
