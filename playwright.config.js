@@ -44,9 +44,11 @@ module.exports = defineConfig({
               '**/Functional/PatientAlerts/CheckList.spec.js',      
               '**/Functional/Pharmacy/RegisterPharmacyPatient.spec.js',
               '**/Functional/ClinicalDomain/PatientSummary/Categories/Assessment/Assessment.spec.js', 
-              '**/Functional/ClinicalDomain/PatientSummary/Categories/Physical Sign/AddPhysicalSign.spec.js',      
+              '**/Functional/ClinicalDomain/PatientSummary/Categories/Physical Sign/AddPhysicalSign.spec.js',
+              '**/Functional/ClinicalDomain/PatientSummary/Categories/Physical Sign/AddPhySign.spec.js',      
 
               '**/Functional/ClinicalDomain/PatientSummary/Categories/Medication/AdministerMedication.spec.js',
+               '**/Functional/ClinicalDomain/PatientSummary/Categories/Medication/MedAdmin.spec.js',
               '**/Functional/ClinicalDomain/PatientSummary/Categories/Devices/AddDevice.spec.js',
               '**/Functional/ClinicalDomain/PatientSummary/Categories/PatientConsent/AddPatientConsent.spec.js',
               '**/Functional/ClinicalDomain/PatientSummary/Categories/TestTool/AddTest.spec.js',

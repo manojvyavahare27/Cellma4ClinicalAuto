@@ -1201,3 +1201,21 @@
 {"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-25T04:42:03.657Z"}
 {"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-25T04:42:04.234Z"}
 {"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-25T04:42:04.648Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-28T14:36:00.576Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-28T14:36:00.653Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-28T14:36:01.276Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-28T14:36:04.826Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-28T14:36:13.115Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-28T14:36:13.367Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-28T14:36:13.802Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-28T15:14:25.327Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-28T15:14:25.417Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-28T15:14:25.593Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-28T15:14:29.064Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-28T15:48:28.284Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-28T15:48:28.385Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-28T15:48:28.567Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-28T15:48:32.272Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-28T15:48:41.850Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-28T15:48:42.085Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-28T15:48:42.479Z"}
