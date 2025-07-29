@@ -1,6 +1,11 @@
 [
   {
-    "pacr_que_name": "Paracetamol 500mg / Ibuprofen 200mg tablets",
-    "pacr_delete_reason": "Delete for testing"
+    "pacr_id": 42323,
+    "pacr_category": "Condition",
+    "pacr_que_name": "Erythematous condition",
+    "pacr_clinic_date": "29/07/2025",
+    "pacr_risk": "none",
+    "cond_date_diagnosed": "22/06/2025",
+    "cond_notes": "Added for Notes for Condition"
   }
 ]
