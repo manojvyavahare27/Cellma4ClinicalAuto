@@ -1,11 +1,9 @@
 [
   {
-    "pacr_id": 42323,
-    "pacr_category": "Condition",
-    "pacr_que_name": "Erythematous condition",
-    "pacr_clinic_date": "29/07/2025",
-    "pacr_risk": "none",
-    "cond_date_diagnosed": "22/06/2025",
-    "cond_notes": "Added for Notes for Condition"
+    "pacr_id": 42749,
+    "pacr_category": "Patient Detail",
+    "pacr_que_name": "Lives on boat",
+    "pacr_clinic_date": "02/08/2025",
+    "pad_notes": "Patient lives on boat Patient lives on boat "
   }
 ]

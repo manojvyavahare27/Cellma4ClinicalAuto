@@ -110,11 +110,14 @@ test.describe("Medical Certificate", () => {
       await page.pause()//wait 1.5 second     
       await page.waitForTimeout(3000)
       await confirmexisting.clickOnConfirmExistingDetails();    
-       //await page.getByRole('heading', { name: 'Alerts', exact: true }).waitFor({ timeout: 5000 }).click(); // waits for 5 seconds
-        // const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible();
-        //   if (alert) {
-        //                 await MedicalCertificate.closePopUp();
-        //             }
+       await page.waitForTimeout(4000);
+      const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
+      if (await alertPopup.isVisible()) {
+         const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
+          await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
+          await cancelButton.click();
+        }
+      await page.waitForTimeout(2000); 
       await page.waitForTimeout(2000);
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
@@ -143,6 +146,7 @@ test.describe("Medical Certificate", () => {
       }        
      // await page.pause()
       await page.waitForTimeout(2000)
+      await page.pause()
       await MedicalCertificate.ClickOnAddMedicalCertificateButton()
       await page.waitForTimeout(1000)
       //await page.pause()

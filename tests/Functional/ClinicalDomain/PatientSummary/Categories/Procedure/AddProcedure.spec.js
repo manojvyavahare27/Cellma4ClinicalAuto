@@ -101,13 +101,13 @@ test.describe("Procedure Category", () => {
       await page.waitForTimeout(1500);
      // await page.pause()
       await confirmexisting.clickOnConfirmExistingDetails(); 
-      await page.waitForTimeout(1000);
-      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
-      if(alertPopup==true)
-        {       
-          await Procedures.closePopUp(page)
-        }                 
-       await page.waitForTimeout(1000)
+      await page.waitForTimeout(4000);
+      const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
+      if (await alertPopup.isVisible()) {
+         const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
+          await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
+          await cancelButton.click();
+        }    
       
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");

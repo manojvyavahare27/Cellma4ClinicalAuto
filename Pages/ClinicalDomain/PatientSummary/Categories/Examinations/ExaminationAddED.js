@@ -11,7 +11,7 @@ class ExaminationAddED
         this.dropdownOutcome=page.locator("xpath=//input[@name='outcome']")
         this.dropdownSelectRecommendation=page.locator("xpath=//input[@name='selectRecommendation']")
         this.textareaNotes=page.locator("xpath=//textarea[@name='notes']")
-        this.btnSave=page.locator("xpath=//button[@data-testid='Save']")
+        this.btnSave=page.locator("xpath=//button[@data-testid='extraDetailsSave']")
 
         this.btnDeleteExamination=page.locator("xpath=//button[@data-testid='Delete']")
         this.btnCancelDeleteExamination=page.getByTestId('Cancel')

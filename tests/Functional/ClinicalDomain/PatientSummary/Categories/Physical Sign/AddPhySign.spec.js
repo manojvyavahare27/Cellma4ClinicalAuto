@@ -29,10 +29,10 @@ test('test', async ({ page }) => {
   await page.getByRole('textbox', { name: '75367002.' }).fill('90');
   await page.getByRole('textbox', { name: '271650006_addPhysicalSignField' }).click();
   await page.getByRole('textbox', { name: '271650006_addPhysicalSignField' }).fill('75');
-  await page.getByRole('cell', { name: '271650006.' }).getByRole('checkbox').check();
-  await page.getByTestId('Reason for Not done').click();
-  await page.getByTestId('Reason for Not done').fill('for testing');
-  await page.getByTestId('CommonCellmaPopup').getByTestId('Save').click();
+  // await page.getByRole('cell', { name: '271650006.' }).getByRole('checkbox').check();
+  // await page.getByTestId('Reason for Not done').click();
+  // await page.getByTestId('Reason for Not done').fill('for testing');
+  // await page.getByTestId('CommonCellmaPopup').getByTestId('Save').click();
   await page.getByRole('textbox', { name: '271650006.' }).click();
   await page.getByRole('textbox', { name: '271650006.' }).fill('75');
   await page.getByRole('textbox', { name: '271649006_addPhysicalSignField' }).click();

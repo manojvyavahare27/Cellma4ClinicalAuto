@@ -106,13 +106,18 @@ test.describe("Care Plan Category", () => {
       await confirmexisting.clickOnConfirmExistingDetails();
      
       //await page.pause()
-      await page.waitForTimeout(5000);
-      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
-      if(alertPopup==true)
-        {       
-          await carePlan.closePopUp()
+     
+
+
+      await page.waitForTimeout(4000);
+      const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
+      if (await alertPopup.isVisible()) {
+         const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
+          await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
+          await cancelButton.click();
         }
       await page.waitForTimeout(2000);
+
 
       await contacthistory.clickOnShowFilter();
       await contacthistory.selectServiceFilter("General Medicine Automation");

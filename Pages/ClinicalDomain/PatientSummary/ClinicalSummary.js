@@ -70,7 +70,7 @@ class ClinicalSummary {
 
 
         //Medical Certificates
-        this.AddMedicalCertificateButton=page.locator("xpath=//div[contains(text(),'Add Applicant Medical Certificate')]")
+        this.AddMedicalCertificateButton=page.locator("xpath=//button[@data-testid='Add Applicant Medical Certificate']")
         this.showLink=page.locator("xpath=//a[@aria-label='Show']")
         this.buttonPrint=page.locator("xpath=//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-disableElevation css-1hx9jce']//div[@class='MuiGrid-root MuiGrid-item css-1wxaqej'][normalize-space()='Print']")
         //Locators for Assertions 
