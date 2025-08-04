@@ -1,13 +1,7 @@
 //Sathyanarayan
 
-const {
-  clickElement,
-  typeText,
-  selectFromDropdown,
-} = require("../../../UtilFiles/StaticUtility.js");
-const {
-  selectFromSearchResults,
-} = require("../../../UtilFiles/DynamicUtility.js");
+const { clickElement, typeText, selectFromDropdown,fillTextBoxByLabel} = require("../../../UtilFiles/StaticUtility.js");
+const { selectFromSearchResults,} = require("../../../UtilFiles/DynamicUtility.js");
 
 class ClinicalExtraDetails {
   constructor(page) {
@@ -1490,6 +1484,20 @@ async enterPatientScanNotes(pascn_notes)
       inte_outcome_eli_text
     );
   }
+
+  //Physical Sign
+
+  async addPhysicalSignButton()
+  {
+    await this.page.locator("xpath=//button[@data-testid='addPhysicalSignAccordion']").click()
+  }
+
+  async enterAirorOxygen(PSName, PSValue)
+  {    
+     await fillTextBoxByLabel(this.page, PSName, PSValue);   
+  }
+
+  
 
   //Investigation
   async selectInvStatus(status) {
