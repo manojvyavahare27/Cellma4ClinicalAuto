@@ -246,7 +246,7 @@ test.describe("Assessment Category", () => {
       await assessmentExtraDetails.clickOnSetAsDefault()
       //await assessmentExtraDetails.clickOnRepeatable()
       //await assessmentExtraDetails.clickOPrivateRecord()  
-      await page.pause() 
+      //await page.pause() 
 
       await assessmentExtraDetails.selectEndoserment(jsonData.AddMedication[index].paprd_endorsement) 
       //await page.pause() 
