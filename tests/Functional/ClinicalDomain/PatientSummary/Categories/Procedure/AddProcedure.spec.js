@@ -108,7 +108,7 @@ test.describe("Procedure Category", () => {
           await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
           await cancelButton.click();
         }    
-      
+      await page.pause()
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -121,7 +121,7 @@ test.describe("Procedure Category", () => {
       await Procedures.clickOnPinContactItemsMenu();
       await Procedures.selectCategoryFromList("Procedures");
       await page.waitForTimeout(2000)
-     // await page.pause()
+      await page.pause()
        ////////REVIEW EXISTING ITEM AND DELETE/////
        if(await Procedures.checkItemOnHistoryTable(jsonData.AddProcedure[index].pacr_que_name)){
         await Procedures.clickOnItemReview(jsonData.AddProcedure[index].pacr_que_name);
@@ -194,11 +194,12 @@ test.describe("Procedure Category", () => {
       await ProceduresExtraDetails.selectProcedureCheckboxPrivateRecord()  
                 
       await ProceduresExtraDetails.enterProcedureNotes(jsonData.AddProcedure[index].proc_notes) 
-      await ProceduresExtraDetails.clickOnSaveExtraDetails();
+      await ProceduresExtraDetails.clickOnConditionExtraDetails();
       //await page.getByLabel('saveChecklist').click()
-     // await page.waitForTimeout(2000);     
-      //await page.getByLabel('saveChecklist').click()     
+     await page.waitForTimeout(2000);     
+      await page.getByLabel('saveChecklist').click()     
       await page.waitForTimeout(500);
+      
       await expect(page.getByText("Procedure record added successfully")).toHaveText("Procedure record added successfully");
      
      
@@ -235,8 +236,9 @@ test.describe("Procedure Category", () => {
       await ProceduresExtraDetails.selectProcedureLevel(jsonData.AddProcedure[index].proc_procedure_level)
       await ProceduresExtraDetails.selectProcedureStatus(jsonData.AddProcedure[index].pacr_status)
       await ProceduresExtraDetails.selectProcedureOutcome(jsonData.AddProcedure[index].proc_outcome)
-      await ProceduresExtraDetails.clickOnSaveExtraDetails();      
-      await page.waitForTimeout(1500);     
+      await ProceduresExtraDetails.clickOnConditionExtraDetails();      
+      await page.waitForTimeout(1500);           
+      await page.getByLabel('saveChecklist').click()    
       //await page.getByRole('button', { name: 'Save' }).click()
       //await page.waitForTimeout(1500);
 

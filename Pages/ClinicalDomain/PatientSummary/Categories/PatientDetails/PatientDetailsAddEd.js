@@ -23,7 +23,7 @@ class PatientDetailsAddED
         this.btnOkDeletePatientDetails=page.locator("//button[@data-testid='Ok']")
         this.txtboxDeletePatientDetailsReason=page.locator("xpath=//textarea[@id='Reason']")
        // [use .nth(0).click for indexing]
-        this.btnSaveDeleteReason=page.locator("xpath=//button[@data-testid='Save']").nth(1)
+        this.btnSaveDeleteReason=page.locator("xpath=//button[@data-testid='Save']")
         
         //PatientDetails ED page pop up icons
       

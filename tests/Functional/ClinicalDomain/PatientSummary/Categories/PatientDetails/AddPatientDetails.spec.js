@@ -156,7 +156,7 @@ test.describe("Excel Conversion Patient Details Category", () => {
       await patientsummary.clickOniconPatientDetailsCategory();
     }
 
-     
+     await page.pause()
       //Add Patient Details
       await patientsummary.clickOniconPatientDetailsCategory();
       await page.waitForTimeout(1000);

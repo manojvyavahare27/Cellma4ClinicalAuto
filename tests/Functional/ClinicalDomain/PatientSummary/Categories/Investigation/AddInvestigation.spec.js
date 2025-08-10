@@ -100,7 +100,7 @@ test.describe("Investigations Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();  
-      
+      await page.waitForTimeout(1500);
        const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
       if(alertPopup==true)
         {       
@@ -145,6 +145,7 @@ test.describe("Investigations Category", () => {
       console.log("Patient Accessed by User:" + patId);
 
 ////////ADD NEW Investigations- Lab/////
+await page.pause()
       await Investigations.selectandAddClinicalItem(jsonData.AddInvestigation[index].pacr_que_name); //This searches item and clicks on add button
       await page.waitForTimeout(2000);  
       await page.getByLabel('cancelIcon').click();
@@ -187,7 +188,7 @@ test.describe("Investigations Category", () => {
       await InvestigationsExtraDetails.clickOPrivateRecord()
       await InvestigationsExtraDetails.clickOnSetAsDefault()
       await InvestigationsExtraDetails.enterInvNotes(jsonData.AddInvestigation[index].notes);
-      await InvestigationsExtraDetails.clickOnSaveExtraDetails();
+      await InvestigationsExtraDetails.clickOnsSaveandCreateLabRequest();
       await page.waitForTimeout(1000);
       
       await InvestigationsExtraDetails.selectlinks()

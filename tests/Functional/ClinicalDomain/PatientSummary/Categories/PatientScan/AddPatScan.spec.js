@@ -174,7 +174,7 @@ test.describe("PatientScan Category", () => {
       await patientScanExtraDetails.selectMachineName(jsonData.AddPatientScan[index].pascn_machine_name);
 
       await patientScanExtraDetails.enterPatientScanNotes(jsonData.AddPatientScan[index].pascn_notes);
-      await patientScanExtraDetails.clickOnSaveExtraDetails();
+      await patientScanExtraDetails.clickOnConditionExtraDetails();
       await page.waitForTimeout(500);
       //await expect(page).toHaveText("'Patient's Scans Record Added Successfully'");
       //await expect(page.getByText("'Patient's Scans Record Added Successfully'")).toHaveText("'Patient's Scans Record Added Successfully'")
@@ -216,7 +216,7 @@ test.describe("PatientScan Category", () => {
       await patientScanExtraDetails.enterTScore(jsonData.EditPatientScan[index].pascn_t_score);
       await patientScanExtraDetails.enterZScore(jsonData.EditPatientScan[index].pascn_z_score);
       await patientScanExtraDetails.enterPatientScanNotes(jsonData.EditPatientScan[index].pascn_notes);
-      await patientScanExtraDetails.clickOnSaveExtraDetails();
+      await patientScanExtraDetails.clickOnConditionExtraDetails();
       await page.waitForTimeout(1000);
      
         ////// Database comparison - Patient Clinical Records - UPDATE Patient Scans/////////

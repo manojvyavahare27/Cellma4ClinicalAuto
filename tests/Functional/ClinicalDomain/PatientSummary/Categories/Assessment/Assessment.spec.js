@@ -95,16 +95,16 @@ test.describe("Assessment Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(2000);
       await confirmexisting.clickOnConfirmExistingDetails();  
-      
-      await page.waitForTimeout(5000);
-      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
-      if(alertPopup==true)
-        {       
-          await assessment.closePopUp()
-        }
-      await page.waitForTimeout(2000);
+      await page.pause()
+      // await page.waitForTimeout(5000);
+      // const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      // if(alertPopup==true)
+      //   {       
+      //     await assessment.closePopUp()
+      //   }
+      // await page.waitForTimeout(2000);
 
-      await page.waitForTimeout(2000); 
+      // await page.waitForTimeout(2000); 
        await contacthistory.clickOnShowFilter()  
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");

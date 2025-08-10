@@ -1,9 +1,6 @@
 [
   {
-    "pacr_id": 42749,
-    "pacr_category": "Patient Detail",
-    "pacr_que_name": "Lives on boat",
-    "pacr_clinic_date": "02/08/2025",
-    "pad_notes": "Patient lives on boat Patient lives on boat "
+    "pacr_que_name": "Coal dust",
+    "pacr_delete_reason": "Delete for testing"
   }
 ]

@@ -107,7 +107,7 @@ test.describe("condition Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();   
-
+      await page.pause()
       await page.waitForTimeout(4000);
       const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
       if (await alertPopup.isVisible()) {
@@ -177,7 +177,7 @@ test.describe("condition Category", () => {
       await conditionExtraDetails.enterPreviousCondition()
       await conditionExtraDetails.enterCoditionNotes(jsonData.AddCondition[index].cond_notes)
       //await page.locator("xpath=//button[@aria-label='saveExtraDetails']").click()     
-      await conditionExtraDetails.clickOnSaveExtraDetails();      
+      await conditionExtraDetails.clickOnConditionExtraDetails();      
       await expect(page.getByText("Condition record added successfully")).toHaveText("Condition record added successfully");     
        
       sqlQuery=
@@ -218,7 +218,7 @@ test.describe("condition Category", () => {
       //await allergyExtraDetails.enterClinicalItemNotes("Updated Allergy Notes From Playwright");
      
       //await page.locator("xpath=//button[@aria-label='saveExtraDetails']").click()
-      await conditionExtraDetails.clickOnSaveExtraDetails();
+      await conditionExtraDetails.clickOnConditionExtraDetails();
       
       //await expect(page.getByText('condition record updated successfully')).toHaveText('condition record updated successfully')
       

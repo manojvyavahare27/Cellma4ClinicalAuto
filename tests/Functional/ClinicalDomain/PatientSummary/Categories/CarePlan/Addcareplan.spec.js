@@ -105,7 +105,7 @@ test.describe("Care Plan Category", () => {
       await page.waitForTimeout(200);
       await confirmexisting.clickOnConfirmExistingDetails();
      
-      //await page.pause()
+      await page.pause()
      
 
 
@@ -164,7 +164,7 @@ test.describe("Care Plan Category", () => {
       //await page.pause();
       await carePlan.selectandAddClinicalItem(jsonData.AddCarePlan[index].pacr_que_name);       
      
-      await carePlanExtraDetails.clickOnSaveExtraDetails();
+      await carePlanExtraDetails.clickonSaveAllergyED();
       await expect(page.getByText('Nursing Diagnosis is required')).toHaveText('Nursing Diagnosis is required')
       await expect(page.getByText('Goal is required')).toHaveText('Goal is required')
       await expect(page.getByText('Intervention is required')).toHaveText('Intervention is required')
@@ -179,7 +179,7 @@ test.describe("Care Plan Category", () => {
       await carePlanExtraDetails.searchAndSelectsearchEvaluations(jsonData.AddCarePlan[index].carpd_eli_text_evaluations);
       await carePlanExtraDetails.EnterEvaluations(jsonData.AddCarePlan[index].carpd_notes_evaluations);
       await carePlanExtraDetails.EnterUpdateNotes(jsonData.AddCarePlan[index].carpd_type_notes);
-      await carePlanExtraDetails.clickOnSaveExtraDetails();
+      await carePlanExtraDetails.clickonSaveAllergyED();
       await expect(page.getByText('Care Plans record added successfully')).toHaveText('Care Plans record added successfully')      
            
 
@@ -227,7 +227,7 @@ test.describe("Care Plan Category", () => {
       await carePlanExtraDetails.EnterEvaluations(jsonData.EditCarePlan[index].carpd_notes_evaluations);
       await carePlanExtraDetails.EnterUpdateNotes(jsonData.EditCarePlan[index].carpd_type_notes);
       
-      await carePlanExtraDetails.clickOnSaveExtraDetails();
+      await carePlanExtraDetails.clickonSaveAllergyED();
       await expect(page.getByText('Care Plans record updated successfully')).toHaveText('Care Plans record updated successfully')      
       
 

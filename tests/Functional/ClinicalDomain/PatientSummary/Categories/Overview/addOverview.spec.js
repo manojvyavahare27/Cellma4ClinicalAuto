@@ -103,7 +103,7 @@ test.describe("Overview Category", () => {
         await patientsearch.clickOnSearchPatientLink();
         await page.waitForTimeout(1500);
         await confirmexisting.clickOnConfirmExistingDetails();        
-        // await page.pause()
+         await page.waitForTimeout(1500);
       const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
       if(alertPopup==true)
         {       
@@ -159,7 +159,7 @@ test.describe("Overview Category", () => {
         //await outcomeExtraDetails.enterDateOfOutcome(jsonData.AddOutcome[index].outc_date);
         //await outcomeExtraDetails.selectFrequency(jsonData.AddOutcome[index].outc_frequency);
         await overviewExtraDetails.enterOverviewNotes(jsonData.AddOverview[index].over_notes);
-        await overviewExtraDetails.clickOnSaveExtraDetails();
+        await overviewExtraDetails.clickOnConditionExtraDetails();
         //await page.getByLabel('saveChecklist').click()
         await page.waitForTimeout(500)
         await expect(page.getByText('Overview record added successfully')).toHaveText('Overview record added successfully')
@@ -206,7 +206,7 @@ test.describe("Overview Category", () => {
         //await overviewExtraDetails.clickOnClincialItemCollapsable();
         //await overviewExtraDetails.selectClinicalItemSubcategory(jsonData.EditOverview[index].eli_text);
         await overviewExtraDetails.enterOverviewNotes(jsonData.EditOverview[index].over_notes);
-        await overviewExtraDetails.clickOnSaveExtraDetails();
+        await overviewExtraDetails.clickOnConditionExtraDetails();
         await page.waitForTimeout(1000)
         await expect(page.getByText('Overview record updated successfully')).toHaveText('Overview record updated successfully')
 

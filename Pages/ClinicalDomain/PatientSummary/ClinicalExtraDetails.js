@@ -126,7 +126,11 @@ this.pregGravida= page.locator("xpath=//input[@id='gravida']")
     this.save = page.locator("xpath=//button[@aria-label='Save']");
     this.saveCheckList = page.locator("xpath=//button[@aria-label='saveChecklist']");
     //this.saveExtraDetails = page.locator("xpath=//button[@aria-label='saveCategoryExtraDetails']");
+    this.saveAllergyED=page.locator("xpath=//button[@data-testid='Save']")
     this.saveExtraDetails = page.locator("xpath=//button[@data-testid='extraDetailsSave']");
+    this.saveConditionExtraDetails=page.locator("xpath=//button[@data-testid='extraDetailsSave']")
+    this.saveandCreateLabRequest=page.locator("xpath=//button[@data-testid='saveAndCreateLabRequest']")
+
     this.saveCheckListButton=page.locator("xpath=//div[@class='MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-12 mui-kqf8ps']//button[@data-testid='Save']")
     this.saveFavourites=page.locator("xpath=//div[@role='dialog']//button[normalize-space()='Save']")
     this.delete = page.locator("xpath=//button[@data-testid='Delete']");
@@ -918,6 +922,19 @@ async enterSocialNotes(soci_notes)
 
   async clickOnSaveExtraDetails() {
     await clickElement(this.page, this.saveExtraDetails);
+  }
+  async clickonSaveAllergyED()
+  {
+    await this.saveAllergyED.click()
+  }
+  async clickOnsSaveandCreateLabRequest()
+  {
+    await clickElement(this.page, this.saveandCreateLabRequest)
+  }
+
+  async clickOnConditionExtraDetails()
+  {
+    await clickElement(this.page, this.saveConditionExtraDetails)
   }
   async clickOnSaveFavourites()
   {

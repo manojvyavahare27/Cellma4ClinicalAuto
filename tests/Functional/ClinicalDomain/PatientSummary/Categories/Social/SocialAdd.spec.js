@@ -145,7 +145,7 @@ test.describe("social Category", () => {
       const patId = results[0].paa_pat_id;
       console.log("Patient Accessed by User:" + patId);
 
-
+        await page.pause()
 
 ////////ADD NEW social/////
       await social.selectandAddClinicalItem(jsonData.Addsocial[index].pacr_que_name); //This searches item and clicks on add button
@@ -159,7 +159,7 @@ test.describe("social Category", () => {
       await page.getByRole('checkbox', { name: 'Private record' }).click()
       await page.getByRole('checkbox', { name: 'Set as default' }).click()
       await socialExtraDetails.enterSocialNotes(jsonData.Addsocial[index].soci_notes);
-      await socialExtraDetails.clickOnSaveExtraDetails();
+      await socialExtraDetails.clickOnConditionExtraDetails();
       await page.waitForTimeout(1000);
      // await expect(page.getByText("Recommendation Record Added Successfully")).toHaveText("Recommendation Record Added Successfully");
       //await expect(page.getByText(`${clinicaCatergory} Record Added Successfully`)).toHaveText(`${clinicaCatergory} Record Added Successfully`); 
@@ -194,7 +194,7 @@ test.describe("social Category", () => {
     //  await socialExtraDetails.selectClinicalItemSubcategory(jsonData.Editsocial[index].eli_text);
             
       await socialExtraDetails.enterSocialNotes(jsonData.Editsocial[index].soci_notes);
-      await socialExtraDetails.clickOnSaveExtraDetails();
+      await socialExtraDetails.clickOnConditionExtraDetails();
       await page.waitForTimeout(1000);
 
        ////// Database comparison - Patient Clinical Records - UPDATE social/////////

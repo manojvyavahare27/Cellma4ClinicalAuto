@@ -192,7 +192,7 @@ await allergy.selectandAddClinicalItem(jsonData.AddAllergy[index].pacr_que_name)
       await allergyExtraDetails.enterallergyTextArea(jsonData.AddAllergy[index].alrg_notes)
       //await page.locator("xpath=//button[@aria-label='saveExtraDetails']").click()
      
-      await allergyExtraDetails.clickOnSaveExtraDetails();
+      await allergyExtraDetails.clickonSaveAllergyED();
       await page.getByLabel('saveChecklist').click()
       await page.waitForTimeout(500);
       //await expect(page.getByText("Allergy record added successfully")).toHaveText("Allergy record added successfully");
@@ -244,7 +244,7 @@ sqlQuery="select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_r
       //await allergyExtraDetails.enterClinicalItemNotes("Updated Allergy Notes From Playwright");
      
       //await page.locator("xpath=//button[@aria-label='saveExtraDetails']").click()
-      await allergyExtraDetails.clickOnSaveExtraDetails();
+      await allergyExtraDetails.clickonSaveAllergyED();
       await page.getByLabel('saveChecklist').click()
       await page.waitForTimeout(1000);
       await expect(page.getByText('Allergy record updated successfully')).toHaveText('Allergy record updated successfully')
