@@ -316,6 +316,7 @@ if (match) {
  );
 }
 
+      await page.pause()
       //patient details home page icons
       await patientDetailshome.homepageOverviewIcon()
       await page.waitForTimeout(1000)
