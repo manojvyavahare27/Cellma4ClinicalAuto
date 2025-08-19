@@ -130,8 +130,9 @@ this.pregGravida= page.locator("xpath=//input[@id='gravida']")
     this.saveExtraDetails = page.locator("xpath=//button[@data-testid='extraDetailsSave']");
     this.saveConditionExtraDetails=page.locator("xpath=//button[@data-testid='extraDetailsSave']")
     this.saveandCreateLabRequest=page.locator("xpath=//button[@data-testid='saveAndCreateLabRequest']")
-
+    this.savePortal = page.locator("xpath=//button[@data-testid='Save']");
     this.saveCheckListButton=page.locator("xpath=//div[@class='MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-12 mui-kqf8ps']//button[@data-testid='Save']")
+    this.saveChecklistPortal = page.locator("xpath=//button[@aria-label='saveChecklist']");
     this.saveFavourites=page.locator("xpath=//div[@role='dialog']//button[normalize-space()='Save']")
     this.delete = page.locator("xpath=//button[@data-testid='Delete']");
     this.deleteCertificate = page.locator("xpath=//button[@aria-label='Delete']");
@@ -918,6 +919,15 @@ async enterSocialNotes(soci_notes)
   async clickOnSaveChecklistButton()
   {
     await this.saveCheckListButton.click()
+  }
+
+  async clickOnSavePortalChecklistButton()
+  {
+    await this.saveChecklistPortal.click()
+  }
+
+  async clickOnPortalSaveBtn() {
+    await clickElement(this.page, this.savePortal)
   }
 
   async clickOnSaveExtraDetails() {
