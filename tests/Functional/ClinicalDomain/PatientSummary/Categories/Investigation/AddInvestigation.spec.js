@@ -206,22 +206,7 @@ test.describe("Investigations Category", () => {
        await InvestigationsExtraDetails.selectCollectSample()
      await page.waitForTimeout(3000);
       await page.getByRole('checkbox', { name: 'Select All' }).check();
-      // await InvestigationsExtraDetails.selectAddCreateLabRequest()
-      // await page.pause()
-      // await page.waitForTimeout(1000);
-      // await page.pause()
-      // //await page.getByLabel('', { exact: true }).click();
-      // await InvestigationsExtraDetails.collectSampleCheckbox()
-      // await page.pause()
-      // await page.getByRole('checkbox', { name: 'Select All' }).check();
-      // await page.waitForTimeout(1000);
-      // await page.pause()
-      // await InvestigationsExtraDetails.selectCollectSample()
-      // await page.waitForTimeout(1000);
-      // await page.pause()
-      // //await page.getByRole('checkbox', { name: 'hideLabel' }).click();
-      // await page.getByRole('checkbox', { name: 'Select All' }).check();
-      // await page.waitForTimeout(1000);
+      
      
       await page.locator('button').filter({ hasText: 'Take Samples & Print All' }).click();
       await page.waitForTimeout(2500);
