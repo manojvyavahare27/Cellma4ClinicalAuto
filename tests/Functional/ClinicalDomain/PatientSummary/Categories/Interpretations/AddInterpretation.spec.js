@@ -93,7 +93,7 @@ test.describe("Interpretations Category", () => {
       logger.info("Family Name entered successfully");
       //await patientsearch.selectSex(data.pat_sex);
       
-      await page.pause()
+      //await page.pause()
    // await patientsearch.selectBornDate(jsonData.PatientDetails[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
@@ -110,7 +110,7 @@ test.describe("Interpretations Category", () => {
         }
       await page.waitForTimeout(2000); 
 
-      await page.pause()
+     
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -135,7 +135,7 @@ test.describe("Interpretations Category", () => {
         console.log('\x1bItem was deleted successfully\x1b[0m');
         }
         await page.waitForTimeout(2000)
-       await page.pause()
+       //await page.pause()
        //////Fetch Patient Details/////////
       var sqlQuery =
       "select * from patient_audit where paa_use_username='" + jsonData.loginDetails[0].username + 
@@ -167,7 +167,7 @@ test.describe("Interpretations Category", () => {
      // await page.waitForTimeout(1000);
       await expect(page.getByText("Interpretation record added successfully")).toHaveText("Interpretation record added successfully");
       //await expect(page.getByText(`${clinicaCatergory} Record Added Successfully`)).toHaveText(`${clinicaCatergory} Record Added Successfully`); 
-     await page.pause()
+   
       ////// Database comparison- Patient Clinical Records - ADDING NEW Interpretations/////////
       sqlQuery =
       "select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk,inte_outcome_eli_text, inte_notes"+
@@ -189,7 +189,7 @@ test.describe("Interpretations Category", () => {
     } else {
       console.log("\n Patient Clinical Records Comparision adding new Interpretations: Parameters from both JSON files do not match!\n");
     }
-   await page.pause()
+   
     await Interpretations.toggleSearchSection(); //Close the search section
       
       await Interpretations.clickOnItemDiv(jsonData.EditInterpretation[index].pacr_que_name);
@@ -202,7 +202,7 @@ test.describe("Interpretations Category", () => {
       await InterpretationsExtraDetails.clickOnSaveExtraDetails();
       await expect(page.getByText("Interpretation record updated successfully")).toHaveText("Interpretation record updated successfully");
       await page.waitForTimeout(1000);
-await page.pause()
+
        ////// Database comparison - Patient Clinical Records - UPDATE Interpretations/////////
      sqlQuery =
      "select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk,inte_outcome_eli_text, inte_notes"+
@@ -286,7 +286,7 @@ await page.pause()
      } else {
        console.log("\n  Patient Clinical Records Comparision for Delete Interpretations: Parameters from both JSON files do not match!\n");
      }   
-     //await page.pause();     
+    // await page.pause();     
       await Interpretations.clickOnMigratedItemsSection();
       await Interpretations.clickOnDeletedItemsSection();
       await page.waitForTimeout(1000);

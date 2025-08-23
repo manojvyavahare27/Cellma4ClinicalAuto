@@ -145,7 +145,7 @@ test.describe("social Category", () => {
       const patId = results[0].paa_pat_id;
       console.log("Patient Accessed by User:" + patId);
 
-        await page.pause()
+       
 
 ////////ADD NEW social/////
       await social.selectandAddClinicalItem(jsonData.Addsocial[index].pacr_que_name); //This searches item and clicks on add button

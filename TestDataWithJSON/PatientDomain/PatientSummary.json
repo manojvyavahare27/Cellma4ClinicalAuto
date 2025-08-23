@@ -269,7 +269,7 @@
       "pacr_category": "Allergies",
       "pacr_que_name": "Coal dust",
       "alrg_reaction_severity": "Moderate",
-      "pacr_clinic_date": "04/08/2025",
+      "pacr_clinic_date": "21/08/2025",
       "alrg_notes": "Add for Notes",
       "eli_text": "Sneezing",
       "alrg_start_date": "08/05/2024",
@@ -281,7 +281,7 @@
       "pacr_category": "Allergies",
       "pacr_que_name": "Coal dust",
       "alrg_reaction_severity": "Moderate",
-      "pacr_clinic_date": "04/08/2025",
+      "pacr_clinic_date": "21/08/2025",
       "alrg_notes": "Edit for Notes",
       "eli_text": "Sneezing",
       "alrg_start_date": "20/05/2024",
@@ -317,7 +317,7 @@
     {
       "pacr_category": "Procedure",
       "pacr_que_name": "Knee Arthroplasty",
-      "proc_procedure_date": 45873,
+      "proc_procedure_date": 45890,
       "proc_site": "Left",
       "proc_type": "High",
       "proc_notes": "Add Procedure Notes",
@@ -677,7 +677,7 @@
   "Alerts": [
     {
       "Alert_Start_Date": "01-04-2025",
-      "Alert_End_Date": "04/08/2025",
+      "Alert_End_Date": "21/08/2025",
       "Priority_Any_Priority": "Any Priority",
       "Priority_Very_High": "Very High",
       "Priority_High": "High",
@@ -1034,7 +1034,7 @@
       "Value": "61"
     },
     {
-      "Label": "News Score",
+      "Label": "News Score (No unit)",
       "Value": "100"
     },
     {

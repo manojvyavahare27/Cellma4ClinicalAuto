@@ -63,6 +63,8 @@ module.exports = {
     }
 };
 
+
+
 // Custom date formatting function
 function formatDate(date) {
     const day = String(date.getDate()).padStart(2, '0');
@@ -70,3 +72,12 @@ function formatDate(date) {
     const year = date.getFullYear();
     return `${day}/${month}/${year}`;
 }
+
+
+// manual close function
+    closeConnection: (connection) => {
+        if (connection && connection.end) {
+            connection.end();
+            console.log('Database connection closed manually.');
+        }
+    }

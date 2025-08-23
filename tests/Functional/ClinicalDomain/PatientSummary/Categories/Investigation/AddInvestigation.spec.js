@@ -100,8 +100,9 @@ test.describe("Investigations Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();  
-      await page.waitForTimeout(1500);
-       const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      await page.waitForTimeout(3000);   
+      
+       const alertPopup= await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible();    
       if(alertPopup==true)
         {       
           await Investigations.closePopUp(page)
@@ -120,7 +121,7 @@ test.describe("Investigations Category", () => {
       await Investigations.clickOnPinContactItemsMenu();
       await Investigations.selectCategoryFromList("Investigations");
       await page.waitForTimeout(2000)
-       //await page.pause()
+      
        ////////REVIEW EXISTING ITEM AND DELETE/////
        if(await Investigations.checkItemOnHistoryTable(jsonData.AddInvestigation[index].pacr_que_name)){
        // await Investigations.clickOnItemReview(jsonData.AddInvestigation[index].pacr_que_name);
@@ -145,7 +146,7 @@ test.describe("Investigations Category", () => {
       console.log("Patient Accessed by User:" + patId);
 
 ////////ADD NEW Investigations- Lab/////
-await page.pause()
+
       await Investigations.selectandAddClinicalItem(jsonData.AddInvestigation[index].pacr_que_name); //This searches item and clicks on add button
       await page.waitForTimeout(2000);  
       await page.getByLabel('cancelIcon').click();
@@ -176,6 +177,7 @@ await page.pause()
       await page.waitForTimeout(1000)
       await InvestigationsExtraDetails.deselectForImagingRequest()
       await page.waitForTimeout(1000)
+
       await InvestigationsExtraDetails.selectForLabRequest()
       await page.waitForTimeout(1000)
       //await InvestigationsExtraDetails.deselectForLabRequest()
@@ -189,29 +191,46 @@ await page.pause()
       await InvestigationsExtraDetails.clickOnSetAsDefault()
       await InvestigationsExtraDetails.enterInvNotes(jsonData.AddInvestigation[index].notes);
       await InvestigationsExtraDetails.clickOnsSaveandCreateLabRequest();
-      await page.waitForTimeout(1000);
-      
+    
+      await page.waitForTimeout(2000);
+      await page.getByRole('button', { name: 'cancelIcon' }).click()
       await InvestigationsExtraDetails.selectlinks()
       await page.waitForTimeout(1000);
+     
       await InvestigationsExtraDetails.LabRequestLink()
+      await page.waitForTimeout(3000);
+     
+      //await InvestigationsExtraDetails.selectLabRequestCheckbox()
+      await page.getByRole('checkbox', { name: 'Select All' }).check();
       await page.waitForTimeout(1000);
-      await InvestigationsExtraDetails.selectLabRequestCheckbox()
-      await page.waitForTimeout(1000);
-      await InvestigationsExtraDetails.selectAddCreateLabRequest()
-      await page.waitForTimeout(1000);
-      //await page.getByLabel('', { exact: true }).click();
-      await InvestigationsExtraDetails.collectSampleCheckbox()
-      await page.waitForTimeout(1000);
-      await InvestigationsExtraDetails.selectCollectSample()
-      await page.waitForTimeout(1000);
-      await page.getByRole('checkbox', { name: 'hideLabel' }).click();
-      await page.waitForTimeout(1000);
+       await InvestigationsExtraDetails.selectCollectSample()
+     await page.waitForTimeout(3000);
+      await page.getByRole('checkbox', { name: 'Select All' }).check();
+      // await InvestigationsExtraDetails.selectAddCreateLabRequest()
+      // await page.pause()
+      // await page.waitForTimeout(1000);
+      // await page.pause()
+      // //await page.getByLabel('', { exact: true }).click();
+      // await InvestigationsExtraDetails.collectSampleCheckbox()
+      // await page.pause()
+      // await page.getByRole('checkbox', { name: 'Select All' }).check();
+      // await page.waitForTimeout(1000);
+      // await page.pause()
+      // await InvestigationsExtraDetails.selectCollectSample()
+      // await page.waitForTimeout(1000);
+      // await page.pause()
+      // //await page.getByRole('checkbox', { name: 'hideLabel' }).click();
+      // await page.getByRole('checkbox', { name: 'Select All' }).check();
+      // await page.waitForTimeout(1000);
+     
       await page.locator('button').filter({ hasText: 'Take Samples & Print All' }).click();
       await page.waitForTimeout(2500);
+      
       await InvestigationsExtraDetails.selectSendSample()
       await page.waitForTimeout(3000);
       //await page.getByLabel('cancelIcon').click();
       await page.getByRole('button', { name: 'cancelIcon' }).click()
+      await page.pause()
       
       
 

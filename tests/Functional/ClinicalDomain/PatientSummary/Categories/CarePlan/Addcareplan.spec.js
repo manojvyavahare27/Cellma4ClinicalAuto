@@ -105,8 +105,7 @@ test.describe("Care Plan Category", () => {
       await page.waitForTimeout(200);
       await confirmexisting.clickOnConfirmExistingDetails();
      
-      await page.pause()
-     
+      
 
 
       await page.waitForTimeout(4000);

@@ -99,11 +99,11 @@ test.describe("Physical Sign Category", () => {
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
-      await page.pause()
+      //await page.pause()
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();
 
-      await page.pause()
+     // await page.pause()
       await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -112,7 +112,7 @@ test.describe("Physical Sign Category", () => {
       await contacthistory.selectContactLocation("Cardio Location");
       //await contacthistory.enterContactWith("Dr Sathya");
       await contacthistory.clickOnAddContact();
-      await page.pause()
+      //await page.pause()
       await Physical.selectCategoryFromList("Physical Signs");
       await page.waitForTimeout(2000)
 
@@ -121,7 +121,7 @@ test.describe("Physical Sign Category", () => {
       await Physical.selectandAddClinicalItem("Height and weight"); //This searches item and clicks on add button
       await page.waitForTimeout(2000);
       await PhysicalExtraDetails.addPhysicalSignButton()
-      await page.pause()
+     // await page.pause()
 
      for (const field of jsonData.PhysicalSign) {
   console.log(`Label: ${field.Label}, Value: ${field.Value}`);
@@ -162,7 +162,7 @@ test.describe("Physical Sign Category", () => {
       // await PhysicalExtraDetails.enterAirorOxygen('Structure of epiphyseal plate', '89');
       // await PhysicalExtraDetails.enterAirorOxygen('Temperature (degree C)', '36');
       // await PhysicalExtraDetails.enterAirorOxygen('Weight (kg) (kg)', '58');
-      await page.pause()
+     // await page.pause()
       await page.locator("xpath=//button[@data-testid='Save']").click()
       await expect(page.getByText('Physical Signs added successfully')).toHaveText('Physical Signs added successfully')
       
