@@ -26,7 +26,8 @@ class ClinicalSummary {
         // Search Clinical Items fields
         this.searchClinicalItem = page.locator("xpath=//label[text()='Any Search, Item, Code, Category']");
         this.addClinicalItem = page.locator("xpath=//button[@aria-label='Add']")
-
+        this.searchMedication = page.locator("xpath=//input[@name='search']")
+ 
         //Medication
         this.editFavouriteMedication=page.locator("xpath=//button[@aria-label='editIconButton']")
        
@@ -548,6 +549,15 @@ class ClinicalSummary {
         
         //await page.pause()
         await selectFromSearchResults(this.page, this.searchClinicalItem, clinicalItemName, this.addClinicalItem);  
+   
+    }
+
+    async selectAndAddMedication(clinicalItemName) {
+
+        console.log("Item Name is:"+clinicalItemName);
+        
+        //await page.pause()
+        await selectFromSearchResults(this.page, this.searchMedication, clinicalItemName, this.addClinicalItem);  
    
     }
 
