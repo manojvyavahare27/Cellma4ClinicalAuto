@@ -43,10 +43,7 @@ test.describe("Excel Conversion Allergy Category", () => {
 
     console.log("excelFilePath:", excelFilePath);
     console.log("jsonFilePath:", jsonFilePath);
-    const conversionSuccess = await convertExcelToJson(
-      excelFilePath,
-      jsonFilePath
-    );    
+    const conversionSuccess = await convertExcelToJson(excelFilePath, jsonFilePath);    
     if (conversionSuccess) {
       // jsonData = require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json");
       jsonData = require("../../../../../../TestDataWithJSON/PatientDomain/PatientSummary.json");
@@ -148,6 +145,7 @@ test.describe("Allergy Category", () => {
         await page.waitForTimeout(2000)
 
 
+        await page.pause()
        
        //////Fetch Patient Details/////////
       var sqlQuery =
@@ -161,6 +159,14 @@ test.describe("Allergy Category", () => {
       console.log("\n Patient Details stored into the database: \n", results);
       const patId = results[0].paa_pat_id;
       console.log("Patient Accessed by User:" + patId);
+
+       await page.pause()
+      closeConnection: (connection) => {
+        if (connection && connection.end) {
+            connection.end();
+            console.log('Database connection closed manually.');
+        }
+    }
 
      
 
@@ -315,7 +321,7 @@ sqlQuery="select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_r
 
      ///////// Deleting Item ////////////
 
-      
+      await page.pause()
       await allergy.clickOnItemEdit();
       await allergyExtraDetails.clickOnDelete();
       await allergyExtraDetails.clickOnCancelDelete();
@@ -335,21 +341,21 @@ sqlQuery="select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_r
      results = await executeQuery(sqlQuery, sqlFilePath);
      //  pacrId=results[0].pacr_id;
      console.log("\n Patient Details stored into the database: \n", results);
-     var match = await compareJsons(
-       sqlFilePath,
-       null,
-       jsonData.DeleteAllergy[index]
-     );
-     if (match) {
-       console.log(
-         "\n  Patient Clinical Records Comparision for Delete Allergy: Parameters from both JSON files match!\n"
-       );
-     } else {
-       console.log(
-         "\n  Patient Clinical Records Comparision: Parameters from both JSON files do not match!\n"
-       );
-     }
      
+      
+     var match = await compareJsons(sqlFilePath, null, jsonData.DeleteAllergy[index]);
+     if (match) {
+       console.log("\n  Patient Clinical Records Comparision for Delete Allergy: Parameters from both JSON files match!\n");
+     } else {
+       console.log("\n  Patient Clinical Records Comparision: Parameters from both JSON files do not match!\n");
+     }    
+    
+      closeConnection: (connection) => {
+        if (connection && connection.end) {
+            connection.end();
+            console.log('Database connection closed manually.');
+        }
+    }
 
     
       // await allergy.clickOnCurrentItemsSection();
