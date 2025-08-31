@@ -284,7 +284,13 @@ this.createAndAdministerPrescriptionButton = page.locator('xpath=//button[@data-
 
   
   async clickHistoryIconForMedicine(medicineName) {
-    const historyIcon = this.page.locator(`xpath=//h1[normalize-space()='${medicineName}']/following::img[@alt='History Image Avatar'][1]`);
+    const historyIcon = this.page.locator(`xpath=//h1[normalize-space()='${medicineName}']/following::img[@alt='History Image Avatar']`);
+    console.log("historyIcon xpath is :" + historyIcon);    
+    await historyIcon.click();
+  }
+
+    async clickHistoryIconForMedicineOnPrescription(medicineName) {
+    const historyIcon = this.page.locator(`xpath=//img[@alt='History Image Avatar']`);
     console.log("historyIcon xpath is :" + historyIcon);    
     await historyIcon.click();
   }
@@ -320,9 +326,9 @@ this.createAndAdministerPrescriptionButton = page.locator('xpath=//button[@data-
     await this.buttonSaveDetails.click()
   }
 
-  async clickOnExpandIconForDispense()
+  async clickOnExpandIconForDispense(med)
   {
-    await this.expandMedicationForDispense.click()
+    await this.page.locator("xpath=//button[@aria-label='expandRowIcon"+med+"']").click()
   }
 
   async enterDispenseQty()
@@ -361,7 +367,8 @@ async clickDispenseButton() {
 }
 async selectCheckBoxforPrescription(med)
 {
-  await this.page.getByRole('row', { name: med + ' Prescribed History Image Avatar 2' }).getByLabel('', { exact: true }).click()
+  await this.page.locator('#prescriptionTabpanel-0').getByRole('cell', { name: 'hideLabel' }).click()
+  //await this.page.getByRole('row', { name: med + ' Prescribed History Image Avatar 2' }).getByLabel('', { exact: true }).click()
 }
 
 async clickOnCreatePrescriptionButton()
