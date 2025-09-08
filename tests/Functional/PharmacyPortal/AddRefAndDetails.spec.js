@@ -95,14 +95,18 @@ test.describe("New Patient", () => {
       const MedicationsExtraDetails = new ClinicalExtraDetails(page);
       const pharmacyHomePage = new PharmacyHome(page);
 
+      await page.pause()
       await page.goto(environment.RefPortal);
       await portalhome.clickOnPharmacyPortalButton();
+      await page.waitForTimeout(1500)
       await loginpage.enterReferralPortalUserName(
         jsonData.loginDetails[0].username
       );
+      await page.waitForTimeout(1500)
       await loginpage.enterRefrralPortalPassword(
         jsonData.loginDetails[0].password
       );
+      await page.waitForTimeout(3000)
       await loginpage.clickOnReferralPortalLoginButton();
       //await expect(page.getByText('Login success')).toHaveText('Login success');
 
@@ -121,7 +125,7 @@ test.describe("New Patient", () => {
       await findPatient.enterBorn(jsonData.addPatient[index].pat_dob);
 
       await findPatient.clickOnSearchButton();
-      await page.waitForTimeout(2000);
+      await page.waitForTimeout(5000);
       await findPatient.clickOnAddPatientButton();
       await findPatient.clickOnCreatePatientButton();
 
@@ -235,6 +239,7 @@ test.describe("New Patient", () => {
         jsonData.AddMedication[index].medi_notes
       );
 
+      await page.waitForTimeout(2000);
       await MedicationsExtraDetails.clickOnPortalSaveBtn();
       await page.waitForTimeout(200);
       await Medications.clickOnCheckallCheckListcheckbox();
@@ -295,7 +300,7 @@ test.describe("New Patient", () => {
 
       //await Medications.selectandAddClinicalItem(jsonData.AddMedication[index].pacr_que_name)
       await pharmacyHomePage.clickHistoryIconForMedicine(jsonData.AddMedication[index].pacr_que_name)
-
+      await page.waitForTimeout(3000)
       await pharmacyHomePage.clickOnClosePopup()
       //await pharmacyHomePage.clickOnAssociatedConditionIcon()
       //await pharmacyHomePage.clickOnClosePopup()
@@ -304,14 +309,20 @@ test.describe("New Patient", () => {
       //await page.pause()
       await pharmacyHomePage.selectCheckBoxforPrescription(jsonData.AddMedication[index].pacr_que_name);
       await pharmacyHomePage.clickOncreatePrescription();
-      await page.waitForTimeout(1000);
+      await page.waitForTimeout(3000);
 
       await pharmacyHomePage.clickOnitemWithPrescriptionLink();
+      await page.waitForTimeout(1500);
       await pharmacyHomePage.clickOnitemsOnlyLink();
+      await page.waitForTimeout(1500);
       await pharmacyHomePage.clickOncancelledPrescriptionLink();
+      await page.waitForTimeout(1500);
       await pharmacyHomePage.clickOnitemsOnlyLink();
+      await page.waitForTimeout(1500);
       await pharmacyHomePage.clickOnitemNotOnPrescriptionLink();
+      await page.waitForTimeout(1500);
       await pharmacyHomePage.clickOnitemWithPrescriptionLink();
+      await page.waitForTimeout(1500);
       await pharmacyHomePage.ClickOnExpandMedication();
       await pharmacyHomePage.clickOnRefillLeftLink();
       await pharmacyHomePage.enterExternalRefillQty();
@@ -332,35 +343,34 @@ test.describe("New Patient", () => {
       await page.waitForTimeout(1000);
       await pharmacyHomePage.clickOnAwaitingProductionLink();
       await pharmacyHomePage.clickPartiallyProduced();
-      await page.pause()
+      // await page.pause()
       await page.getByRole("button", { name: "Save" }).click();
       //await pharmacyHomePage.clickOnSaveButton()
-      await expect(
+      await expect.soft(
         page.getByText("Prescription updated successfully")
       ).toHaveText("Prescription updated successfully");
-      await page.waitForTimeout(1000);
+      await page.waitForTimeout(2000);
       await pharmacyHomePage.clickOnPartiallyProducedLink();
-      await pharmacyHomePage.clickOnExpandIconForDispense();
+      await pharmacyHomePage.clickOnExpandIconForDispense(jsonData.AddMedication[index].pacr_que_name);
+      await page.waitForTimeout(2000);
+      ////Bug with medication expand
+      //await pharmacyHomePage.enterDispenseQty();
       await page.waitForTimeout(1000);
-      //////Bug with medication expand
-      // await pharmacyHomePage.enterDispenseQty();
-      // await page.waitForTimeout(1000);
-      // await pharmacyHomePage.clickOnDispenseButton();
-      // await page.getByRole("button", { name: "Save" }).click();
-      // //await pharmacyHomePage.clickOnSaveButton()
+      await pharmacyHomePage.clickOnDispenseButton();
+      await page.getByRole("button", { name: "Save" }).click();
+      //await pharmacyHomePage.clickOnSaveButton()
 
-      // await expect(
-      //   page.getByText("Prescription updated successfully")
-      // ).toHaveText("Prescription updated successfully");
+      await expect.soft(
+        page.getByText("Prescription updated successfully")
+      ).toHaveText("Prescription updated successfully");
 
-      // await pharmacyHomePage.clickOnProducedLink();
-
-      // await pharmacyHomePage.clickCollected();
-      // await page.getByRole("button", { name: "Save" }).click();
-      // //await pharmacyHomePage.clickOnSaveButton()
-      // await expect(
-      //   page.getByText("Prescription updated successfully")
-      // ).toHaveText("Prescription updated successfully");
+      await pharmacyHomePage.clickOnProducedLink();
+      await pharmacyHomePage.clickCollected();
+      await page.getByRole("button", { name: "Save" }).click();
+      //await pharmacyHomePage.clickOnSaveButton()
+      await expect.soft(
+        page.getByText("Prescription updated successfully")
+      ).toHaveText("Prescription updated successfully");
 
       //
       //
@@ -378,16 +388,19 @@ test.describe("New Patient", () => {
       await MedicationsExtraDetails.selectRoute(
         jsonData.EditMedication[index].medi_route
       );
-      await MedicationsExtraDetails.enterDays(
+      await MedicationsExtraDetails.enterEditDays(
         jsonData.EditMedication[index].medi_duration
       );
       await MedicationsExtraDetails.selectSite(
         jsonData.EditMedication[index].meded_value
       );
-      await MedicationsExtraDetails.selectPrescribeBy(
+      await MedicationsExtraDetails.selectEditPrescribeBy(
         jsonData.EditMedication[index].medi_prescribed_by
       );
       await MedicationsExtraDetails.enterStartDate(
+        jsonData.EditMedication[index].medi_start_date
+      );
+      await MedicationsExtraDetails.enterReviewDate(
         jsonData.EditMedication[index].medi_start_date
       );
       await MedicationsExtraDetails.enterStopDate(
@@ -404,14 +417,15 @@ test.describe("New Patient", () => {
       await MedicationsExtraDetails.selectCurrentLocation(
         jsonData.EditMedication[index].pcl_location_name
       );
-      await MedicationsExtraDetails.enterMedicationNotes(
+      await MedicationsExtraDetails.enterEditMedicationNotes(
         jsonData.EditMedication[index].medi_notes
       );
       //await page.pause()
-      await MedicationsExtraDetails.clickOnSaveExtraDetails();
+      //await MedicationsExtraDetails.clickOnPortalSaveBtn();
+      await page.getByTestId('CommonCellmaPopup').getByTestId('Save').click();
       await page.waitForTimeout(1500);
       await Medications.clickOnCheckallCheckListcheckbox();
-      await MedicationsExtraDetails.clickOnSaveChecklistButton();
+      await MedicationsExtraDetails.clickOnSavePortalChecklistButton();
 
       ////// Database comparison - Patient Clinical Records - UPDATE Medications/////////
       sqlQuery =
@@ -445,27 +459,18 @@ test.describe("New Patient", () => {
         );
       }
 
-      //await page.pause()
       ////////AUTO UPDATE RISK AFTER UPDATING OUTCOME /////
-      await Medications.clickOnItemHistory();
-      await Medications.clickOnHistoryItemDiv();
-      await page.waitForTimeout(500);
+      await pharmacyHomePage.clickHistoryIconForMedicineOnPrescription()
       await Medications.closeWindow();
       await page.waitForTimeout(500);
-
       // await page.waitForTimeout(500);
-      await Medications.clickOnItemHighlightNone();
+      // await Medications.clickOnItemHighlightNone();
+      await Medications.changeRiskLevel('highlightNone');
       await page.waitForTimeout(500);
-      await Medications.selectLowRiskLevel();
+      await Medications.changeRiskLevel('highlightModerate');
       await page.waitForTimeout(500);
-      await Medications.selectModerateRiskLevel();
+      await Medications.changeRiskLevel('highlightHigh');
       await page.waitForTimeout(500);
-      await Medications.selectHighRiskLevel();
-      await page.waitForTimeout(500);
-      await Medications.selectAllRiskLevel();
-      await Medications.clickOnLevelTwoExtraDetails();
-      // await Interpretations.clickOnLevelThreeExtraDetails();
-      await Medications.clickOnLevelOneExtraDetails();
 
       ////// Database comparison - Patient Clinical Records - UPDATE Medications RISK/////////
       sqlQuery =
@@ -486,7 +491,7 @@ test.describe("New Patient", () => {
 
       ///////// Deleting Item ////////////
 
-      await Medications.clickOnItemEdit();
+      await pharmacyHomePage.clickOnItemEdit();
       await MedicationsExtraDetails.clickOnDelete();
       await MedicationsExtraDetails.clickOnCancelDelete();
       await MedicationsExtraDetails.clickOnDelete();
@@ -494,7 +499,8 @@ test.describe("New Patient", () => {
       await MedicationsExtraDetails.enterDeleteReason(
         jsonData.DeleteMedication[index].pacr_delete_reason
       );
-      await MedicationsExtraDetails.clickOnSaveDeleteReason();
+      await page.getByRole('button', { name: 'Save' }).click();
+      //await MedicationsExtraDetails.clickOnPortalSaveBtn();
       await page.waitForTimeout(1000);
 
       ////// Database comparison- Patient Clinical Records - DELETE OUTCOME/////////
@@ -521,15 +527,7 @@ test.describe("New Patient", () => {
           "\n  Patient Clinical Records Comparision for Delete Medications: Parameters from both JSON files do not match!\n"
         );
       }
-      await Medications.clickOnMigratedItemsSection();
-      await Medications.clickOnDeletedItemsSection();
-      await page.waitForTimeout(1000);
-      await Medications.clickOnArchivedItemsSection();
-      //await Medications.clickOnAllItemsSection();
-      //await Medications.toggleHistorySection(); // Close the history section
-
-      ////////// Patient Address comparison placeholder //////////
-
+      
       index++; // Don't forget to increment index
     }
   });

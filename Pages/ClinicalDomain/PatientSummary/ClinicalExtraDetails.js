@@ -132,7 +132,6 @@ this.pregGravida= page.locator("xpath=//input[@id='gravida']")
     this.saveExtraDetails = page.locator("xpath=//button[@data-testid='extraDetailsSave']");
     this.saveConditionExtraDetails=page.locator("xpath=//button[@data-testid='extraDetailsSave']")
     this.saveandCreateLabRequest=page.locator("xpath=//button[@data-testid='saveAndCreateLabRequest']")
-    this.savePortal = page.locator("xpath=//button[@data-testid='Save']");
     this.saveCheckListButton=page.locator("xpath=//div[@class='MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-12 mui-kqf8ps']//button[@data-testid='Save']")
     this.saveChecklistPortal = page.locator("xpath=//button[@aria-label='saveChecklist']");
     this.saveFavourites=page.locator("xpath=//div[@role='dialog']//button[normalize-space()='Save']")
@@ -306,6 +305,12 @@ this.pregGravida= page.locator("xpath=//input[@id='gravida']")
     this.MCnotes = page.locator("xpath=//textarea[@data-testid='Notes']")
     this.ClincalNotes= page.locator("xpath=//textarea[@name='notes']")
     //this.notes = page.locator("xpath=//textarea[@aria-label='Notes']");
+    this.editDays = page.locator("xpath=//input[@id='Duration']");
+    this.editPrescribed = page.locator("xpath=//input[@id='Prescribed By']")
+    this.popUpNotes = page.getByTestId('CommonCellmaPopup').getByTestId('Notes')
+    this.dispensingSectionNotes = page.locator("xpath=//textarea[@id='dispensingSectionNotes']");
+    this.savePortal = page.locator("xpath=//button[@data-testid='Save']");
+    this.saveAndCreatePrescription = page.locator("xpath=//button[@aria-label='saveAndCreatePrescription']")
 
     //Medication Checkboxes
     this.prescribeAndSupply = page.locator("xpath=//span[@data-testid='Prescription and supply']");
@@ -1417,6 +1422,7 @@ async enterPatientScanNotes(pascn_notes)
   {
     await this.medicationNotes.type(medi_notes)
   }
+  
   async selectForCondition(que_display_text) {
     // await this.forCondition.click()
     // await this.forCondition.type(que_display_text)
@@ -1434,6 +1440,18 @@ async enterPatientScanNotes(pascn_notes)
   }
   async enterNotes(medi_notes) {
     await typeText(this.page, this.notes, medi_notes);
+  }
+
+  async enterEditDays(days) {
+    await typeText(this.page, this.editDays, days);
+  }
+
+  async selectEditPrescribeBy(prescribeBy) {
+    await selectFromDropdown(this.page, this.editPrescribed, prescribeBy);
+  }
+
+  async enterEditMedicationNotes(medi_notes){
+    await typeText(this.page, this.popUpNotes, medi_notes);
   }
 
   //Methods for Medication Checkboxes

@@ -158,9 +158,7 @@ test.describe("Allergy Category", () => {
       var results = await executeQuery(sqlQuery, sqlFilePath);
       console.log("\n Patient Details stored into the database: \n", results);
       const patId = results[0].paa_pat_id;
-      console.log("Patient Accessed by User:" + patId);
-
-       await page.pause()
+      console.log("Patient Accessed by User:" + patId);       
       closeConnection: (connection) => {
         if (connection && connection.end) {
             connection.end();

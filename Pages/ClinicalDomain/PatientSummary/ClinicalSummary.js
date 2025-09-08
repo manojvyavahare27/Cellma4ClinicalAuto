@@ -602,6 +602,10 @@ class ClinicalSummary {
         await selectFromDropdown(this.page, this.riskLevel, 'High Risk')
     }
 
+    async changeRiskLevel(risk){
+        await this.page.getByRole('button', { name: risk }).click();
+    }
+
 
 //////////////////////// STATIC METHODS USED TO CLICK ON DYNAMICALLY CREATED LOCATORS /////////////////
 
