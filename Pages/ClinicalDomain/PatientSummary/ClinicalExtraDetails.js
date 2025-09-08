@@ -127,6 +127,8 @@ this.pregGravida= page.locator("xpath=//input[@id='gravida']")
     this.saveCheckList = page.locator("xpath=//button[@aria-label='saveChecklist']");
     //this.saveExtraDetails = page.locator("xpath=//button[@aria-label='saveCategoryExtraDetails']");
     this.saveAllergyED=page.locator("xpath=//button[@data-testid='Save']")
+    
+    this.saveEDCarePlan=page.locator("xpath=//button[@aria-label='saveExtraDetailsOfCarePlans']")
     this.saveExtraDetails = page.locator("xpath=//button[@data-testid='extraDetailsSave']");
     this.saveConditionExtraDetails=page.locator("xpath=//button[@data-testid='extraDetailsSave']")
     this.saveandCreateLabRequest=page.locator("xpath=//button[@data-testid='saveAndCreateLabRequest']")
@@ -932,6 +934,11 @@ async enterSocialNotes(soci_notes)
 
   async clickOnSaveExtraDetails() {
     await clickElement(this.page, this.saveExtraDetails);
+  }
+
+  async clickOnSaveEdCarePlan()
+  {
+    await this.saveEDCarePlan.click()
   }
   async clickonSaveAllergyED()
   {

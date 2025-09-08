@@ -145,7 +145,7 @@ test.describe("Allergy Category", () => {
         await page.waitForTimeout(2000)
 
 
-        await page.pause()
+       
        
        //////Fetch Patient Details/////////
       var sqlQuery =
@@ -321,7 +321,7 @@ sqlQuery="select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_r
 
      ///////// Deleting Item ////////////
 
-      await page.pause()
+      
       await allergy.clickOnItemEdit();
       await allergyExtraDetails.clickOnDelete();
       await allergyExtraDetails.clickOnCancelDelete();

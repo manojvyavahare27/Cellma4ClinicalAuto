@@ -146,6 +146,7 @@ test.describe("Device Category", () => {
             const patId = results[0].paa_pat_id;
             console.log("Patient Accessed by User:" + patId);
 
+            await page.pause()
             // Add New Device
             await SummaryPage.selectandAddClinicalItem(jsonData.AddDevice[index].dev_name);
             await page.waitForTimeout(2000);
@@ -316,11 +317,7 @@ test.describe("Device Category", () => {
               "\n Patient Device record edited in database: \n",
               results
             );
-            var match = await compareJsons(
-              sqlFilePath,
-              null,
-              jsonData.EditDevice[index]
-            );
+            var match = await compareJsons(sqlFilePath, null, jsonData.EditDevice[index]);
             if (match) {
               console.log(
                 "\n Patient - Edit device: Parameters from both JSON files match!\n"

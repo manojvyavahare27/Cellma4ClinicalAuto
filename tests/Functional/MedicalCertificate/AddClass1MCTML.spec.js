@@ -131,7 +131,7 @@ test.describe("Medical Certificate", () => {
       await MedicalCertificate.clickOnViewContactItemsMenu();
       await MedicalCertificate.clickOnPinContactItemsMenu();
       await MedicalCertificate.selectCategoryFromList("Medical Certificates");
-     await page.pause()
+     
       //Removed Existing Certificate
       await page.waitForTimeout(1000)
       //await page.pause() 

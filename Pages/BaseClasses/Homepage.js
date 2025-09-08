@@ -92,7 +92,7 @@ class Homepage{
 
     async clickOnHomeDashboardIcon()
     {
-         await this.container.scrollIntoViewIfNeeded();
+       await this.container.scrollIntoViewIfNeeded();
        await this.homeDashboard.scrollIntoViewIfNeeded();
        await this.homeDashboard.click()
     }

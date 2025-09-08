@@ -238,7 +238,7 @@ test.describe('Login Tests', () => {
 			await expect(page.getByText('Patient interested party details added successfully')).toHaveText('Patient interested party details added successfully')
 
 			//View PIP
-			//await page.pause()
+			await page.pause()
 			await viewpip.clickOnViewPIPLink()
 			await viewpip.clickOnCloseViewPopup()
 			await viewpip.clickOnNextbntViewPIP()

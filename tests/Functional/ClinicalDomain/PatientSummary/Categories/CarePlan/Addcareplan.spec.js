@@ -226,7 +226,7 @@ test.describe("Care Plan Category", () => {
       await carePlanExtraDetails.EnterEvaluations(jsonData.EditCarePlan[index].carpd_notes_evaluations);
       await carePlanExtraDetails.EnterUpdateNotes(jsonData.EditCarePlan[index].carpd_type_notes);
       
-      await carePlanExtraDetails.clickonSaveAllergyED();
+      await carePlanExtraDetails.clickOnSaveEdCarePlan();
       await expect(page.getByText('Care Plans record updated successfully')).toHaveText('Care Plans record updated successfully')      
       
 

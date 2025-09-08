@@ -1,11 +1,132 @@
 [
   {
-    "pattod_pacr_id": 181042,
-    "pattod_pat_id": 788397,
-    "pattod_var_name": "tender",
-    "pattod_var_value": "2",
-    "pacr_que_name": "DAS78",
-    "patto_notes": "DAS 78 New tool",
-    "pattom_notes": "Patient marker for DAS 78"
+    "pattod_id": 4429,
+    "patto_tool_pacr_id": 181737,
+    "pacr_que_name": "Audiogram Tool",
+    "patto_pat_id": 788397,
+    "patto_notes": "Notes on Air Conduction",
+    "pattod_var_name": "testingMethod",
+    "pattod_var_value": "VRA",
+    "pacr_clinic_date": "03/09/2025"
+  },
+  {
+    "pattod_id": 4430,
+    "patto_tool_pacr_id": 181737,
+    "pacr_que_name": "Audiogram Tool",
+    "patto_pat_id": 788397,
+    "patto_notes": "Notes on Air Conduction",
+    "pattod_var_name": "stimulusSignalType",
+    "pattod_var_value": "Pure tone",
+    "pacr_clinic_date": "03/09/2025"
+  },
+  {
+    "pattod_id": 4431,
+    "patto_tool_pacr_id": 181737,
+    "pacr_que_name": "Audiogram Tool",
+    "patto_pat_id": 788397,
+    "patto_notes": "Notes on Air Conduction",
+    "pattod_var_name": "reliability",
+    "pattod_var_value": "Reliability Air Conduction",
+    "pacr_clinic_date": "03/09/2025"
+  },
+  {
+    "pattod_id": 4432,
+    "patto_tool_pacr_id": 181737,
+    "pacr_que_name": "Audiogram Tool",
+    "patto_pat_id": 788397,
+    "patto_notes": "Notes on Air Conduction",
+    "pattod_var_name": "transducerUsed",
+    "pattod_var_value": "Headphones",
+    "pacr_clinic_date": "03/09/2025"
+  },
+  {
+    "pattod_id": 4433,
+    "patto_tool_pacr_id": 181737,
+    "pacr_que_name": "Audiogram Tool",
+    "patto_pat_id": 788397,
+    "patto_notes": "Notes on Bone Conduction",
+    "pattod_var_name": "testingMethod",
+    "pattod_var_value": "Play Audiometry",
+    "pacr_clinic_date": "03/09/2025"
+  },
+  {
+    "pattod_id": 4434,
+    "patto_tool_pacr_id": 181737,
+    "pacr_que_name": "Audiogram Tool",
+    "patto_pat_id": 788397,
+    "patto_notes": "Notes on Bone Conduction",
+    "pattod_var_name": "stimulusSignalType",
+    "pattod_var_value": "Warble",
+    "pacr_clinic_date": "03/09/2025"
+  },
+  {
+    "pattod_id": 4435,
+    "patto_tool_pacr_id": 181737,
+    "pacr_que_name": "Audiogram Tool",
+    "patto_pat_id": 788397,
+    "patto_notes": "Notes on Bone Conduction",
+    "pattod_var_name": "reliability",
+    "pattod_var_value": "Reliability Bone Conduction",
+    "pacr_clinic_date": "03/09/2025"
+  },
+  {
+    "pattod_id": 4436,
+    "patto_tool_pacr_id": 181737,
+    "pacr_que_name": "Audiogram Tool",
+    "patto_pat_id": 788397,
+    "patto_notes": "Notes on Unaided Soundfield",
+    "pattod_var_name": "testingMethod",
+    "pattod_var_value": "Behavioural Observation Audiometry",
+    "pacr_clinic_date": "03/09/2025"
+  },
+  {
+    "pattod_id": 4437,
+    "patto_tool_pacr_id": 181737,
+    "pacr_que_name": "Audiogram Tool",
+    "patto_pat_id": 788397,
+    "patto_notes": "Notes on Unaided Soundfield",
+    "pattod_var_name": "stimulusSignalType",
+    "pattod_var_value": "Narrowband noise",
+    "pacr_clinic_date": "03/09/2025"
+  },
+  {
+    "pattod_id": 4438,
+    "patto_tool_pacr_id": 181737,
+    "pacr_que_name": "Audiogram Tool",
+    "patto_pat_id": 788397,
+    "patto_notes": "Notes on Unaided Soundfield",
+    "pattod_var_name": "reliability",
+    "pattod_var_value": "Reliability Unaided Soundfield",
+    "pacr_clinic_date": "03/09/2025"
+  },
+  {
+    "pattod_id": 4439,
+    "patto_tool_pacr_id": 181737,
+    "pacr_que_name": "Audiogram Tool",
+    "patto_pat_id": 788397,
+    "patto_notes": "Notes on Aided Soundfield",
+    "pattod_var_name": "testingMethod",
+    "pattod_var_value": "Patient Response Button",
+    "pacr_clinic_date": "03/09/2025"
+  },
+  {
+    "pattod_id": 4440,
+    "patto_tool_pacr_id": 181737,
+    "pacr_que_name": "Audiogram Tool",
+    "patto_pat_id": 788397,
+    "patto_notes": "Notes on Aided Soundfield",
+    "pattod_var_name": "stimulusSignalType",
+    "pattod_var_value": "White noise",
+    "pacr_clinic_date": "03/09/2025"
+  },
+  {
+    "pattod_id": 4441,
+    "patto_tool_pacr_id": 181737,
+    "pacr_que_name": "Audiogram Tool",
+    "patto_pat_id": 788397,
+    "patto_notes": "Notes on Aided Soundfield",
+    "pattod_var_name": "reliability",
+    "pattod_var_value": "Reliability Aided Soundfield",
+    "pacr_clinic_date": "03/09/2025"
   }
 ]
