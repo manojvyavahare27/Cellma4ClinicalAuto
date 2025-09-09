@@ -107,7 +107,7 @@ test.describe("condition Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();   
-      await page.pause()
+     
       await page.waitForTimeout(4000);
       const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
       if (await alertPopup.isVisible()) {
@@ -199,7 +199,7 @@ test.describe("condition Category", () => {
       console.log("\n Patient Clinical Records Comparision adding new condition: Parameters from both JSON files do not match!\n");
     }
     
-    await page.pause()
+   
     await condition.toggleSearchSection(); //Close the search section
       await condition.clickOnItemDiv(jsonData.EditCondition[index].pacr_que_name);
       await condition.clickOnItemEdit();
