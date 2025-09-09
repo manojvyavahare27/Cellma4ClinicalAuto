@@ -3033,3 +3033,10 @@
 {"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-08T16:51:44.731Z"}
 {"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-08T16:51:45.048Z"}
 {"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-08T16:51:45.409Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-09T04:16:18.400Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-09T04:16:18.478Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-09T04:16:18.650Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-09T04:16:32.945Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-09T04:16:36.037Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-09T04:16:36.520Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-09T04:16:37.036Z"}
