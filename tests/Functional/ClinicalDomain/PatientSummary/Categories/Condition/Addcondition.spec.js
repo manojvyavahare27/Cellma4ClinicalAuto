@@ -184,7 +184,7 @@ test.describe("condition Category", () => {
        "select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk, cond_date_diagnosed, cond_notes "+
        " from patient_clinical_records join patient_clinical_records_details "+
        " on pacr_id=pacrd_pacr_id join conditions on pacr_id=cond_pacr_id where pacr_record_status='approved' and "+
-       " pacr_pat_id=789847 and pacrd_record_status='approved' and cond_record_status='approved' and "+
+       " pacr_pat_id=790487 and pacrd_record_status='approved' and cond_record_status='approved' and "+
        "pacr_que_name='Erythematous condition' and pacr_category='condition' order by 1 desc limit 1"
 
     console.log(sqlQuery)       
