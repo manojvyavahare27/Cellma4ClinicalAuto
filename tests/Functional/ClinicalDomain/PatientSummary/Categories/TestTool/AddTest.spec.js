@@ -70,7 +70,9 @@ test.describe("Test and Tool Category", () => {
             await loginpage.enter_Password(jsonData.loginDetails[0].password);
             logger.info("Password enter successfully");
             await loginpage.clickOnLogin();
-            logger.info("Clicked on Login button successfully");
+            logger.info("Clicked on Login button successfully");            
+            await homepage.scrollDivToLastIcon(page);
+
             await homepage.clickOnHomeDashboardIcon();
             await homepage.clickOnPatientIcon();
             logger.info("Clicked on Patient Icon successfully");
@@ -98,8 +100,6 @@ test.describe("Test and Tool Category", () => {
           await carePlan.closePopUp()
         }
       await page.waitForTimeout(2000);
-
-
             await contacthistory.selectContactReason("Data Entry");
             await contacthistory.selectContactLocation("Cardio Location");
             await contacthistory.clickOnAddContact();
@@ -108,7 +108,7 @@ test.describe("Test and Tool Category", () => {
 
             //////CHECK FOR ANY EXISTING TEST AND DELETE/////
             await page.waitForTimeout(8000);
-
+//await page.pause()
             var editButton = await TestTool.editIcon.isVisible();
 
             if (editButton) {
@@ -451,6 +451,7 @@ test.describe("Test and Tool Category", () => {
             }
             await page.waitForTimeout(5000);
 
+            
             // Edit Test
             await TestTool.clickOnEditIcon();
             await TestTool.enterReviewDate(jsonData.EditTest[index].pattes_review_date);
@@ -596,7 +597,7 @@ test.describe("Test and Tool Category", () => {
             }
             await page.waitForTimeout(5000);
             index++;
-
+await page.pause()
             // Add New Test Falls Risk Assessment Scale
             await SummaryPage.selectTestToolItem(jsonData.AddTest[index].pattes_tests_question_que_name);
             await SummaryPage.clickOnAddButton()

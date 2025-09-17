@@ -92,6 +92,8 @@ test.describe("Medical Certificate", () => {
       await page.waitForTimeout(500)
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
+       await page.waitForTimeout(1000)
+      await homepage.scrollDivToLastIcon(page);
       await homepage.clickOnSideIconPatient()
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
@@ -107,17 +109,24 @@ test.describe("Medical Certificate", () => {
       await patientsearch.clickOnSearchButton();
       
       await patientsearch.clickOnSearchPatientLink();
-      //await page.pause()//wait 1.5 second     
-      await page.waitForTimeout(7000)
-      await confirmexisting.clickOnConfirmExistingDetails();   
+      //wait 1.5 second     
       
-       await page.waitForTimeout(4000);
-      const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
-      if (await alertPopup.isVisible()) {
-         const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
-          await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
-          await cancelButton.click();
-        }
+      await confirmexisting.clickOnConfirmExistingDetails();   
+     
+      // Wait until the popup becomes visible (no timeout given)
+    const alertPopup = await page.locator("//h2[text()='Alerts']").waitFor({ state: 'visible' });
+
+    // Once visible, click the cancel button
+    const cancelButton = page.locator("//button[@aria-label='cancelIcon']");
+    await cancelButton.waitFor({ state: 'visible' });
+    await cancelButton.click();
+       
+      // const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
+      // if (await alertPopup.isVisible()) {
+      //    const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
+      //     await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
+      //     await cancelButton.click();
+      //   }
       await page.waitForTimeout(2000); 
       
        await contacthistory.clickOnShowFilter()
@@ -150,7 +159,7 @@ test.describe("Medical Certificate", () => {
       await expect(page.getByText("Medical certificate deleted successfully")).toHaveText("Medical certificate deleted successfully");
       await page.waitForTimeout(1000)
     }        
-      await page.waitForTimeout(1000)
+      await page.waitForTimeout(3000)
       await MedicalCertificate.ClickOnAddMedicalCertificateButton()
       await page.waitForTimeout(1000)
       //await page.pause()

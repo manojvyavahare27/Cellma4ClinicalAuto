@@ -92,6 +92,8 @@ test.describe("Medical Certificate", () => {
       await page.waitForTimeout(500)
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
+       await page.waitForTimeout(1000)
+      await homepage.scrollDivToLastIcon(page);
       await homepage.clickOnSideIconPatient()
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();

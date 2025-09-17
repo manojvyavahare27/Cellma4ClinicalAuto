@@ -87,7 +87,8 @@ test.describe("condition Category", () => {
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
-     // await homepage.clickOnHomeDashboardIcon()
+     await homepage.scrollDivToLastIcon(page);
+      await homepage.clickOnHomeDashboardIcon()
      
       await homepage.clickOnSideIconPatient()
       logger.info("Clicked on Patient Icon successfully");

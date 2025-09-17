@@ -85,7 +85,7 @@ test.describe("Allergy Category", () => {
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
      // await homepage.clickOnHomeDashboardIcon()
-     
+     await homepage.scrollDivToLastIcon(page);
       await homepage.clickOnSideIconPatient()
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();

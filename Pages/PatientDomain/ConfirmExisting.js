@@ -36,8 +36,12 @@ class ConfirmExisting
         this.btn_confirmExistingDetails=page.locator("xpath=//button[@data-testid='Confirm Existing Details']")
         
         this.btn_SaveChangeDetails=page.locator("xpath=//div[contains(text(),'Save Changed Details')]")
-
+        
     }
+
+    //Handles alert pop up on Patient summary screen
+
+    
     async enterTempAddressDetails()
     {
         await this.txtbox_TempCompanyName.fill('')

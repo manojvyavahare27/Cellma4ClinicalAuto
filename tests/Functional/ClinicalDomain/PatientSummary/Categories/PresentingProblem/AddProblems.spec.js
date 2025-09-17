@@ -81,7 +81,8 @@ test.describe("Problems Category", () => {
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
-      await page.pause()
+      await page.waitForTimeout(1000)
+      await homepage.scrollDivToLastIcon(page);
       await homepage.redirectsToHomePage();
       logger.info("Redirected To Home Page Successfully")
       await page.waitForTimeout(2000)

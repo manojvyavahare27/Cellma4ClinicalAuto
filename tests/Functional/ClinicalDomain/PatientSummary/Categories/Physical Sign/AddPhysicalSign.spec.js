@@ -83,6 +83,8 @@ test.describe("Physical Sign Category", () => {
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();
       logger.info("Clicked on Login button successfully");
+      await page.waitForTimeout(1000)
+      await homepage.scrollDivToLastIcon(page);
       await homepage.clickOnHomeDashboardIcon()
       await homepage.clickOnPatientIcon();
       logger.info("Clicked on Patient Icon successfully");
@@ -117,6 +119,7 @@ test.describe("Physical Sign Category", () => {
       await page.waitForTimeout(2000)
 
 
+      await page.pause()
       //Add Physical sign
       await Physical.selectandAddClinicalItem("Height and weight"); //This searches item and clicks on add button
       await page.waitForTimeout(2000);

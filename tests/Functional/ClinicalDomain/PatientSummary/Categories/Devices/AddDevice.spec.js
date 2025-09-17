@@ -72,6 +72,7 @@ test.describe("Device Category", () => {
             logger.info("Password enter successfully");
             await loginpage.clickOnLogin();
             logger.info("Clicked on Login button successfully");
+            await homepage.scrollDivToLastIcon(page);
             await homepage.clickOnHomeDashboardIcon();
              await page.waitForTimeout(2000)
             await homepage.clickOnPatientIcon();

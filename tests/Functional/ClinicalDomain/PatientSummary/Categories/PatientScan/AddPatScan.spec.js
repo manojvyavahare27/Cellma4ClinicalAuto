@@ -83,9 +83,8 @@ test.describe("PatientScan Category", () => {
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
-      // await homepage.redirectsToHomePage();
-      // logger.info("Redirected To Home Page Successfully")
-       await page.waitForTimeout(2000)
+     await page.waitForTimeout(1000)
+      await homepage.scrollDivToLastIcon(page);
       await homepage.clickOnSideIconPatient()
       logger.info("Clicked on Patient Icon successfully");
       // await homepage.clickOnPatientIcon();

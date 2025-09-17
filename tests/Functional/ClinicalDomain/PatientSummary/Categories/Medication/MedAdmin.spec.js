@@ -76,7 +76,8 @@ test.describe("Medications Category", () => {
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();
       logger.info("Clicked on Login button successfully");
-      
+      await page.waitForTimeout(1000)
+      await homepage.scrollDivToLastIcon(page);
       await homepage.clickOnHomeDashboardIcon();
       await homepage.clickOnPatientIcon();
       logger.info("Clicked on Patient Icon successfully");

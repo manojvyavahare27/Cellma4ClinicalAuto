@@ -2088,11 +2088,11 @@ async clickSaveButton() {
   }
   
   async selectMovingSlowly(ans) {
-    await this.page.getByText(ans, { exact: true }).first().click();
+    await this.page.getByRole('radio', { name: ans }).first().click();
   }
 
   async selectThoughtsOfDeath(ans) {
-    await this.page.getByText(ans, { exact: true }).nth(1).click();
+    await this.page.getByRole('radio', { name: ans }).nth(1).click();
   }
 
   //Tools

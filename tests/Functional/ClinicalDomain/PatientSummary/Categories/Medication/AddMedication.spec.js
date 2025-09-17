@@ -85,6 +85,7 @@ test.describe("Medications Category", () => {
       logger.info("Clicked on Login button successfully");
       //await page.pause()
        await page.waitForTimeout(2000)
+       await homepage.scrollDivToLastIcon(page);
       await homepage.clickOnHomeDashboardIcon()
        await page.waitForTimeout(2000)
       await homepage.clickOnPatientIcon();

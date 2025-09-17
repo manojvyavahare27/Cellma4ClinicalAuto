@@ -80,7 +80,8 @@ test.describe("Communication Category", () => {
       logger.info("Username enter successfully");
       await loginpage.enter_Password(jsonData.loginDetails[0].password);
       logger.info("Password enter successfully");
-      await loginpage.clickOnLogin();      
+      await loginpage.clickOnLogin();    
+      await page.pause()  
       logger.info("Clicked on Login button successfully");
       await homepage.clickOnHomeDashboardIcon()
       await homepage.clickOnSideIconPatient();
@@ -157,12 +158,14 @@ test.describe("Communication Category", () => {
       await page.waitForTimeout(2000)
       await CommunicationExtraDetails.closePopUp()
       await page.waitForTimeout(2000)
+      
       await CommunicationExtraDetails.clickOnSecondShowLink()
       await page.waitForTimeout(2000)
       await CommunicationExtraDetails.closePopUp()
       await page.waitForTimeout(2000)
       await CommunicationExtraDetails.clickOnCellma()
       await page.waitForTimeout(3000)
+      await page.pause()
       await CommunicationExtraDetails.clickOnCommunicationDiv()
       await page.waitForTimeout(3000)
       await page.waitForTimeout(2000)

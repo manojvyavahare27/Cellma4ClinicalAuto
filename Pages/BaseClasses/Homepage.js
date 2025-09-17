@@ -90,10 +90,17 @@ class Homepage{
         await this.sideIconStock.click()
      }
 
+     // Scroll inside the div until the last icon is visible
+async  scrollDivToLastIcon(page) {    
+  await this.container.scrollIntoViewIfNeeded();
+  await this.homeDashboard.scrollIntoViewIfNeeded();   
+  console.log("Scrolled to the last icon successfully!");
+}
+
     async clickOnHomeDashboardIcon()
     {
-       await this.container.scrollIntoViewIfNeeded();
-       await this.homeDashboard.scrollIntoViewIfNeeded();
+       // await this.container.scrollIntoViewIfNeeded();
+    //    await this.homeDashboard.scrollIntoViewIfNeeded();
        await this.homeDashboard.click()
     }
     async clickOnSidebarAppointmentIcon()
