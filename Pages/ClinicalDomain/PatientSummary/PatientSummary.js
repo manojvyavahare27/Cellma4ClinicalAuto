@@ -129,7 +129,7 @@ class PatientSummary
         this.emailSection= page.locator("xpath=//button[normalize-space()='Email']")
         this.textSection= page.locator("xpath=//button[normalize-space()='Text']")
         this.allCommSection= page.locator("xpath=//button[normalize-space()='All']")
-        this.closeTaskPopup=page.page.getByRole('button', { name: 'cancelIcon' })
+        this.closeTaskPopup=page.getByRole('button', { name: 'cancelIcon' })
         this.showLinkFirst= page.locator('a').first()
         this.showLinkSecond= page.locator('.MuiDataGrid-virtualScrollerRenderZone > div:nth-child(2) > div:nth-child(8) > .MuiTypography-root')
         this.cellmaLink= page.locator("xpath=//img[@alt='Cellma Image Avatar']")

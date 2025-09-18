@@ -95,6 +95,7 @@ test.describe("Examination Category", () => {
       //   document.body.style.zoom = '70%';
       // });
 
+      
       await loginpage.enterUsername(jsonData.loginDetails[0].username);
       logger.info("Username enter successfully");
       await loginpage.enter_Password(jsonData.loginDetails[0].password);
@@ -107,7 +108,7 @@ test.describe("Examination Category", () => {
       await homepage.clickOnPatientIcon();
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
-      
+      await page.pause()
       logger.info("Clicked on Search button successfully");
       await patientsearch.enterGivenName(data.pat_firstname);
       logger.info("Given Name entered successfully");

@@ -119,7 +119,7 @@ test.describe("Physical Sign Category", () => {
       await page.waitForTimeout(2000)
 
 
-      await page.pause()
+      
       //Add Physical sign
       await Physical.selectandAddClinicalItem("Height and weight"); //This searches item and clicks on add button
       await page.waitForTimeout(2000);
