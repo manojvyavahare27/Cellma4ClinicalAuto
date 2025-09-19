@@ -72,7 +72,6 @@ test.describe("Test and Tool Category", () => {
             await loginpage.clickOnLogin();
             logger.info("Clicked on Login button successfully");            
             await homepage.scrollDivToLastIcon(page);
-
             await homepage.clickOnHomeDashboardIcon();
             await homepage.clickOnPatientIcon();
             logger.info("Clicked on Patient Icon successfully");

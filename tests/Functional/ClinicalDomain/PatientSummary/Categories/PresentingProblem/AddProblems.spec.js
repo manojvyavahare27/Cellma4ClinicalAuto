@@ -123,6 +123,7 @@ test.describe("Problems Category", () => {
         await problems.clickOnPinContactItemsMenu();
        
         await problems.selectCategoryFromList("Presenting Problems");
+        await page.pause()
         
         //Review and delete
         await page.waitForTimeout(5000);
