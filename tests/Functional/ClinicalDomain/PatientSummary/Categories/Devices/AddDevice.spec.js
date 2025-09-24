@@ -147,7 +147,7 @@ test.describe("Device Category", () => {
             const patId = results[0].paa_pat_id;
             console.log("Patient Accessed by User:" + patId);
 
-            await page.pause()
+          
             // Add New Device
             await SummaryPage.selectandAddClinicalItem(jsonData.AddDevice[index].dev_name);
             await page.waitForTimeout(2000);
