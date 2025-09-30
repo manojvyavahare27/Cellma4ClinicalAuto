@@ -95,7 +95,7 @@ test.describe("Device Category", () => {
             await page.waitForTimeout(1000);
             await confirmexisting.clickOnConfirmExistingDetails();
             
-           //await page.pause()
+           await page.pause()
       await page.waitForTimeout(5000);
       const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
       if(alertPopup==true)

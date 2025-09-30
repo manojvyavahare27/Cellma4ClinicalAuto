@@ -95,7 +95,7 @@ test.describe("Recommendations Category", () => {
       logger.info("Clicked on Search button successfully");
       await patientsearch.enterGivenName(data.pat_firstname);
       logger.info("Given Name entered successfully");
-      //await page.pause()
+      await page.pause()
       await patientsearch.enterFamilyName(data.pat_surname);
       logger.info("Family Name entered successfully");
      // await patientsearch.selectSex(data.pat_sex);

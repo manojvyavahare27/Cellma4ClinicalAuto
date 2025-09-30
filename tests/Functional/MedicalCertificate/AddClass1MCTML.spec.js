@@ -120,7 +120,7 @@ test.describe("Medical Certificate", () => {
     const cancelButton = page.locator("//button[@aria-label='cancelIcon']");
     await cancelButton.waitFor({ state: 'visible' });
     await cancelButton.click();
-       
+       await page.pause()
       // const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
       // if (await alertPopup.isVisible()) {
       //    const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
@@ -159,6 +159,7 @@ test.describe("Medical Certificate", () => {
       await expect(page.getByText("Medical certificate deleted successfully")).toHaveText("Medical certificate deleted successfully");
       await page.waitForTimeout(1000)
     }        
+    await page.pause()
       await page.waitForTimeout(3000)
       await MedicalCertificate.ClickOnAddMedicalCertificateButton()
       await page.waitForTimeout(1000)
@@ -225,7 +226,7 @@ await page.waitForTimeout(1000)
         await MCExtraDetails.enterReasonForLimitation(jsonData.Limitation[index].patmcsn_reason)
         await page.waitForTimeout(1000)
         await MCExtraDetails.clickOnAddLimitationButton()
-        await page.waitForTimeout(1000)
+       
         await expect(page.getByText('Limitation added successfully.')).toHaveText('Limitation added successfully.')        
       }    
       else{

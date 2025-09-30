@@ -365,7 +365,7 @@ class PatientSummary
  
     async clickOnCommunicationDiv()
     {
-        await clickElement(this.page, this.page.locator("xpath=//div[@data-testid='patientCommunication']"))
+        await clickElement(this.page, this.page.locator("xpath=//span[contains(text(),'Communication')]"))
     }
     async clickOnSecondShowLink()
     {

@@ -42,8 +42,8 @@ class ClinicalSummary {
         
         // Favourites & Order sets
         // this.orderSetName = "xpath=//h1[text()='Conditions Order Sets']//..//..//button[@aria-label='Condyloma latum']"
-        this.orderSetNameHypertension = page.locator("xpath=//div[contains(text(),'Hypertension')]")
-        this.orderSetItemChronic =page.locator("xpath=//a[@aria-label='Chronic Diahorrhoea']")
+        this.orderSetNamePneumonia = page.locator("xpath=//button[@data-testid='Pneumonia']")
+        this.orderSetItemPneumonia =page.locator("xpath=//a[@data-testid='Pneumonia']")
         // this.favouriteName = "xpath=//h1[text()='Conditions Favourites']//..//..//button[@aria-label='Condyloma latum']"
         this.favouriteNameRespiratory = page.locator("xpath=//div[contains(text(),'Respiratory System')]")
         this.FavouriteItemAsthama=page.locator("xpath=//a[@aria-label='Asthma']")
@@ -158,14 +158,14 @@ class ClinicalSummary {
      }
 
      //Add order sets diagnosis
-        async clickOnOrderSetHypertension()
+        async clickOnOrderSetPneumonia()
         {
-            await this.orderSetNameHypertension.click()
+            await this.orderSetNamePneumonia.click()
         }
 
-        async clickOnOrderSetItemChronic()
+        async clickOnOrderSetItemPneumonia()
         {
-            await this.orderSetItemChronic.click()
+            await this.orderSetItemPneumonia.click()
         }
 
      //Examination

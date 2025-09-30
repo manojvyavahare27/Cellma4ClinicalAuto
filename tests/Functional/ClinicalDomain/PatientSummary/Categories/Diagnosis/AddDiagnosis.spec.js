@@ -126,7 +126,10 @@ test.describe("Diagnosis Category", () => {
       await contacthistory.clickOnAddContact();    
       
 
+      await page.pause()
+      await page.waitForTimeout(2000)
       await page.locator("xpath=//h1[normalize-space()='Diagnosis']").click()
+     
      
       //Add Favourites
       await diagnosis.clickOnFavouritesQuestion()
@@ -148,9 +151,9 @@ test.describe("Diagnosis Category", () => {
 
 
         //Add OrderSet
-
-        await diagnosis.clickOnOrderSetHypertension()
-      await diagnosis.clickOnOrderSetItemChronic()
+await page.pause()
+        await diagnosis.clickOnOrderSetPneumonia()
+      await diagnosis.clickOnOrderSetItemPneumonia()
       await diagnosisExtraDetails.enterOnSetDate(jsonData.EditDiagnosis[index].diag_date_onset.toString());
       await diagnosisExtraDetails.enterDiagnosedDate(jsonData.EditDiagnosis[index].diag_date_diagnosed.toString());
       await page.waitForTimeout(1500)
@@ -159,7 +162,7 @@ test.describe("Diagnosis Category", () => {
       await diagnosisExtraDetails.selectActivity(jsonData.EditDiagnosis[index].diag_activity)
       await diagnosisExtraDetails.enterDiagnosisNotes(jsonData.EditDiagnosis[index].diag_notes);
       await diagnosisExtraDetails.clickOnSaveFavourites();
-        await diagnosis.clickOnItemEdit('Chronic Diahorrhoea');
+        await diagnosis.clickOnItemEdit('Pneumonia');
         await diagnosisExtraDetails.clickOnDelete();
         await diagnosisExtraDetails.clickOnConfirmDelete();
         await diagnosisExtraDetails.enterDeleteReason('Deleted Existing item');
@@ -170,7 +173,7 @@ test.describe("Diagnosis Category", () => {
       await diagnosis.selectCategoryFromList(jsonData.AddDiagnosis[index].pacr_category);
       await page.waitForTimeout(2000)
      
-      //await page.pause()
+      
  
        // await clinicalSummary.clickOnFavouritesCustView(jsonData.AddDiagnosis[index].remove_favourites)
          
@@ -220,7 +223,7 @@ test.describe("Diagnosis Category", () => {
       //await diagnosisExtraDetails.clickOnClincialItemCollapsable();
       await page.waitForTimeout(1000);
  
-     //await page.pause()
+  
  
       // Customizable view
       // await contacthistory.clickOnSettingButton()      
@@ -295,6 +298,7 @@ test.describe("Diagnosis Category", () => {
       console.log("\n Patient Clinical Records Comparision adding new Diagnosis: Parameters from both JSON files do not match!\n");
     }
  
+  
     await diagnosis.toggleSearchSection(); //Close the search section
       await diagnosis.clickOnItemDiv(jsonData.EditDiagnosis[index].pacr_que_name);
       await diagnosis.clickOnItemEdit();
@@ -342,6 +346,7 @@ test.describe("Diagnosis Category", () => {
      );
    }
  
+   
    ////////AUTO UPDATE RISK AFTER UPDATING OUTCOME /////
       await diagnosis.clickOnItemHistory();
       await diagnosis.clickOnHistoryItemDiv();

@@ -596,7 +596,7 @@ test.describe("Test and Tool Category", () => {
             }
             await page.waitForTimeout(5000);
             index++;
-await page.pause()
+
             // Add New Test Falls Risk Assessment Scale
             await SummaryPage.selectTestToolItem(jsonData.AddTest[index].pattes_tests_question_que_name);
             await SummaryPage.clickOnAddButton()
