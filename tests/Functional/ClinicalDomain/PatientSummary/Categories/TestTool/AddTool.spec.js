@@ -72,8 +72,7 @@ test.describe("Test and Tool Category", () => {
             await loginpage.clickOnLogin();
             logger.info("Clicked on Login button successfully");
              await page.waitForTimeout(1000)
-             await homepage.scrollDivToLastIcon(page);
-            await homepage.clickOnHomeDashboardIcon();
+             
             await homepage.clickOnPatientIcon();
             logger.info("Clicked on Patient Icon successfully");
             await patientsearch.clickOnSearchButton();
@@ -94,12 +93,14 @@ test.describe("Test and Tool Category", () => {
             await page.waitForTimeout(1000);
             await confirmexisting.clickOnConfirmExistingDetails();
 
-
-            // const alert = page.getByRole('heading', { name: 'Alerts' }).isVisible()
-            // if (alert) {
-            //   await TestTool.clickPopup();              
-            // }
-
+ await page.waitForTimeout(4000);
+      const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
+      if (await alertPopup.isVisible()) {
+         const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
+          await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
+          await cancelButton.click();
+        }
+      await page.waitForTimeout(2000);
 
             await page.waitForTimeout(5000)
             

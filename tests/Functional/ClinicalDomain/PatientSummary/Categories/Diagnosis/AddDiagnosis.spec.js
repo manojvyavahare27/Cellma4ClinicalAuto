@@ -126,7 +126,6 @@ test.describe("Diagnosis Category", () => {
       await contacthistory.clickOnAddContact();    
       
 
-      await page.pause()
       await page.waitForTimeout(2000)
       await page.locator("xpath=//h1[normalize-space()='Diagnosis']").click()
      
@@ -151,7 +150,7 @@ test.describe("Diagnosis Category", () => {
 
 
         //Add OrderSet
-await page.pause()
+
         await diagnosis.clickOnOrderSetPneumonia()
       await diagnosis.clickOnOrderSetItemPneumonia()
       await diagnosisExtraDetails.enterOnSetDate(jsonData.EditDiagnosis[index].diag_date_onset.toString());

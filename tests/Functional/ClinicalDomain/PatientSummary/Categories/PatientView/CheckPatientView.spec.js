@@ -100,6 +100,7 @@ test.describe("Patient View Category", () => {
               await PatientViewDetails.clickPopup();              
             }
 
+            await page.pause()
             await PatientViewDetails.togglePatientView();
             let count = 0;
             console.log("\n Display Check For All Patient View Categories")

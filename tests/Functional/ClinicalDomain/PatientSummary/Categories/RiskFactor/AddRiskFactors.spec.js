@@ -85,8 +85,7 @@ test.describe("riskFactor Category", () => {
       logger.info("Clicked on Login button successfully");
         await page.waitForTimeout(1000)
       await homepage.scrollDivToLastIcon(page);
-      await homepage.clickOnHomeDashboardIcon()
-       await page.waitForTimeout(2000)
+     
       await homepage.clickOnPatientIcon();
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
@@ -104,14 +103,14 @@ test.describe("riskFactor Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1500);
       await confirmexisting.clickOnConfirmExistingDetails();    
-      await page.waitForTimeout(4000);
+       await page.waitForTimeout(4000);
       const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
       if (await alertPopup.isVisible()) {
          const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
           await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
           await cancelButton.click();
-        }              
-       await page.waitForTimeout(1000)
+        }
+      await page.waitForTimeout(2000);
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");

@@ -81,7 +81,7 @@ test.describe("Communication Category", () => {
       await loginpage.enter_Password(jsonData.loginDetails[0].password);
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();    
-      await page.pause()  
+      
       logger.info("Clicked on Login button successfully");
       await homepage.clickOnHomeDashboardIcon()
       await homepage.clickOnSideIconPatient();
@@ -95,13 +95,21 @@ test.describe("Communication Category", () => {
       logger.info("Family Name entered successfully");
       //await patientsearch.selectSex(data.pat_sex);
  
-      await page.pause()
+    
     await patientsearch.selectBornDate(jsonData.PatientDetails[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1500);
-      await confirmexisting.clickOnConfirmExistingDetails();    
+      await confirmexisting.clickOnConfirmExistingDetails(); 
+      await page.waitForTimeout(4000);
+      const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
+      if (await alertPopup.isVisible()) {
+         const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
+          await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
+          await cancelButton.click();
+        }
+      await page.waitForTimeout(2000);
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -114,7 +122,7 @@ test.describe("Communication Category", () => {
       await Communications.clickOnPinContactItemsMenu();
       await Communications.selectCategoryFromList("Communication");
      
-      await page.pause()
+      
  
          
        //////Fetch Patient Details/////////
@@ -165,10 +173,11 @@ test.describe("Communication Category", () => {
       await page.waitForTimeout(2000)
       await CommunicationExtraDetails.clickOnCellma()
       await page.waitForTimeout(3000)
-      await page.pause()
+      
       await CommunicationExtraDetails.clickOnCommunicationDiv()
       await page.waitForTimeout(3000)
       await page.waitForTimeout(2000)
+      await page.pause()
       await CommunicationExtraDetails.clickOnCommunicationIcon()
       await page.waitForTimeout(2000)
       await CommunicationExtraDetails.clickOnSearchButton()
