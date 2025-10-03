@@ -287,7 +287,7 @@ this.pregGravida= page.locator("xpath=//input[@id='gravida']")
     this.indication = page.locator("xpath=//input[@name='indication']");
     this.stopReason = page.locator("xpath=//input[@name='stoppedReason']");
     this.PGDPSD = page.locator("xpath=//input[@name='pGDPSD']");
-    this.medicationGradeForAdministrator = page.locator("xpath=//div[@data-testid='userGradesThatCanAdministratorMedication']");
+    this.medicationGradeForAdministrator = page.locator("xpath=//input[@name='userGradesThatCanAdministratorMedication']");
     this.maxReffills = page.locator("xpath=//input[@name='maxRefills']");
     this.quantity = page.locator("xpath=//input[@name='quantity']");
     this.unit = page.locator("xpath=//input[@name='unit']");

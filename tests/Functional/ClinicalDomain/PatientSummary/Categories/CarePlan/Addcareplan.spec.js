@@ -106,10 +106,7 @@ test.describe("Care Plan Category", () => {
       await page.waitForTimeout(200);
       await confirmexisting.clickOnConfirmExistingDetails();
      
-      
-
-
-      await page.waitForTimeout(4000);
+            await page.waitForTimeout(4000);
       const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
       if (await alertPopup.isVisible()) {
          const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
