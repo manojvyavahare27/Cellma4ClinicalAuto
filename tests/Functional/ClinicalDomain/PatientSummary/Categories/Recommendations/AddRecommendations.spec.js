@@ -100,7 +100,7 @@ test.describe("Recommendations Category", () => {
       logger.info("Family Name entered successfully");
      // await patientsearch.selectSex(data.pat_sex);
 
-      //await page.pause()
+      await page.pause()
     await patientsearch.selectBornDate(jsonData.PatientDetails[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
@@ -125,6 +125,7 @@ test.describe("Recommendations Category", () => {
       await contacthistory.clickOnAddContact();
       await Recommendations.clickOnViewContactItemsMenu();
       await Recommendations.clickOnPinContactItemsMenu();
+      await page.pause()
       await Recommendations.selectCategoryFromList("Recommendations");
       await page.waitForTimeout(5000)
 
