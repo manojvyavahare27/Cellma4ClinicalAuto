@@ -100,13 +100,14 @@ test.describe("Medications Category", () => {
       await confirmexisting.btn_confirmExistingDetails.waitFor();
       await page.waitForTimeout(1000);
       await confirmexisting.clickOnConfirmExistingDetails();
-      await page.waitForTimeout(5000)
-      
-      const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible();
-      if (alert) {
-        await MedicationsExtraDetails.clickPopup();
-      }
-
+     await page.waitForTimeout(4000);
+      const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
+      if (await alertPopup.isVisible()) {
+         const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
+          await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
+          await cancelButton.click();
+        }
+      await page.waitForTimeout(2000);
       await contacthistory.clickOnShowFilter();
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -119,6 +120,7 @@ test.describe("Medications Category", () => {
       await Medications.clickOnPinContactItemsMenu();
       await Medications.selectCategoryFromList("Medications");
       await page.waitForTimeout(6000);
+
 
       ////////REVIEW EXISTING ITEM AND DELETE/////
       if (
@@ -252,6 +254,7 @@ test.describe("Medications Category", () => {
       await MedicationsExtraDetails.clickOnSaveExtraDetails();
       await page.waitForTimeout(1000);
       
+      
       let checklist = page.getByRole('heading', { name: 'Medications Checklist' }).isVisible()
       if (checklist) {
         await MedicationsExtraDetails.clickOnSaveCheckList();
@@ -296,7 +299,7 @@ test.describe("Medications Category", () => {
 
         checklist = page.getByRole('heading', { name: 'Medication Administration' }).isVisible()
         if (checklist) {
-          await MedicationAdministration.clickOnCheckAllButton();
+          // await MedicationAdministration.clickOnCheckAllButton();
           await MedicationAdministration.clickOnSaveChecklistButton();              
         }
 

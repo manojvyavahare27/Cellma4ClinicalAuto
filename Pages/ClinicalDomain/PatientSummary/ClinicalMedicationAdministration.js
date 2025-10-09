@@ -11,7 +11,7 @@ class ClinicalMedicationAdministration {
         this.btnSelect = page.getByTestId('Select')
         this.btnSave = page.getByTestId('Save')
         this.btnLogout = page.getByTestId('logout')
-        this.btnPageBack = page.getByLabel('Back-Button')
+        this.btnPageBack = page.getByRole('button', { name: 'Back-Button' })
         this.btnCheckAll = page.getByTestId('Check All')
         this.btnSaveChecklist = page.getByLabel('saveChecklist')
 
