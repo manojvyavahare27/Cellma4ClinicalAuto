@@ -279,7 +279,7 @@ if (match) {
 }
 
   
-      await page.pause()
+      //await page.pause()
      //Delete records
       await patientDetailshome.clickonEditPatientDetailsIcon();
       await patientDetailsED.clickOnDeleteButton()

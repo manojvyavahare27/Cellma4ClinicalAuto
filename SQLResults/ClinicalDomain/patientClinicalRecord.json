@@ -1,10 +1,9 @@
 [
   {
-    "pacr_id": 184329,
-    "pacr_category": "Medication",
-    "pacr_que_name": "Paracetamol 500mg / Ibuprofen 200mg tablets",
-    "pacr_clinic_date": "12/10/2025",
-    "pacr_risk": "none",
-    "medi_notes": "Added notes for testing"
+    "pacr_id": 184342,
+    "pacr_category": "Patient Detail",
+    "pacr_que_name": "Lives on boat",
+    "pacr_clinic_date": "13/10/2025",
+    "pad_notes": "Patient lives on boat Patient lives on boat "
   }
 ]
