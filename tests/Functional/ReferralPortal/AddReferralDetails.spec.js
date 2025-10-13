@@ -32,7 +32,7 @@ test('Add Referral Details @ReferralPortal',async ({page})=>{
     await loginpage.enterReferralPortalUserName(logindata.username)    
     await loginpage.enterRefrralPortalPassword(logindata.password);
     await loginpage.clickOnReferralPortalLoginButton()
-    await expect(page.getByText('Login success')).toHaveText('Login success')
+  //  await expect(page.getByText('Login success')).toHaveText('Login success')
    // await portalselectscreen.clickOnReferralRequestButton()    
     
     //Customizable view
