@@ -125,7 +125,7 @@ test.describe("Medications Category", () => {
       await Medications.clickOnPinContactItemsMenu();
       await Medications.selectCategoryFromList("Medications");
       await page.waitForTimeout(2000);
-      //await page.pause();
+      await page.pause();
        ////////REVIEW EXISTING ITEM AND DELETE/////
        if(await Medications.checkItemOnHistoryTable(jsonData.AddMedication[index].pacr_que_name)){
         //await Medications.clickOnItemReview(jsonData.AddMedication[index].pacr_que_name);
@@ -158,6 +158,7 @@ test.describe("Medications Category", () => {
         await Medications.clickOnFavouritemItemMedication() 
         await page.waitForTimeout(2000);
         await MedicationsExtraDetails.enterOnDose(jsonData.AddMedication[index].medi_dose)
+        await page.getByTestId('Ok').click()
       await MedicationsExtraDetails.enterForm(jsonData.AddMedication[index].medi_form)
       await MedicationsExtraDetails.selectFrequency(jsonData.AddMedication[index].medi_frequency)
       await MedicationsExtraDetails.selectRoute(jsonData.AddMedication[index].medi_route)
