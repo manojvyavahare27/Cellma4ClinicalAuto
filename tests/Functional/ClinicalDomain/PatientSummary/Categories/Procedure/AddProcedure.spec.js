@@ -191,13 +191,14 @@ test.describe("Procedure Category", () => {
       
       await ProceduresExtraDetails.selectProcedureCheckboxSetAsDefault()      
       await ProceduresExtraDetails.selectProcedureCheckboxPrivateRecord()  
-                
+                await page.pause()
       await ProceduresExtraDetails.enterProcedureNotes(jsonData.AddProcedure[index].proc_notes) 
       await ProceduresExtraDetails.clickOnConditionExtraDetails();
+      //await page.pause()
       //await page.getByLabel('saveChecklist').click()
-     await page.waitForTimeout(2000);     
-      await page.getByLabel('saveChecklist').click()     
-      await page.waitForTimeout(500);
+    //  await page.waitForTimeout(2000);     
+    //   await page.getByLabel('saveChecklist').click()     
+    //   await page.waitForTimeout(500);
       
       await expect(page.getByText("Procedure record added successfully")).toHaveText("Procedure record added successfully");
      
@@ -236,8 +237,8 @@ test.describe("Procedure Category", () => {
       await ProceduresExtraDetails.selectProcedureStatus(jsonData.AddProcedure[index].pacr_status)
       await ProceduresExtraDetails.selectProcedureOutcome(jsonData.AddProcedure[index].proc_outcome)
       await ProceduresExtraDetails.clickOnConditionExtraDetails();      
-      await page.waitForTimeout(1500);           
-      await page.getByLabel('saveChecklist').click()    
+      // await page.waitForTimeout(1500);           
+      // await page.getByLabel('saveChecklist').click()    
       //await page.getByRole('button', { name: 'Save' }).click()
       //await page.waitForTimeout(1500);
 
