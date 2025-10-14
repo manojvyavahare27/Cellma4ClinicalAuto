@@ -590,6 +590,7 @@ async enterRiskFactorNotes(risk_notes)
 //Lifestyle
 async enterLifestyleNotes(life_notes)
 {
+  await this.lifeStyleNotes.fill('')
   await this.lifeStyleNotes.type(life_notes);
 }
 

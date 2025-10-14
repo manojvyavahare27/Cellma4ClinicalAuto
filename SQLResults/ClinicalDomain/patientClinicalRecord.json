@@ -1,11 +1,6 @@
 [
   {
-    "pacr_id": 184426,
-    "pacr_category": "Lifestyle",
-    "pacr_que_name": "Smoking Status: Current Smoker",
-    "pacr_clinic_date": "14/10/2025",
-    "pacr_risk": "none",
-    "life_notes": "Added Notes for LifestyleEdit Notes for Lifestyle",
-    "pacrd_subcategory_eli_code": ""
+    "pacr_que_name": "Lives on boat",
+    "pacr_delete_reason": "not required"
   }
 ]

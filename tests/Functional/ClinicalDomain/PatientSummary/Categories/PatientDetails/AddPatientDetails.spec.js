@@ -182,7 +182,7 @@ test.describe("Excel Conversion Patient Details Category", () => {
       await expect(page.getByText("Patient Detail record added successfully")).toHaveText("Patient Detail record added successfully");
       
       
-      await patientDetailshome.expandLevels();
+     // await patientDetailshome.expandLevels();
       await patientDetailshome.reviewRecords();
       await page.waitForTimeout(1000);
       await patientDetailshome.riskFilters1();
