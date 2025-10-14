@@ -118,7 +118,7 @@ test.describe("Excel Conversion Patient Details Category", () => {
      
       await patientDetailshome.addContact();
       await patientDetailshome.clickOnAddContact()
-
+ await page.pause()
        //Add Patient Details
      //await patientsummary.clickOniconPatientDetailsCategory();
      //const addedLifestylelocator = page.getByRole("heading", {name: "Smoking Status"});      
@@ -279,7 +279,7 @@ if (match) {
 }
 
   
-      //await page.pause()
+      await page.pause()
      //Delete records
       await patientDetailshome.clickonEditPatientDetailsIcon();
       await patientDetailsED.clickOnDeleteButton()
