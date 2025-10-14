@@ -124,7 +124,7 @@ test.describe("riskFactor Category", () => {
       await riskFactor.selectCategoryFromList("Risk Factors");
       await page.waitForTimeout(2000)
 
-      //await page.pause()
+      
        ////////REVIEW EXISTING ITEM AND DELETE/////
        if(await riskFactor.checkItemOnHistoryTable(jsonData.AddRiskFactor[index].pacr_que_name)){
         //await riskFactor.clickOnItemReview(jsonData.AddRiskFactor[index].pacr_que_name);
@@ -225,9 +225,9 @@ test.describe("riskFactor Category", () => {
       // await riskFactor.clickOnHistoryItemDiv();
       await riskFactor.clickOnItemHistory();
       //await page.getByLabel('patientHistoryIconButton').click();
-      await page.locator("xpath=//button[@aria-label='expandRowIconAdult At Risk']").nth(1).click();
+      await page.locator("xpath=//button[@aria-label='expandRowIconChild at risk']").nth(1).click();
       await page.waitForTimeout(1000);
-      await page.locator("xpath=//button[@aria-label='expandRowIconAdult At Risk']").nth(1).click();
+      await page.locator("xpath=//button[@aria-label='expandRowIconChild at risk']").nth(1).click();
       //await riskFactor.clickOnHistoryItemDiv();
       await page.waitForTimeout(500);
       await riskFactor.closeWindow();
