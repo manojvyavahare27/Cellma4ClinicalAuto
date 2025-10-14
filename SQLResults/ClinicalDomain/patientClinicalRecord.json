@@ -1,10 +1,11 @@
 [
   {
-    "pacr_id": 184420,
-    "pacr_category": "Risk Factor",
-    "pacr_que_name": "Child at risk",
+    "pacr_id": 184426,
+    "pacr_category": "Lifestyle",
+    "pacr_que_name": "Smoking Status: Current Smoker",
     "pacr_clinic_date": "14/10/2025",
     "pacr_risk": "none",
-    "risk_notes": "Added Notes for Risk FactorEdited Notes for Risk Factor"
+    "life_notes": "Added Notes for LifestyleEdit Notes for Lifestyle",
+    "pacrd_subcategory_eli_code": ""
   }
 ]
