@@ -6,8 +6,9 @@ test('test', async ({ page }) => {
   await page.getByTestId('Username').fill('manoj.auto');
   await page.getByTestId('Password').click();
   await page.getByTestId('Password').fill('Manoj@2024');
+  await page.waitForTimeout(1000)
   await page.getByTestId('Login').click();
-//  await page.pause()
+  
   await page.getByTestId('todaysAppointments').getByRole('button', { name: 'cellmaAccordionIcon' }).click();
   await page.getByTestId('myAlerts').getByRole('button', { name: 'cellmaAccordionIcon' }).click();
   await page.getByRole('button', { name: 'messages My Messages' }).getByLabel('cellmaAccordionIcon').click();
@@ -21,7 +22,7 @@ test('test', async ({ page }) => {
   await page.getByRole('button', { name: 'CaseLoad Image Avatar My' }).getByLabel('cellmaAccordionIcon').click();
   await page.getByRole('button', { name: 'CaseLoad Image Avatar My' }).getByLabel('cellmaAccordionIcon').click();
   await page.getByRole('button', { name: 'serviceAppointment', exact: true }).click();
-  await page.getByRole('button', { name: 'serviceAlert', exact: true }).click();
+  await page.getByTestId('alerts').click();
   await page.getByRole('button', { name: 'Back Button' }).click();
   await page.getByTestId('moduleDrawerMyDetails').click();
   await page.getByTestId('todaysAppointments').getByRole('button', { name: 'cellmaAccordionIcon' }).click();

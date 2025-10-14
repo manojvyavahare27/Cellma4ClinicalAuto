@@ -725,7 +725,7 @@
     {
       "dev_name": "Cochlear Osia OSI200",
       "dev_type": "Device",
-      "dev_procedure_name": "Cochlear Implantation (7/31/2025, left)",
+      "dev_procedure_name": "Cochlear Implantation",
       "dev_manufacturer": "Cochlear",
       "dev_expiry_date": "28/02/2025",
       "ded_type": "primary",

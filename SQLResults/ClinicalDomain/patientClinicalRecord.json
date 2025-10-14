@@ -1,10 +1,5 @@
 [
   {
-    "pacr_id": 184462,
-    "pacr_category": "Procedure",
-    "pacr_que_name": "Knee Arthroplasty",
-    "pacr_clinic_date": "14/10/2025",
-    "pacr_risk": "none",
-    "proc_notes": "Add Procedure Notes"
+    "medadt_medication_status": "given"
   }
 ]
