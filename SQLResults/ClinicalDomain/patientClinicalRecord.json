@@ -1,5 +1,6 @@
 [
   {
-    "medadt_medication_status": "given"
+    "pacr_que_name": "Coal dust",
+    "pacr_delete_reason": "Delete for testing"
   }
 ]

@@ -106,12 +106,21 @@ test.describe("Overview Category", () => {
         await page.waitForTimeout(1500);
         await confirmexisting.clickOnConfirmExistingDetails();        
          await page.waitForTimeout(1500);
-      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
-      if(alertPopup==true)
-        {       
-          await overview.closePopUp(page)
-        }                 
-       await page.waitForTimeout(1000)  
+      // const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      // if(alertPopup==true)
+      //   {       
+      //     await overview.closePopUp(page)
+      //   }                 
+      //  await page.waitForTimeout(1000)  
+
+      await page.waitForTimeout(6000);
+      const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
+      if (await alertPopup.isVisible()) {
+         const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
+          await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
+         await cancelButton.click({ force: true });
+        }
+        await page.waitForTimeout(2000);
        // await contacthistory.enterContactDate('26/04/2024');
         await contacthistory.selectContactReason('Assessments');
         await contacthistory.selectContactLocation('Cardio Location');

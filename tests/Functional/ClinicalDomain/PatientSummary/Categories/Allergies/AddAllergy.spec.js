@@ -80,6 +80,7 @@ test.describe("Allergy Category", () => {
       await page.goto(environment.Test);
       await loginpage.enterUsername(jsonData.loginDetails[0].username);
       logger.info("Username enter successfully");
+      
       await loginpage.enter_Password(jsonData.loginDetails[0].password);
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();      
@@ -105,14 +106,16 @@ test.describe("Allergy Category", () => {
       await page.waitForTimeout(1500);
       //await page.pause()
       await confirmexisting.clickOnConfirmExistingDetails();   
-     //await page.pause()
-     await page.waitForTimeout(4000);
+     
+
+     await page.waitForTimeout(6000);
       const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
       if (await alertPopup.isVisible()) {
          const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
           await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
-          await cancelButton.click();
+         await cancelButton.click({ force: true });
         }
+        
       await page.waitForTimeout(2000);
       
        await contacthistory.clickOnShowFilter()  

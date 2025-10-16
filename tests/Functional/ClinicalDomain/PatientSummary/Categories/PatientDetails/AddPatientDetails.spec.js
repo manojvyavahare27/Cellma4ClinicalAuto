@@ -107,14 +107,14 @@ test.describe("Excel Conversion Patient Details Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       await page.waitForTimeout(1000);
       await confirmexisting.clickOnConfirmExistingDetails();
-       await page.waitForTimeout(4000);
+       await page.waitForTimeout(6000);
       const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
       if (await alertPopup.isVisible()) {
          const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
           await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
-          await cancelButton.click();
+         await cancelButton.click({ force: true });
         }
-      await page.waitForTimeout(2000);
+        await page.waitForTimeout(2000);
      
       await patientDetailshome.addContact();
       await patientDetailshome.clickOnAddContact()

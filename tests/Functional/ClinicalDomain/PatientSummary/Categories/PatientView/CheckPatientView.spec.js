@@ -95,10 +95,18 @@ test.describe("Patient View Category", () => {
 
             
             
-            const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible()
-            if (alert) {
-              await PatientViewDetails.clickPopup();              
-            }
+            // const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible()
+            // if (alert) {
+            //   await PatientViewDetails.clickPopup();              
+            // }
+            await page.waitForTimeout(6000);
+      const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
+      if (await alertPopup.isVisible()) {
+         const cancelButton = page.locator("xpath=//button[@aria-label='cancelIcon']");
+          await cancelButton.waitFor({ state: 'visible', timeout: 5000 });
+         await cancelButton.click({ force: true });
+        }
+        await page.waitForTimeout(2000);
 
             await page.pause()
             await PatientViewDetails.togglePatientView();
