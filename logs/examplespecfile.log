@@ -1545,3 +1545,10 @@
 {"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-10-16T15:23:19.685Z"}
 {"level":"info","message":"Given Name entered successfully","timestamp":"2025-10-16T15:23:19.991Z"}
 {"level":"info","message":"Family Name entered successfully","timestamp":"2025-10-16T15:23:20.276Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-10-16T15:27:59.309Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-10-16T15:27:59.389Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-10-16T15:27:59.557Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-10-16T15:28:02.551Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-10-16T15:28:07.375Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-10-16T15:28:07.691Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-10-16T15:28:07.971Z"}
