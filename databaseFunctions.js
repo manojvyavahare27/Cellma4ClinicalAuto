@@ -16,9 +16,9 @@ const dbConfig = {
     // connectionLimit: 10
 
 
-	//Active code for Linux server
+	 //Active code for Linux server
 	host: "10.0.0.16",
-    user: "suarabh.dayal",
+  user: "Manoj.vyavahare",
     password: "Cellma4@2025",
     port:3314,
     database: "cellma4_loadtesting_9sep25",
