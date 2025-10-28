@@ -3,16 +3,24 @@ const fs = require('fs');
 
 // MySQL database configuration
 const dbConfig = {
-    
-   host: "10.0.0.16",
-    user: "cellma4_api_user",
-    password: "Welcome@123",
+    //For Pre-release server
+//    host: "10.0.0.16",
+//     user: "cellma4_api_user",
+//     password: "Welcome@123",
+//     port:3314,
+//     //database: "cellma4_api",
+//     database: "cellma4_pre_release",
+//     connectionLimit: 10
+
+//Active code for Linux server
+	host: "10.0.0.16",
+    user: "suarabh.dayal",
+    password: "Cellma4@2025",
     port:3314,
-    //database: "cellma4_api",
-    database: "cellma4_pre_release",
+    database: "cellma4_loadtesting_9sep25",
     connectionLimit: 10
 
-    //Activate below code for Linux server execution.
+    //not active below code for Linux server execution.
     // host: "10.0.0.38",
     // user: "ManojV.C4",
     // password: "Welcome@1234",

@@ -6,15 +6,25 @@ import { createConnection } from 'mysql2';
 let databaseConnection; // Variable to store the database connection instance
 
 const dbConfig = {	
+	//For Pre-release server
+	// host: "10.0.0.16",
+    // user: "cellma4_api_user",
+    // password: "Welcome@123",
+    // port:3314,
+    // //database: "cellma4_api",
+    // database: "cellma4_pre_release",
+    // connectionLimit: 10
+
+
+	//Active code for Linux server
 	host: "10.0.0.16",
-    user: "cellma4_api_user",
-    password: "Welcome@123",
+    user: "suarabh.dayal",
+    password: "Cellma4@2025",
     port:3314,
-    //database: "cellma4_api",
-    database: "cellma4_pre_release",
+    database: "cellma4_loadtesting_9sep25",
     connectionLimit: 10
 
-	//Activate below code for Linux server execution.
+	//Not Active below code for Linux server execution.
 	// host: "10.0.0.38",
     // user: "ManojV.C4",
     // password: "Welcome@1234",
