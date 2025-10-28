@@ -13,21 +13,21 @@ const dbConfig = {
 //     connectionLimit: 10
 
  //Active code for Linux server
-	host: "10.0.0.16",
-  user: "admin",
-    password: "Welcome@123",
-    port:3314,
-    database: "cellma4_loadtesting_9sep25",
-    connectionLimit: 10
+// 	host: "10.0.0.16",
+//   user: "admin",
+//     password: "Welcome@123",
+//     port:3314,
+//     database: "cellma4_loadtesting_9sep25",
+//     connectionLimit: 10
 
     //not active below code for Linux server execution.
-    // host: "10.0.0.38",
-    // user: "ManojV.C4",
-    // password: "Welcome@1234",
-    // port:3310,
-    // //database: "cellma4_api",
-    // database: "cellma4_api_14oct2025",
-    // connectionLimit: 10
+    host: "10.0.0.38",
+    user: "ManojV.C4",
+    password: "Welcome@1234",
+    port:3310,
+    //database: "cellma4_api",
+    database: "cellma4_api_14oct2025",
+    connectionLimit: 10
 };
 
 module.exports = {
