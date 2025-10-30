@@ -145,21 +145,31 @@ test.describe("Task Category", () => {
         await page.waitForTimeout(1000);
         await patientsummary.selectTasklink();
         await page.waitForTimeout(1000);
+        
         await patientsummary.clickOnSearchTask();
         await page.waitForTimeout(1500);
-        await patientsummary.selectTaskTemplate();
-        await page.waitForTimeout(5000);
+        await patientsummary.addTask()
+        //await patientsummary.selectTaskTemplate();
+        
+    
+        await patientsummary.selectTaskCategory(jsonData.AddTask[index].task_category);
+        await patientsummary.searchExistingTask(jsonData.AddTask[index].existing_task_search);
+        await patientsummary.selectTaskType(jsonData.AddTask[index].task_type);
+        await patientsummary.enterTaskAreaDescription(jsonData.AddTask[index].task_description);
+        await patientsummary.selectTaskActionToPerform(jsonData.AddTask[index].task_action_perform);
+       // 
         await patientsummary.selectAssignTaskUser(jsonData.AddTask[index].task_username);
         await patientsummary.selectTaskDueDate(jsonData.AddTask[index].task_due_date);
         await patientsummary.selectTaskDueTime(jsonData.AddTask[index].task_due_time);
         await patientsummary.selectSendAlertTo();
         await patientsummary.selectSendAlertUsing();
-        await patientsummary.selectApptSpeciality(jsonData.AddTask[index].specialty);
-        await patientsummary.selectApptClinicType(jsonData.AddTask[index].clinic_type);
-        await patientsummary.selectApptClinicLocation(jsonData.AddTask[index].appt_location);
-        await patientsummary.selectApptTeam(jsonData.AddTask[index].team);
-        await patientsummary.enterTaskDescription(jsonData.AddTask[index].taskd_description);
-        await patientsummary.enterTaskNotes(jsonData.AddTask[index].task_notes);
+       // await patientsummary.selectApptSpeciality(jsonData.AddTask[index].specialty);
+       
+        // await patientsummary.selectApptClinicType(jsonData.AddTask[index].clinic_type);
+        // await patientsummary.selectApptClinicLocation(jsonData.AddTask[index].appt_location);
+        // await patientsummary.selectApptTeam(jsonData.AddTask[index].team);
+        // await patientsummary.enterTaskDescription(jsonData.AddTask[index].taskd_description);
+        // await patientsummary.enterTaskNotes(jsonData.AddTask[index].task_notes);
         await patientsummary.reoccurringTaskCheck();
         await page.waitForTimeout(1500);
         await patientsummary.reoccurringTaskUncheck();
@@ -169,21 +179,27 @@ test.describe("Task Category", () => {
         await patientsummary.addSpecificMinAge(jsonData.AddTask[index].age_min);
         await patientsummary.addSpecificMaxAge(jsonData.AddTask[index].age_max);
         await patientsummary.addSpecificSex();
+       
         await page.waitForTimeout(1500);
+        await patientsummary.enterLocalCode(jsonData.AddTask[index].local_code);
         await patientsummary.saveTask();
-        await page.waitForTimeout(5000);
+         await page.waitForTimeout(1500);
+        await page.waitForTimeout(1000);
+         await page.waitForTimeout(1000);
         await page.getByLabel('cancelIcon').click();
 
+       
 let username = jsonData.loginDetails[0].username;        
          ////// Database comparison - ADDING NEW TASK/////////
   sqlQuery =
-  `SELECT task_name,task_due_date,task_due_time,task_status,task_priority,alert_category,taskd_description, task_notes FROM c4_tasks JOIN c4_alerts ON c4_tasks.task_id = c4_alerts.alert_task_id JOIN task_details ON c4_tasks.task_id = task_details.taskd_task_id WHERE c4_tasks.task_pat_id =${patId}  and task_created_by = '${username}' order by task_id desc limit 1`;
+  //`SELECT task_name,task_que_code,task_due_date,task_due_time,task_status,task_priority,alert_category,taskd_description, task_notes FROM c4_tasks JOIN c4_alerts ON c4_tasks.task_id = c4_alerts.alert_task_id JOIN task_details ON c4_tasks.task_id = task_details.taskd_task_id WHERE c4_tasks.task_pat_id =${patId}  and task_created_by = '${username}' order by task_id desc limit 1`;
+  'SELECT t.task_id, t.task_pat_id, t.task_name, t.task_que_code, t.task_due_date, t.task_due_time, t.task_status, t.task_priority, td.taskd_id, td.taskd_description, td.taskd_action_to_perform FROM c4_tasks t JOIN task_details td ON t.task_id = td.taskd_task_id ORDER BY t.task_id DESC LIMIT 1';
  console.log("Task query"+sqlQuery)       
  
 
 sqlFilePath = "SQLResults/ClinicalDomain/addTaskToPatient.json";
 results = await executeQuery(sqlQuery, sqlFilePath);
-const pacrId = results[0].pacr_id;
+//const pacrId = results[0].pacr_id;
 console.log("\n Patient Clinical Records stored into the database: \n", results);
 var match = await compareJsons(sqlFilePath, null, jsonData.AddTask[index]);
 if (match) {
@@ -197,24 +213,52 @@ if (match) {
 } 
    
 
+
         //Edit & Complete Task
         await patientsummary.clickTaskIcon();
         await page.waitForTimeout(1500);
         await patientsummary.allTaskTab()
         await page.waitForTimeout(1500);
+        
         await patientsummary.expandIncompleteTask()
+        await page.waitForTimeout(1500);
+        await patientsummary.expandIncompleteTask()
+        await page.waitForTimeout(1500);
+        await patientsummary.expandCompleteTask()
         await page.waitForTimeout(1500);
         await patientsummary.expandCompleteTask()
         await page.waitForTimeout(1500);
         await patientsummary.expandNotToBeCompleted()
         await page.waitForTimeout(1500);
+        await patientsummary.expandNotToBeCompleted()
+        await page.waitForTimeout(1500);
+        
         await patientsummary.incompleteTaskTab()
         await page.waitForTimeout(1500);
+        await patientsummary.notToBeCompletedTab()
+        await page.waitForTimeout(1500);
+        await patientsummary.completedTaskTab()
+        await page.waitForTimeout(1500);
+         await patientsummary.incompleteTaskTab()
+        await page.waitForTimeout(1500);
+        //  await patientsummary.expandIncompleteTask()
+        // await page.waitForTimeout(1500);
         await patientsummary.editTask();
         await page.waitForTimeout(1500);
-        await patientsummary.selectTaskDueDate(jsonData.EditTask[index].due_date);
-        await patientsummary.selectTaskDueTime(jsonData.EditTask[index].due_time);
-        await patientsummary.enterTaskNotes(jsonData.EditTask[index].notes);
+ 
+       
+//await patientsummary.selectTaskCategory(jsonData.EditTask[index].task_category);  // Update category from JSON data
+await patientsummary.enterTaskAreaDescription(jsonData.EditTask[index].task_description); // Update description
+await patientsummary.selectTaskActionToPerform(jsonData.EditTask[index].task_action_perform);  // Update action to perform
+await patientsummary.selectAssignTaskUser(jsonData.EditTask[index].task_username);  // Reassign task to another user
+//await patientsummary.selectTaskDueDate(jsonData.EditTask[index].task_due_date);  // Update due date
+//await patientsummary.selectTaskDueTime(jsonData.EditTask[index].task_due_time);  // Update due time
+//await patientsummary.selectSendAlertTo(jsonData.EditTask[index].alert_recipient);  // Update alert recipient
+//await patientsummary.selectSendAlertUsing(jsonData.EditTask[index].alert_method); // Update alert method
+        // await patientsummary.selectTaskDueDate(jsonData.EditTask[index].due_date);
+        // await patientsummary.selectTaskDueTime(jsonData.EditTask[index].due_time);
+        // await patientsummary.enterTaskNotes(jsonData.EditTask[index].notes);
+       
         await patientsummary.saveTask();
         await page.waitForTimeout(2500);
         await patientsummary.clickCheckAll();
@@ -224,42 +268,34 @@ if (match) {
         await patientsummary.clickCheckAll();
         await page.waitForTimeout(1000);
         await patientsummary.clickCompleteTask();
-        await page.waitForTimeout(5000);
+        await page.waitForTimeout(2000);
+       
         await page.getByLabel('cancelIcon').click();
 
          //Adding task & Not to be Complete Task
-         await patientsummary.clickOnAddToTask();
-         await page.waitForTimeout(1000);
-         await patientsummary.selectTasklink();
-         await page.waitForTimeout(1000);
-         await patientsummary.clickOnSearchTask();
-         await page.waitForTimeout(1500);
-         await patientsummary.selectTaskTemplate();
-         await page.waitForTimeout(5000);
-         await patientsummary.selectAssignTaskUser(jsonData.AddTask[index].task_username);
+        await patientsummary.clickTaskIcon();
+        // await page.waitForTimeout(1500);
+        //  await patientsummary.selectTasklink();
+        //  await page.waitForTimeout(1000);
+        //  await patientsummary.clickOnSearchTask();
+        //  await page.waitForTimeout(1500);
+        //  await patientsummary.selectTaskTemplate();
+        //  await page.waitForTimeout(5000);
+        await patientsummary.allTaskTab()
+        await patientsummary.expandIncompleteTask()
+        await page.waitForTimeout(1500);
+
+        
+        await patientsummary.editTask();
+        await page.waitForTimeout(1500);
+          await patientsummary.saveTask();
+    
          
-         await patientsummary.selectTaskDueDate(jsonData.EditTask[index].due_date);
-         await patientsummary.selectTaskDueTime(jsonData.EditTask[index].due_time);
-         await patientsummary.selectSendAlertTo();
-         await patientsummary.selectSendAlertUsing();
-         await patientsummary.selectApptSpeciality(jsonData.AddTask[index].specialty);
-         await patientsummary.selectApptClinicType(jsonData.AddTask[index].clinic_type);
-         await patientsummary.selectApptClinicLocation(jsonData.AddTask[index].appt_location);
-         await patientsummary.selectApptTeam(jsonData.AddTask[index].team);
-         await patientsummary.enterTaskDescription(jsonData.EditTask[index].description);
-         await patientsummary.enterTaskNotes(jsonData.EditTask[index].notes);
-         await patientsummary.reoccurringTaskCheck();
          await page.waitForTimeout(1500);
-         await patientsummary.reoccurringTaskUncheck();
-         await page.waitForTimeout(1500);
-         await patientsummary.setAgeSpecificTask();
-         await patientsummary.setSexSpecificTask();
-         await patientsummary.addSpecificMinAge(jsonData.AddTask[index].age_min);
-         await patientsummary.addSpecificMaxAge(jsonData.AddTask[index].age_max);
-         await patientsummary.addSpecificSex();
-         await patientsummary.saveTask();
-         await page.waitForTimeout(4500);
          await page.getByLabel('cancelIcon').nth(0).click();
+
+         await page.pause();
+        
 
           //Edit & Not to be Complete Task
         await patientsummary.clickTaskIcon();

@@ -1,11 +1,6 @@
 [
   {
-    "pacr_id": 184837,
-    "pacr_category": "Condition",
-    "pacr_que_name": "Erythematous condition",
-    "pacr_clinic_date": "16/10/2025",
-    "pacr_risk": "none",
-    "cond_date_diagnosed": "22/06/2025",
-    "cond_notes": "Added for Notes for Condition"
+    "pacr_que_name": "Coal dust",
+    "pacr_delete_reason": "Delete for testing"
   }
 ]
