@@ -208,7 +208,7 @@ test.describe("Interpretations Category", () => {
      sqlQuery =
      "select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk,inte_outcome_eli_text, inte_notes"+
      " from patient_clinical_records join patient_clinical_records_details"+
-     " on pacr_id=pacrd_pacr_id join Interpretations on pacr_id=inte_pacr_id where pacr_record_status='approved'"+
+     " on pacr_id=pacrd_pacr_id join interpretations on pacr_id=inte_pacr_id where pacr_record_status='approved'"+
      " and pacrd_record_status='approved' and inte_record_status='approved' and pacr_id=" + pacrId +
      " and pacr_record_status='approved'";
           
