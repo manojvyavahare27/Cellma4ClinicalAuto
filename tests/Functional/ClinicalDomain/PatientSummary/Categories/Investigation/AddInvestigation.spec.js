@@ -103,7 +103,8 @@ test.describe("Investigations Category", () => {
       await confirmexisting.clickOnConfirmExistingDetails();  
       await page.waitForTimeout(3000);   
       
-       const alertPopup= await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible();    
+      await page.pause()
+       const alertPopup= await page.getByRole('button', { name: 'cancelIcon' }).isVisible();    
       if(alertPopup==true)
         {       
           await Investigations.closePopUp(page)
@@ -164,7 +165,7 @@ test.describe("Investigations Category", () => {
       await InvestigationsExtraDetails.selectInvReason(jsonData.AddInvestigation[index].reason);
       await InvestigationsExtraDetails.enterInvResult(jsonData.AddInvestigation[index].result);
       await InvestigationsExtraDetails.selectInvOutcome(jsonData.AddInvestigation[index].outcome);
-      await InvestigationsExtraDetails.selectInvCritical(jsonData.AddInvestigation[index].critical);
+      //await InvestigationsExtraDetails.selectInvCritical(jsonData.AddInvestigation[index].critical);
       await InvestigationsExtraDetails.enterInvDateOfUpload(jsonData.AddInvestigation[index].date);
       await InvestigationsExtraDetails.selectInvPatLocation(jsonData.AddInvestigation[index].location);
      // await InvestigationsExtraDetails.enterInvCompletedDate(jsonData.AddInvestigation[index].dateCompleted);
@@ -288,6 +289,7 @@ test.describe("Investigations Category", () => {
   //    console.log("\n Update Patient Clinical Records Comparision Edit Investigations: Parameters from both JSON files do not match!\n");
   //  }
 
+  await page.pause()
    ////////AUTO UPDATE RISK AFTER UPDATING OUTCOME /////
       await Investigations.clickOnItemHistory();
       await Investigations.clickOnHistoryItemDiv();
@@ -295,6 +297,7 @@ test.describe("Investigations Category", () => {
       await Investigations.closeWindow();
       await page.waitForTimeout(500);
       
+      await page.pause()
      
       // await page.waitForTimeout(500);
       await Investigations.clickOnItemHighlightNone();
