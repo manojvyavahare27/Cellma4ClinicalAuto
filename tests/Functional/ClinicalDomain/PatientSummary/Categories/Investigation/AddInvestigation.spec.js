@@ -103,7 +103,7 @@ test.describe("Investigations Category", () => {
       await confirmexisting.clickOnConfirmExistingDetails();  
       await page.waitForTimeout(3000);   
       
-      await page.pause()
+      
        const alertPopup= await page.getByRole('button', { name: 'cancelIcon' }).isVisible();    
       if(alertPopup==true)
         {       
@@ -217,8 +217,8 @@ test.describe("Investigations Category", () => {
       await page.waitForTimeout(3000);
       //await page.getByLabel('cancelIcon').click();
       await page.getByRole('button', { name: 'cancelIcon' }).click()
-      await page.pause()
-      
+     
+      await page.waitForTimeout(2000);
       
 
       //await expect(page.getByText("Investigation record added successfully")).toHaveText("Investigation record added successfully");
@@ -289,15 +289,15 @@ test.describe("Investigations Category", () => {
   //    console.log("\n Update Patient Clinical Records Comparision Edit Investigations: Parameters from both JSON files do not match!\n");
   //  }
 
-  await page.pause()
+
    ////////AUTO UPDATE RISK AFTER UPDATING OUTCOME /////
       await Investigations.clickOnItemHistory();
       await Investigations.clickOnHistoryItemDiv();
       await page.waitForTimeout(500);
       await Investigations.closeWindow();
-      await page.waitForTimeout(500);
+      await page.waitForTimeout(1500);
       
-      await page.pause()
+     
      
       // await page.waitForTimeout(500);
       await Investigations.clickOnItemHighlightNone();
