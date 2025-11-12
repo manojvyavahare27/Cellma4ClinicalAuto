@@ -535,6 +535,10 @@ this.linkOverdueTask = page.locator("xpath=//div[@role='tablist']//button[@data-
         await clickElement(this.page, this.showLinkFirst)
     }
  
+    async clickOnCommunicationIcon()
+    {
+        await clickElement(this.page, this.page.locator("xpath=//button[@aria-label='communicationIcon']"))
+    }
     async clickOnCommunicationDiv()
     {
         await clickElement(this.page, this.page.locator("xpath=//span[contains(text(),'Communication')]"))

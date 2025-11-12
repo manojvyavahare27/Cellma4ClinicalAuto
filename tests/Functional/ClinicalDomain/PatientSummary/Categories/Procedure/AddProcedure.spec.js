@@ -173,6 +173,7 @@ test.describe("Procedure Category", () => {
       //   await page.waitForTimeout(1000)
       //   await ProceduresExtraDetails.clickOnSave();
                // Add New Procedures
+               await page.pause()
       await Procedures.selectandAddClinicalItem(jsonData.AddProcedure[index].pacr_que_name)
       await page.waitForTimeout(2000);      
       await page.getByLabel('cancelIcon').click();
@@ -226,7 +227,8 @@ test.describe("Procedure Category", () => {
     }
    
     await page.waitForTimeout(1500)
-      await Procedures.clickOnItemEdit();
+     // await Procedures.clickOnItemEdit();
+     await page.locator("xpath=//button[@aria-label='editIconButton']").click()
      // await ProceduresExtraDetails.clickOnClincialItemCollapsable();
       //await ProceduresExtraDetails.selectClinicalItemSubcategory(jsonData.AddProcedure[index].eli_text);      
       await ProceduresExtraDetails.enterDateOfProcedure(jsonData.AddProcedure[index].proc_procedure_date)
@@ -304,7 +306,8 @@ test.describe("Procedure Category", () => {
 
      ///////// Deleting Item ////////////
 
-      await Procedures.clickOnItemEdit();
+     // await Procedures.clickOnItemEdit();
+      await page.locator("xpath=//button[@aria-label='editIconButton']").click()
       await ProceduresExtraDetails.clickOnDelete();
       await ProceduresExtraDetails.clickOnCancelDelete();
       await ProceduresExtraDetails.clickOnDelete();
