@@ -123,6 +123,7 @@ test.describe("Examination Category", () => {
       await patientsearch.clickOnSearchPatientLink();
       //await page.waitForTimeout(3000);
       
+      await page.pause()
       await confirmexisting.clickOnConfirmExistingDetails();
       await page.waitForTimeout(6000);
       const alertPopup = page.locator("xpath=//h2[text()='Alerts']");
