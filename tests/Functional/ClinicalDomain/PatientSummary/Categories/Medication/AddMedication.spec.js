@@ -273,7 +273,7 @@ test.describe("Medications Category", () => {
       ////// Database comparison- Patient Clinical Records - ADDING NEW Medications/////////
       sqlQuery =
       "select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk, medi_notes"+
-      " from patient_clinical_records join patient_clinical_records_details on pacr_id=pacrd_pacr_id join Medications on pacr_id=medi_pacr_id where pacr_record_status='approved'"+
+      " from patient_clinical_records join patient_clinical_records_details on pacr_id=pacrd_pacr_id join medications on pacr_id=medi_pacr_id where pacr_record_status='approved'"+
       " and pacr_pat_id=" + patId +
       " and pacr_record_status='approved' and pacr_que_name='" + jsonData.AddMedication[index].pacr_que_name +
       "' and pacr_category='Medication' order by 1 desc limit 1";
@@ -318,7 +318,7 @@ test.describe("Medications Category", () => {
      sqlQuery =
      "select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk, medi_notes"+
      " from patient_clinical_records join patient_clinical_records_details"+
-     " on pacr_id=pacrd_pacr_id join Medications on pacr_id=medi_pacr_id where pacr_record_status='approved'"+
+     " on pacr_id=pacrd_pacr_id join medications on pacr_id=medi_pacr_id where pacr_record_status='approved'"+
      " and pacrd_record_status='approved' and medi_record_status='approved' and pacr_id=" + pacrId +
      " and pacr_record_status='approved'";
           
