@@ -264,13 +264,14 @@ test.describe("Procedure Category", () => {
      console.log("\n Update Patient Clinical Records Comparision Edit Procedures: Parameters from both JSON files do not match!\n");
    }
 
-   //await page.pause()
+   await page.pause()
    ////////AUTO UPDATE RISK AFTER UPDATING Procedures /////
-      await Procedures.clickOnItemHistory();
-      await Procedures.clickOnHistoryItemDiv();
-      await page.waitForTimeout(500);
-      await Procedures.closeWindow();
-      await page.waitForTimeout(500);
+      //await Procedures.clickOnItemHistory();
+      //page.locator("xpath=//a[normalize-space(text())='Division of Left Knee Tendon, Open Approach']/ancestor::tr//button[@aria-label='patientHistoryIconButton']")
+      //await Procedures.clickOnHistoryItemDiv();
+      //await page.waitForTimeout(500);
+      //await Procedures.closeWindow();
+      //await page.waitForTimeout(500);
      
      
       // await page.waitForTimeout(500);
