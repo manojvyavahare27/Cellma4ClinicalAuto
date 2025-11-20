@@ -248,7 +248,7 @@ test.describe("Procedure Category", () => {
      sqlQuery =
      "select pacr_id, pacr_category, pacr_que_name, pacr_clinic_date, pacr_risk, proc_notes"+
      " from patient_clinical_records join patient_clinical_records_details"+
-     " on pacr_id=pacrd_pacr_id join Procedures on pacr_id=proc_pacr_id where pacr_record_status='approved'"+
+     " on pacr_id=pacrd_pacr_id join procedures on pacr_id=proc_pacr_id where pacr_record_status='approved'"+
      " and pacrd_record_status='approved' and proc_record_status='approved' and pacr_id=" + pacrId +
      " and pacr_record_status='approved'";
           
