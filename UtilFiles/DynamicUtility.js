@@ -320,8 +320,7 @@ async function assertElementHasLabel(page, elementLocator, elementLabel=null) {
     let locator = "";
     if(historyPage === null){
       locator = `//div[@id='historyTable']//*[text()='${itemName}']//../..//button[@aria-label='${ariaLabel}']`; //History Table
-      console.log("If loop");
-      
+      console.log("If loop");      
     }
     else{
       locator = `//div[@data-testid='CommonCellmaPopup']//*[text()='${itemName}']//../..//button[@aria-label='${ariaLabel}']`; ////History Popup

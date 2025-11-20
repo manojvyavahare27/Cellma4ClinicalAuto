@@ -264,7 +264,7 @@ this.pregGravida= page.locator("xpath=//input[@id='gravida']")
         this.invAddCreateLabRequest= page.locator("xpath=//button[@aria-label='Create Lab Request']")
         this.invSelectCheckbox= page.locator("xpath=//span[@data-testid='Select All']")
         this.invCollectSample= page.locator("xpath=//div[contains(text(),'Collect Sample')]")
-        this.invSendSample= page.locator("xpath=//button[@aria-label='Send Sample']")
+        this.invSendSample= page.locator("xpath=//button[@data-testid='Send Sample']")
         this.createImgRequest  = page.locator("xpath=//div[contains(text(),'Create Imaging Request')]")
 
 

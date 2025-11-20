@@ -180,6 +180,7 @@ test.describe("Investigations Category", () => {
       await InvestigationsExtraDetails.deselectForImagingRequest()
       await page.waitForTimeout(1000)
 
+      await page.pause()
       await InvestigationsExtraDetails.selectForLabRequest()
       await page.waitForTimeout(1000)
       //await InvestigationsExtraDetails.deselectForLabRequest()

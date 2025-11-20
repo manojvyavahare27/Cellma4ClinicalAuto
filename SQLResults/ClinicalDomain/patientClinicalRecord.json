@@ -1,10 +1,6 @@
 [
   {
-    "pacr_id": 185922,
-    "pacr_category": "Procedure",
-    "pacr_que_name": "Division of Left Knee Tendon, Open Approach\r",
-    "pacr_clinic_date": "10/11/2025",
-    "pacr_risk": "none",
-    "proc_notes": "Add Procedure Notes"
+    "pacr_que_name": "Paracetamol 500mg / Ibuprofen 200mg tablets",
+    "pacr_delete_reason": "Delete for testing"
   }
 ]

@@ -7,13 +7,13 @@ let databaseConnection; // Variable to store the database connection instance
 
 const dbConfig = {	
 	//For Pre-release server
-	// host: "10.0.0.16",
-    // user: "cellma4_api_user",
-    // password: "Welcome@123",
-    // port:3314,
-    // //database: "cellma4_api",
-    // database: "cellma4_pre_release",
-    // connectionLimit: 10
+	host: "10.0.0.16",
+    user: "cellma4_api_user",
+    password: "Welcome@123",
+    port:3314,
+    //database: "cellma4_api",
+    database: "cellma4_pre_release",
+    connectionLimit: 10
 
 
 	 //Active code for regression server
@@ -25,13 +25,13 @@ const dbConfig = {
 //     connectionLimit: 10
 
 	//Not Active below code for Linux server execution.
-	host: "10.0.0.38",
-    user: "ManojV.C4",
-    password: "Welcome@1234",
-    port:3310,
-    //database: "cellma4_api",
-    database: "cellma4_api_14oct2025",
-    connectionLimit: 10
+	// host: "10.0.0.38",
+    // user: "ManojV.C4",
+    // password: "Welcome@1234",
+    // port:3310,
+    // //database: "cellma4_api",
+    // database: "cellma4_api_14oct2025",
+    // connectionLimit: 10
 };
 
 async function openDatabaseConnection() {
