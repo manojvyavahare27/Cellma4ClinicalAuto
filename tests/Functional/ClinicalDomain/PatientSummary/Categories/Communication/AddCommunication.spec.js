@@ -147,6 +147,7 @@ test.describe("Communication Category", () => {
       await CommunicationExtraDetails.sendToPatientCheckbox()
       await CommunicationExtraDetails.clickOnSendComm()
       await page.waitForTimeout(2000)
+      await page.pause()
       await CommunicationExtraDetails.clickOnEmailSection()
       await page.waitForTimeout(2000)
       await CommunicationExtraDetails.clickOnTextSection()
