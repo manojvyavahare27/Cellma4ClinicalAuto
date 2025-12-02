@@ -92,7 +92,7 @@ test.describe("Problems Category", () => {
         logger.info("Clicked on Search button successfully");
         await patientsearch.enterGivenName(data.pat_firstname);
         logger.info("Given Name entered successfully");
-        //await page.pause()
+        await page.pause()
         await patientsearch.enterFamilyName(data.pat_surname);
         logger.info("Family Name entered successfully");
         //await patientsearch.selectSex(data.pat_sex);
@@ -167,7 +167,7 @@ test.describe("Problems Category", () => {
   await problems.selectandAddClinicalItem(jsonData.AddProblems[index].pacr_que_name);
   await page.waitForTimeout(1000);
   //await page.pause()
-  //await problemsExtraDetails.selectClinicalItemSubcategory(jsonData.AddProblems[index].eli_text);
+  await problemsExtraDetails.selectClinicalItemSubcategory(jsonData.AddProblems[index].eli_text);
   await problemsExtraDetails.enterOnSetDate(jsonData.AddProblems[index].prp_date_of_onset);
   //await page.pause()
   await problemsExtraDetails.clickOnestimatedDate();
@@ -217,7 +217,7 @@ if (match) {
       //await problems.clickOnItemEdit('Back Pain');
       await page.waitForTimeout(2000);
       //await problemsExtraDetails.clickOnClincialItemCollapsable();
-      //await problemsExtraDetails.selectClinicalItemSubcategory(jsonData.EditPatientScan[index].eli_text);
+     await problemsExtraDetails.selectClinicalItemSubcategory(jsonData.EditProblems[index].eli_text);
       await problemsExtraDetails.enterOnsetDate(jsonData.EditProblems[index].prp_date_of_onset);
       await problemsExtraDetails.clickOnactualDate();
       await problemsExtraDetails.selectProblemStatus(jsonData.EditProblems[index].prp_status);

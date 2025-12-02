@@ -123,6 +123,7 @@ test.describe("Investigations Category", () => {
       await Investigations.clickOnPinContactItemsMenu();
       await Investigations.selectCategoryFromList("Investigations");
       await page.waitForTimeout(2000)
+      await page.pause()
       
        ////////REVIEW EXISTING ITEM AND DELETE/////
        if(await Investigations.checkItemOnHistoryTable(jsonData.AddInvestigation[index].pacr_que_name)){
@@ -193,6 +194,7 @@ test.describe("Investigations Category", () => {
       await InvestigationsExtraDetails.clickOPrivateRecord()
       await InvestigationsExtraDetails.clickOnSetAsDefault()
       await InvestigationsExtraDetails.enterInvNotes(jsonData.AddInvestigation[index].notes);
+      await page.pause()
       await InvestigationsExtraDetails.clickOnsSaveandCreateLabRequest();
     
       await page.waitForTimeout(2000);
