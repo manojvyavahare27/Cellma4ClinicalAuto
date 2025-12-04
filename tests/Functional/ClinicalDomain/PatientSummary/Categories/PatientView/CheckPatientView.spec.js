@@ -93,6 +93,7 @@ test.describe("Patient View Category", () => {
             await page.waitForTimeout(1000);
             await confirmexisting.clickOnConfirmExistingDetails();
 
+            await page.pause()
             
             
             // const alert = await page.getByRole('heading', { name: 'Alerts', exact: true }).isVisible()
@@ -116,6 +117,7 @@ test.describe("Patient View Category", () => {
               for (let section of jsonData.PatientViewSections) {
 
                 ////////// Checking function call
+                await page.pause()
                 await PatientViewDetails.checkPatientView(section.selector, section.selector2, section.popUp)
 
                 console.log(++count);

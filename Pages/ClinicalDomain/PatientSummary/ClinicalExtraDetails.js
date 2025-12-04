@@ -2271,6 +2271,7 @@ async clickSaveButton() {
     const popUp = this.page.getByRole('heading', { name: popUpName, exact: true });
     const selector = this.page.getByTestId(selectorName);
 
+    console.info("into methods")
     if(popUpName === 'Allergies History') {
       await this.clickOnAllergyHistoryBtn();
     } else if (popUpName === 'Diagnosis History'){
@@ -2313,6 +2314,7 @@ async clickSaveButton() {
     const isSelectorVisible = selector.isVisible();
     console.log("\n");
 
+    await this.page.pause()
     if(isPopupVisible) {
       console.log(popUpName + " Pop up is displayed")
       
