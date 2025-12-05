@@ -130,7 +130,7 @@ test('Service Appointment @Appt',async ({page})=>{
      // await servicebookapp.clickOnClosepopup()     
      //*********************************************************** */
      await page.getByRole('button', { name: 'Add Appointments' }).click()
-     await page.pause()
+     
      await servicebookapp.SelectDate()
      await servicebookapp.selectDropdownSpecility()
      await servicebookapp.selectDropdownClinicType()
@@ -181,7 +181,7 @@ test('Service Appointment @Appt',async ({page})=>{
        
 }
 else{         
-    await page.pause()
+    
      await servicebookapp.SelectDate()
      await servicebookapp.selectDropdownSpecility()
      await servicebookapp.selectDropdownClinicType()

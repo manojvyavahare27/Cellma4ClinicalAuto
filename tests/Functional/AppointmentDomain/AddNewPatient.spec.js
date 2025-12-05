@@ -312,7 +312,7 @@ test.describe('New Patient', () => {
       //await addpip.selectPIPPartnerDetailsOnRegForm();
       await addpip.checkSendPatientTextEmail(jsonData.pip[index].pip_send_txt_email_yes);
       await addpip.checkIsReferrer();
-      await addpip.enterPIPNotes(jsonData.pip[index].pip_notes);
+     // await addpip.enterPIPNotes(jsonData.pip[index].pip_notes);
       await addpip.checkcAssistingInPartner();
       await addpip.checkHelpingPatients();
       await addpip.checkBeingPhotographed();
@@ -344,7 +344,7 @@ test.describe('New Patient', () => {
       await addgp.enterGPGMCCode(jsonData.addGP[index].egp_gmc_code);
       await addgp.clickOnShowbnt();
       await addgp.selectUnknownPostCode();
-await page.pause()
+
 
       //Gp Address Details       
       await addgp.enterLocalGPPostcode()
